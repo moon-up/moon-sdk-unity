@@ -15,7 +15,6 @@ using System.Linq;
 using System.Net;
 using System.Net.Mime;
 using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Client.Auth;
 using Org.OpenAPITools.Model;
 
 namespace Org.OpenAPITools.Api
@@ -34,9 +33,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="transactionInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Object</returns>
-        Object OnRamperCheckout(string authorization, string accountName, TransactionInput transactionInput, int operationIndex = 0);
+        Object OnRamperCheckout(string authorization, string accountName, TransactionInput transactionInput);
 
         /// <summary>
         /// 
@@ -48,9 +46,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="transactionInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> OnRamperCheckoutWithHttpInfo(string authorization, string accountName, TransactionInput transactionInput, int operationIndex = 0);
+        ApiResponse<Object> OnRamperCheckoutWithHttpInfo(string authorization, string accountName, TransactionInput transactionInput);
         /// <summary>
         /// 
         /// </summary>
@@ -63,9 +60,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="uuid"> (optional, default to &quot;&quot;)</param>
         /// <param name="clientName"> (optional, default to &quot;&quot;)</param>
         /// <param name="country"> (optional, default to &quot;&quot;)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;Quote&gt;</returns>
-        List<Quote> OnRamperGetQuotesBuy(string authorization, string fiat, string crypto, double amount, string? paymentMethod = default(string?), string? uuid = default(string?), string? clientName = default(string?), string? country = default(string?), int operationIndex = 0);
+        List<Quote> OnRamperGetQuotesBuy(string authorization, string fiat, string crypto, double amount, string paymentMethod = default(string), string uuid = default(string), string clientName = default(string), string country = default(string));
 
         /// <summary>
         /// 
@@ -82,9 +78,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="uuid"> (optional, default to &quot;&quot;)</param>
         /// <param name="clientName"> (optional, default to &quot;&quot;)</param>
         /// <param name="country"> (optional, default to &quot;&quot;)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;Quote&gt;</returns>
-        ApiResponse<List<Quote>> OnRamperGetQuotesBuyWithHttpInfo(string authorization, string fiat, string crypto, double amount, string? paymentMethod = default(string?), string? uuid = default(string?), string? clientName = default(string?), string? country = default(string?), int operationIndex = 0);
+        ApiResponse<List<Quote>> OnRamperGetQuotesBuyWithHttpInfo(string authorization, string fiat, string crypto, double amount, string paymentMethod = default(string), string uuid = default(string), string clientName = default(string), string country = default(string));
         /// <summary>
         /// 
         /// </summary>
@@ -97,9 +92,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="uuid"> (optional, default to &quot;&quot;)</param>
         /// <param name="clientName"> (optional, default to &quot;&quot;)</param>
         /// <param name="country"> (optional, default to &quot;&quot;)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;SellQuote&gt;</returns>
-        List<SellQuote> OnRamperGetQuotesSell(string authorization, string fiat, string crypto, double amount, string? paymentMethod = default(string?), string? uuid = default(string?), string? clientName = default(string?), string? country = default(string?), int operationIndex = 0);
+        List<SellQuote> OnRamperGetQuotesSell(string authorization, string fiat, string crypto, double amount, string paymentMethod = default(string), string uuid = default(string), string clientName = default(string), string country = default(string));
 
         /// <summary>
         /// 
@@ -116,9 +110,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="uuid"> (optional, default to &quot;&quot;)</param>
         /// <param name="clientName"> (optional, default to &quot;&quot;)</param>
         /// <param name="country"> (optional, default to &quot;&quot;)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;SellQuote&gt;</returns>
-        ApiResponse<List<SellQuote>> OnRamperGetQuotesSellWithHttpInfo(string authorization, string fiat, string crypto, double amount, string? paymentMethod = default(string?), string? uuid = default(string?), string? clientName = default(string?), string? country = default(string?), int operationIndex = 0);
+        ApiResponse<List<SellQuote>> OnRamperGetQuotesSellWithHttpInfo(string authorization, string fiat, string crypto, double amount, string paymentMethod = default(string), string uuid = default(string), string clientName = default(string), string country = default(string));
         /// <summary>
         /// 
         /// </summary>
@@ -126,9 +119,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="source"></param>
         /// <param name="country"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SupportedAssetResponse</returns>
-        SupportedAssetResponse OnRamperGetSupportedAssets(string authorization, string source, string country, int operationIndex = 0);
+        SupportedAssetResponse OnRamperGetSupportedAssets(string authorization, string source, string country);
 
         /// <summary>
         /// 
@@ -140,18 +132,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="source"></param>
         /// <param name="country"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SupportedAssetResponse</returns>
-        ApiResponse<SupportedAssetResponse> OnRamperGetSupportedAssetsWithHttpInfo(string authorization, string source, string country, int operationIndex = 0);
+        ApiResponse<SupportedAssetResponse> OnRamperGetSupportedAssetsWithHttpInfo(string authorization, string source, string country);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="type"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SupportedCurrenciesResponse</returns>
-        SupportedCurrenciesResponse OnRamperGetSupportedCurrencies(string authorization, string type, int operationIndex = 0);
+        SupportedCurrenciesResponse OnRamperGetSupportedCurrencies(string authorization, string type);
 
         /// <summary>
         /// 
@@ -162,9 +152,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="type"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SupportedCurrenciesResponse</returns>
-        ApiResponse<SupportedCurrenciesResponse> OnRamperGetSupportedCurrenciesWithHttpInfo(string authorization, string type, int operationIndex = 0);
+        ApiResponse<SupportedCurrenciesResponse> OnRamperGetSupportedCurrenciesWithHttpInfo(string authorization, string type);
         /// <summary>
         /// 
         /// </summary>
@@ -172,9 +161,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="country"></param>
         /// <param name="type"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SupportedDefaultResponse</returns>
-        SupportedDefaultResponse OnRamperGetSupportedDefaultsAll(string authorization, string country, string type, int operationIndex = 0);
+        SupportedDefaultResponse OnRamperGetSupportedDefaultsAll(string authorization, string country, string type);
 
         /// <summary>
         /// 
@@ -186,17 +174,15 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="country"></param>
         /// <param name="type"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SupportedDefaultResponse</returns>
-        ApiResponse<SupportedDefaultResponse> OnRamperGetSupportedDefaultsAllWithHttpInfo(string authorization, string country, string type, int operationIndex = 0);
+        ApiResponse<SupportedDefaultResponse> OnRamperGetSupportedDefaultsAllWithHttpInfo(string authorization, string country, string type);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetSupportedOnRampsResponse</returns>
-        GetSupportedOnRampsResponse OnRamperGetSupportedOnRampsAll(string authorization, int operationIndex = 0);
+        GetSupportedOnRampsResponse OnRamperGetSupportedOnRampsAll(string authorization);
 
         /// <summary>
         /// 
@@ -206,9 +192,8 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetSupportedOnRampsResponse</returns>
-        ApiResponse<GetSupportedOnRampsResponse> OnRamperGetSupportedOnRampsAllWithHttpInfo(string authorization, int operationIndex = 0);
+        ApiResponse<GetSupportedOnRampsResponse> OnRamperGetSupportedOnRampsAllWithHttpInfo(string authorization);
         /// <summary>
         /// 
         /// </summary>
@@ -217,9 +202,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="fiat"></param>
         /// <param name="country"></param>
         /// <param name="type"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SupportedPaymentTypesCurrencyResponse</returns>
-        SupportedPaymentTypesCurrencyResponse OnRamperGetSupportedPaymentTypes(string authorization, string fiat, string country, string type, int operationIndex = 0);
+        SupportedPaymentTypesCurrencyResponse OnRamperGetSupportedPaymentTypes(string authorization, string fiat, string country, string type);
 
         /// <summary>
         /// 
@@ -232,9 +216,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="fiat"></param>
         /// <param name="country"></param>
         /// <param name="type"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SupportedPaymentTypesCurrencyResponse</returns>
-        ApiResponse<SupportedPaymentTypesCurrencyResponse> OnRamperGetSupportedPaymentTypesWithHttpInfo(string authorization, string fiat, string country, string type, int operationIndex = 0);
+        ApiResponse<SupportedPaymentTypesCurrencyResponse> OnRamperGetSupportedPaymentTypesWithHttpInfo(string authorization, string fiat, string country, string type);
         /// <summary>
         /// 
         /// </summary>
@@ -242,9 +225,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="fiat"></param>
         /// <param name="country"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SupportedPaymentTypesCurrencyResponse</returns>
-        SupportedPaymentTypesCurrencyResponse OnRamperGetSupportedPaymentTypesFiat(string authorization, string fiat, string country, int operationIndex = 0);
+        SupportedPaymentTypesCurrencyResponse OnRamperGetSupportedPaymentTypesFiat(string authorization, string fiat, string country);
 
         /// <summary>
         /// 
@@ -256,9 +238,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="fiat"></param>
         /// <param name="country"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SupportedPaymentTypesCurrencyResponse</returns>
-        ApiResponse<SupportedPaymentTypesCurrencyResponse> OnRamperGetSupportedPaymentTypesFiatWithHttpInfo(string authorization, string fiat, string country, int operationIndex = 0);
+        ApiResponse<SupportedPaymentTypesCurrencyResponse> OnRamperGetSupportedPaymentTypesFiatWithHttpInfo(string authorization, string fiat, string country);
         #endregion Synchronous Operations
     }
 
@@ -278,10 +259,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="transactionInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> OnRamperCheckoutAsync(string authorization, string accountName, TransactionInput transactionInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> OnRamperCheckoutAsync(string authorization, string accountName, TransactionInput transactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -293,10 +273,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="transactionInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> OnRamperCheckoutWithHttpInfoAsync(string authorization, string accountName, TransactionInput transactionInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> OnRamperCheckoutWithHttpInfoAsync(string authorization, string accountName, TransactionInput transactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -312,10 +291,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="uuid"> (optional, default to &quot;&quot;)</param>
         /// <param name="clientName"> (optional, default to &quot;&quot;)</param>
         /// <param name="country"> (optional, default to &quot;&quot;)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;Quote&gt;</returns>
-        System.Threading.Tasks.Task<List<Quote>> OnRamperGetQuotesBuyAsync(string authorization, string fiat, string crypto, double amount, string? paymentMethod = default(string?), string? uuid = default(string?), string? clientName = default(string?), string? country = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<Quote>> OnRamperGetQuotesBuyAsync(string authorization, string fiat, string crypto, double amount, string paymentMethod = default(string), string uuid = default(string), string clientName = default(string), string country = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -332,10 +310,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="uuid"> (optional, default to &quot;&quot;)</param>
         /// <param name="clientName"> (optional, default to &quot;&quot;)</param>
         /// <param name="country"> (optional, default to &quot;&quot;)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;Quote&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<Quote>>> OnRamperGetQuotesBuyWithHttpInfoAsync(string authorization, string fiat, string crypto, double amount, string? paymentMethod = default(string?), string? uuid = default(string?), string? clientName = default(string?), string? country = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<Quote>>> OnRamperGetQuotesBuyWithHttpInfoAsync(string authorization, string fiat, string crypto, double amount, string paymentMethod = default(string), string uuid = default(string), string clientName = default(string), string country = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -351,10 +328,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="uuid"> (optional, default to &quot;&quot;)</param>
         /// <param name="clientName"> (optional, default to &quot;&quot;)</param>
         /// <param name="country"> (optional, default to &quot;&quot;)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;SellQuote&gt;</returns>
-        System.Threading.Tasks.Task<List<SellQuote>> OnRamperGetQuotesSellAsync(string authorization, string fiat, string crypto, double amount, string? paymentMethod = default(string?), string? uuid = default(string?), string? clientName = default(string?), string? country = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<SellQuote>> OnRamperGetQuotesSellAsync(string authorization, string fiat, string crypto, double amount, string paymentMethod = default(string), string uuid = default(string), string clientName = default(string), string country = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -371,10 +347,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="uuid"> (optional, default to &quot;&quot;)</param>
         /// <param name="clientName"> (optional, default to &quot;&quot;)</param>
         /// <param name="country"> (optional, default to &quot;&quot;)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;SellQuote&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<SellQuote>>> OnRamperGetQuotesSellWithHttpInfoAsync(string authorization, string fiat, string crypto, double amount, string? paymentMethod = default(string?), string? uuid = default(string?), string? clientName = default(string?), string? country = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<SellQuote>>> OnRamperGetQuotesSellWithHttpInfoAsync(string authorization, string fiat, string crypto, double amount, string paymentMethod = default(string), string uuid = default(string), string clientName = default(string), string country = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -385,10 +360,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="source"></param>
         /// <param name="country"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SupportedAssetResponse</returns>
-        System.Threading.Tasks.Task<SupportedAssetResponse> OnRamperGetSupportedAssetsAsync(string authorization, string source, string country, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SupportedAssetResponse> OnRamperGetSupportedAssetsAsync(string authorization, string source, string country, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -400,10 +374,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="source"></param>
         /// <param name="country"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SupportedAssetResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SupportedAssetResponse>> OnRamperGetSupportedAssetsWithHttpInfoAsync(string authorization, string source, string country, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SupportedAssetResponse>> OnRamperGetSupportedAssetsWithHttpInfoAsync(string authorization, string source, string country, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -413,10 +386,9 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="type"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SupportedCurrenciesResponse</returns>
-        System.Threading.Tasks.Task<SupportedCurrenciesResponse> OnRamperGetSupportedCurrenciesAsync(string authorization, string type, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SupportedCurrenciesResponse> OnRamperGetSupportedCurrenciesAsync(string authorization, string type, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -427,10 +399,9 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="type"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SupportedCurrenciesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SupportedCurrenciesResponse>> OnRamperGetSupportedCurrenciesWithHttpInfoAsync(string authorization, string type, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SupportedCurrenciesResponse>> OnRamperGetSupportedCurrenciesWithHttpInfoAsync(string authorization, string type, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -441,10 +412,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="country"></param>
         /// <param name="type"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SupportedDefaultResponse</returns>
-        System.Threading.Tasks.Task<SupportedDefaultResponse> OnRamperGetSupportedDefaultsAllAsync(string authorization, string country, string type, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SupportedDefaultResponse> OnRamperGetSupportedDefaultsAllAsync(string authorization, string country, string type, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -456,10 +426,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="country"></param>
         /// <param name="type"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SupportedDefaultResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SupportedDefaultResponse>> OnRamperGetSupportedDefaultsAllWithHttpInfoAsync(string authorization, string country, string type, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SupportedDefaultResponse>> OnRamperGetSupportedDefaultsAllWithHttpInfoAsync(string authorization, string country, string type, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -468,10 +437,9 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetSupportedOnRampsResponse</returns>
-        System.Threading.Tasks.Task<GetSupportedOnRampsResponse> OnRamperGetSupportedOnRampsAllAsync(string authorization, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetSupportedOnRampsResponse> OnRamperGetSupportedOnRampsAllAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -481,10 +449,9 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetSupportedOnRampsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetSupportedOnRampsResponse>> OnRamperGetSupportedOnRampsAllWithHttpInfoAsync(string authorization, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetSupportedOnRampsResponse>> OnRamperGetSupportedOnRampsAllWithHttpInfoAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -496,10 +463,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="fiat"></param>
         /// <param name="country"></param>
         /// <param name="type"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SupportedPaymentTypesCurrencyResponse</returns>
-        System.Threading.Tasks.Task<SupportedPaymentTypesCurrencyResponse> OnRamperGetSupportedPaymentTypesAsync(string authorization, string fiat, string country, string type, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SupportedPaymentTypesCurrencyResponse> OnRamperGetSupportedPaymentTypesAsync(string authorization, string fiat, string country, string type, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -512,10 +478,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="fiat"></param>
         /// <param name="country"></param>
         /// <param name="type"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SupportedPaymentTypesCurrencyResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SupportedPaymentTypesCurrencyResponse>> OnRamperGetSupportedPaymentTypesWithHttpInfoAsync(string authorization, string fiat, string country, string type, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SupportedPaymentTypesCurrencyResponse>> OnRamperGetSupportedPaymentTypesWithHttpInfoAsync(string authorization, string fiat, string country, string type, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -526,10 +491,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="fiat"></param>
         /// <param name="country"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SupportedPaymentTypesCurrencyResponse</returns>
-        System.Threading.Tasks.Task<SupportedPaymentTypesCurrencyResponse> OnRamperGetSupportedPaymentTypesFiatAsync(string authorization, string fiat, string country, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SupportedPaymentTypesCurrencyResponse> OnRamperGetSupportedPaymentTypesFiatAsync(string authorization, string fiat, string country, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -541,10 +505,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="fiat"></param>
         /// <param name="country"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SupportedPaymentTypesCurrencyResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SupportedPaymentTypesCurrencyResponse>> OnRamperGetSupportedPaymentTypesFiatWithHttpInfoAsync(string authorization, string fiat, string country, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SupportedPaymentTypesCurrencyResponse>> OnRamperGetSupportedPaymentTypesFiatWithHttpInfoAsync(string authorization, string fiat, string country, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -559,12 +522,14 @@ namespace Org.OpenAPITools.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class OnramperApi : IOnramperApi
+    public partial class OnramperApi : IDisposable, IOnramperApi
     {
         private Org.OpenAPITools.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="OnramperApi"/> class.
+        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
+        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
         /// <returns></returns>
         public OnramperApi() : this((string)null)
@@ -573,7 +538,11 @@ namespace Org.OpenAPITools.Api
 
         /// <summary>
         /// Initializes a new instance of the <see cref="OnramperApi"/> class.
+        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
+        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
+        /// <param name="basePath">The target service's base path in URL format.</param>
+        /// <exception cref="ArgumentException"></exception>
         /// <returns></returns>
         public OnramperApi(string basePath)
         {
@@ -581,16 +550,19 @@ namespace Org.OpenAPITools.Api
                 Org.OpenAPITools.Client.GlobalConfiguration.Instance,
                 new Org.OpenAPITools.Client.Configuration { BasePath = basePath }
             );
-            this.Client = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.ApiClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.Client =  this.ApiClient;
+            this.AsynchronousClient = this.ApiClient;
             this.ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OnramperApi"/> class
-        /// using Configuration object
+        /// Initializes a new instance of the <see cref="OnramperApi"/> class using Configuration object.
+        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
+        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
-        /// <param name="configuration">An instance of Configuration</param>
+        /// <param name="configuration">An instance of Configuration.</param>
+        /// <exception cref="ArgumentNullException"></exception>
         /// <returns></returns>
         public OnramperApi(Org.OpenAPITools.Client.Configuration configuration)
         {
@@ -600,8 +572,9 @@ namespace Org.OpenAPITools.Api
                 Org.OpenAPITools.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.ApiClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = this.ApiClient;
+            this.AsynchronousClient = this.ApiClient;
             ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -612,6 +585,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
+        /// <exception cref="ArgumentNullException"></exception>
         public OnramperApi(Org.OpenAPITools.Client.ISynchronousClient client, Org.OpenAPITools.Client.IAsynchronousClient asyncClient, Org.OpenAPITools.Client.IReadableConfiguration configuration)
         {
             if (client == null) throw new ArgumentNullException("client");
@@ -623,6 +597,19 @@ namespace Org.OpenAPITools.Api
             this.Configuration = configuration;
             this.ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
         }
+
+        /// <summary>
+        /// Disposes resources if they were created by us
+        /// </summary>
+        public void Dispose()
+        {
+            this.ApiClient?.Dispose();
+        }
+
+        /// <summary>
+        /// Holds the ApiClient if created
+        /// </summary>
+        public Org.OpenAPITools.Client.ApiClient ApiClient { get; set; } = null;
 
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
@@ -672,9 +659,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="transactionInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Object</returns>
-        public Object OnRamperCheckout(string authorization, string accountName, TransactionInput transactionInput, int operationIndex = 0)
+        public Object OnRamperCheckout(string authorization, string accountName, TransactionInput transactionInput)
         {
             Org.OpenAPITools.Client.ApiResponse<Object> localVarResponse = OnRamperCheckoutWithHttpInfo(authorization, accountName, transactionInput);
             return localVarResponse.Data;
@@ -687,27 +673,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="transactionInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object</returns>
-        public Org.OpenAPITools.Client.ApiResponse<Object> OnRamperCheckoutWithHttpInfo(string authorization, string accountName, TransactionInput transactionInput, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<Object> OnRamperCheckoutWithHttpInfo(string authorization, string accountName, TransactionInput transactionInput)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling OnramperApi->OnRamperCheckout");
-            }
 
             // verify the required parameter 'accountName' is set
             if (accountName == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'accountName' when calling OnramperApi->OnRamperCheckout");
-            }
 
             // verify the required parameter 'transactionInput' is set
             if (transactionInput == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'transactionInput' when calling OnramperApi->OnRamperCheckout");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -721,23 +700,14 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("accountName", Org.OpenAPITools.Client.ClientUtils.ParameterToString(accountName)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = transactionInput;
-
-            localVarRequestOptions.Operation = "OnramperApi.OnRamperCheckout";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -752,13 +722,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/onramper/fund/${accountName}", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("OnRamperCheckout", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -771,12 +739,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="transactionInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> OnRamperCheckoutAsync(string authorization, string accountName, TransactionInput transactionInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> OnRamperCheckoutAsync(string authorization, string accountName, TransactionInput transactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<Object> localVarResponse = await OnRamperCheckoutWithHttpInfoAsync(authorization, accountName, transactionInput, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = OnRamperCheckoutWithHttpInfoAsync(authorization, accountName, transactionInput, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<Object> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<Object> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -787,28 +759,21 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="transactionInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<Object>> OnRamperCheckoutWithHttpInfoAsync(string authorization, string accountName, TransactionInput transactionInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<Object>> OnRamperCheckoutWithHttpInfoAsync(string authorization, string accountName, TransactionInput transactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling OnramperApi->OnRamperCheckout");
-            }
 
             // verify the required parameter 'accountName' is set
             if (accountName == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'accountName' when calling OnramperApi->OnRamperCheckout");
-            }
 
             // verify the required parameter 'transactionInput' is set
             if (transactionInput == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'transactionInput' when calling OnramperApi->OnRamperCheckout");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -822,24 +787,16 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("accountName", Org.OpenAPITools.Client.ClientUtils.ParameterToString(accountName)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = transactionInput;
-
-            localVarRequestOptions.Operation = "OnramperApi.OnRamperCheckout";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -853,15 +810,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/onramper/fund/${accountName}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.PostAsync<Object>("/onramper/fund/${accountName}", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("OnRamperCheckout", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -879,9 +840,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="uuid"> (optional, default to &quot;&quot;)</param>
         /// <param name="clientName"> (optional, default to &quot;&quot;)</param>
         /// <param name="country"> (optional, default to &quot;&quot;)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;Quote&gt;</returns>
-        public List<Quote> OnRamperGetQuotesBuy(string authorization, string fiat, string crypto, double amount, string? paymentMethod = default(string?), string? uuid = default(string?), string? clientName = default(string?), string? country = default(string?), int operationIndex = 0)
+        public List<Quote> OnRamperGetQuotesBuy(string authorization, string fiat, string crypto, double amount, string paymentMethod = default(string), string uuid = default(string), string clientName = default(string), string country = default(string))
         {
             Org.OpenAPITools.Client.ApiResponse<List<Quote>> localVarResponse = OnRamperGetQuotesBuyWithHttpInfo(authorization, fiat, crypto, amount, paymentMethod, uuid, clientName, country);
             return localVarResponse.Data;
@@ -899,27 +859,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="uuid"> (optional, default to &quot;&quot;)</param>
         /// <param name="clientName"> (optional, default to &quot;&quot;)</param>
         /// <param name="country"> (optional, default to &quot;&quot;)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;Quote&gt;</returns>
-        public Org.OpenAPITools.Client.ApiResponse<List<Quote>> OnRamperGetQuotesBuyWithHttpInfo(string authorization, string fiat, string crypto, double amount, string? paymentMethod = default(string?), string? uuid = default(string?), string? clientName = default(string?), string? country = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<List<Quote>> OnRamperGetQuotesBuyWithHttpInfo(string authorization, string fiat, string crypto, double amount, string paymentMethod = default(string), string uuid = default(string), string clientName = default(string), string country = default(string))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling OnramperApi->OnRamperGetQuotesBuy");
-            }
 
             // verify the required parameter 'fiat' is set
             if (fiat == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'fiat' when calling OnramperApi->OnRamperGetQuotesBuy");
-            }
 
             // verify the required parameter 'crypto' is set
             if (crypto == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'crypto' when calling OnramperApi->OnRamperGetQuotesBuy");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -932,16 +885,10 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "fiat", fiat));
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "crypto", crypto));
@@ -964,9 +911,6 @@ namespace Org.OpenAPITools.Api
             }
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
 
-            localVarRequestOptions.Operation = "OnramperApi.OnRamperGetQuotesBuy";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
@@ -980,13 +924,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<List<Quote>>("/onramper/quotes/buy", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("OnRamperGetQuotesBuy", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1004,12 +946,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="uuid"> (optional, default to &quot;&quot;)</param>
         /// <param name="clientName"> (optional, default to &quot;&quot;)</param>
         /// <param name="country"> (optional, default to &quot;&quot;)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;Quote&gt;</returns>
-        public async System.Threading.Tasks.Task<List<Quote>> OnRamperGetQuotesBuyAsync(string authorization, string fiat, string crypto, double amount, string? paymentMethod = default(string?), string? uuid = default(string?), string? clientName = default(string?), string? country = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<Quote>> OnRamperGetQuotesBuyAsync(string authorization, string fiat, string crypto, double amount, string paymentMethod = default(string), string uuid = default(string), string clientName = default(string), string country = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<List<Quote>> localVarResponse = await OnRamperGetQuotesBuyWithHttpInfoAsync(authorization, fiat, crypto, amount, paymentMethod, uuid, clientName, country, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = OnRamperGetQuotesBuyWithHttpInfoAsync(authorization, fiat, crypto, amount, paymentMethod, uuid, clientName, country, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<List<Quote>> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<List<Quote>> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -1025,28 +971,21 @@ namespace Org.OpenAPITools.Api
         /// <param name="uuid"> (optional, default to &quot;&quot;)</param>
         /// <param name="clientName"> (optional, default to &quot;&quot;)</param>
         /// <param name="country"> (optional, default to &quot;&quot;)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;Quote&gt;)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<List<Quote>>> OnRamperGetQuotesBuyWithHttpInfoAsync(string authorization, string fiat, string crypto, double amount, string? paymentMethod = default(string?), string? uuid = default(string?), string? clientName = default(string?), string? country = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<List<Quote>>> OnRamperGetQuotesBuyWithHttpInfoAsync(string authorization, string fiat, string crypto, double amount, string paymentMethod = default(string), string uuid = default(string), string clientName = default(string), string country = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling OnramperApi->OnRamperGetQuotesBuy");
-            }
 
             // verify the required parameter 'fiat' is set
             if (fiat == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'fiat' when calling OnramperApi->OnRamperGetQuotesBuy");
-            }
 
             // verify the required parameter 'crypto' is set
             if (crypto == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'crypto' when calling OnramperApi->OnRamperGetQuotesBuy");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1059,17 +998,12 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "fiat", fiat));
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "crypto", crypto));
@@ -1092,9 +1026,6 @@ namespace Org.OpenAPITools.Api
             }
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
 
-            localVarRequestOptions.Operation = "OnramperApi.OnRamperGetQuotesBuy";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
@@ -1107,15 +1038,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<Quote>>("/onramper/quotes/buy", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.GetAsync<List<Quote>>("/onramper/quotes/buy", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("OnRamperGetQuotesBuy", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1133,9 +1068,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="uuid"> (optional, default to &quot;&quot;)</param>
         /// <param name="clientName"> (optional, default to &quot;&quot;)</param>
         /// <param name="country"> (optional, default to &quot;&quot;)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;SellQuote&gt;</returns>
-        public List<SellQuote> OnRamperGetQuotesSell(string authorization, string fiat, string crypto, double amount, string? paymentMethod = default(string?), string? uuid = default(string?), string? clientName = default(string?), string? country = default(string?), int operationIndex = 0)
+        public List<SellQuote> OnRamperGetQuotesSell(string authorization, string fiat, string crypto, double amount, string paymentMethod = default(string), string uuid = default(string), string clientName = default(string), string country = default(string))
         {
             Org.OpenAPITools.Client.ApiResponse<List<SellQuote>> localVarResponse = OnRamperGetQuotesSellWithHttpInfo(authorization, fiat, crypto, amount, paymentMethod, uuid, clientName, country);
             return localVarResponse.Data;
@@ -1153,27 +1087,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="uuid"> (optional, default to &quot;&quot;)</param>
         /// <param name="clientName"> (optional, default to &quot;&quot;)</param>
         /// <param name="country"> (optional, default to &quot;&quot;)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;SellQuote&gt;</returns>
-        public Org.OpenAPITools.Client.ApiResponse<List<SellQuote>> OnRamperGetQuotesSellWithHttpInfo(string authorization, string fiat, string crypto, double amount, string? paymentMethod = default(string?), string? uuid = default(string?), string? clientName = default(string?), string? country = default(string?), int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<List<SellQuote>> OnRamperGetQuotesSellWithHttpInfo(string authorization, string fiat, string crypto, double amount, string paymentMethod = default(string), string uuid = default(string), string clientName = default(string), string country = default(string))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling OnramperApi->OnRamperGetQuotesSell");
-            }
 
             // verify the required parameter 'fiat' is set
             if (fiat == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'fiat' when calling OnramperApi->OnRamperGetQuotesSell");
-            }
 
             // verify the required parameter 'crypto' is set
             if (crypto == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'crypto' when calling OnramperApi->OnRamperGetQuotesSell");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1186,16 +1113,10 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "fiat", fiat));
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "crypto", crypto));
@@ -1217,9 +1138,6 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "country", country));
             }
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "OnramperApi.OnRamperGetQuotesSell";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1234,13 +1152,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<List<SellQuote>>("/onramper/quotes/sell", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("OnRamperGetQuotesSell", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1258,12 +1174,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="uuid"> (optional, default to &quot;&quot;)</param>
         /// <param name="clientName"> (optional, default to &quot;&quot;)</param>
         /// <param name="country"> (optional, default to &quot;&quot;)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;SellQuote&gt;</returns>
-        public async System.Threading.Tasks.Task<List<SellQuote>> OnRamperGetQuotesSellAsync(string authorization, string fiat, string crypto, double amount, string? paymentMethod = default(string?), string? uuid = default(string?), string? clientName = default(string?), string? country = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<SellQuote>> OnRamperGetQuotesSellAsync(string authorization, string fiat, string crypto, double amount, string paymentMethod = default(string), string uuid = default(string), string clientName = default(string), string country = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<List<SellQuote>> localVarResponse = await OnRamperGetQuotesSellWithHttpInfoAsync(authorization, fiat, crypto, amount, paymentMethod, uuid, clientName, country, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = OnRamperGetQuotesSellWithHttpInfoAsync(authorization, fiat, crypto, amount, paymentMethod, uuid, clientName, country, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<List<SellQuote>> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<List<SellQuote>> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -1279,28 +1199,21 @@ namespace Org.OpenAPITools.Api
         /// <param name="uuid"> (optional, default to &quot;&quot;)</param>
         /// <param name="clientName"> (optional, default to &quot;&quot;)</param>
         /// <param name="country"> (optional, default to &quot;&quot;)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;SellQuote&gt;)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<List<SellQuote>>> OnRamperGetQuotesSellWithHttpInfoAsync(string authorization, string fiat, string crypto, double amount, string? paymentMethod = default(string?), string? uuid = default(string?), string? clientName = default(string?), string? country = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<List<SellQuote>>> OnRamperGetQuotesSellWithHttpInfoAsync(string authorization, string fiat, string crypto, double amount, string paymentMethod = default(string), string uuid = default(string), string clientName = default(string), string country = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling OnramperApi->OnRamperGetQuotesSell");
-            }
 
             // verify the required parameter 'fiat' is set
             if (fiat == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'fiat' when calling OnramperApi->OnRamperGetQuotesSell");
-            }
 
             // verify the required parameter 'crypto' is set
             if (crypto == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'crypto' when calling OnramperApi->OnRamperGetQuotesSell");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1313,17 +1226,12 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "fiat", fiat));
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "crypto", crypto));
@@ -1346,9 +1254,6 @@ namespace Org.OpenAPITools.Api
             }
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
 
-            localVarRequestOptions.Operation = "OnramperApi.OnRamperGetQuotesSell";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
@@ -1361,15 +1266,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<SellQuote>>("/onramper/quotes/sell", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.GetAsync<List<SellQuote>>("/onramper/quotes/sell", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("OnRamperGetQuotesSell", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1382,9 +1291,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="source"></param>
         /// <param name="country"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SupportedAssetResponse</returns>
-        public SupportedAssetResponse OnRamperGetSupportedAssets(string authorization, string source, string country, int operationIndex = 0)
+        public SupportedAssetResponse OnRamperGetSupportedAssets(string authorization, string source, string country)
         {
             Org.OpenAPITools.Client.ApiResponse<SupportedAssetResponse> localVarResponse = OnRamperGetSupportedAssetsWithHttpInfo(authorization, source, country);
             return localVarResponse.Data;
@@ -1397,27 +1305,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="source"></param>
         /// <param name="country"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SupportedAssetResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<SupportedAssetResponse> OnRamperGetSupportedAssetsWithHttpInfo(string authorization, string source, string country, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<SupportedAssetResponse> OnRamperGetSupportedAssetsWithHttpInfo(string authorization, string source, string country)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling OnramperApi->OnRamperGetSupportedAssets");
-            }
 
             // verify the required parameter 'source' is set
             if (source == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'source' when calling OnramperApi->OnRamperGetSupportedAssets");
-            }
 
             // verify the required parameter 'country' is set
             if (country == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'country' when calling OnramperApi->OnRamperGetSupportedAssets");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1430,23 +1331,14 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "source", source));
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "country", country));
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "OnramperApi.OnRamperGetSupportedAssets";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1461,13 +1353,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<SupportedAssetResponse>("/onramper/assets", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("OnRamperGetSupportedAssets", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1480,12 +1370,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="source"></param>
         /// <param name="country"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SupportedAssetResponse</returns>
-        public async System.Threading.Tasks.Task<SupportedAssetResponse> OnRamperGetSupportedAssetsAsync(string authorization, string source, string country, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SupportedAssetResponse> OnRamperGetSupportedAssetsAsync(string authorization, string source, string country, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<SupportedAssetResponse> localVarResponse = await OnRamperGetSupportedAssetsWithHttpInfoAsync(authorization, source, country, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = OnRamperGetSupportedAssetsWithHttpInfoAsync(authorization, source, country, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<SupportedAssetResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<SupportedAssetResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -1496,28 +1390,21 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="source"></param>
         /// <param name="country"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SupportedAssetResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<SupportedAssetResponse>> OnRamperGetSupportedAssetsWithHttpInfoAsync(string authorization, string source, string country, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<SupportedAssetResponse>> OnRamperGetSupportedAssetsWithHttpInfoAsync(string authorization, string source, string country, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling OnramperApi->OnRamperGetSupportedAssets");
-            }
 
             // verify the required parameter 'source' is set
             if (source == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'source' when calling OnramperApi->OnRamperGetSupportedAssets");
-            }
 
             // verify the required parameter 'country' is set
             if (country == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'country' when calling OnramperApi->OnRamperGetSupportedAssets");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1530,24 +1417,16 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "source", source));
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "country", country));
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "OnramperApi.OnRamperGetSupportedAssets";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1561,15 +1440,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<SupportedAssetResponse>("/onramper/assets", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.GetAsync<SupportedAssetResponse>("/onramper/assets", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("OnRamperGetSupportedAssets", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1581,9 +1464,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="type"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SupportedCurrenciesResponse</returns>
-        public SupportedCurrenciesResponse OnRamperGetSupportedCurrencies(string authorization, string type, int operationIndex = 0)
+        public SupportedCurrenciesResponse OnRamperGetSupportedCurrencies(string authorization, string type)
         {
             Org.OpenAPITools.Client.ApiResponse<SupportedCurrenciesResponse> localVarResponse = OnRamperGetSupportedCurrenciesWithHttpInfo(authorization, type);
             return localVarResponse.Data;
@@ -1595,21 +1477,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="type"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SupportedCurrenciesResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<SupportedCurrenciesResponse> OnRamperGetSupportedCurrenciesWithHttpInfo(string authorization, string type, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<SupportedCurrenciesResponse> OnRamperGetSupportedCurrenciesWithHttpInfo(string authorization, string type)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling OnramperApi->OnRamperGetSupportedCurrencies");
-            }
 
             // verify the required parameter 'type' is set
             if (type == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'type' when calling OnramperApi->OnRamperGetSupportedCurrencies");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1622,22 +1499,13 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "type", type));
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "OnramperApi.OnRamperGetSupportedCurrencies";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1652,13 +1520,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<SupportedCurrenciesResponse>("/onramper/currencies", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("OnRamperGetSupportedCurrencies", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1670,12 +1536,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="type"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SupportedCurrenciesResponse</returns>
-        public async System.Threading.Tasks.Task<SupportedCurrenciesResponse> OnRamperGetSupportedCurrenciesAsync(string authorization, string type, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SupportedCurrenciesResponse> OnRamperGetSupportedCurrenciesAsync(string authorization, string type, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<SupportedCurrenciesResponse> localVarResponse = await OnRamperGetSupportedCurrenciesWithHttpInfoAsync(authorization, type, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = OnRamperGetSupportedCurrenciesWithHttpInfoAsync(authorization, type, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<SupportedCurrenciesResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<SupportedCurrenciesResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -1685,22 +1555,17 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="type"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SupportedCurrenciesResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<SupportedCurrenciesResponse>> OnRamperGetSupportedCurrenciesWithHttpInfoAsync(string authorization, string type, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<SupportedCurrenciesResponse>> OnRamperGetSupportedCurrenciesWithHttpInfoAsync(string authorization, string type, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling OnramperApi->OnRamperGetSupportedCurrencies");
-            }
 
             // verify the required parameter 'type' is set
             if (type == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'type' when calling OnramperApi->OnRamperGetSupportedCurrencies");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1713,23 +1578,15 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "type", type));
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "OnramperApi.OnRamperGetSupportedCurrencies";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1743,15 +1600,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<SupportedCurrenciesResponse>("/onramper/currencies", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.GetAsync<SupportedCurrenciesResponse>("/onramper/currencies", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("OnRamperGetSupportedCurrencies", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1764,9 +1625,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="country"></param>
         /// <param name="type"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SupportedDefaultResponse</returns>
-        public SupportedDefaultResponse OnRamperGetSupportedDefaultsAll(string authorization, string country, string type, int operationIndex = 0)
+        public SupportedDefaultResponse OnRamperGetSupportedDefaultsAll(string authorization, string country, string type)
         {
             Org.OpenAPITools.Client.ApiResponse<SupportedDefaultResponse> localVarResponse = OnRamperGetSupportedDefaultsAllWithHttpInfo(authorization, country, type);
             return localVarResponse.Data;
@@ -1779,27 +1639,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="country"></param>
         /// <param name="type"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SupportedDefaultResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<SupportedDefaultResponse> OnRamperGetSupportedDefaultsAllWithHttpInfo(string authorization, string country, string type, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<SupportedDefaultResponse> OnRamperGetSupportedDefaultsAllWithHttpInfo(string authorization, string country, string type)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling OnramperApi->OnRamperGetSupportedDefaultsAll");
-            }
 
             // verify the required parameter 'country' is set
             if (country == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'country' when calling OnramperApi->OnRamperGetSupportedDefaultsAll");
-            }
 
             // verify the required parameter 'type' is set
             if (type == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'type' when calling OnramperApi->OnRamperGetSupportedDefaultsAll");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1812,23 +1665,14 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "country", country));
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "type", type));
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "OnramperApi.OnRamperGetSupportedDefaultsAll";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1843,13 +1687,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<SupportedDefaultResponse>("/onramper/defaults", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("OnRamperGetSupportedDefaultsAll", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1862,12 +1704,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="country"></param>
         /// <param name="type"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SupportedDefaultResponse</returns>
-        public async System.Threading.Tasks.Task<SupportedDefaultResponse> OnRamperGetSupportedDefaultsAllAsync(string authorization, string country, string type, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SupportedDefaultResponse> OnRamperGetSupportedDefaultsAllAsync(string authorization, string country, string type, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<SupportedDefaultResponse> localVarResponse = await OnRamperGetSupportedDefaultsAllWithHttpInfoAsync(authorization, country, type, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = OnRamperGetSupportedDefaultsAllWithHttpInfoAsync(authorization, country, type, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<SupportedDefaultResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<SupportedDefaultResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -1878,28 +1724,21 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="country"></param>
         /// <param name="type"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SupportedDefaultResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<SupportedDefaultResponse>> OnRamperGetSupportedDefaultsAllWithHttpInfoAsync(string authorization, string country, string type, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<SupportedDefaultResponse>> OnRamperGetSupportedDefaultsAllWithHttpInfoAsync(string authorization, string country, string type, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling OnramperApi->OnRamperGetSupportedDefaultsAll");
-            }
 
             // verify the required parameter 'country' is set
             if (country == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'country' when calling OnramperApi->OnRamperGetSupportedDefaultsAll");
-            }
 
             // verify the required parameter 'type' is set
             if (type == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'type' when calling OnramperApi->OnRamperGetSupportedDefaultsAll");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1912,24 +1751,16 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "country", country));
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "type", type));
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "OnramperApi.OnRamperGetSupportedDefaultsAll";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1943,15 +1774,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<SupportedDefaultResponse>("/onramper/defaults", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.GetAsync<SupportedDefaultResponse>("/onramper/defaults", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("OnRamperGetSupportedDefaultsAll", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1962,9 +1797,8 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetSupportedOnRampsResponse</returns>
-        public GetSupportedOnRampsResponse OnRamperGetSupportedOnRampsAll(string authorization, int operationIndex = 0)
+        public GetSupportedOnRampsResponse OnRamperGetSupportedOnRampsAll(string authorization)
         {
             Org.OpenAPITools.Client.ApiResponse<GetSupportedOnRampsResponse> localVarResponse = OnRamperGetSupportedOnRampsAllWithHttpInfo(authorization);
             return localVarResponse.Data;
@@ -1975,15 +1809,12 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetSupportedOnRampsResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<GetSupportedOnRampsResponse> OnRamperGetSupportedOnRampsAllWithHttpInfo(string authorization, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<GetSupportedOnRampsResponse> OnRamperGetSupportedOnRampsAllWithHttpInfo(string authorization)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling OnramperApi->OnRamperGetSupportedOnRampsAll");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1996,21 +1827,12 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "OnramperApi.OnRamperGetSupportedOnRampsAll";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -2025,13 +1847,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<GetSupportedOnRampsResponse>("/onramper/onramps", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("OnRamperGetSupportedOnRampsAll", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2042,12 +1862,16 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetSupportedOnRampsResponse</returns>
-        public async System.Threading.Tasks.Task<GetSupportedOnRampsResponse> OnRamperGetSupportedOnRampsAllAsync(string authorization, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetSupportedOnRampsResponse> OnRamperGetSupportedOnRampsAllAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<GetSupportedOnRampsResponse> localVarResponse = await OnRamperGetSupportedOnRampsAllWithHttpInfoAsync(authorization, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = OnRamperGetSupportedOnRampsAllWithHttpInfoAsync(authorization, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<GetSupportedOnRampsResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<GetSupportedOnRampsResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -2056,16 +1880,13 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetSupportedOnRampsResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<GetSupportedOnRampsResponse>> OnRamperGetSupportedOnRampsAllWithHttpInfoAsync(string authorization, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<GetSupportedOnRampsResponse>> OnRamperGetSupportedOnRampsAllWithHttpInfoAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling OnramperApi->OnRamperGetSupportedOnRampsAll");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -2078,22 +1899,14 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "OnramperApi.OnRamperGetSupportedOnRampsAll";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -2107,15 +1920,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<GetSupportedOnRampsResponse>("/onramper/onramps", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.GetAsync<GetSupportedOnRampsResponse>("/onramper/onramps", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("OnRamperGetSupportedOnRampsAll", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2129,9 +1946,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="fiat"></param>
         /// <param name="country"></param>
         /// <param name="type"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SupportedPaymentTypesCurrencyResponse</returns>
-        public SupportedPaymentTypesCurrencyResponse OnRamperGetSupportedPaymentTypes(string authorization, string fiat, string country, string type, int operationIndex = 0)
+        public SupportedPaymentTypesCurrencyResponse OnRamperGetSupportedPaymentTypes(string authorization, string fiat, string country, string type)
         {
             Org.OpenAPITools.Client.ApiResponse<SupportedPaymentTypesCurrencyResponse> localVarResponse = OnRamperGetSupportedPaymentTypesWithHttpInfo(authorization, fiat, country, type);
             return localVarResponse.Data;
@@ -2145,33 +1961,24 @@ namespace Org.OpenAPITools.Api
         /// <param name="fiat"></param>
         /// <param name="country"></param>
         /// <param name="type"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SupportedPaymentTypesCurrencyResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<SupportedPaymentTypesCurrencyResponse> OnRamperGetSupportedPaymentTypesWithHttpInfo(string authorization, string fiat, string country, string type, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<SupportedPaymentTypesCurrencyResponse> OnRamperGetSupportedPaymentTypesWithHttpInfo(string authorization, string fiat, string country, string type)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling OnramperApi->OnRamperGetSupportedPaymentTypes");
-            }
 
             // verify the required parameter 'fiat' is set
             if (fiat == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'fiat' when calling OnramperApi->OnRamperGetSupportedPaymentTypes");
-            }
 
             // verify the required parameter 'country' is set
             if (country == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'country' when calling OnramperApi->OnRamperGetSupportedPaymentTypes");
-            }
 
             // verify the required parameter 'type' is set
             if (type == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'type' when calling OnramperApi->OnRamperGetSupportedPaymentTypes");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -2184,24 +1991,15 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "fiat", fiat));
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "country", country));
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "type", type));
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "OnramperApi.OnRamperGetSupportedPaymentTypes";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -2216,13 +2014,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<SupportedPaymentTypesCurrencyResponse>("/onramper/payment-types", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("OnRamperGetSupportedPaymentTypes", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2236,12 +2032,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="fiat"></param>
         /// <param name="country"></param>
         /// <param name="type"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SupportedPaymentTypesCurrencyResponse</returns>
-        public async System.Threading.Tasks.Task<SupportedPaymentTypesCurrencyResponse> OnRamperGetSupportedPaymentTypesAsync(string authorization, string fiat, string country, string type, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SupportedPaymentTypesCurrencyResponse> OnRamperGetSupportedPaymentTypesAsync(string authorization, string fiat, string country, string type, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<SupportedPaymentTypesCurrencyResponse> localVarResponse = await OnRamperGetSupportedPaymentTypesWithHttpInfoAsync(authorization, fiat, country, type, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = OnRamperGetSupportedPaymentTypesWithHttpInfoAsync(authorization, fiat, country, type, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<SupportedPaymentTypesCurrencyResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<SupportedPaymentTypesCurrencyResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -2253,34 +2053,25 @@ namespace Org.OpenAPITools.Api
         /// <param name="fiat"></param>
         /// <param name="country"></param>
         /// <param name="type"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SupportedPaymentTypesCurrencyResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<SupportedPaymentTypesCurrencyResponse>> OnRamperGetSupportedPaymentTypesWithHttpInfoAsync(string authorization, string fiat, string country, string type, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<SupportedPaymentTypesCurrencyResponse>> OnRamperGetSupportedPaymentTypesWithHttpInfoAsync(string authorization, string fiat, string country, string type, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling OnramperApi->OnRamperGetSupportedPaymentTypes");
-            }
 
             // verify the required parameter 'fiat' is set
             if (fiat == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'fiat' when calling OnramperApi->OnRamperGetSupportedPaymentTypes");
-            }
 
             // verify the required parameter 'country' is set
             if (country == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'country' when calling OnramperApi->OnRamperGetSupportedPaymentTypes");
-            }
 
             // verify the required parameter 'type' is set
             if (type == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'type' when calling OnramperApi->OnRamperGetSupportedPaymentTypes");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -2293,25 +2084,17 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "fiat", fiat));
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "country", country));
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "type", type));
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "OnramperApi.OnRamperGetSupportedPaymentTypes";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -2325,15 +2108,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<SupportedPaymentTypesCurrencyResponse>("/onramper/payment-types", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.GetAsync<SupportedPaymentTypesCurrencyResponse>("/onramper/payment-types", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("OnRamperGetSupportedPaymentTypes", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2346,9 +2133,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="fiat"></param>
         /// <param name="country"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SupportedPaymentTypesCurrencyResponse</returns>
-        public SupportedPaymentTypesCurrencyResponse OnRamperGetSupportedPaymentTypesFiat(string authorization, string fiat, string country, int operationIndex = 0)
+        public SupportedPaymentTypesCurrencyResponse OnRamperGetSupportedPaymentTypesFiat(string authorization, string fiat, string country)
         {
             Org.OpenAPITools.Client.ApiResponse<SupportedPaymentTypesCurrencyResponse> localVarResponse = OnRamperGetSupportedPaymentTypesFiatWithHttpInfo(authorization, fiat, country);
             return localVarResponse.Data;
@@ -2361,27 +2147,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="fiat"></param>
         /// <param name="country"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SupportedPaymentTypesCurrencyResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<SupportedPaymentTypesCurrencyResponse> OnRamperGetSupportedPaymentTypesFiatWithHttpInfo(string authorization, string fiat, string country, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<SupportedPaymentTypesCurrencyResponse> OnRamperGetSupportedPaymentTypesFiatWithHttpInfo(string authorization, string fiat, string country)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling OnramperApi->OnRamperGetSupportedPaymentTypesFiat");
-            }
 
             // verify the required parameter 'fiat' is set
             if (fiat == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'fiat' when calling OnramperApi->OnRamperGetSupportedPaymentTypesFiat");
-            }
 
             // verify the required parameter 'country' is set
             if (country == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'country' when calling OnramperApi->OnRamperGetSupportedPaymentTypesFiat");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -2394,23 +2173,14 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "fiat", fiat));
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "country", country));
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "OnramperApi.OnRamperGetSupportedPaymentTypesFiat";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -2425,13 +2195,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<SupportedPaymentTypesCurrencyResponse>("/onramper/payment-types/fiat", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("OnRamperGetSupportedPaymentTypesFiat", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2444,12 +2212,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="fiat"></param>
         /// <param name="country"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SupportedPaymentTypesCurrencyResponse</returns>
-        public async System.Threading.Tasks.Task<SupportedPaymentTypesCurrencyResponse> OnRamperGetSupportedPaymentTypesFiatAsync(string authorization, string fiat, string country, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SupportedPaymentTypesCurrencyResponse> OnRamperGetSupportedPaymentTypesFiatAsync(string authorization, string fiat, string country, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<SupportedPaymentTypesCurrencyResponse> localVarResponse = await OnRamperGetSupportedPaymentTypesFiatWithHttpInfoAsync(authorization, fiat, country, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = OnRamperGetSupportedPaymentTypesFiatWithHttpInfoAsync(authorization, fiat, country, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<SupportedPaymentTypesCurrencyResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<SupportedPaymentTypesCurrencyResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -2460,28 +2232,21 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="fiat"></param>
         /// <param name="country"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SupportedPaymentTypesCurrencyResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<SupportedPaymentTypesCurrencyResponse>> OnRamperGetSupportedPaymentTypesFiatWithHttpInfoAsync(string authorization, string fiat, string country, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<SupportedPaymentTypesCurrencyResponse>> OnRamperGetSupportedPaymentTypesFiatWithHttpInfoAsync(string authorization, string fiat, string country, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling OnramperApi->OnRamperGetSupportedPaymentTypesFiat");
-            }
 
             // verify the required parameter 'fiat' is set
             if (fiat == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'fiat' when calling OnramperApi->OnRamperGetSupportedPaymentTypesFiat");
-            }
 
             // verify the required parameter 'country' is set
             if (country == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'country' when calling OnramperApi->OnRamperGetSupportedPaymentTypesFiat");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -2494,24 +2259,16 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "fiat", fiat));
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "country", country));
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "OnramperApi.OnRamperGetSupportedPaymentTypesFiat";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -2525,15 +2282,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<SupportedPaymentTypesCurrencyResponse>("/onramper/payment-types/fiat", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.GetAsync<SupportedPaymentTypesCurrencyResponse>("/onramper/payment-types/fiat", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("OnRamperGetSupportedPaymentTypesFiat", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;

@@ -20,7 +20,6 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Org.OpenAPITools.Client.OpenAPIDateConverter;
 
 namespace Org.OpenAPITools.Model
@@ -29,7 +28,7 @@ namespace Org.OpenAPITools.Model
     /// TransactionResponseInfo
     /// </summary>
     [DataContract(Name = "TransactionResponse_info")]
-    public partial class TransactionResponseInfo : IEquatable<TransactionResponseInfo>, IValidatableObject
+    public partial class TransactionResponseInfo : IEquatable<TransactionResponseInfo>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TransactionResponseInfo" /> class.
@@ -216,15 +215,6 @@ namespace Org.OpenAPITools.Model
             }
         }
 
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
 
 }

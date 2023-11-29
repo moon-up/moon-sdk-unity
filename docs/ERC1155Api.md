@@ -11,7 +11,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 | [**SafeTransferFrom**](ERC1155Api.md#safetransferfrom) | **POST** /erc1155/{name}/safe-transfer-from |  |
 | [**SetApprovalForAll**](ERC1155Api.md#setapprovalforall) | **POST** /erc1155/{name}/set-approval-for-all |  |
 
-<a id="balanceof"></a>
+<a name="balanceof"></a>
 # **BalanceOf**
 > AccountControllerResponse BalanceOf (string name, string authorization, Erc1155Request erc1155Request)
 
@@ -111,7 +111,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="balanceofbatch"></a>
+<a name="balanceofbatch"></a>
 # **BalanceOfBatch**
 > AccountControllerResponse BalanceOfBatch (string name, string authorization, Erc1155Request erc1155Request)
 
@@ -211,7 +211,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="isapprovedforall"></a>
+<a name="isapprovedforall"></a>
 # **IsApprovedForAll**
 > AccountControllerResponse IsApprovedForAll (string name, string authorization, Erc1155Request erc1155Request)
 
@@ -311,7 +311,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="safebatchtransferfrom"></a>
+<a name="safebatchtransferfrom"></a>
 # **SafeBatchTransferFrom**
 > AccountControllerResponse SafeBatchTransferFrom (string name, string authorization, Erc1155Request erc1155Request)
 
@@ -411,7 +411,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="safetransferfrom"></a>
+<a name="safetransferfrom"></a>
 # **SafeTransferFrom**
 > AccountControllerResponse SafeTransferFrom (string name, string authorization, Erc1155Request erc1155Request)
 
@@ -511,7 +511,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="setapprovalforall"></a>
+<a name="setapprovalforall"></a>
 # **SetApprovalForAll**
 > AccountControllerResponse SetApprovalForAll (string name, string authorization, Erc1155Request erc1155Request)
 

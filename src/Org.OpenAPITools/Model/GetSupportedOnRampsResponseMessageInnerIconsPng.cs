@@ -20,7 +20,6 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Org.OpenAPITools.Client.OpenAPIDateConverter;
 
 namespace Org.OpenAPITools.Model
@@ -29,7 +28,7 @@ namespace Org.OpenAPITools.Model
     /// GetSupportedOnRampsResponseMessageInnerIconsPng
     /// </summary>
     [DataContract(Name = "GetSupportedOnRampsResponse_message_inner_icons_png")]
-    public partial class GetSupportedOnRampsResponseMessageInnerIconsPng : IEquatable<GetSupportedOnRampsResponseMessageInnerIconsPng>, IValidatableObject
+    public partial class GetSupportedOnRampsResponseMessageInnerIconsPng : IEquatable<GetSupportedOnRampsResponseMessageInnerIconsPng>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="GetSupportedOnRampsResponseMessageInnerIconsPng" /> class.
@@ -39,35 +38,35 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetSupportedOnRampsResponseMessageInnerIconsPng" /> class.
         /// </summary>
-        /// <param name="var160x160">var160x160 (required).</param>
-        /// <param name="var32x32">var32x32 (required).</param>
-        public GetSupportedOnRampsResponseMessageInnerIconsPng(string var160x160 = default(string), string var32x32 = default(string))
+        /// <param name="_160x160">_160x160 (required).</param>
+        /// <param name="_32x32">_32x32 (required).</param>
+        public GetSupportedOnRampsResponseMessageInnerIconsPng(string _160x160 = default(string), string _32x32 = default(string))
         {
-            // to ensure "var160x160" is required (not null)
-            if (var160x160 == null)
+            // to ensure "_160x160" is required (not null)
+            if (_160x160 == null)
             {
-                throw new ArgumentNullException("var160x160 is a required property for GetSupportedOnRampsResponseMessageInnerIconsPng and cannot be null");
+                throw new ArgumentNullException("_160x160 is a required property for GetSupportedOnRampsResponseMessageInnerIconsPng and cannot be null");
             }
-            this.Var160x160 = var160x160;
-            // to ensure "var32x32" is required (not null)
-            if (var32x32 == null)
+            this._160x160 = _160x160;
+            // to ensure "_32x32" is required (not null)
+            if (_32x32 == null)
             {
-                throw new ArgumentNullException("var32x32 is a required property for GetSupportedOnRampsResponseMessageInnerIconsPng and cannot be null");
+                throw new ArgumentNullException("_32x32 is a required property for GetSupportedOnRampsResponseMessageInnerIconsPng and cannot be null");
             }
-            this.Var32x32 = var32x32;
+            this._32x32 = _32x32;
         }
 
         /// <summary>
-        /// Gets or Sets Var160x160
+        /// Gets or Sets _160x160
         /// </summary>
         [DataMember(Name = "160x160", IsRequired = true, EmitDefaultValue = true)]
-        public string Var160x160 { get; set; }
+        public string _160x160 { get; set; }
 
         /// <summary>
-        /// Gets or Sets Var32x32
+        /// Gets or Sets _32x32
         /// </summary>
         [DataMember(Name = "32x32", IsRequired = true, EmitDefaultValue = true)]
-        public string Var32x32 { get; set; }
+        public string _32x32 { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -77,8 +76,8 @@ namespace Org.OpenAPITools.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class GetSupportedOnRampsResponseMessageInnerIconsPng {\n");
-            sb.Append("  Var160x160: ").Append(Var160x160).Append("\n");
-            sb.Append("  Var32x32: ").Append(Var32x32).Append("\n");
+            sb.Append("  _160x160: ").Append(_160x160).Append("\n");
+            sb.Append("  _32x32: ").Append(_32x32).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -115,14 +114,14 @@ namespace Org.OpenAPITools.Model
             }
             return 
                 (
-                    this.Var160x160 == input.Var160x160 ||
-                    (this.Var160x160 != null &&
-                    this.Var160x160.Equals(input.Var160x160))
+                    this._160x160 == input._160x160 ||
+                    (this._160x160 != null &&
+                    this._160x160.Equals(input._160x160))
                 ) && 
                 (
-                    this.Var32x32 == input.Var32x32 ||
-                    (this.Var32x32 != null &&
-                    this.Var32x32.Equals(input.Var32x32))
+                    this._32x32 == input._32x32 ||
+                    (this._32x32 != null &&
+                    this._32x32.Equals(input._32x32))
                 );
         }
 
@@ -135,27 +134,18 @@ namespace Org.OpenAPITools.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Var160x160 != null)
+                if (this._160x160 != null)
                 {
-                    hashCode = (hashCode * 59) + this.Var160x160.GetHashCode();
+                    hashCode = (hashCode * 59) + this._160x160.GetHashCode();
                 }
-                if (this.Var32x32 != null)
+                if (this._32x32 != null)
                 {
-                    hashCode = (hashCode * 59) + this.Var32x32.GetHashCode();
+                    hashCode = (hashCode * 59) + this._32x32.GetHashCode();
                 }
                 return hashCode;
             }
         }
 
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
 
 }

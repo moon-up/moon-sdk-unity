@@ -9,7 +9,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 | [**ListLitecoinAccounts**](LitecoinApi.md#listlitecoinaccounts) | **GET** /litecoin |  |
 | [**SignLitecoinTransaction**](LitecoinApi.md#signlitecointransaction) | **POST** /litecoin/{accountName}/sign-tx |  |
 
-<a id="createlitecoinaccount"></a>
+<a name="createlitecoinaccount"></a>
 # **CreateLitecoinAccount**
 > AccountControllerResponse CreateLitecoinAccount (string authorization, LitecoinInput litecoinInput)
 
@@ -107,7 +107,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="getlitecoinaccount"></a>
+<a name="getlitecoinaccount"></a>
 # **GetLitecoinAccount**
 > AccountControllerResponse GetLitecoinAccount (string authorization, string accountName)
 
@@ -205,7 +205,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="listlitecoinaccounts"></a>
+<a name="listlitecoinaccounts"></a>
 # **ListLitecoinAccounts**
 > AccountControllerResponse ListLitecoinAccounts (string authorization)
 
@@ -301,7 +301,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="signlitecointransaction"></a>
+<a name="signlitecointransaction"></a>
 # **SignLitecoinTransaction**
 > AccountControllerResponse SignLitecoinTransaction (string authorization, string accountName, LitecoinTransactionInput litecoinTransactionInput)
 

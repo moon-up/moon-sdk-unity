@@ -6,16 +6,16 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Nonce** | **double** |  | 
 **Balance** | **string** |  | 
-**UseropTransaction** | **string** |  | [optional] 
-**UserOps** | [**List&lt;TransactionRequest&gt;**](TransactionRequest.md) |  | [optional] 
-**Transaction** | [**Tx**](Tx.md) |  | [optional] 
-**Signature** | **string** |  | [optional] 
-**MoonScanUrl** | **string** |  | [optional] 
-**Transactions** | [**List&lt;TransactionData&gt;**](TransactionData.md) |  | [optional] 
-**Data** | **string** |  | 
-**RawTransaction** | **string** |  | [optional] 
-**SignedTransaction** | **string** |  | [optional] 
 **TransactionHash** | **string** |  | [optional] 
+**SignedTransaction** | **string** |  | [optional] 
+**RawTransaction** | **string** |  | [optional] 
+**Data** | **string** |  | 
+**Transactions** | [**List&lt;TransactionData&gt;**](TransactionData.md) |  | [optional] 
+**MoonScanUrl** | **string** |  | [optional] 
+**Signature** | **string** |  | [optional] 
+**Transaction** | [**Tx**](Tx.md) |  | [optional] 
+**UserOps** | [**List&lt;TransactionRequest&gt;**](TransactionRequest.md) |  | [optional] 
+**UseropTransaction** | **string** |  | [optional] 
 **Keys** | **List&lt;string&gt;** |  | [optional] 
 **Address** | **string** |  | 
 **Name** | **string** |  | [optional] 

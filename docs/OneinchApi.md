@@ -11,7 +11,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 | [**Swap**](OneinchApi.md#swap) | **POST** /oneinch/{accountName}/swap |  |
 | [**Tokens**](OneinchApi.md#tokens) | **POST** /oneinch/tokens |  |
 
-<a id="approvecalldata"></a>
+<a name="approvecalldata"></a>
 # **ApproveCallData**
 > Object ApproveCallData (Object body)
 
@@ -107,7 +107,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="approvespender"></a>
+<a name="approvespender"></a>
 # **ApproveSpender**
 > Object ApproveSpender (Object body)
 
@@ -203,7 +203,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="protocols"></a>
+<a name="protocols"></a>
 # **Protocols**
 > Object Protocols (Object body)
 
@@ -299,7 +299,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="quote"></a>
+<a name="quote"></a>
 # **Quote**
 > Object Quote (Object body)
 
@@ -395,7 +395,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="swap"></a>
+<a name="swap"></a>
 # **Swap**
 > Object Swap (string accountName, string authorization, GetSwapDto getSwapDto)
 
@@ -495,7 +495,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="tokens"></a>
+<a name="tokens"></a>
 # **Tokens**
 > Object Tokens (Object body)
 

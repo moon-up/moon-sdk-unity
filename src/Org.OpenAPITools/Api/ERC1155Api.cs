@@ -15,7 +15,6 @@ using System.Linq;
 using System.Net;
 using System.Net.Mime;
 using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Client.Auth;
 using Org.OpenAPITools.Model;
 
 namespace Org.OpenAPITools.Api
@@ -34,9 +33,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse BalanceOf(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0);
+        AccountControllerResponse BalanceOf(string name, string authorization, Erc1155Request erc1155Request);
 
         /// <summary>
         /// 
@@ -48,9 +46,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> BalanceOfWithHttpInfo(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0);
+        ApiResponse<AccountControllerResponse> BalanceOfWithHttpInfo(string name, string authorization, Erc1155Request erc1155Request);
         /// <summary>
         /// 
         /// </summary>
@@ -58,9 +55,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse BalanceOfBatch(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0);
+        AccountControllerResponse BalanceOfBatch(string name, string authorization, Erc1155Request erc1155Request);
 
         /// <summary>
         /// 
@@ -72,9 +68,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> BalanceOfBatchWithHttpInfo(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0);
+        ApiResponse<AccountControllerResponse> BalanceOfBatchWithHttpInfo(string name, string authorization, Erc1155Request erc1155Request);
         /// <summary>
         /// 
         /// </summary>
@@ -82,9 +77,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse IsApprovedForAll(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0);
+        AccountControllerResponse IsApprovedForAll(string name, string authorization, Erc1155Request erc1155Request);
 
         /// <summary>
         /// 
@@ -96,9 +90,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> IsApprovedForAllWithHttpInfo(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0);
+        ApiResponse<AccountControllerResponse> IsApprovedForAllWithHttpInfo(string name, string authorization, Erc1155Request erc1155Request);
         /// <summary>
         /// 
         /// </summary>
@@ -106,9 +99,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse SafeBatchTransferFrom(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0);
+        AccountControllerResponse SafeBatchTransferFrom(string name, string authorization, Erc1155Request erc1155Request);
 
         /// <summary>
         /// 
@@ -120,9 +112,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> SafeBatchTransferFromWithHttpInfo(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0);
+        ApiResponse<AccountControllerResponse> SafeBatchTransferFromWithHttpInfo(string name, string authorization, Erc1155Request erc1155Request);
         /// <summary>
         /// 
         /// </summary>
@@ -130,9 +121,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse SafeTransferFrom(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0);
+        AccountControllerResponse SafeTransferFrom(string name, string authorization, Erc1155Request erc1155Request);
 
         /// <summary>
         /// 
@@ -144,9 +134,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> SafeTransferFromWithHttpInfo(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0);
+        ApiResponse<AccountControllerResponse> SafeTransferFromWithHttpInfo(string name, string authorization, Erc1155Request erc1155Request);
         /// <summary>
         /// 
         /// </summary>
@@ -154,9 +143,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse SetApprovalForAll(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0);
+        AccountControllerResponse SetApprovalForAll(string name, string authorization, Erc1155Request erc1155Request);
 
         /// <summary>
         /// 
@@ -168,9 +156,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> SetApprovalForAllWithHttpInfo(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0);
+        ApiResponse<AccountControllerResponse> SetApprovalForAllWithHttpInfo(string name, string authorization, Erc1155Request erc1155Request);
         #endregion Synchronous Operations
     }
 
@@ -190,10 +177,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> BalanceOfAsync(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountControllerResponse> BalanceOfAsync(string name, string authorization, Erc1155Request erc1155Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -205,10 +191,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> BalanceOfWithHttpInfoAsync(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> BalanceOfWithHttpInfoAsync(string name, string authorization, Erc1155Request erc1155Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -219,10 +204,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> BalanceOfBatchAsync(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountControllerResponse> BalanceOfBatchAsync(string name, string authorization, Erc1155Request erc1155Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -234,10 +218,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> BalanceOfBatchWithHttpInfoAsync(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> BalanceOfBatchWithHttpInfoAsync(string name, string authorization, Erc1155Request erc1155Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -248,10 +231,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> IsApprovedForAllAsync(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountControllerResponse> IsApprovedForAllAsync(string name, string authorization, Erc1155Request erc1155Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -263,10 +245,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> IsApprovedForAllWithHttpInfoAsync(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> IsApprovedForAllWithHttpInfoAsync(string name, string authorization, Erc1155Request erc1155Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -277,10 +258,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> SafeBatchTransferFromAsync(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountControllerResponse> SafeBatchTransferFromAsync(string name, string authorization, Erc1155Request erc1155Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -292,10 +272,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> SafeBatchTransferFromWithHttpInfoAsync(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> SafeBatchTransferFromWithHttpInfoAsync(string name, string authorization, Erc1155Request erc1155Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -306,10 +285,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> SafeTransferFromAsync(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountControllerResponse> SafeTransferFromAsync(string name, string authorization, Erc1155Request erc1155Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -321,10 +299,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> SafeTransferFromWithHttpInfoAsync(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> SafeTransferFromWithHttpInfoAsync(string name, string authorization, Erc1155Request erc1155Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -335,10 +312,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> SetApprovalForAllAsync(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountControllerResponse> SetApprovalForAllAsync(string name, string authorization, Erc1155Request erc1155Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -350,10 +326,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> SetApprovalForAllWithHttpInfoAsync(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> SetApprovalForAllWithHttpInfoAsync(string name, string authorization, Erc1155Request erc1155Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -368,12 +343,14 @@ namespace Org.OpenAPITools.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class ERC1155Api : IERC1155Api
+    public partial class ERC1155Api : IDisposable, IERC1155Api
     {
         private Org.OpenAPITools.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ERC1155Api"/> class.
+        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
+        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
         /// <returns></returns>
         public ERC1155Api() : this((string)null)
@@ -382,7 +359,11 @@ namespace Org.OpenAPITools.Api
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ERC1155Api"/> class.
+        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
+        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
+        /// <param name="basePath">The target service's base path in URL format.</param>
+        /// <exception cref="ArgumentException"></exception>
         /// <returns></returns>
         public ERC1155Api(string basePath)
         {
@@ -390,16 +371,19 @@ namespace Org.OpenAPITools.Api
                 Org.OpenAPITools.Client.GlobalConfiguration.Instance,
                 new Org.OpenAPITools.Client.Configuration { BasePath = basePath }
             );
-            this.Client = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.ApiClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.Client =  this.ApiClient;
+            this.AsynchronousClient = this.ApiClient;
             this.ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ERC1155Api"/> class
-        /// using Configuration object
+        /// Initializes a new instance of the <see cref="ERC1155Api"/> class using Configuration object.
+        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
+        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
-        /// <param name="configuration">An instance of Configuration</param>
+        /// <param name="configuration">An instance of Configuration.</param>
+        /// <exception cref="ArgumentNullException"></exception>
         /// <returns></returns>
         public ERC1155Api(Org.OpenAPITools.Client.Configuration configuration)
         {
@@ -409,8 +393,9 @@ namespace Org.OpenAPITools.Api
                 Org.OpenAPITools.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.ApiClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = this.ApiClient;
+            this.AsynchronousClient = this.ApiClient;
             ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -421,6 +406,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
+        /// <exception cref="ArgumentNullException"></exception>
         public ERC1155Api(Org.OpenAPITools.Client.ISynchronousClient client, Org.OpenAPITools.Client.IAsynchronousClient asyncClient, Org.OpenAPITools.Client.IReadableConfiguration configuration)
         {
             if (client == null) throw new ArgumentNullException("client");
@@ -432,6 +418,19 @@ namespace Org.OpenAPITools.Api
             this.Configuration = configuration;
             this.ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
         }
+
+        /// <summary>
+        /// Disposes resources if they were created by us
+        /// </summary>
+        public void Dispose()
+        {
+            this.ApiClient?.Dispose();
+        }
+
+        /// <summary>
+        /// Holds the ApiClient if created
+        /// </summary>
+        public Org.OpenAPITools.Client.ApiClient ApiClient { get; set; } = null;
 
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
@@ -481,9 +480,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse BalanceOf(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0)
+        public AccountControllerResponse BalanceOf(string name, string authorization, Erc1155Request erc1155Request)
         {
             Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = BalanceOfWithHttpInfo(name, authorization, erc1155Request);
             return localVarResponse.Data;
@@ -496,27 +494,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> BalanceOfWithHttpInfo(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> BalanceOfWithHttpInfo(string name, string authorization, Erc1155Request erc1155Request)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling ERC1155Api->BalanceOf");
-            }
 
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling ERC1155Api->BalanceOf");
-            }
 
             // verify the required parameter 'erc1155Request' is set
             if (erc1155Request == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'erc1155Request' when calling ERC1155Api->BalanceOf");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -530,23 +521,14 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("name", Org.OpenAPITools.Client.ClientUtils.ParameterToString(name)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = erc1155Request;
-
-            localVarRequestOptions.Operation = "ERC1155Api.BalanceOf";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -561,13 +543,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<AccountControllerResponse>("/erc1155/{name}/balance-of", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("BalanceOf", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -580,12 +560,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> BalanceOfAsync(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountControllerResponse> BalanceOfAsync(string name, string authorization, Erc1155Request erc1155Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await BalanceOfWithHttpInfoAsync(name, authorization, erc1155Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = BalanceOfWithHttpInfoAsync(name, authorization, erc1155Request, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -596,28 +580,21 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> BalanceOfWithHttpInfoAsync(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> BalanceOfWithHttpInfoAsync(string name, string authorization, Erc1155Request erc1155Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling ERC1155Api->BalanceOf");
-            }
 
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling ERC1155Api->BalanceOf");
-            }
 
             // verify the required parameter 'erc1155Request' is set
             if (erc1155Request == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'erc1155Request' when calling ERC1155Api->BalanceOf");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -631,24 +608,16 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("name", Org.OpenAPITools.Client.ClientUtils.ParameterToString(name)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = erc1155Request;
-
-            localVarRequestOptions.Operation = "ERC1155Api.BalanceOf";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -662,15 +631,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<AccountControllerResponse>("/erc1155/{name}/balance-of", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/erc1155/{name}/balance-of", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("BalanceOf", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -683,9 +656,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse BalanceOfBatch(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0)
+        public AccountControllerResponse BalanceOfBatch(string name, string authorization, Erc1155Request erc1155Request)
         {
             Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = BalanceOfBatchWithHttpInfo(name, authorization, erc1155Request);
             return localVarResponse.Data;
@@ -698,27 +670,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> BalanceOfBatchWithHttpInfo(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> BalanceOfBatchWithHttpInfo(string name, string authorization, Erc1155Request erc1155Request)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling ERC1155Api->BalanceOfBatch");
-            }
 
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling ERC1155Api->BalanceOfBatch");
-            }
 
             // verify the required parameter 'erc1155Request' is set
             if (erc1155Request == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'erc1155Request' when calling ERC1155Api->BalanceOfBatch");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -732,23 +697,14 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("name", Org.OpenAPITools.Client.ClientUtils.ParameterToString(name)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = erc1155Request;
-
-            localVarRequestOptions.Operation = "ERC1155Api.BalanceOfBatch";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -763,13 +719,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<AccountControllerResponse>("/erc1155/{name}/balance-of-batch", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("BalanceOfBatch", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -782,12 +736,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> BalanceOfBatchAsync(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountControllerResponse> BalanceOfBatchAsync(string name, string authorization, Erc1155Request erc1155Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await BalanceOfBatchWithHttpInfoAsync(name, authorization, erc1155Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = BalanceOfBatchWithHttpInfoAsync(name, authorization, erc1155Request, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -798,28 +756,21 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> BalanceOfBatchWithHttpInfoAsync(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> BalanceOfBatchWithHttpInfoAsync(string name, string authorization, Erc1155Request erc1155Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling ERC1155Api->BalanceOfBatch");
-            }
 
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling ERC1155Api->BalanceOfBatch");
-            }
 
             // verify the required parameter 'erc1155Request' is set
             if (erc1155Request == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'erc1155Request' when calling ERC1155Api->BalanceOfBatch");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -833,24 +784,16 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("name", Org.OpenAPITools.Client.ClientUtils.ParameterToString(name)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = erc1155Request;
-
-            localVarRequestOptions.Operation = "ERC1155Api.BalanceOfBatch";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -864,15 +807,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<AccountControllerResponse>("/erc1155/{name}/balance-of-batch", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/erc1155/{name}/balance-of-batch", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("BalanceOfBatch", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -885,9 +832,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse IsApprovedForAll(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0)
+        public AccountControllerResponse IsApprovedForAll(string name, string authorization, Erc1155Request erc1155Request)
         {
             Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = IsApprovedForAllWithHttpInfo(name, authorization, erc1155Request);
             return localVarResponse.Data;
@@ -900,27 +846,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> IsApprovedForAllWithHttpInfo(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> IsApprovedForAllWithHttpInfo(string name, string authorization, Erc1155Request erc1155Request)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling ERC1155Api->IsApprovedForAll");
-            }
 
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling ERC1155Api->IsApprovedForAll");
-            }
 
             // verify the required parameter 'erc1155Request' is set
             if (erc1155Request == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'erc1155Request' when calling ERC1155Api->IsApprovedForAll");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -934,23 +873,14 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("name", Org.OpenAPITools.Client.ClientUtils.ParameterToString(name)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = erc1155Request;
-
-            localVarRequestOptions.Operation = "ERC1155Api.IsApprovedForAll";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -965,13 +895,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<AccountControllerResponse>("/erc1155/{name}/is-approved-for-all", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("IsApprovedForAll", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -984,12 +912,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> IsApprovedForAllAsync(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountControllerResponse> IsApprovedForAllAsync(string name, string authorization, Erc1155Request erc1155Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await IsApprovedForAllWithHttpInfoAsync(name, authorization, erc1155Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = IsApprovedForAllWithHttpInfoAsync(name, authorization, erc1155Request, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -1000,28 +932,21 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> IsApprovedForAllWithHttpInfoAsync(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> IsApprovedForAllWithHttpInfoAsync(string name, string authorization, Erc1155Request erc1155Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling ERC1155Api->IsApprovedForAll");
-            }
 
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling ERC1155Api->IsApprovedForAll");
-            }
 
             // verify the required parameter 'erc1155Request' is set
             if (erc1155Request == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'erc1155Request' when calling ERC1155Api->IsApprovedForAll");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1035,24 +960,16 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("name", Org.OpenAPITools.Client.ClientUtils.ParameterToString(name)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = erc1155Request;
-
-            localVarRequestOptions.Operation = "ERC1155Api.IsApprovedForAll";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1066,15 +983,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<AccountControllerResponse>("/erc1155/{name}/is-approved-for-all", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/erc1155/{name}/is-approved-for-all", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("IsApprovedForAll", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1087,9 +1008,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse SafeBatchTransferFrom(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0)
+        public AccountControllerResponse SafeBatchTransferFrom(string name, string authorization, Erc1155Request erc1155Request)
         {
             Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = SafeBatchTransferFromWithHttpInfo(name, authorization, erc1155Request);
             return localVarResponse.Data;
@@ -1102,27 +1022,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> SafeBatchTransferFromWithHttpInfo(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> SafeBatchTransferFromWithHttpInfo(string name, string authorization, Erc1155Request erc1155Request)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling ERC1155Api->SafeBatchTransferFrom");
-            }
 
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling ERC1155Api->SafeBatchTransferFrom");
-            }
 
             // verify the required parameter 'erc1155Request' is set
             if (erc1155Request == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'erc1155Request' when calling ERC1155Api->SafeBatchTransferFrom");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1136,23 +1049,14 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("name", Org.OpenAPITools.Client.ClientUtils.ParameterToString(name)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = erc1155Request;
-
-            localVarRequestOptions.Operation = "ERC1155Api.SafeBatchTransferFrom";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1167,13 +1071,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<AccountControllerResponse>("/erc1155/{name}/safe-batch-transfer-from", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SafeBatchTransferFrom", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1186,12 +1088,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> SafeBatchTransferFromAsync(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountControllerResponse> SafeBatchTransferFromAsync(string name, string authorization, Erc1155Request erc1155Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await SafeBatchTransferFromWithHttpInfoAsync(name, authorization, erc1155Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = SafeBatchTransferFromWithHttpInfoAsync(name, authorization, erc1155Request, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -1202,28 +1108,21 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> SafeBatchTransferFromWithHttpInfoAsync(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> SafeBatchTransferFromWithHttpInfoAsync(string name, string authorization, Erc1155Request erc1155Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling ERC1155Api->SafeBatchTransferFrom");
-            }
 
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling ERC1155Api->SafeBatchTransferFrom");
-            }
 
             // verify the required parameter 'erc1155Request' is set
             if (erc1155Request == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'erc1155Request' when calling ERC1155Api->SafeBatchTransferFrom");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1237,24 +1136,16 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("name", Org.OpenAPITools.Client.ClientUtils.ParameterToString(name)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = erc1155Request;
-
-            localVarRequestOptions.Operation = "ERC1155Api.SafeBatchTransferFrom";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1268,15 +1159,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<AccountControllerResponse>("/erc1155/{name}/safe-batch-transfer-from", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/erc1155/{name}/safe-batch-transfer-from", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SafeBatchTransferFrom", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1289,9 +1184,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse SafeTransferFrom(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0)
+        public AccountControllerResponse SafeTransferFrom(string name, string authorization, Erc1155Request erc1155Request)
         {
             Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = SafeTransferFromWithHttpInfo(name, authorization, erc1155Request);
             return localVarResponse.Data;
@@ -1304,27 +1198,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> SafeTransferFromWithHttpInfo(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> SafeTransferFromWithHttpInfo(string name, string authorization, Erc1155Request erc1155Request)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling ERC1155Api->SafeTransferFrom");
-            }
 
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling ERC1155Api->SafeTransferFrom");
-            }
 
             // verify the required parameter 'erc1155Request' is set
             if (erc1155Request == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'erc1155Request' when calling ERC1155Api->SafeTransferFrom");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1338,23 +1225,14 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("name", Org.OpenAPITools.Client.ClientUtils.ParameterToString(name)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = erc1155Request;
-
-            localVarRequestOptions.Operation = "ERC1155Api.SafeTransferFrom";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1369,13 +1247,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<AccountControllerResponse>("/erc1155/{name}/safe-transfer-from", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SafeTransferFrom", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1388,12 +1264,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> SafeTransferFromAsync(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountControllerResponse> SafeTransferFromAsync(string name, string authorization, Erc1155Request erc1155Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await SafeTransferFromWithHttpInfoAsync(name, authorization, erc1155Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = SafeTransferFromWithHttpInfoAsync(name, authorization, erc1155Request, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -1404,28 +1284,21 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> SafeTransferFromWithHttpInfoAsync(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> SafeTransferFromWithHttpInfoAsync(string name, string authorization, Erc1155Request erc1155Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling ERC1155Api->SafeTransferFrom");
-            }
 
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling ERC1155Api->SafeTransferFrom");
-            }
 
             // verify the required parameter 'erc1155Request' is set
             if (erc1155Request == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'erc1155Request' when calling ERC1155Api->SafeTransferFrom");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1439,24 +1312,16 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("name", Org.OpenAPITools.Client.ClientUtils.ParameterToString(name)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = erc1155Request;
-
-            localVarRequestOptions.Operation = "ERC1155Api.SafeTransferFrom";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1470,15 +1335,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<AccountControllerResponse>("/erc1155/{name}/safe-transfer-from", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/erc1155/{name}/safe-transfer-from", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SafeTransferFrom", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1491,9 +1360,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse SetApprovalForAll(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0)
+        public AccountControllerResponse SetApprovalForAll(string name, string authorization, Erc1155Request erc1155Request)
         {
             Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = SetApprovalForAllWithHttpInfo(name, authorization, erc1155Request);
             return localVarResponse.Data;
@@ -1506,27 +1374,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> SetApprovalForAllWithHttpInfo(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> SetApprovalForAllWithHttpInfo(string name, string authorization, Erc1155Request erc1155Request)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling ERC1155Api->SetApprovalForAll");
-            }
 
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling ERC1155Api->SetApprovalForAll");
-            }
 
             // verify the required parameter 'erc1155Request' is set
             if (erc1155Request == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'erc1155Request' when calling ERC1155Api->SetApprovalForAll");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1540,23 +1401,14 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("name", Org.OpenAPITools.Client.ClientUtils.ParameterToString(name)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = erc1155Request;
-
-            localVarRequestOptions.Operation = "ERC1155Api.SetApprovalForAll";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1571,13 +1423,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<AccountControllerResponse>("/erc1155/{name}/set-approval-for-all", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SetApprovalForAll", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1590,12 +1440,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> SetApprovalForAllAsync(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountControllerResponse> SetApprovalForAllAsync(string name, string authorization, Erc1155Request erc1155Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await SetApprovalForAllWithHttpInfoAsync(name, authorization, erc1155Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = SetApprovalForAllWithHttpInfoAsync(name, authorization, erc1155Request, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -1606,28 +1460,21 @@ namespace Org.OpenAPITools.Api
         /// <param name="name"></param>
         /// <param name="authorization"></param>
         /// <param name="erc1155Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> SetApprovalForAllWithHttpInfoAsync(string name, string authorization, Erc1155Request erc1155Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> SetApprovalForAllWithHttpInfoAsync(string name, string authorization, Erc1155Request erc1155Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling ERC1155Api->SetApprovalForAll");
-            }
 
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling ERC1155Api->SetApprovalForAll");
-            }
 
             // verify the required parameter 'erc1155Request' is set
             if (erc1155Request == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'erc1155Request' when calling ERC1155Api->SetApprovalForAll");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1641,24 +1488,16 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("name", Org.OpenAPITools.Client.ClientUtils.ParameterToString(name)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = erc1155Request;
-
-            localVarRequestOptions.Operation = "ERC1155Api.SetApprovalForAll";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1672,15 +1511,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<AccountControllerResponse>("/erc1155/{name}/set-approval-for-all", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/erc1155/{name}/set-approval-for-all", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SetApprovalForAll", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;

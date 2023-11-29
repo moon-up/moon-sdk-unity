@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **Contract** | **string** |  | 
 **LogIndex** | **string** |  | 
 **Account** | **string** |  | 
-**VarOperator** | **string** |  | 
+**Operator** | **string** |  | 
 **Approved** | **bool** |  | 
 **TokenContractType** | **string** |  | 
 **TokenName** | **string** |  | 

@@ -9,7 +9,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 | [**ListEosAccounts**](EosApi.md#listeosaccounts) | **GET** /eos |  |
 | [**SignEosTransaction**](EosApi.md#signeostransaction) | **POST** /eos/{accountName}/sign-tx |  |
 
-<a id="createeosaccount"></a>
+<a name="createeosaccount"></a>
 # **CreateEosAccount**
 > AccountControllerResponse CreateEosAccount (string authorization, EosInput eosInput)
 
@@ -107,7 +107,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="geteosaccount"></a>
+<a name="geteosaccount"></a>
 # **GetEosAccount**
 > AccountControllerResponse GetEosAccount (string authorization, string accountName)
 
@@ -205,7 +205,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="listeosaccounts"></a>
+<a name="listeosaccounts"></a>
 # **ListEosAccounts**
 > AccountControllerResponse ListEosAccounts (string authorization)
 
@@ -301,7 +301,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="signeostransaction"></a>
+<a name="signeostransaction"></a>
 # **SignEosTransaction**
 > AccountControllerResponse SignEosTransaction (string authorization, string accountName, EosTransactionInput eosTransactionInput)
 

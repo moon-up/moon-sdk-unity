@@ -14,7 +14,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 | [**TransferErc20**](Erc20Api.md#transfererc20) | **POST** /erc20/{name}/transfer |  |
 | [**TransferFromErc20**](Erc20Api.md#transferfromerc20) | **POST** /erc20/{name}/transfer-from |  |
 
-<a id="allowanceerc20"></a>
+<a name="allowanceerc20"></a>
 # **AllowanceErc20**
 > AccountControllerResponse AllowanceErc20 (string authorization, string name, InputBody inputBody)
 
@@ -114,7 +114,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="approveerc20"></a>
+<a name="approveerc20"></a>
 # **ApproveErc20**
 > AccountControllerResponse ApproveErc20 (string authorization, string name, InputBody inputBody)
 
@@ -214,7 +214,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="balanceoferc20"></a>
+<a name="balanceoferc20"></a>
 # **BalanceOfErc20**
 > AccountControllerResponse BalanceOfErc20 (string authorization, string name, InputBody inputBody)
 
@@ -314,7 +314,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="decimalserc20"></a>
+<a name="decimalserc20"></a>
 # **DecimalsErc20**
 > AccountControllerResponse DecimalsErc20 (string authorization, string name, InputBody inputBody)
 
@@ -414,7 +414,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="nameerc20"></a>
+<a name="nameerc20"></a>
 # **NameErc20**
 > AccountControllerResponse NameErc20 (string authorization, string name, InputBody inputBody)
 
@@ -514,7 +514,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="symbolerc20"></a>
+<a name="symbolerc20"></a>
 # **SymbolErc20**
 > AccountControllerResponse SymbolErc20 (string authorization, string name, InputBody inputBody)
 
@@ -614,7 +614,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="totalsupplyerc20"></a>
+<a name="totalsupplyerc20"></a>
 # **TotalSupplyErc20**
 > AccountControllerResponse TotalSupplyErc20 (string authorization, string name, InputBody inputBody)
 
@@ -714,7 +714,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="transfererc20"></a>
+<a name="transfererc20"></a>
 # **TransferErc20**
 > AccountControllerResponse TransferErc20 (string authorization, string name, InputBody inputBody)
 
@@ -814,7 +814,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="transferfromerc20"></a>
+<a name="transferfromerc20"></a>
 # **TransferFromErc20**
 > AccountControllerResponse TransferFromErc20 (string authorization, string name, InputBody inputBody)
 

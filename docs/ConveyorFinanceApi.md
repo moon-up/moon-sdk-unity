@@ -6,7 +6,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 |--------|--------------|-------------|
 | [**Swap**](ConveyorFinanceApi.md#swap) | **POST** /conveyorfinance/{name}/swap |  |
 
-<a id="swap"></a>
+<a name="swap"></a>
 # **Swap**
 > ConveyorFinanceControllerResponse Swap (string authorization, string name, TokenSwapParams tokenSwapParams)
 

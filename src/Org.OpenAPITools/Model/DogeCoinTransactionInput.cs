@@ -20,7 +20,6 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Org.OpenAPITools.Client.OpenAPIDateConverter;
 
 namespace Org.OpenAPITools.Model
@@ -29,7 +28,7 @@ namespace Org.OpenAPITools.Model
     /// DogeCoinTransactionInput
     /// </summary>
     [DataContract(Name = "DogeCoinTransactionInput")]
-    public partial class DogeCoinTransactionInput : IEquatable<DogeCoinTransactionInput>, IValidatableObject
+    public partial class DogeCoinTransactionInput : IEquatable<DogeCoinTransactionInput>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DogeCoinTransactionInput" /> class.
@@ -160,15 +159,6 @@ namespace Org.OpenAPITools.Model
             }
         }
 
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
 
 }

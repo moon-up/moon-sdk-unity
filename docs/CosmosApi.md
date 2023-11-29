@@ -9,7 +9,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 | [**ListCosmosAccounts**](CosmosApi.md#listcosmosaccounts) | **GET** /cosmos |  |
 | [**SignCosmosTransaction**](CosmosApi.md#signcosmostransaction) | **POST** /cosmos/{accountName}/sign-tx |  |
 
-<a id="createcosmosaccount"></a>
+<a name="createcosmosaccount"></a>
 # **CreateCosmosAccount**
 > AccountControllerResponse CreateCosmosAccount (string authorization, CosmosInput cosmosInput)
 
@@ -107,7 +107,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="getcosmosaccount"></a>
+<a name="getcosmosaccount"></a>
 # **GetCosmosAccount**
 > AccountControllerResponse GetCosmosAccount (string authorization, string accountName)
 
@@ -205,7 +205,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="listcosmosaccounts"></a>
+<a name="listcosmosaccounts"></a>
 # **ListCosmosAccounts**
 > AccountControllerResponse ListCosmosAccounts (string authorization)
 
@@ -301,7 +301,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="signcosmostransaction"></a>
+<a name="signcosmostransaction"></a>
 # **SignCosmosTransaction**
 > AccountControllerResponse SignCosmosTransaction (string authorization, string accountName, CosmosTransactionInput cosmosTransactionInput)
 

@@ -15,7 +15,6 @@ using System.Linq;
 using System.Net;
 using System.Net.Mime;
 using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Client.Auth;
 using Org.OpenAPITools.Model;
 
 namespace Org.OpenAPITools.Api
@@ -34,9 +33,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse AddLiquidity(string authorization, string name, InputBody inputBody, int operationIndex = 0);
+        AccountControllerResponse AddLiquidity(string authorization, string name, InputBody inputBody);
 
         /// <summary>
         /// 
@@ -48,9 +46,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> AddLiquidityWithHttpInfo(string authorization, string name, InputBody inputBody, int operationIndex = 0);
+        ApiResponse<AccountControllerResponse> AddLiquidityWithHttpInfo(string authorization, string name, InputBody inputBody);
         /// <summary>
         /// 
         /// </summary>
@@ -58,9 +55,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse AddLiquidityWeth(string authorization, string name, InputBody inputBody, int operationIndex = 0);
+        AccountControllerResponse AddLiquidityWeth(string authorization, string name, InputBody inputBody);
 
         /// <summary>
         /// 
@@ -72,9 +68,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> AddLiquidityWethWithHttpInfo(string authorization, string name, InputBody inputBody, int operationIndex = 0);
+        ApiResponse<AccountControllerResponse> AddLiquidityWethWithHttpInfo(string authorization, string name, InputBody inputBody);
         /// <summary>
         /// 
         /// </summary>
@@ -82,9 +77,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse RemoveLiquidity(string authorization, string name, InputBody inputBody, int operationIndex = 0);
+        AccountControllerResponse RemoveLiquidity(string authorization, string name, InputBody inputBody);
 
         /// <summary>
         /// 
@@ -96,9 +90,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> RemoveLiquidityWithHttpInfo(string authorization, string name, InputBody inputBody, int operationIndex = 0);
+        ApiResponse<AccountControllerResponse> RemoveLiquidityWithHttpInfo(string authorization, string name, InputBody inputBody);
         /// <summary>
         /// 
         /// </summary>
@@ -106,9 +99,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse RemoveLiquidityWeth(string authorization, string name, InputBody inputBody, int operationIndex = 0);
+        AccountControllerResponse RemoveLiquidityWeth(string authorization, string name, InputBody inputBody);
 
         /// <summary>
         /// 
@@ -120,9 +112,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> RemoveLiquidityWethWithHttpInfo(string authorization, string name, InputBody inputBody, int operationIndex = 0);
+        ApiResponse<AccountControllerResponse> RemoveLiquidityWethWithHttpInfo(string authorization, string name, InputBody inputBody);
         #endregion Synchronous Operations
     }
 
@@ -142,10 +133,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> AddLiquidityAsync(string authorization, string name, InputBody inputBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountControllerResponse> AddLiquidityAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -157,10 +147,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> AddLiquidityWithHttpInfoAsync(string authorization, string name, InputBody inputBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> AddLiquidityWithHttpInfoAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -171,10 +160,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> AddLiquidityWethAsync(string authorization, string name, InputBody inputBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountControllerResponse> AddLiquidityWethAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -186,10 +174,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> AddLiquidityWethWithHttpInfoAsync(string authorization, string name, InputBody inputBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> AddLiquidityWethWithHttpInfoAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -200,10 +187,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> RemoveLiquidityAsync(string authorization, string name, InputBody inputBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountControllerResponse> RemoveLiquidityAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -215,10 +201,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> RemoveLiquidityWithHttpInfoAsync(string authorization, string name, InputBody inputBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> RemoveLiquidityWithHttpInfoAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -229,10 +214,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> RemoveLiquidityWethAsync(string authorization, string name, InputBody inputBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountControllerResponse> RemoveLiquidityWethAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -244,10 +228,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> RemoveLiquidityWethWithHttpInfoAsync(string authorization, string name, InputBody inputBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> RemoveLiquidityWethWithHttpInfoAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -262,12 +245,14 @@ namespace Org.OpenAPITools.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class YearnApi : IYearnApi
+    public partial class YearnApi : IDisposable, IYearnApi
     {
         private Org.OpenAPITools.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="YearnApi"/> class.
+        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
+        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
         /// <returns></returns>
         public YearnApi() : this((string)null)
@@ -276,7 +261,11 @@ namespace Org.OpenAPITools.Api
 
         /// <summary>
         /// Initializes a new instance of the <see cref="YearnApi"/> class.
+        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
+        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
+        /// <param name="basePath">The target service's base path in URL format.</param>
+        /// <exception cref="ArgumentException"></exception>
         /// <returns></returns>
         public YearnApi(string basePath)
         {
@@ -284,16 +273,19 @@ namespace Org.OpenAPITools.Api
                 Org.OpenAPITools.Client.GlobalConfiguration.Instance,
                 new Org.OpenAPITools.Client.Configuration { BasePath = basePath }
             );
-            this.Client = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.ApiClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.Client =  this.ApiClient;
+            this.AsynchronousClient = this.ApiClient;
             this.ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="YearnApi"/> class
-        /// using Configuration object
+        /// Initializes a new instance of the <see cref="YearnApi"/> class using Configuration object.
+        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
+        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
-        /// <param name="configuration">An instance of Configuration</param>
+        /// <param name="configuration">An instance of Configuration.</param>
+        /// <exception cref="ArgumentNullException"></exception>
         /// <returns></returns>
         public YearnApi(Org.OpenAPITools.Client.Configuration configuration)
         {
@@ -303,8 +295,9 @@ namespace Org.OpenAPITools.Api
                 Org.OpenAPITools.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.ApiClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = this.ApiClient;
+            this.AsynchronousClient = this.ApiClient;
             ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -315,6 +308,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
+        /// <exception cref="ArgumentNullException"></exception>
         public YearnApi(Org.OpenAPITools.Client.ISynchronousClient client, Org.OpenAPITools.Client.IAsynchronousClient asyncClient, Org.OpenAPITools.Client.IReadableConfiguration configuration)
         {
             if (client == null) throw new ArgumentNullException("client");
@@ -326,6 +320,19 @@ namespace Org.OpenAPITools.Api
             this.Configuration = configuration;
             this.ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
         }
+
+        /// <summary>
+        /// Disposes resources if they were created by us
+        /// </summary>
+        public void Dispose()
+        {
+            this.ApiClient?.Dispose();
+        }
+
+        /// <summary>
+        /// Holds the ApiClient if created
+        /// </summary>
+        public Org.OpenAPITools.Client.ApiClient ApiClient { get; set; } = null;
 
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
@@ -375,9 +382,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse AddLiquidity(string authorization, string name, InputBody inputBody, int operationIndex = 0)
+        public AccountControllerResponse AddLiquidity(string authorization, string name, InputBody inputBody)
         {
             Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = AddLiquidityWithHttpInfo(authorization, name, inputBody);
             return localVarResponse.Data;
@@ -390,27 +396,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> AddLiquidityWithHttpInfo(string authorization, string name, InputBody inputBody, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> AddLiquidityWithHttpInfo(string authorization, string name, InputBody inputBody)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling YearnApi->AddLiquidity");
-            }
 
             // verify the required parameter 'name' is set
             if (name == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling YearnApi->AddLiquidity");
-            }
 
             // verify the required parameter 'inputBody' is set
             if (inputBody == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'inputBody' when calling YearnApi->AddLiquidity");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -424,23 +423,14 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("name", Org.OpenAPITools.Client.ClientUtils.ParameterToString(name)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = inputBody;
-
-            localVarRequestOptions.Operation = "YearnApi.AddLiquidity";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -455,13 +445,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<AccountControllerResponse>("/yearn/{name}/add-liquidity", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("AddLiquidity", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -474,12 +462,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> AddLiquidityAsync(string authorization, string name, InputBody inputBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountControllerResponse> AddLiquidityAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await AddLiquidityWithHttpInfoAsync(authorization, name, inputBody, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = AddLiquidityWithHttpInfoAsync(authorization, name, inputBody, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -490,28 +482,21 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> AddLiquidityWithHttpInfoAsync(string authorization, string name, InputBody inputBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> AddLiquidityWithHttpInfoAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling YearnApi->AddLiquidity");
-            }
 
             // verify the required parameter 'name' is set
             if (name == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling YearnApi->AddLiquidity");
-            }
 
             // verify the required parameter 'inputBody' is set
             if (inputBody == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'inputBody' when calling YearnApi->AddLiquidity");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -525,24 +510,16 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("name", Org.OpenAPITools.Client.ClientUtils.ParameterToString(name)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = inputBody;
-
-            localVarRequestOptions.Operation = "YearnApi.AddLiquidity";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -556,15 +533,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<AccountControllerResponse>("/yearn/{name}/add-liquidity", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/yearn/{name}/add-liquidity", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("AddLiquidity", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -577,9 +558,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse AddLiquidityWeth(string authorization, string name, InputBody inputBody, int operationIndex = 0)
+        public AccountControllerResponse AddLiquidityWeth(string authorization, string name, InputBody inputBody)
         {
             Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = AddLiquidityWethWithHttpInfo(authorization, name, inputBody);
             return localVarResponse.Data;
@@ -592,27 +572,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> AddLiquidityWethWithHttpInfo(string authorization, string name, InputBody inputBody, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> AddLiquidityWethWithHttpInfo(string authorization, string name, InputBody inputBody)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling YearnApi->AddLiquidityWeth");
-            }
 
             // verify the required parameter 'name' is set
             if (name == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling YearnApi->AddLiquidityWeth");
-            }
 
             // verify the required parameter 'inputBody' is set
             if (inputBody == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'inputBody' when calling YearnApi->AddLiquidityWeth");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -626,23 +599,14 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("name", Org.OpenAPITools.Client.ClientUtils.ParameterToString(name)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = inputBody;
-
-            localVarRequestOptions.Operation = "YearnApi.AddLiquidityWeth";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -657,13 +621,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<AccountControllerResponse>("/yearn/{name}/add-liquidity-weth", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("AddLiquidityWeth", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -676,12 +638,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> AddLiquidityWethAsync(string authorization, string name, InputBody inputBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountControllerResponse> AddLiquidityWethAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await AddLiquidityWethWithHttpInfoAsync(authorization, name, inputBody, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = AddLiquidityWethWithHttpInfoAsync(authorization, name, inputBody, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -692,28 +658,21 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> AddLiquidityWethWithHttpInfoAsync(string authorization, string name, InputBody inputBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> AddLiquidityWethWithHttpInfoAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling YearnApi->AddLiquidityWeth");
-            }
 
             // verify the required parameter 'name' is set
             if (name == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling YearnApi->AddLiquidityWeth");
-            }
 
             // verify the required parameter 'inputBody' is set
             if (inputBody == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'inputBody' when calling YearnApi->AddLiquidityWeth");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -727,24 +686,16 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("name", Org.OpenAPITools.Client.ClientUtils.ParameterToString(name)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = inputBody;
-
-            localVarRequestOptions.Operation = "YearnApi.AddLiquidityWeth";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -758,15 +709,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<AccountControllerResponse>("/yearn/{name}/add-liquidity-weth", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/yearn/{name}/add-liquidity-weth", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("AddLiquidityWeth", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -779,9 +734,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse RemoveLiquidity(string authorization, string name, InputBody inputBody, int operationIndex = 0)
+        public AccountControllerResponse RemoveLiquidity(string authorization, string name, InputBody inputBody)
         {
             Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = RemoveLiquidityWithHttpInfo(authorization, name, inputBody);
             return localVarResponse.Data;
@@ -794,27 +748,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> RemoveLiquidityWithHttpInfo(string authorization, string name, InputBody inputBody, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> RemoveLiquidityWithHttpInfo(string authorization, string name, InputBody inputBody)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling YearnApi->RemoveLiquidity");
-            }
 
             // verify the required parameter 'name' is set
             if (name == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling YearnApi->RemoveLiquidity");
-            }
 
             // verify the required parameter 'inputBody' is set
             if (inputBody == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'inputBody' when calling YearnApi->RemoveLiquidity");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -828,23 +775,14 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("name", Org.OpenAPITools.Client.ClientUtils.ParameterToString(name)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = inputBody;
-
-            localVarRequestOptions.Operation = "YearnApi.RemoveLiquidity";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -859,13 +797,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<AccountControllerResponse>("/yearn/{name}/remove-liquidity", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("RemoveLiquidity", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -878,12 +814,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> RemoveLiquidityAsync(string authorization, string name, InputBody inputBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountControllerResponse> RemoveLiquidityAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await RemoveLiquidityWithHttpInfoAsync(authorization, name, inputBody, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = RemoveLiquidityWithHttpInfoAsync(authorization, name, inputBody, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -894,28 +834,21 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> RemoveLiquidityWithHttpInfoAsync(string authorization, string name, InputBody inputBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> RemoveLiquidityWithHttpInfoAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling YearnApi->RemoveLiquidity");
-            }
 
             // verify the required parameter 'name' is set
             if (name == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling YearnApi->RemoveLiquidity");
-            }
 
             // verify the required parameter 'inputBody' is set
             if (inputBody == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'inputBody' when calling YearnApi->RemoveLiquidity");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -929,24 +862,16 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("name", Org.OpenAPITools.Client.ClientUtils.ParameterToString(name)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = inputBody;
-
-            localVarRequestOptions.Operation = "YearnApi.RemoveLiquidity";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -960,15 +885,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<AccountControllerResponse>("/yearn/{name}/remove-liquidity", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/yearn/{name}/remove-liquidity", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("RemoveLiquidity", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -981,9 +910,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse RemoveLiquidityWeth(string authorization, string name, InputBody inputBody, int operationIndex = 0)
+        public AccountControllerResponse RemoveLiquidityWeth(string authorization, string name, InputBody inputBody)
         {
             Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = RemoveLiquidityWethWithHttpInfo(authorization, name, inputBody);
             return localVarResponse.Data;
@@ -996,27 +924,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> RemoveLiquidityWethWithHttpInfo(string authorization, string name, InputBody inputBody, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> RemoveLiquidityWethWithHttpInfo(string authorization, string name, InputBody inputBody)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling YearnApi->RemoveLiquidityWeth");
-            }
 
             // verify the required parameter 'name' is set
             if (name == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling YearnApi->RemoveLiquidityWeth");
-            }
 
             // verify the required parameter 'inputBody' is set
             if (inputBody == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'inputBody' when calling YearnApi->RemoveLiquidityWeth");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1030,23 +951,14 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("name", Org.OpenAPITools.Client.ClientUtils.ParameterToString(name)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = inputBody;
-
-            localVarRequestOptions.Operation = "YearnApi.RemoveLiquidityWeth";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1061,13 +973,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<AccountControllerResponse>("/yearn/{name}/remove-liquidity-weth", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("RemoveLiquidityWeth", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1080,12 +990,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> RemoveLiquidityWethAsync(string authorization, string name, InputBody inputBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountControllerResponse> RemoveLiquidityWethAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await RemoveLiquidityWethWithHttpInfoAsync(authorization, name, inputBody, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = RemoveLiquidityWethWithHttpInfoAsync(authorization, name, inputBody, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -1096,28 +1010,21 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> RemoveLiquidityWethWithHttpInfoAsync(string authorization, string name, InputBody inputBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> RemoveLiquidityWethWithHttpInfoAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling YearnApi->RemoveLiquidityWeth");
-            }
 
             // verify the required parameter 'name' is set
             if (name == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling YearnApi->RemoveLiquidityWeth");
-            }
 
             // verify the required parameter 'inputBody' is set
             if (inputBody == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'inputBody' when calling YearnApi->RemoveLiquidityWeth");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1131,24 +1038,16 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("name", Org.OpenAPITools.Client.ClientUtils.ParameterToString(name)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = inputBody;
-
-            localVarRequestOptions.Operation = "YearnApi.RemoveLiquidityWeth";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1162,15 +1061,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<AccountControllerResponse>("/yearn/{name}/remove-liquidity-weth", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/yearn/{name}/remove-liquidity-weth", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("RemoveLiquidityWeth", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;

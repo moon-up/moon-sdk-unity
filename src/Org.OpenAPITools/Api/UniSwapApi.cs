@@ -15,7 +15,6 @@ using System.Linq;
 using System.Net;
 using System.Net.Mime;
 using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Client.Auth;
 using Org.OpenAPITools.Model;
 
 namespace Org.OpenAPITools.Api
@@ -34,9 +33,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse AddLiquidity(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0);
+        AccountControllerResponse AddLiquidity(string authorization, string name, UniswapInput uniswapInput);
 
         /// <summary>
         /// 
@@ -48,9 +46,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> AddLiquidityWithHttpInfo(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0);
+        ApiResponse<AccountControllerResponse> AddLiquidityWithHttpInfo(string authorization, string name, UniswapInput uniswapInput);
         /// <summary>
         /// 
         /// </summary>
@@ -58,9 +55,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse RemoveLiquidity(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0);
+        AccountControllerResponse RemoveLiquidity(string authorization, string name, UniswapInput uniswapInput);
 
         /// <summary>
         /// 
@@ -72,9 +68,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> RemoveLiquidityWithHttpInfo(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0);
+        ApiResponse<AccountControllerResponse> RemoveLiquidityWithHttpInfo(string authorization, string name, UniswapInput uniswapInput);
         /// <summary>
         /// 
         /// </summary>
@@ -82,9 +77,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse SwapExactETHForTokens(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0);
+        AccountControllerResponse SwapExactETHForTokens(string authorization, string name, UniswapInput uniswapInput);
 
         /// <summary>
         /// 
@@ -96,9 +90,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> SwapExactETHForTokensWithHttpInfo(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0);
+        ApiResponse<AccountControllerResponse> SwapExactETHForTokensWithHttpInfo(string authorization, string name, UniswapInput uniswapInput);
         /// <summary>
         /// 
         /// </summary>
@@ -106,9 +99,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse SwapExactTokensForTokens(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0);
+        AccountControllerResponse SwapExactTokensForTokens(string authorization, string name, UniswapInput uniswapInput);
 
         /// <summary>
         /// 
@@ -120,9 +112,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> SwapExactTokensForTokensWithHttpInfo(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0);
+        ApiResponse<AccountControllerResponse> SwapExactTokensForTokensWithHttpInfo(string authorization, string name, UniswapInput uniswapInput);
         #endregion Synchronous Operations
     }
 
@@ -142,10 +133,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> AddLiquidityAsync(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountControllerResponse> AddLiquidityAsync(string authorization, string name, UniswapInput uniswapInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -157,10 +147,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> AddLiquidityWithHttpInfoAsync(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> AddLiquidityWithHttpInfoAsync(string authorization, string name, UniswapInput uniswapInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -171,10 +160,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> RemoveLiquidityAsync(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountControllerResponse> RemoveLiquidityAsync(string authorization, string name, UniswapInput uniswapInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -186,10 +174,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> RemoveLiquidityWithHttpInfoAsync(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> RemoveLiquidityWithHttpInfoAsync(string authorization, string name, UniswapInput uniswapInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -200,10 +187,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> SwapExactETHForTokensAsync(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountControllerResponse> SwapExactETHForTokensAsync(string authorization, string name, UniswapInput uniswapInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -215,10 +201,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> SwapExactETHForTokensWithHttpInfoAsync(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> SwapExactETHForTokensWithHttpInfoAsync(string authorization, string name, UniswapInput uniswapInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -229,10 +214,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> SwapExactTokensForTokensAsync(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountControllerResponse> SwapExactTokensForTokensAsync(string authorization, string name, UniswapInput uniswapInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -244,10 +228,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> SwapExactTokensForTokensWithHttpInfoAsync(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> SwapExactTokensForTokensWithHttpInfoAsync(string authorization, string name, UniswapInput uniswapInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -262,12 +245,14 @@ namespace Org.OpenAPITools.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class UniSwapApi : IUniSwapApi
+    public partial class UniSwapApi : IDisposable, IUniSwapApi
     {
         private Org.OpenAPITools.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="UniSwapApi"/> class.
+        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
+        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
         /// <returns></returns>
         public UniSwapApi() : this((string)null)
@@ -276,7 +261,11 @@ namespace Org.OpenAPITools.Api
 
         /// <summary>
         /// Initializes a new instance of the <see cref="UniSwapApi"/> class.
+        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
+        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
+        /// <param name="basePath">The target service's base path in URL format.</param>
+        /// <exception cref="ArgumentException"></exception>
         /// <returns></returns>
         public UniSwapApi(string basePath)
         {
@@ -284,16 +273,19 @@ namespace Org.OpenAPITools.Api
                 Org.OpenAPITools.Client.GlobalConfiguration.Instance,
                 new Org.OpenAPITools.Client.Configuration { BasePath = basePath }
             );
-            this.Client = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.ApiClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.Client =  this.ApiClient;
+            this.AsynchronousClient = this.ApiClient;
             this.ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="UniSwapApi"/> class
-        /// using Configuration object
+        /// Initializes a new instance of the <see cref="UniSwapApi"/> class using Configuration object.
+        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
+        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
-        /// <param name="configuration">An instance of Configuration</param>
+        /// <param name="configuration">An instance of Configuration.</param>
+        /// <exception cref="ArgumentNullException"></exception>
         /// <returns></returns>
         public UniSwapApi(Org.OpenAPITools.Client.Configuration configuration)
         {
@@ -303,8 +295,9 @@ namespace Org.OpenAPITools.Api
                 Org.OpenAPITools.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.ApiClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = this.ApiClient;
+            this.AsynchronousClient = this.ApiClient;
             ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -315,6 +308,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
+        /// <exception cref="ArgumentNullException"></exception>
         public UniSwapApi(Org.OpenAPITools.Client.ISynchronousClient client, Org.OpenAPITools.Client.IAsynchronousClient asyncClient, Org.OpenAPITools.Client.IReadableConfiguration configuration)
         {
             if (client == null) throw new ArgumentNullException("client");
@@ -326,6 +320,19 @@ namespace Org.OpenAPITools.Api
             this.Configuration = configuration;
             this.ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
         }
+
+        /// <summary>
+        /// Disposes resources if they were created by us
+        /// </summary>
+        public void Dispose()
+        {
+            this.ApiClient?.Dispose();
+        }
+
+        /// <summary>
+        /// Holds the ApiClient if created
+        /// </summary>
+        public Org.OpenAPITools.Client.ApiClient ApiClient { get; set; } = null;
 
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
@@ -375,9 +382,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse AddLiquidity(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0)
+        public AccountControllerResponse AddLiquidity(string authorization, string name, UniswapInput uniswapInput)
         {
             Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = AddLiquidityWithHttpInfo(authorization, name, uniswapInput);
             return localVarResponse.Data;
@@ -390,27 +396,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> AddLiquidityWithHttpInfo(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> AddLiquidityWithHttpInfo(string authorization, string name, UniswapInput uniswapInput)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling UniSwapApi->AddLiquidity");
-            }
 
             // verify the required parameter 'name' is set
             if (name == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling UniSwapApi->AddLiquidity");
-            }
 
             // verify the required parameter 'uniswapInput' is set
             if (uniswapInput == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'uniswapInput' when calling UniSwapApi->AddLiquidity");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -424,23 +423,14 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("name", Org.OpenAPITools.Client.ClientUtils.ParameterToString(name)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = uniswapInput;
-
-            localVarRequestOptions.Operation = "UniSwapApi.AddLiquidity";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -455,13 +445,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<AccountControllerResponse>("/uniswap/{name}/add-liquidity", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("AddLiquidity", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -474,12 +462,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> AddLiquidityAsync(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountControllerResponse> AddLiquidityAsync(string authorization, string name, UniswapInput uniswapInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await AddLiquidityWithHttpInfoAsync(authorization, name, uniswapInput, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = AddLiquidityWithHttpInfoAsync(authorization, name, uniswapInput, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -490,28 +482,21 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> AddLiquidityWithHttpInfoAsync(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> AddLiquidityWithHttpInfoAsync(string authorization, string name, UniswapInput uniswapInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling UniSwapApi->AddLiquidity");
-            }
 
             // verify the required parameter 'name' is set
             if (name == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling UniSwapApi->AddLiquidity");
-            }
 
             // verify the required parameter 'uniswapInput' is set
             if (uniswapInput == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'uniswapInput' when calling UniSwapApi->AddLiquidity");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -525,24 +510,16 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("name", Org.OpenAPITools.Client.ClientUtils.ParameterToString(name)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = uniswapInput;
-
-            localVarRequestOptions.Operation = "UniSwapApi.AddLiquidity";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -556,15 +533,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<AccountControllerResponse>("/uniswap/{name}/add-liquidity", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/uniswap/{name}/add-liquidity", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("AddLiquidity", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -577,9 +558,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse RemoveLiquidity(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0)
+        public AccountControllerResponse RemoveLiquidity(string authorization, string name, UniswapInput uniswapInput)
         {
             Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = RemoveLiquidityWithHttpInfo(authorization, name, uniswapInput);
             return localVarResponse.Data;
@@ -592,27 +572,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> RemoveLiquidityWithHttpInfo(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> RemoveLiquidityWithHttpInfo(string authorization, string name, UniswapInput uniswapInput)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling UniSwapApi->RemoveLiquidity");
-            }
 
             // verify the required parameter 'name' is set
             if (name == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling UniSwapApi->RemoveLiquidity");
-            }
 
             // verify the required parameter 'uniswapInput' is set
             if (uniswapInput == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'uniswapInput' when calling UniSwapApi->RemoveLiquidity");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -626,23 +599,14 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("name", Org.OpenAPITools.Client.ClientUtils.ParameterToString(name)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = uniswapInput;
-
-            localVarRequestOptions.Operation = "UniSwapApi.RemoveLiquidity";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -657,13 +621,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<AccountControllerResponse>("/uniswap/{name}/remove-liquidity", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("RemoveLiquidity", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -676,12 +638,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> RemoveLiquidityAsync(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountControllerResponse> RemoveLiquidityAsync(string authorization, string name, UniswapInput uniswapInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await RemoveLiquidityWithHttpInfoAsync(authorization, name, uniswapInput, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = RemoveLiquidityWithHttpInfoAsync(authorization, name, uniswapInput, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -692,28 +658,21 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> RemoveLiquidityWithHttpInfoAsync(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> RemoveLiquidityWithHttpInfoAsync(string authorization, string name, UniswapInput uniswapInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling UniSwapApi->RemoveLiquidity");
-            }
 
             // verify the required parameter 'name' is set
             if (name == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling UniSwapApi->RemoveLiquidity");
-            }
 
             // verify the required parameter 'uniswapInput' is set
             if (uniswapInput == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'uniswapInput' when calling UniSwapApi->RemoveLiquidity");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -727,24 +686,16 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("name", Org.OpenAPITools.Client.ClientUtils.ParameterToString(name)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = uniswapInput;
-
-            localVarRequestOptions.Operation = "UniSwapApi.RemoveLiquidity";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -758,15 +709,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<AccountControllerResponse>("/uniswap/{name}/remove-liquidity", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/uniswap/{name}/remove-liquidity", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("RemoveLiquidity", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -779,9 +734,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse SwapExactETHForTokens(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0)
+        public AccountControllerResponse SwapExactETHForTokens(string authorization, string name, UniswapInput uniswapInput)
         {
             Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = SwapExactETHForTokensWithHttpInfo(authorization, name, uniswapInput);
             return localVarResponse.Data;
@@ -794,27 +748,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> SwapExactETHForTokensWithHttpInfo(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> SwapExactETHForTokensWithHttpInfo(string authorization, string name, UniswapInput uniswapInput)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling UniSwapApi->SwapExactETHForTokens");
-            }
 
             // verify the required parameter 'name' is set
             if (name == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling UniSwapApi->SwapExactETHForTokens");
-            }
 
             // verify the required parameter 'uniswapInput' is set
             if (uniswapInput == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'uniswapInput' when calling UniSwapApi->SwapExactETHForTokens");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -828,23 +775,14 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("name", Org.OpenAPITools.Client.ClientUtils.ParameterToString(name)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = uniswapInput;
-
-            localVarRequestOptions.Operation = "UniSwapApi.SwapExactETHForTokens";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -859,13 +797,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<AccountControllerResponse>("/uniswap/{name}/swap-exact-eth-for-tokens", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SwapExactETHForTokens", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -878,12 +814,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> SwapExactETHForTokensAsync(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountControllerResponse> SwapExactETHForTokensAsync(string authorization, string name, UniswapInput uniswapInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await SwapExactETHForTokensWithHttpInfoAsync(authorization, name, uniswapInput, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = SwapExactETHForTokensWithHttpInfoAsync(authorization, name, uniswapInput, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -894,28 +834,21 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> SwapExactETHForTokensWithHttpInfoAsync(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> SwapExactETHForTokensWithHttpInfoAsync(string authorization, string name, UniswapInput uniswapInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling UniSwapApi->SwapExactETHForTokens");
-            }
 
             // verify the required parameter 'name' is set
             if (name == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling UniSwapApi->SwapExactETHForTokens");
-            }
 
             // verify the required parameter 'uniswapInput' is set
             if (uniswapInput == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'uniswapInput' when calling UniSwapApi->SwapExactETHForTokens");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -929,24 +862,16 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("name", Org.OpenAPITools.Client.ClientUtils.ParameterToString(name)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = uniswapInput;
-
-            localVarRequestOptions.Operation = "UniSwapApi.SwapExactETHForTokens";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -960,15 +885,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<AccountControllerResponse>("/uniswap/{name}/swap-exact-eth-for-tokens", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/uniswap/{name}/swap-exact-eth-for-tokens", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SwapExactETHForTokens", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -981,9 +910,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse SwapExactTokensForTokens(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0)
+        public AccountControllerResponse SwapExactTokensForTokens(string authorization, string name, UniswapInput uniswapInput)
         {
             Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = SwapExactTokensForTokensWithHttpInfo(authorization, name, uniswapInput);
             return localVarResponse.Data;
@@ -996,27 +924,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> SwapExactTokensForTokensWithHttpInfo(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> SwapExactTokensForTokensWithHttpInfo(string authorization, string name, UniswapInput uniswapInput)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling UniSwapApi->SwapExactTokensForTokens");
-            }
 
             // verify the required parameter 'name' is set
             if (name == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling UniSwapApi->SwapExactTokensForTokens");
-            }
 
             // verify the required parameter 'uniswapInput' is set
             if (uniswapInput == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'uniswapInput' when calling UniSwapApi->SwapExactTokensForTokens");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1030,23 +951,14 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("name", Org.OpenAPITools.Client.ClientUtils.ParameterToString(name)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = uniswapInput;
-
-            localVarRequestOptions.Operation = "UniSwapApi.SwapExactTokensForTokens";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1061,13 +973,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<AccountControllerResponse>("/uniswap/{name}/swap-exact-tokens-for-tokens", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SwapExactTokensForTokens", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1080,12 +990,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> SwapExactTokensForTokensAsync(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountControllerResponse> SwapExactTokensForTokensAsync(string authorization, string name, UniswapInput uniswapInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await SwapExactTokensForTokensWithHttpInfoAsync(authorization, name, uniswapInput, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = SwapExactTokensForTokensWithHttpInfoAsync(authorization, name, uniswapInput, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -1096,28 +1010,21 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="uniswapInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> SwapExactTokensForTokensWithHttpInfoAsync(string authorization, string name, UniswapInput uniswapInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> SwapExactTokensForTokensWithHttpInfoAsync(string authorization, string name, UniswapInput uniswapInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling UniSwapApi->SwapExactTokensForTokens");
-            }
 
             // verify the required parameter 'name' is set
             if (name == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling UniSwapApi->SwapExactTokensForTokens");
-            }
 
             // verify the required parameter 'uniswapInput' is set
             if (uniswapInput == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'uniswapInput' when calling UniSwapApi->SwapExactTokensForTokens");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1131,24 +1038,16 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("name", Org.OpenAPITools.Client.ClientUtils.ParameterToString(name)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = uniswapInput;
-
-            localVarRequestOptions.Operation = "UniSwapApi.SwapExactTokensForTokens";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1162,15 +1061,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<AccountControllerResponse>("/uniswap/{name}/swap-exact-tokens-for-tokens", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/uniswap/{name}/swap-exact-tokens-for-tokens", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SwapExactTokensForTokens", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;

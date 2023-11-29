@@ -15,7 +15,6 @@ using System.Linq;
 using System.Net;
 using System.Net.Mime;
 using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Client.Auth;
 using Org.OpenAPITools.Model;
 
 namespace Org.OpenAPITools.Api
@@ -34,9 +33,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="tokenSwapParams"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ConveyorFinanceControllerResponse</returns>
-        ConveyorFinanceControllerResponse Swap(string authorization, string name, TokenSwapParams tokenSwapParams, int operationIndex = 0);
+        ConveyorFinanceControllerResponse Swap(string authorization, string name, TokenSwapParams tokenSwapParams);
 
         /// <summary>
         /// 
@@ -48,9 +46,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="tokenSwapParams"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ConveyorFinanceControllerResponse</returns>
-        ApiResponse<ConveyorFinanceControllerResponse> SwapWithHttpInfo(string authorization, string name, TokenSwapParams tokenSwapParams, int operationIndex = 0);
+        ApiResponse<ConveyorFinanceControllerResponse> SwapWithHttpInfo(string authorization, string name, TokenSwapParams tokenSwapParams);
         #endregion Synchronous Operations
     }
 
@@ -70,10 +67,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="tokenSwapParams"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ConveyorFinanceControllerResponse</returns>
-        System.Threading.Tasks.Task<ConveyorFinanceControllerResponse> SwapAsync(string authorization, string name, TokenSwapParams tokenSwapParams, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ConveyorFinanceControllerResponse> SwapAsync(string authorization, string name, TokenSwapParams tokenSwapParams, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -85,10 +81,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="tokenSwapParams"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ConveyorFinanceControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ConveyorFinanceControllerResponse>> SwapWithHttpInfoAsync(string authorization, string name, TokenSwapParams tokenSwapParams, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ConveyorFinanceControllerResponse>> SwapWithHttpInfoAsync(string authorization, string name, TokenSwapParams tokenSwapParams, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -103,12 +98,14 @@ namespace Org.OpenAPITools.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class ConveyorFinanceApi : IConveyorFinanceApi
+    public partial class ConveyorFinanceApi : IDisposable, IConveyorFinanceApi
     {
         private Org.OpenAPITools.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ConveyorFinanceApi"/> class.
+        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
+        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
         /// <returns></returns>
         public ConveyorFinanceApi() : this((string)null)
@@ -117,7 +114,11 @@ namespace Org.OpenAPITools.Api
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ConveyorFinanceApi"/> class.
+        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
+        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
+        /// <param name="basePath">The target service's base path in URL format.</param>
+        /// <exception cref="ArgumentException"></exception>
         /// <returns></returns>
         public ConveyorFinanceApi(string basePath)
         {
@@ -125,16 +126,19 @@ namespace Org.OpenAPITools.Api
                 Org.OpenAPITools.Client.GlobalConfiguration.Instance,
                 new Org.OpenAPITools.Client.Configuration { BasePath = basePath }
             );
-            this.Client = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.ApiClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.Client =  this.ApiClient;
+            this.AsynchronousClient = this.ApiClient;
             this.ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ConveyorFinanceApi"/> class
-        /// using Configuration object
+        /// Initializes a new instance of the <see cref="ConveyorFinanceApi"/> class using Configuration object.
+        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
+        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
-        /// <param name="configuration">An instance of Configuration</param>
+        /// <param name="configuration">An instance of Configuration.</param>
+        /// <exception cref="ArgumentNullException"></exception>
         /// <returns></returns>
         public ConveyorFinanceApi(Org.OpenAPITools.Client.Configuration configuration)
         {
@@ -144,8 +148,9 @@ namespace Org.OpenAPITools.Api
                 Org.OpenAPITools.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.ApiClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = this.ApiClient;
+            this.AsynchronousClient = this.ApiClient;
             ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -156,6 +161,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
+        /// <exception cref="ArgumentNullException"></exception>
         public ConveyorFinanceApi(Org.OpenAPITools.Client.ISynchronousClient client, Org.OpenAPITools.Client.IAsynchronousClient asyncClient, Org.OpenAPITools.Client.IReadableConfiguration configuration)
         {
             if (client == null) throw new ArgumentNullException("client");
@@ -167,6 +173,19 @@ namespace Org.OpenAPITools.Api
             this.Configuration = configuration;
             this.ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
         }
+
+        /// <summary>
+        /// Disposes resources if they were created by us
+        /// </summary>
+        public void Dispose()
+        {
+            this.ApiClient?.Dispose();
+        }
+
+        /// <summary>
+        /// Holds the ApiClient if created
+        /// </summary>
+        public Org.OpenAPITools.Client.ApiClient ApiClient { get; set; } = null;
 
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
@@ -216,9 +235,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="tokenSwapParams"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ConveyorFinanceControllerResponse</returns>
-        public ConveyorFinanceControllerResponse Swap(string authorization, string name, TokenSwapParams tokenSwapParams, int operationIndex = 0)
+        public ConveyorFinanceControllerResponse Swap(string authorization, string name, TokenSwapParams tokenSwapParams)
         {
             Org.OpenAPITools.Client.ApiResponse<ConveyorFinanceControllerResponse> localVarResponse = SwapWithHttpInfo(authorization, name, tokenSwapParams);
             return localVarResponse.Data;
@@ -231,27 +249,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="tokenSwapParams"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ConveyorFinanceControllerResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ConveyorFinanceControllerResponse> SwapWithHttpInfo(string authorization, string name, TokenSwapParams tokenSwapParams, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<ConveyorFinanceControllerResponse> SwapWithHttpInfo(string authorization, string name, TokenSwapParams tokenSwapParams)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling ConveyorFinanceApi->Swap");
-            }
 
             // verify the required parameter 'name' is set
             if (name == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling ConveyorFinanceApi->Swap");
-            }
 
             // verify the required parameter 'tokenSwapParams' is set
             if (tokenSwapParams == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'tokenSwapParams' when calling ConveyorFinanceApi->Swap");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -265,23 +276,14 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("name", Org.OpenAPITools.Client.ClientUtils.ParameterToString(name)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = tokenSwapParams;
-
-            localVarRequestOptions.Operation = "ConveyorFinanceApi.Swap";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -296,13 +298,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<ConveyorFinanceControllerResponse>("/conveyorfinance/{name}/swap", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("Swap", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -315,12 +315,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="tokenSwapParams"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ConveyorFinanceControllerResponse</returns>
-        public async System.Threading.Tasks.Task<ConveyorFinanceControllerResponse> SwapAsync(string authorization, string name, TokenSwapParams tokenSwapParams, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ConveyorFinanceControllerResponse> SwapAsync(string authorization, string name, TokenSwapParams tokenSwapParams, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ConveyorFinanceControllerResponse> localVarResponse = await SwapWithHttpInfoAsync(authorization, name, tokenSwapParams, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = SwapWithHttpInfoAsync(authorization, name, tokenSwapParams, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<ConveyorFinanceControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<ConveyorFinanceControllerResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -331,28 +335,21 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="tokenSwapParams"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ConveyorFinanceControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ConveyorFinanceControllerResponse>> SwapWithHttpInfoAsync(string authorization, string name, TokenSwapParams tokenSwapParams, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ConveyorFinanceControllerResponse>> SwapWithHttpInfoAsync(string authorization, string name, TokenSwapParams tokenSwapParams, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling ConveyorFinanceApi->Swap");
-            }
 
             // verify the required parameter 'name' is set
             if (name == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'name' when calling ConveyorFinanceApi->Swap");
-            }
 
             // verify the required parameter 'tokenSwapParams' is set
             if (tokenSwapParams == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'tokenSwapParams' when calling ConveyorFinanceApi->Swap");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -366,24 +363,16 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("name", Org.OpenAPITools.Client.ClientUtils.ParameterToString(name)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = tokenSwapParams;
-
-            localVarRequestOptions.Operation = "ConveyorFinanceApi.Swap";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -397,15 +386,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<ConveyorFinanceControllerResponse>("/conveyorfinance/{name}/swap", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.PostAsync<ConveyorFinanceControllerResponse>("/conveyorfinance/{name}/swap", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("Swap", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;

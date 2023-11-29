@@ -20,7 +20,6 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Org.OpenAPITools.Client.OpenAPIDateConverter;
 
 namespace Org.OpenAPITools.Model
@@ -29,82 +28,40 @@ namespace Org.OpenAPITools.Model
     /// Transaction
     /// </summary>
     [DataContract(Name = "Transaction")]
-    public partial class Transaction : IEquatable<Transaction>, IValidatableObject
+    public partial class Transaction : IEquatable<Transaction>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Transaction" /> class.
         /// </summary>
-        /// <param name="useropTransaction">useropTransaction.</param>
-        /// <param name="userOps">userOps.</param>
-        /// <param name="varTransaction">varTransaction.</param>
-        /// <param name="signature">signature.</param>
-        /// <param name="moonScanUrl">moonScanUrl.</param>
-        /// <param name="transactions">transactions.</param>
-        /// <param name="data">data.</param>
-        /// <param name="rawTransaction">rawTransaction.</param>
-        /// <param name="signedTransaction">signedTransaction.</param>
         /// <param name="transactionHash">transactionHash.</param>
-        public Transaction(string useropTransaction = default(string), List<TransactionRequest> userOps = default(List<TransactionRequest>), Tx varTransaction = default(Tx), string signature = default(string), string moonScanUrl = default(string), List<TransactionData> transactions = default(List<TransactionData>), string data = default(string), string rawTransaction = default(string), string signedTransaction = default(string), string transactionHash = default(string))
+        /// <param name="signedTransaction">signedTransaction.</param>
+        /// <param name="rawTransaction">rawTransaction.</param>
+        /// <param name="data">data.</param>
+        /// <param name="transactions">transactions.</param>
+        /// <param name="moonScanUrl">moonScanUrl.</param>
+        /// <param name="signature">signature.</param>
+        /// <param name="transaction">transaction.</param>
+        /// <param name="userOps">userOps.</param>
+        /// <param name="useropTransaction">useropTransaction.</param>
+        public Transaction(string transactionHash = default(string), string signedTransaction = default(string), string rawTransaction = default(string), string data = default(string), List<TransactionData> transactions = default(List<TransactionData>), string moonScanUrl = default(string), string signature = default(string), Tx transaction = default(Tx), List<TransactionRequest> userOps = default(List<TransactionRequest>), string useropTransaction = default(string))
         {
-            this.UseropTransaction = useropTransaction;
-            this.UserOps = userOps;
-            this.VarTransaction = varTransaction;
-            this.Signature = signature;
-            this.MoonScanUrl = moonScanUrl;
-            this.Transactions = transactions;
-            this.Data = data;
-            this.RawTransaction = rawTransaction;
-            this.SignedTransaction = signedTransaction;
             this.TransactionHash = transactionHash;
+            this.SignedTransaction = signedTransaction;
+            this.RawTransaction = rawTransaction;
+            this.Data = data;
+            this.Transactions = transactions;
+            this.MoonScanUrl = moonScanUrl;
+            this.Signature = signature;
+            this._Transaction = transaction;
+            this.UserOps = userOps;
+            this.UseropTransaction = useropTransaction;
         }
 
         /// <summary>
-        /// Gets or Sets UseropTransaction
+        /// Gets or Sets TransactionHash
         /// </summary>
-        [DataMember(Name = "userop_transaction", EmitDefaultValue = false)]
-        public string UseropTransaction { get; set; }
-
-        /// <summary>
-        /// Gets or Sets UserOps
-        /// </summary>
-        [DataMember(Name = "userOps", EmitDefaultValue = false)]
-        public List<TransactionRequest> UserOps { get; set; }
-
-        /// <summary>
-        /// Gets or Sets VarTransaction
-        /// </summary>
-        [DataMember(Name = "transaction", EmitDefaultValue = false)]
-        public Tx VarTransaction { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Signature
-        /// </summary>
-        [DataMember(Name = "signature", EmitDefaultValue = false)]
-        public string Signature { get; set; }
-
-        /// <summary>
-        /// Gets or Sets MoonScanUrl
-        /// </summary>
-        [DataMember(Name = "moon_scan_url", EmitDefaultValue = false)]
-        public string MoonScanUrl { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Transactions
-        /// </summary>
-        [DataMember(Name = "transactions", EmitDefaultValue = false)]
-        public List<TransactionData> Transactions { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Data
-        /// </summary>
-        [DataMember(Name = "data", EmitDefaultValue = true)]
-        public string Data { get; set; }
-
-        /// <summary>
-        /// Gets or Sets RawTransaction
-        /// </summary>
-        [DataMember(Name = "raw_transaction", EmitDefaultValue = false)]
-        public string RawTransaction { get; set; }
+        [DataMember(Name = "transaction_hash", EmitDefaultValue = false)]
+        public string TransactionHash { get; set; }
 
         /// <summary>
         /// Gets or Sets SignedTransaction
@@ -113,10 +70,52 @@ namespace Org.OpenAPITools.Model
         public string SignedTransaction { get; set; }
 
         /// <summary>
-        /// Gets or Sets TransactionHash
+        /// Gets or Sets RawTransaction
         /// </summary>
-        [DataMember(Name = "transaction_hash", EmitDefaultValue = false)]
-        public string TransactionHash { get; set; }
+        [DataMember(Name = "raw_transaction", EmitDefaultValue = false)]
+        public string RawTransaction { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Data
+        /// </summary>
+        [DataMember(Name = "data", EmitDefaultValue = true)]
+        public string Data { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Transactions
+        /// </summary>
+        [DataMember(Name = "transactions", EmitDefaultValue = false)]
+        public List<TransactionData> Transactions { get; set; }
+
+        /// <summary>
+        /// Gets or Sets MoonScanUrl
+        /// </summary>
+        [DataMember(Name = "moon_scan_url", EmitDefaultValue = false)]
+        public string MoonScanUrl { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Signature
+        /// </summary>
+        [DataMember(Name = "signature", EmitDefaultValue = false)]
+        public string Signature { get; set; }
+
+        /// <summary>
+        /// Gets or Sets _Transaction
+        /// </summary>
+        [DataMember(Name = "transaction", EmitDefaultValue = false)]
+        public Tx _Transaction { get; set; }
+
+        /// <summary>
+        /// Gets or Sets UserOps
+        /// </summary>
+        [DataMember(Name = "userOps", EmitDefaultValue = false)]
+        public List<TransactionRequest> UserOps { get; set; }
+
+        /// <summary>
+        /// Gets or Sets UseropTransaction
+        /// </summary>
+        [DataMember(Name = "userop_transaction", EmitDefaultValue = false)]
+        public string UseropTransaction { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -126,16 +125,16 @@ namespace Org.OpenAPITools.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class Transaction {\n");
-            sb.Append("  UseropTransaction: ").Append(UseropTransaction).Append("\n");
-            sb.Append("  UserOps: ").Append(UserOps).Append("\n");
-            sb.Append("  VarTransaction: ").Append(VarTransaction).Append("\n");
-            sb.Append("  Signature: ").Append(Signature).Append("\n");
-            sb.Append("  MoonScanUrl: ").Append(MoonScanUrl).Append("\n");
-            sb.Append("  Transactions: ").Append(Transactions).Append("\n");
-            sb.Append("  Data: ").Append(Data).Append("\n");
-            sb.Append("  RawTransaction: ").Append(RawTransaction).Append("\n");
-            sb.Append("  SignedTransaction: ").Append(SignedTransaction).Append("\n");
             sb.Append("  TransactionHash: ").Append(TransactionHash).Append("\n");
+            sb.Append("  SignedTransaction: ").Append(SignedTransaction).Append("\n");
+            sb.Append("  RawTransaction: ").Append(RawTransaction).Append("\n");
+            sb.Append("  Data: ").Append(Data).Append("\n");
+            sb.Append("  Transactions: ").Append(Transactions).Append("\n");
+            sb.Append("  MoonScanUrl: ").Append(MoonScanUrl).Append("\n");
+            sb.Append("  Signature: ").Append(Signature).Append("\n");
+            sb.Append("  _Transaction: ").Append(_Transaction).Append("\n");
+            sb.Append("  UserOps: ").Append(UserOps).Append("\n");
+            sb.Append("  UseropTransaction: ").Append(UseropTransaction).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -172,30 +171,24 @@ namespace Org.OpenAPITools.Model
             }
             return 
                 (
-                    this.UseropTransaction == input.UseropTransaction ||
-                    (this.UseropTransaction != null &&
-                    this.UseropTransaction.Equals(input.UseropTransaction))
+                    this.TransactionHash == input.TransactionHash ||
+                    (this.TransactionHash != null &&
+                    this.TransactionHash.Equals(input.TransactionHash))
                 ) && 
                 (
-                    this.UserOps == input.UserOps ||
-                    this.UserOps != null &&
-                    input.UserOps != null &&
-                    this.UserOps.SequenceEqual(input.UserOps)
+                    this.SignedTransaction == input.SignedTransaction ||
+                    (this.SignedTransaction != null &&
+                    this.SignedTransaction.Equals(input.SignedTransaction))
                 ) && 
                 (
-                    this.VarTransaction == input.VarTransaction ||
-                    (this.VarTransaction != null &&
-                    this.VarTransaction.Equals(input.VarTransaction))
+                    this.RawTransaction == input.RawTransaction ||
+                    (this.RawTransaction != null &&
+                    this.RawTransaction.Equals(input.RawTransaction))
                 ) && 
                 (
-                    this.Signature == input.Signature ||
-                    (this.Signature != null &&
-                    this.Signature.Equals(input.Signature))
-                ) && 
-                (
-                    this.MoonScanUrl == input.MoonScanUrl ||
-                    (this.MoonScanUrl != null &&
-                    this.MoonScanUrl.Equals(input.MoonScanUrl))
+                    this.Data == input.Data ||
+                    (this.Data != null &&
+                    this.Data.Equals(input.Data))
                 ) && 
                 (
                     this.Transactions == input.Transactions ||
@@ -204,24 +197,30 @@ namespace Org.OpenAPITools.Model
                     this.Transactions.SequenceEqual(input.Transactions)
                 ) && 
                 (
-                    this.Data == input.Data ||
-                    (this.Data != null &&
-                    this.Data.Equals(input.Data))
+                    this.MoonScanUrl == input.MoonScanUrl ||
+                    (this.MoonScanUrl != null &&
+                    this.MoonScanUrl.Equals(input.MoonScanUrl))
                 ) && 
                 (
-                    this.RawTransaction == input.RawTransaction ||
-                    (this.RawTransaction != null &&
-                    this.RawTransaction.Equals(input.RawTransaction))
+                    this.Signature == input.Signature ||
+                    (this.Signature != null &&
+                    this.Signature.Equals(input.Signature))
                 ) && 
                 (
-                    this.SignedTransaction == input.SignedTransaction ||
-                    (this.SignedTransaction != null &&
-                    this.SignedTransaction.Equals(input.SignedTransaction))
+                    this._Transaction == input._Transaction ||
+                    (this._Transaction != null &&
+                    this._Transaction.Equals(input._Transaction))
                 ) && 
                 (
-                    this.TransactionHash == input.TransactionHash ||
-                    (this.TransactionHash != null &&
-                    this.TransactionHash.Equals(input.TransactionHash))
+                    this.UserOps == input.UserOps ||
+                    this.UserOps != null &&
+                    input.UserOps != null &&
+                    this.UserOps.SequenceEqual(input.UserOps)
+                ) && 
+                (
+                    this.UseropTransaction == input.UseropTransaction ||
+                    (this.UseropTransaction != null &&
+                    this.UseropTransaction.Equals(input.UseropTransaction))
                 );
         }
 
@@ -234,59 +233,50 @@ namespace Org.OpenAPITools.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.UseropTransaction != null)
+                if (this.TransactionHash != null)
                 {
-                    hashCode = (hashCode * 59) + this.UseropTransaction.GetHashCode();
-                }
-                if (this.UserOps != null)
-                {
-                    hashCode = (hashCode * 59) + this.UserOps.GetHashCode();
-                }
-                if (this.VarTransaction != null)
-                {
-                    hashCode = (hashCode * 59) + this.VarTransaction.GetHashCode();
-                }
-                if (this.Signature != null)
-                {
-                    hashCode = (hashCode * 59) + this.Signature.GetHashCode();
-                }
-                if (this.MoonScanUrl != null)
-                {
-                    hashCode = (hashCode * 59) + this.MoonScanUrl.GetHashCode();
-                }
-                if (this.Transactions != null)
-                {
-                    hashCode = (hashCode * 59) + this.Transactions.GetHashCode();
-                }
-                if (this.Data != null)
-                {
-                    hashCode = (hashCode * 59) + this.Data.GetHashCode();
-                }
-                if (this.RawTransaction != null)
-                {
-                    hashCode = (hashCode * 59) + this.RawTransaction.GetHashCode();
+                    hashCode = (hashCode * 59) + this.TransactionHash.GetHashCode();
                 }
                 if (this.SignedTransaction != null)
                 {
                     hashCode = (hashCode * 59) + this.SignedTransaction.GetHashCode();
                 }
-                if (this.TransactionHash != null)
+                if (this.RawTransaction != null)
                 {
-                    hashCode = (hashCode * 59) + this.TransactionHash.GetHashCode();
+                    hashCode = (hashCode * 59) + this.RawTransaction.GetHashCode();
+                }
+                if (this.Data != null)
+                {
+                    hashCode = (hashCode * 59) + this.Data.GetHashCode();
+                }
+                if (this.Transactions != null)
+                {
+                    hashCode = (hashCode * 59) + this.Transactions.GetHashCode();
+                }
+                if (this.MoonScanUrl != null)
+                {
+                    hashCode = (hashCode * 59) + this.MoonScanUrl.GetHashCode();
+                }
+                if (this.Signature != null)
+                {
+                    hashCode = (hashCode * 59) + this.Signature.GetHashCode();
+                }
+                if (this._Transaction != null)
+                {
+                    hashCode = (hashCode * 59) + this._Transaction.GetHashCode();
+                }
+                if (this.UserOps != null)
+                {
+                    hashCode = (hashCode * 59) + this.UserOps.GetHashCode();
+                }
+                if (this.UseropTransaction != null)
+                {
+                    hashCode = (hashCode * 59) + this.UseropTransaction.GetHashCode();
                 }
                 return hashCode;
             }
         }
 
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
 
 }

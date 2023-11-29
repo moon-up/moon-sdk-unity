@@ -15,7 +15,6 @@ using System.Linq;
 using System.Net;
 using System.Net.Mime;
 using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Client.Auth;
 using Org.OpenAPITools.Model;
 
 namespace Org.OpenAPITools.Api
@@ -34,9 +33,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="broadcastInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse BroadcastTx(string authorization, string accountName, BroadcastInput broadcastInput, int operationIndex = 0);
+        AccountControllerResponse BroadcastTx(string authorization, string accountName, BroadcastInput broadcastInput);
 
         /// <summary>
         /// 
@@ -48,18 +46,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="broadcastInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> BroadcastTxWithHttpInfo(string authorization, string accountName, BroadcastInput broadcastInput, int operationIndex = 0);
+        ApiResponse<AccountControllerResponse> BroadcastTxWithHttpInfo(string authorization, string accountName, BroadcastInput broadcastInput);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="createAccountInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse CreateAccount(string authorization, CreateAccountInput createAccountInput, int operationIndex = 0);
+        AccountControllerResponse CreateAccount(string authorization, CreateAccountInput createAccountInput);
 
         /// <summary>
         /// 
@@ -70,18 +66,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="createAccountInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> CreateAccountWithHttpInfo(string authorization, CreateAccountInput createAccountInput, int operationIndex = 0);
+        ApiResponse<AccountControllerResponse> CreateAccountWithHttpInfo(string authorization, CreateAccountInput createAccountInput);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse DeleteAccount(string authorization, string accountName, int operationIndex = 0);
+        AccountControllerResponse DeleteAccount(string authorization, string accountName);
 
         /// <summary>
         /// 
@@ -92,9 +86,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> DeleteAccountWithHttpInfo(string authorization, string accountName, int operationIndex = 0);
+        ApiResponse<AccountControllerResponse> DeleteAccountWithHttpInfo(string authorization, string accountName);
         /// <summary>
         /// 
         /// </summary>
@@ -102,9 +95,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="deployInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse DeployContract(string authorization, string accountName, DeployInput deployInput, int operationIndex = 0);
+        AccountControllerResponse DeployContract(string authorization, string accountName, DeployInput deployInput);
 
         /// <summary>
         /// 
@@ -116,18 +108,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="deployInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> DeployContractWithHttpInfo(string authorization, string accountName, DeployInput deployInput, int operationIndex = 0);
+        ApiResponse<AccountControllerResponse> DeployContractWithHttpInfo(string authorization, string accountName, DeployInput deployInput);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse GetAccount(string authorization, string accountName, int operationIndex = 0);
+        AccountControllerResponse GetAccount(string authorization, string accountName);
 
         /// <summary>
         /// 
@@ -138,9 +128,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> GetAccountWithHttpInfo(string authorization, string accountName, int operationIndex = 0);
+        ApiResponse<AccountControllerResponse> GetAccountWithHttpInfo(string authorization, string accountName);
         /// <summary>
         /// 
         /// </summary>
@@ -148,9 +137,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="chainId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse GetBalance(string accountName, string authorization, string chainId, int operationIndex = 0);
+        AccountControllerResponse GetBalance(string accountName, string authorization, string chainId);
 
         /// <summary>
         /// 
@@ -162,18 +150,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="chainId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> GetBalanceWithHttpInfo(string accountName, string authorization, string chainId, int operationIndex = 0);
+        ApiResponse<AccountControllerResponse> GetBalanceWithHttpInfo(string accountName, string authorization, string chainId);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse GetNonce(string accountName, string authorization, int operationIndex = 0);
+        AccountControllerResponse GetNonce(string accountName, string authorization);
 
         /// <summary>
         /// 
@@ -184,17 +170,15 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> GetNonceWithHttpInfo(string accountName, string authorization, int operationIndex = 0);
+        ApiResponse<AccountControllerResponse> GetNonceWithHttpInfo(string accountName, string authorization);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse ListAccounts(string authorization, int operationIndex = 0);
+        AccountControllerResponse ListAccounts(string authorization);
 
         /// <summary>
         /// 
@@ -204,9 +188,8 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> ListAccountsWithHttpInfo(string authorization, int operationIndex = 0);
+        ApiResponse<AccountControllerResponse> ListAccountsWithHttpInfo(string authorization);
         /// <summary>
         /// 
         /// </summary>
@@ -214,9 +197,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="signMessage"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse SignMessage(string accountName, string authorization, SignMessage signMessage, int operationIndex = 0);
+        AccountControllerResponse SignMessage(string accountName, string authorization, SignMessage signMessage);
 
         /// <summary>
         /// 
@@ -228,9 +210,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="signMessage"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> SignMessageWithHttpInfo(string accountName, string authorization, SignMessage signMessage, int operationIndex = 0);
+        ApiResponse<AccountControllerResponse> SignMessageWithHttpInfo(string accountName, string authorization, SignMessage signMessage);
         /// <summary>
         /// 
         /// </summary>
@@ -238,9 +219,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse SignTransaction(string accountName, string authorization, InputBody inputBody, int operationIndex = 0);
+        AccountControllerResponse SignTransaction(string accountName, string authorization, InputBody inputBody);
 
         /// <summary>
         /// 
@@ -252,9 +232,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> SignTransactionWithHttpInfo(string accountName, string authorization, InputBody inputBody, int operationIndex = 0);
+        ApiResponse<AccountControllerResponse> SignTransactionWithHttpInfo(string accountName, string authorization, InputBody inputBody);
         /// <summary>
         /// 
         /// </summary>
@@ -262,9 +241,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="signTypedData"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse SignTypedData(string accountName, string authorization, SignTypedData signTypedData, int operationIndex = 0);
+        AccountControllerResponse SignTypedData(string accountName, string authorization, SignTypedData signTypedData);
 
         /// <summary>
         /// 
@@ -276,9 +254,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="signTypedData"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> SignTypedDataWithHttpInfo(string accountName, string authorization, SignTypedData signTypedData, int operationIndex = 0);
+        ApiResponse<AccountControllerResponse> SignTypedDataWithHttpInfo(string accountName, string authorization, SignTypedData signTypedData);
         /// <summary>
         /// 
         /// </summary>
@@ -286,9 +263,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse TransferEth(string accountName, string authorization, InputBody inputBody, int operationIndex = 0);
+        AccountControllerResponse TransferEth(string accountName, string authorization, InputBody inputBody);
 
         /// <summary>
         /// 
@@ -300,9 +276,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> TransferEthWithHttpInfo(string accountName, string authorization, InputBody inputBody, int operationIndex = 0);
+        ApiResponse<AccountControllerResponse> TransferEthWithHttpInfo(string accountName, string authorization, InputBody inputBody);
         #endregion Synchronous Operations
     }
 
@@ -322,10 +297,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="broadcastInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> BroadcastTxAsync(string authorization, string accountName, BroadcastInput broadcastInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountControllerResponse> BroadcastTxAsync(string authorization, string accountName, BroadcastInput broadcastInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -337,10 +311,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="broadcastInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> BroadcastTxWithHttpInfoAsync(string authorization, string accountName, BroadcastInput broadcastInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> BroadcastTxWithHttpInfoAsync(string authorization, string accountName, BroadcastInput broadcastInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -350,10 +323,9 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="createAccountInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> CreateAccountAsync(string authorization, CreateAccountInput createAccountInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountControllerResponse> CreateAccountAsync(string authorization, CreateAccountInput createAccountInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -364,10 +336,9 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="createAccountInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> CreateAccountWithHttpInfoAsync(string authorization, CreateAccountInput createAccountInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> CreateAccountWithHttpInfoAsync(string authorization, CreateAccountInput createAccountInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -377,10 +348,9 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> DeleteAccountAsync(string authorization, string accountName, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountControllerResponse> DeleteAccountAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -391,10 +361,9 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> DeleteAccountWithHttpInfoAsync(string authorization, string accountName, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> DeleteAccountWithHttpInfoAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -405,10 +374,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="deployInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> DeployContractAsync(string authorization, string accountName, DeployInput deployInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountControllerResponse> DeployContractAsync(string authorization, string accountName, DeployInput deployInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -420,10 +388,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="deployInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> DeployContractWithHttpInfoAsync(string authorization, string accountName, DeployInput deployInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> DeployContractWithHttpInfoAsync(string authorization, string accountName, DeployInput deployInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -433,10 +400,9 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> GetAccountAsync(string authorization, string accountName, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountControllerResponse> GetAccountAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -447,10 +413,9 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> GetAccountWithHttpInfoAsync(string authorization, string accountName, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> GetAccountWithHttpInfoAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -461,10 +426,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="chainId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> GetBalanceAsync(string accountName, string authorization, string chainId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountControllerResponse> GetBalanceAsync(string accountName, string authorization, string chainId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -476,10 +440,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="chainId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> GetBalanceWithHttpInfoAsync(string accountName, string authorization, string chainId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> GetBalanceWithHttpInfoAsync(string accountName, string authorization, string chainId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -489,10 +452,9 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> GetNonceAsync(string accountName, string authorization, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountControllerResponse> GetNonceAsync(string accountName, string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -503,10 +465,9 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> GetNonceWithHttpInfoAsync(string accountName, string authorization, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> GetNonceWithHttpInfoAsync(string accountName, string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -515,10 +476,9 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> ListAccountsAsync(string authorization, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountControllerResponse> ListAccountsAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -528,10 +488,9 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> ListAccountsWithHttpInfoAsync(string authorization, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> ListAccountsWithHttpInfoAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -542,10 +501,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="signMessage"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> SignMessageAsync(string accountName, string authorization, SignMessage signMessage, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountControllerResponse> SignMessageAsync(string accountName, string authorization, SignMessage signMessage, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -557,10 +515,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="signMessage"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> SignMessageWithHttpInfoAsync(string accountName, string authorization, SignMessage signMessage, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> SignMessageWithHttpInfoAsync(string accountName, string authorization, SignMessage signMessage, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -571,10 +528,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> SignTransactionAsync(string accountName, string authorization, InputBody inputBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountControllerResponse> SignTransactionAsync(string accountName, string authorization, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -586,10 +542,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> SignTransactionWithHttpInfoAsync(string accountName, string authorization, InputBody inputBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> SignTransactionWithHttpInfoAsync(string accountName, string authorization, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -600,10 +555,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="signTypedData"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> SignTypedDataAsync(string accountName, string authorization, SignTypedData signTypedData, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountControllerResponse> SignTypedDataAsync(string accountName, string authorization, SignTypedData signTypedData, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -615,10 +569,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="signTypedData"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> SignTypedDataWithHttpInfoAsync(string accountName, string authorization, SignTypedData signTypedData, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> SignTypedDataWithHttpInfoAsync(string accountName, string authorization, SignTypedData signTypedData, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -629,10 +582,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> TransferEthAsync(string accountName, string authorization, InputBody inputBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountControllerResponse> TransferEthAsync(string accountName, string authorization, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -644,10 +596,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> TransferEthWithHttpInfoAsync(string accountName, string authorization, InputBody inputBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> TransferEthWithHttpInfoAsync(string accountName, string authorization, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -662,12 +613,14 @@ namespace Org.OpenAPITools.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class AccountsApi : IAccountsApi
+    public partial class AccountsApi : IDisposable, IAccountsApi
     {
         private Org.OpenAPITools.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AccountsApi"/> class.
+        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
+        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
         /// <returns></returns>
         public AccountsApi() : this((string)null)
@@ -676,7 +629,11 @@ namespace Org.OpenAPITools.Api
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AccountsApi"/> class.
+        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
+        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
+        /// <param name="basePath">The target service's base path in URL format.</param>
+        /// <exception cref="ArgumentException"></exception>
         /// <returns></returns>
         public AccountsApi(string basePath)
         {
@@ -684,16 +641,19 @@ namespace Org.OpenAPITools.Api
                 Org.OpenAPITools.Client.GlobalConfiguration.Instance,
                 new Org.OpenAPITools.Client.Configuration { BasePath = basePath }
             );
-            this.Client = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.ApiClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.Client =  this.ApiClient;
+            this.AsynchronousClient = this.ApiClient;
             this.ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AccountsApi"/> class
-        /// using Configuration object
+        /// Initializes a new instance of the <see cref="AccountsApi"/> class using Configuration object.
+        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
+        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
-        /// <param name="configuration">An instance of Configuration</param>
+        /// <param name="configuration">An instance of Configuration.</param>
+        /// <exception cref="ArgumentNullException"></exception>
         /// <returns></returns>
         public AccountsApi(Org.OpenAPITools.Client.Configuration configuration)
         {
@@ -703,8 +663,9 @@ namespace Org.OpenAPITools.Api
                 Org.OpenAPITools.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.ApiClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = this.ApiClient;
+            this.AsynchronousClient = this.ApiClient;
             ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -715,6 +676,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
+        /// <exception cref="ArgumentNullException"></exception>
         public AccountsApi(Org.OpenAPITools.Client.ISynchronousClient client, Org.OpenAPITools.Client.IAsynchronousClient asyncClient, Org.OpenAPITools.Client.IReadableConfiguration configuration)
         {
             if (client == null) throw new ArgumentNullException("client");
@@ -726,6 +688,19 @@ namespace Org.OpenAPITools.Api
             this.Configuration = configuration;
             this.ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
         }
+
+        /// <summary>
+        /// Disposes resources if they were created by us
+        /// </summary>
+        public void Dispose()
+        {
+            this.ApiClient?.Dispose();
+        }
+
+        /// <summary>
+        /// Holds the ApiClient if created
+        /// </summary>
+        public Org.OpenAPITools.Client.ApiClient ApiClient { get; set; } = null;
 
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
@@ -775,9 +750,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="broadcastInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse BroadcastTx(string authorization, string accountName, BroadcastInput broadcastInput, int operationIndex = 0)
+        public AccountControllerResponse BroadcastTx(string authorization, string accountName, BroadcastInput broadcastInput)
         {
             Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = BroadcastTxWithHttpInfo(authorization, accountName, broadcastInput);
             return localVarResponse.Data;
@@ -790,27 +764,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="broadcastInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> BroadcastTxWithHttpInfo(string authorization, string accountName, BroadcastInput broadcastInput, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> BroadcastTxWithHttpInfo(string authorization, string accountName, BroadcastInput broadcastInput)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling AccountsApi->BroadcastTx");
-            }
 
             // verify the required parameter 'accountName' is set
             if (accountName == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'accountName' when calling AccountsApi->BroadcastTx");
-            }
 
             // verify the required parameter 'broadcastInput' is set
             if (broadcastInput == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'broadcastInput' when calling AccountsApi->BroadcastTx");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -824,23 +791,14 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("accountName", Org.OpenAPITools.Client.ClientUtils.ParameterToString(accountName)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = broadcastInput;
-
-            localVarRequestOptions.Operation = "AccountsApi.BroadcastTx";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -855,13 +813,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<AccountControllerResponse>("/accounts/{accountName}/broadcast-tx", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("BroadcastTx", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -874,12 +830,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="broadcastInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> BroadcastTxAsync(string authorization, string accountName, BroadcastInput broadcastInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountControllerResponse> BroadcastTxAsync(string authorization, string accountName, BroadcastInput broadcastInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await BroadcastTxWithHttpInfoAsync(authorization, accountName, broadcastInput, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = BroadcastTxWithHttpInfoAsync(authorization, accountName, broadcastInput, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -890,28 +850,21 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="broadcastInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> BroadcastTxWithHttpInfoAsync(string authorization, string accountName, BroadcastInput broadcastInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> BroadcastTxWithHttpInfoAsync(string authorization, string accountName, BroadcastInput broadcastInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling AccountsApi->BroadcastTx");
-            }
 
             // verify the required parameter 'accountName' is set
             if (accountName == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'accountName' when calling AccountsApi->BroadcastTx");
-            }
 
             // verify the required parameter 'broadcastInput' is set
             if (broadcastInput == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'broadcastInput' when calling AccountsApi->BroadcastTx");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -925,24 +878,16 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("accountName", Org.OpenAPITools.Client.ClientUtils.ParameterToString(accountName)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = broadcastInput;
-
-            localVarRequestOptions.Operation = "AccountsApi.BroadcastTx";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -956,15 +901,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<AccountControllerResponse>("/accounts/{accountName}/broadcast-tx", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/accounts/{accountName}/broadcast-tx", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("BroadcastTx", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -976,9 +925,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="createAccountInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse CreateAccount(string authorization, CreateAccountInput createAccountInput, int operationIndex = 0)
+        public AccountControllerResponse CreateAccount(string authorization, CreateAccountInput createAccountInput)
         {
             Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = CreateAccountWithHttpInfo(authorization, createAccountInput);
             return localVarResponse.Data;
@@ -990,21 +938,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="createAccountInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> CreateAccountWithHttpInfo(string authorization, CreateAccountInput createAccountInput, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> CreateAccountWithHttpInfo(string authorization, CreateAccountInput createAccountInput)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling AccountsApi->CreateAccount");
-            }
 
             // verify the required parameter 'createAccountInput' is set
             if (createAccountInput == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'createAccountInput' when calling AccountsApi->CreateAccount");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1018,22 +961,13 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = createAccountInput;
-
-            localVarRequestOptions.Operation = "AccountsApi.CreateAccount";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1048,13 +982,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<AccountControllerResponse>("/accounts", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateAccount", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1066,12 +998,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="createAccountInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> CreateAccountAsync(string authorization, CreateAccountInput createAccountInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountControllerResponse> CreateAccountAsync(string authorization, CreateAccountInput createAccountInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await CreateAccountWithHttpInfoAsync(authorization, createAccountInput, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = CreateAccountWithHttpInfoAsync(authorization, createAccountInput, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -1081,22 +1017,17 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="createAccountInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> CreateAccountWithHttpInfoAsync(string authorization, CreateAccountInput createAccountInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> CreateAccountWithHttpInfoAsync(string authorization, CreateAccountInput createAccountInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling AccountsApi->CreateAccount");
-            }
 
             // verify the required parameter 'createAccountInput' is set
             if (createAccountInput == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'createAccountInput' when calling AccountsApi->CreateAccount");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1110,23 +1041,15 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = createAccountInput;
-
-            localVarRequestOptions.Operation = "AccountsApi.CreateAccount";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1140,15 +1063,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<AccountControllerResponse>("/accounts", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/accounts", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateAccount", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1160,9 +1087,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse DeleteAccount(string authorization, string accountName, int operationIndex = 0)
+        public AccountControllerResponse DeleteAccount(string authorization, string accountName)
         {
             Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = DeleteAccountWithHttpInfo(authorization, accountName);
             return localVarResponse.Data;
@@ -1174,21 +1100,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> DeleteAccountWithHttpInfo(string authorization, string accountName, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> DeleteAccountWithHttpInfo(string authorization, string accountName)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling AccountsApi->DeleteAccount");
-            }
 
             // verify the required parameter 'accountName' is set
             if (accountName == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'accountName' when calling AccountsApi->DeleteAccount");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1201,22 +1122,13 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("accountName", Org.OpenAPITools.Client.ClientUtils.ParameterToString(accountName)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "AccountsApi.DeleteAccount";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1231,13 +1143,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Delete<AccountControllerResponse>("/accounts/{accountName}", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteAccount", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1249,12 +1159,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> DeleteAccountAsync(string authorization, string accountName, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountControllerResponse> DeleteAccountAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await DeleteAccountWithHttpInfoAsync(authorization, accountName, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = DeleteAccountWithHttpInfoAsync(authorization, accountName, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -1264,22 +1178,17 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> DeleteAccountWithHttpInfoAsync(string authorization, string accountName, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> DeleteAccountWithHttpInfoAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling AccountsApi->DeleteAccount");
-            }
 
             // verify the required parameter 'accountName' is set
             if (accountName == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'accountName' when calling AccountsApi->DeleteAccount");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1292,23 +1201,15 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("accountName", Org.OpenAPITools.Client.ClientUtils.ParameterToString(accountName)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "AccountsApi.DeleteAccount";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1322,15 +1223,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<AccountControllerResponse>("/accounts/{accountName}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.DeleteAsync<AccountControllerResponse>("/accounts/{accountName}", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteAccount", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1343,9 +1248,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="deployInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse DeployContract(string authorization, string accountName, DeployInput deployInput, int operationIndex = 0)
+        public AccountControllerResponse DeployContract(string authorization, string accountName, DeployInput deployInput)
         {
             Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = DeployContractWithHttpInfo(authorization, accountName, deployInput);
             return localVarResponse.Data;
@@ -1358,27 +1262,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="deployInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> DeployContractWithHttpInfo(string authorization, string accountName, DeployInput deployInput, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> DeployContractWithHttpInfo(string authorization, string accountName, DeployInput deployInput)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling AccountsApi->DeployContract");
-            }
 
             // verify the required parameter 'accountName' is set
             if (accountName == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'accountName' when calling AccountsApi->DeployContract");
-            }
 
             // verify the required parameter 'deployInput' is set
             if (deployInput == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'deployInput' when calling AccountsApi->DeployContract");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1392,23 +1289,14 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("accountName", Org.OpenAPITools.Client.ClientUtils.ParameterToString(accountName)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = deployInput;
-
-            localVarRequestOptions.Operation = "AccountsApi.DeployContract";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1423,13 +1311,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<AccountControllerResponse>("/accounts/{accountName}/deploy", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeployContract", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1442,12 +1328,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="deployInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> DeployContractAsync(string authorization, string accountName, DeployInput deployInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountControllerResponse> DeployContractAsync(string authorization, string accountName, DeployInput deployInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await DeployContractWithHttpInfoAsync(authorization, accountName, deployInput, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = DeployContractWithHttpInfoAsync(authorization, accountName, deployInput, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -1458,28 +1348,21 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="deployInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> DeployContractWithHttpInfoAsync(string authorization, string accountName, DeployInput deployInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> DeployContractWithHttpInfoAsync(string authorization, string accountName, DeployInput deployInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling AccountsApi->DeployContract");
-            }
 
             // verify the required parameter 'accountName' is set
             if (accountName == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'accountName' when calling AccountsApi->DeployContract");
-            }
 
             // verify the required parameter 'deployInput' is set
             if (deployInput == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'deployInput' when calling AccountsApi->DeployContract");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1493,24 +1376,16 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("accountName", Org.OpenAPITools.Client.ClientUtils.ParameterToString(accountName)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = deployInput;
-
-            localVarRequestOptions.Operation = "AccountsApi.DeployContract";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1524,15 +1399,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<AccountControllerResponse>("/accounts/{accountName}/deploy", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/accounts/{accountName}/deploy", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeployContract", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1544,9 +1423,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse GetAccount(string authorization, string accountName, int operationIndex = 0)
+        public AccountControllerResponse GetAccount(string authorization, string accountName)
         {
             Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = GetAccountWithHttpInfo(authorization, accountName);
             return localVarResponse.Data;
@@ -1558,21 +1436,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> GetAccountWithHttpInfo(string authorization, string accountName, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> GetAccountWithHttpInfo(string authorization, string accountName)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling AccountsApi->GetAccount");
-            }
 
             // verify the required parameter 'accountName' is set
             if (accountName == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'accountName' when calling AccountsApi->GetAccount");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1585,22 +1458,13 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("accountName", Org.OpenAPITools.Client.ClientUtils.ParameterToString(accountName)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "AccountsApi.GetAccount";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1615,13 +1479,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<AccountControllerResponse>("/accounts/{accountName}", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetAccount", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1633,12 +1495,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> GetAccountAsync(string authorization, string accountName, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountControllerResponse> GetAccountAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await GetAccountWithHttpInfoAsync(authorization, accountName, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = GetAccountWithHttpInfoAsync(authorization, accountName, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -1648,22 +1514,17 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> GetAccountWithHttpInfoAsync(string authorization, string accountName, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> GetAccountWithHttpInfoAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling AccountsApi->GetAccount");
-            }
 
             // verify the required parameter 'accountName' is set
             if (accountName == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'accountName' when calling AccountsApi->GetAccount");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1676,23 +1537,15 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("accountName", Org.OpenAPITools.Client.ClientUtils.ParameterToString(accountName)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "AccountsApi.GetAccount";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1706,15 +1559,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<AccountControllerResponse>("/accounts/{accountName}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.GetAsync<AccountControllerResponse>("/accounts/{accountName}", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetAccount", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1727,9 +1584,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="chainId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse GetBalance(string accountName, string authorization, string chainId, int operationIndex = 0)
+        public AccountControllerResponse GetBalance(string accountName, string authorization, string chainId)
         {
             Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = GetBalanceWithHttpInfo(accountName, authorization, chainId);
             return localVarResponse.Data;
@@ -1742,27 +1598,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="chainId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> GetBalanceWithHttpInfo(string accountName, string authorization, string chainId, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> GetBalanceWithHttpInfo(string accountName, string authorization, string chainId)
         {
             // verify the required parameter 'accountName' is set
             if (accountName == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'accountName' when calling AccountsApi->GetBalance");
-            }
 
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling AccountsApi->GetBalance");
-            }
 
             // verify the required parameter 'chainId' is set
             if (chainId == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'chainId' when calling AccountsApi->GetBalance");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1775,23 +1624,14 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("accountName", Org.OpenAPITools.Client.ClientUtils.ParameterToString(accountName)); // path parameter
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "chainId", chainId));
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "AccountsApi.GetBalance";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1806,13 +1646,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<AccountControllerResponse>("/accounts/{accountName}/balance", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetBalance", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1825,12 +1663,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="chainId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> GetBalanceAsync(string accountName, string authorization, string chainId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountControllerResponse> GetBalanceAsync(string accountName, string authorization, string chainId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await GetBalanceWithHttpInfoAsync(accountName, authorization, chainId, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = GetBalanceWithHttpInfoAsync(accountName, authorization, chainId, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -1841,28 +1683,21 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="chainId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> GetBalanceWithHttpInfoAsync(string accountName, string authorization, string chainId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> GetBalanceWithHttpInfoAsync(string accountName, string authorization, string chainId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'accountName' is set
             if (accountName == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'accountName' when calling AccountsApi->GetBalance");
-            }
 
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling AccountsApi->GetBalance");
-            }
 
             // verify the required parameter 'chainId' is set
             if (chainId == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'chainId' when calling AccountsApi->GetBalance");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1875,24 +1710,16 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("accountName", Org.OpenAPITools.Client.ClientUtils.ParameterToString(accountName)); // path parameter
             localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "chainId", chainId));
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "AccountsApi.GetBalance";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1906,15 +1733,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<AccountControllerResponse>("/accounts/{accountName}/balance", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.GetAsync<AccountControllerResponse>("/accounts/{accountName}/balance", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetBalance", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1926,9 +1757,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse GetNonce(string accountName, string authorization, int operationIndex = 0)
+        public AccountControllerResponse GetNonce(string accountName, string authorization)
         {
             Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = GetNonceWithHttpInfo(accountName, authorization);
             return localVarResponse.Data;
@@ -1940,21 +1770,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> GetNonceWithHttpInfo(string accountName, string authorization, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> GetNonceWithHttpInfo(string accountName, string authorization)
         {
             // verify the required parameter 'accountName' is set
             if (accountName == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'accountName' when calling AccountsApi->GetNonce");
-            }
 
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling AccountsApi->GetNonce");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1967,22 +1792,13 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("accountName", Org.OpenAPITools.Client.ClientUtils.ParameterToString(accountName)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "AccountsApi.GetNonce";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1997,13 +1813,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<AccountControllerResponse>("/accounts/{accountName}/nonce", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetNonce", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2015,12 +1829,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> GetNonceAsync(string accountName, string authorization, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountControllerResponse> GetNonceAsync(string accountName, string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await GetNonceWithHttpInfoAsync(accountName, authorization, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = GetNonceWithHttpInfoAsync(accountName, authorization, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -2030,22 +1848,17 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> GetNonceWithHttpInfoAsync(string accountName, string authorization, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> GetNonceWithHttpInfoAsync(string accountName, string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'accountName' is set
             if (accountName == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'accountName' when calling AccountsApi->GetNonce");
-            }
 
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling AccountsApi->GetNonce");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -2058,23 +1871,15 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("accountName", Org.OpenAPITools.Client.ClientUtils.ParameterToString(accountName)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "AccountsApi.GetNonce";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -2088,15 +1893,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<AccountControllerResponse>("/accounts/{accountName}/nonce", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.GetAsync<AccountControllerResponse>("/accounts/{accountName}/nonce", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetNonce", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2107,9 +1916,8 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse ListAccounts(string authorization, int operationIndex = 0)
+        public AccountControllerResponse ListAccounts(string authorization)
         {
             Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = ListAccountsWithHttpInfo(authorization);
             return localVarResponse.Data;
@@ -2120,15 +1928,12 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> ListAccountsWithHttpInfo(string authorization, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> ListAccountsWithHttpInfo(string authorization)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling AccountsApi->ListAccounts");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -2141,21 +1946,12 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "AccountsApi.ListAccounts";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -2170,13 +1966,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<AccountControllerResponse>("/accounts", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListAccounts", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2187,12 +1981,16 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> ListAccountsAsync(string authorization, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountControllerResponse> ListAccountsAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await ListAccountsWithHttpInfoAsync(authorization, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = ListAccountsWithHttpInfoAsync(authorization, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -2201,16 +1999,13 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> ListAccountsWithHttpInfoAsync(string authorization, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> ListAccountsWithHttpInfoAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling AccountsApi->ListAccounts");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -2223,22 +2018,14 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "AccountsApi.ListAccounts";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -2252,15 +2039,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<AccountControllerResponse>("/accounts", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.GetAsync<AccountControllerResponse>("/accounts", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListAccounts", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2273,9 +2064,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="signMessage"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse SignMessage(string accountName, string authorization, SignMessage signMessage, int operationIndex = 0)
+        public AccountControllerResponse SignMessage(string accountName, string authorization, SignMessage signMessage)
         {
             Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = SignMessageWithHttpInfo(accountName, authorization, signMessage);
             return localVarResponse.Data;
@@ -2288,27 +2078,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="signMessage"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> SignMessageWithHttpInfo(string accountName, string authorization, SignMessage signMessage, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> SignMessageWithHttpInfo(string accountName, string authorization, SignMessage signMessage)
         {
             // verify the required parameter 'accountName' is set
             if (accountName == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'accountName' when calling AccountsApi->SignMessage");
-            }
 
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling AccountsApi->SignMessage");
-            }
 
             // verify the required parameter 'signMessage' is set
             if (signMessage == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'signMessage' when calling AccountsApi->SignMessage");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -2322,23 +2105,14 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("accountName", Org.OpenAPITools.Client.ClientUtils.ParameterToString(accountName)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = signMessage;
-
-            localVarRequestOptions.Operation = "AccountsApi.SignMessage";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -2353,13 +2127,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<AccountControllerResponse>("/accounts/{accountName}/sign-message", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SignMessage", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2372,12 +2144,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="signMessage"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> SignMessageAsync(string accountName, string authorization, SignMessage signMessage, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountControllerResponse> SignMessageAsync(string accountName, string authorization, SignMessage signMessage, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await SignMessageWithHttpInfoAsync(accountName, authorization, signMessage, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = SignMessageWithHttpInfoAsync(accountName, authorization, signMessage, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -2388,28 +2164,21 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="signMessage"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> SignMessageWithHttpInfoAsync(string accountName, string authorization, SignMessage signMessage, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> SignMessageWithHttpInfoAsync(string accountName, string authorization, SignMessage signMessage, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'accountName' is set
             if (accountName == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'accountName' when calling AccountsApi->SignMessage");
-            }
 
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling AccountsApi->SignMessage");
-            }
 
             // verify the required parameter 'signMessage' is set
             if (signMessage == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'signMessage' when calling AccountsApi->SignMessage");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -2423,24 +2192,16 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("accountName", Org.OpenAPITools.Client.ClientUtils.ParameterToString(accountName)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = signMessage;
-
-            localVarRequestOptions.Operation = "AccountsApi.SignMessage";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -2454,15 +2215,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<AccountControllerResponse>("/accounts/{accountName}/sign-message", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/accounts/{accountName}/sign-message", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SignMessage", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2475,9 +2240,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse SignTransaction(string accountName, string authorization, InputBody inputBody, int operationIndex = 0)
+        public AccountControllerResponse SignTransaction(string accountName, string authorization, InputBody inputBody)
         {
             Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = SignTransactionWithHttpInfo(accountName, authorization, inputBody);
             return localVarResponse.Data;
@@ -2490,27 +2254,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> SignTransactionWithHttpInfo(string accountName, string authorization, InputBody inputBody, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> SignTransactionWithHttpInfo(string accountName, string authorization, InputBody inputBody)
         {
             // verify the required parameter 'accountName' is set
             if (accountName == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'accountName' when calling AccountsApi->SignTransaction");
-            }
 
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling AccountsApi->SignTransaction");
-            }
 
             // verify the required parameter 'inputBody' is set
             if (inputBody == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'inputBody' when calling AccountsApi->SignTransaction");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -2524,23 +2281,14 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("accountName", Org.OpenAPITools.Client.ClientUtils.ParameterToString(accountName)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = inputBody;
-
-            localVarRequestOptions.Operation = "AccountsApi.SignTransaction";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -2555,13 +2303,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<AccountControllerResponse>("/accounts/{accountName}/sign-transaction", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SignTransaction", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2574,12 +2320,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> SignTransactionAsync(string accountName, string authorization, InputBody inputBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountControllerResponse> SignTransactionAsync(string accountName, string authorization, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await SignTransactionWithHttpInfoAsync(accountName, authorization, inputBody, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = SignTransactionWithHttpInfoAsync(accountName, authorization, inputBody, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -2590,28 +2340,21 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> SignTransactionWithHttpInfoAsync(string accountName, string authorization, InputBody inputBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> SignTransactionWithHttpInfoAsync(string accountName, string authorization, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'accountName' is set
             if (accountName == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'accountName' when calling AccountsApi->SignTransaction");
-            }
 
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling AccountsApi->SignTransaction");
-            }
 
             // verify the required parameter 'inputBody' is set
             if (inputBody == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'inputBody' when calling AccountsApi->SignTransaction");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -2625,24 +2368,16 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("accountName", Org.OpenAPITools.Client.ClientUtils.ParameterToString(accountName)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = inputBody;
-
-            localVarRequestOptions.Operation = "AccountsApi.SignTransaction";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -2656,15 +2391,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<AccountControllerResponse>("/accounts/{accountName}/sign-transaction", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/accounts/{accountName}/sign-transaction", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SignTransaction", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2677,9 +2416,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="signTypedData"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse SignTypedData(string accountName, string authorization, SignTypedData signTypedData, int operationIndex = 0)
+        public AccountControllerResponse SignTypedData(string accountName, string authorization, SignTypedData signTypedData)
         {
             Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = SignTypedDataWithHttpInfo(accountName, authorization, signTypedData);
             return localVarResponse.Data;
@@ -2692,27 +2430,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="signTypedData"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> SignTypedDataWithHttpInfo(string accountName, string authorization, SignTypedData signTypedData, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> SignTypedDataWithHttpInfo(string accountName, string authorization, SignTypedData signTypedData)
         {
             // verify the required parameter 'accountName' is set
             if (accountName == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'accountName' when calling AccountsApi->SignTypedData");
-            }
 
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling AccountsApi->SignTypedData");
-            }
 
             // verify the required parameter 'signTypedData' is set
             if (signTypedData == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'signTypedData' when calling AccountsApi->SignTypedData");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -2726,23 +2457,14 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("accountName", Org.OpenAPITools.Client.ClientUtils.ParameterToString(accountName)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = signTypedData;
-
-            localVarRequestOptions.Operation = "AccountsApi.SignTypedData";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -2757,13 +2479,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<AccountControllerResponse>("/accounts/{accountName}/sign-typed-data", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SignTypedData", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2776,12 +2496,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="signTypedData"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> SignTypedDataAsync(string accountName, string authorization, SignTypedData signTypedData, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountControllerResponse> SignTypedDataAsync(string accountName, string authorization, SignTypedData signTypedData, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await SignTypedDataWithHttpInfoAsync(accountName, authorization, signTypedData, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = SignTypedDataWithHttpInfoAsync(accountName, authorization, signTypedData, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -2792,28 +2516,21 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="signTypedData"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> SignTypedDataWithHttpInfoAsync(string accountName, string authorization, SignTypedData signTypedData, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> SignTypedDataWithHttpInfoAsync(string accountName, string authorization, SignTypedData signTypedData, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'accountName' is set
             if (accountName == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'accountName' when calling AccountsApi->SignTypedData");
-            }
 
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling AccountsApi->SignTypedData");
-            }
 
             // verify the required parameter 'signTypedData' is set
             if (signTypedData == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'signTypedData' when calling AccountsApi->SignTypedData");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -2827,24 +2544,16 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("accountName", Org.OpenAPITools.Client.ClientUtils.ParameterToString(accountName)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = signTypedData;
-
-            localVarRequestOptions.Operation = "AccountsApi.SignTypedData";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -2858,15 +2567,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<AccountControllerResponse>("/accounts/{accountName}/sign-typed-data", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/accounts/{accountName}/sign-typed-data", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SignTypedData", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2879,9 +2592,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse TransferEth(string accountName, string authorization, InputBody inputBody, int operationIndex = 0)
+        public AccountControllerResponse TransferEth(string accountName, string authorization, InputBody inputBody)
         {
             Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = TransferEthWithHttpInfo(accountName, authorization, inputBody);
             return localVarResponse.Data;
@@ -2894,27 +2606,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> TransferEthWithHttpInfo(string accountName, string authorization, InputBody inputBody, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> TransferEthWithHttpInfo(string accountName, string authorization, InputBody inputBody)
         {
             // verify the required parameter 'accountName' is set
             if (accountName == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'accountName' when calling AccountsApi->TransferEth");
-            }
 
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling AccountsApi->TransferEth");
-            }
 
             // verify the required parameter 'inputBody' is set
             if (inputBody == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'inputBody' when calling AccountsApi->TransferEth");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -2928,23 +2633,14 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("accountName", Org.OpenAPITools.Client.ClientUtils.ParameterToString(accountName)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = inputBody;
-
-            localVarRequestOptions.Operation = "AccountsApi.TransferEth";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -2959,13 +2655,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<AccountControllerResponse>("/accounts/{accountName}/transfer-eth", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("TransferEth", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2978,12 +2672,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> TransferEthAsync(string accountName, string authorization, InputBody inputBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountControllerResponse> TransferEthAsync(string accountName, string authorization, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await TransferEthWithHttpInfoAsync(accountName, authorization, inputBody, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = TransferEthWithHttpInfoAsync(accountName, authorization, inputBody, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -2994,28 +2692,21 @@ namespace Org.OpenAPITools.Api
         /// <param name="accountName"></param>
         /// <param name="authorization"></param>
         /// <param name="inputBody"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> TransferEthWithHttpInfoAsync(string accountName, string authorization, InputBody inputBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> TransferEthWithHttpInfoAsync(string accountName, string authorization, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'accountName' is set
             if (accountName == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'accountName' when calling AccountsApi->TransferEth");
-            }
 
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling AccountsApi->TransferEth");
-            }
 
             // verify the required parameter 'inputBody' is set
             if (inputBody == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'inputBody' when calling AccountsApi->TransferEth");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -3029,24 +2720,16 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("accountName", Org.OpenAPITools.Client.ClientUtils.ParameterToString(accountName)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = inputBody;
-
-            localVarRequestOptions.Operation = "AccountsApi.TransferEth";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -3060,15 +2743,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<AccountControllerResponse>("/accounts/{accountName}/transfer-eth", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/accounts/{accountName}/transfer-eth", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("TransferEth", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;

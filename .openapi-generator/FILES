@@ -1,8 +1,6 @@
 .gitignore
-Org.OpenAPITools.sln
 README.md
 api/openapi.yaml
-appveyor.yml
 docs/AaveApi.md
 docs/AaveInput.md
 docs/AaveReservesData.md
@@ -124,7 +122,7 @@ docs/UniSwapApi.md
 docs/UniswapInput.md
 docs/YearnApi.md
 git_push.sh
-src/Org.OpenAPITools.Test/Org.OpenAPITools.Test.csproj
+src/Org.OpenAPITools.Test/Org.OpenAPITools.Test.asmdef
 src/Org.OpenAPITools/Api/AaveApi.cs
 src/Org.OpenAPITools/Api/AccountsApi.cs
 src/Org.OpenAPITools/Api/BitcoinApi.cs
@@ -151,14 +149,11 @@ src/Org.OpenAPITools/Api/YearnApi.cs
 src/Org.OpenAPITools/Client/ApiClient.cs
 src/Org.OpenAPITools/Client/ApiException.cs
 src/Org.OpenAPITools/Client/ApiResponse.cs
-src/Org.OpenAPITools/Client/Auth/OAuthAuthenticator.cs
-src/Org.OpenAPITools/Client/Auth/OAuthFlow.cs
-src/Org.OpenAPITools/Client/Auth/TokenResponse.cs
 src/Org.OpenAPITools/Client/ClientUtils.cs
 src/Org.OpenAPITools/Client/Configuration.cs
+src/Org.OpenAPITools/Client/ConnectionException.cs
 src/Org.OpenAPITools/Client/ExceptionFactory.cs
 src/Org.OpenAPITools/Client/GlobalConfiguration.cs
-src/Org.OpenAPITools/Client/HttpMethod.cs
 src/Org.OpenAPITools/Client/IApiAccessor.cs
 src/Org.OpenAPITools/Client/IAsynchronousClient.cs
 src/Org.OpenAPITools/Client/IReadableConfiguration.cs
@@ -166,7 +161,8 @@ src/Org.OpenAPITools/Client/ISynchronousClient.cs
 src/Org.OpenAPITools/Client/Multimap.cs
 src/Org.OpenAPITools/Client/OpenAPIDateConverter.cs
 src/Org.OpenAPITools/Client/RequestOptions.cs
-src/Org.OpenAPITools/Client/RetryConfiguration.cs
+src/Org.OpenAPITools/Client/UnexpectedResponseException.cs
+src/Org.OpenAPITools/Client/WebRequestPathBuilder.cs
 src/Org.OpenAPITools/Model/AaveInput.cs
 src/Org.OpenAPITools/Model/AaveReservesData.cs
 src/Org.OpenAPITools/Model/AbiInput.cs
@@ -265,4 +261,4 @@ src/Org.OpenAPITools/Model/TronInput.cs
 src/Org.OpenAPITools/Model/TronTransactionInput.cs
 src/Org.OpenAPITools/Model/Tx.cs
 src/Org.OpenAPITools/Model/UniswapInput.cs
-src/Org.OpenAPITools/Org.OpenAPITools.csproj
+src/Org.OpenAPITools/Org.OpenAPITools.asmdef

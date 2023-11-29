@@ -9,7 +9,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 | [**ListBitcoinAccounts**](BitcoinApi.md#listbitcoinaccounts) | **GET** /bitcoin |  |
 | [**SignBitcoinTransaction**](BitcoinApi.md#signbitcointransaction) | **POST** /bitcoin/{accountName}/sign-tx |  |
 
-<a id="createbitcoinaccount"></a>
+<a name="createbitcoinaccount"></a>
 # **CreateBitcoinAccount**
 > AccountControllerResponse CreateBitcoinAccount (string authorization, BitcoinInput bitcoinInput)
 
@@ -107,7 +107,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="getbitcoinaccount"></a>
+<a name="getbitcoinaccount"></a>
 # **GetBitcoinAccount**
 > AccountControllerResponse GetBitcoinAccount (string authorization, string accountName)
 
@@ -205,7 +205,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="listbitcoinaccounts"></a>
+<a name="listbitcoinaccounts"></a>
 # **ListBitcoinAccounts**
 > AccountControllerResponse ListBitcoinAccounts (string authorization)
 
@@ -301,7 +301,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="signbitcointransaction"></a>
+<a name="signbitcointransaction"></a>
 # **SignBitcoinTransaction**
 > AccountControllerResponse SignBitcoinTransaction (string authorization, string accountName, BitcoinTransactionInput bitcoinTransactionInput)
 

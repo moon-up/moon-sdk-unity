@@ -15,7 +15,6 @@ using System.Linq;
 using System.Net;
 using System.Net.Mime;
 using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Client.Auth;
 using Org.OpenAPITools.Model;
 
 namespace Org.OpenAPITools.Api
@@ -33,9 +32,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="tronInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse CreateTronAccount(string authorization, TronInput tronInput, int operationIndex = 0);
+        AccountControllerResponse CreateTronAccount(string authorization, TronInput tronInput);
 
         /// <summary>
         /// 
@@ -46,18 +44,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="tronInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> CreateTronAccountWithHttpInfo(string authorization, TronInput tronInput, int operationIndex = 0);
+        ApiResponse<AccountControllerResponse> CreateTronAccountWithHttpInfo(string authorization, TronInput tronInput);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse GetTronAccount(string authorization, string accountName, int operationIndex = 0);
+        AccountControllerResponse GetTronAccount(string authorization, string accountName);
 
         /// <summary>
         /// 
@@ -68,17 +64,15 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> GetTronAccountWithHttpInfo(string authorization, string accountName, int operationIndex = 0);
+        ApiResponse<AccountControllerResponse> GetTronAccountWithHttpInfo(string authorization, string accountName);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse ListTronAccounts(string authorization, int operationIndex = 0);
+        AccountControllerResponse ListTronAccounts(string authorization);
 
         /// <summary>
         /// 
@@ -88,9 +82,8 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> ListTronAccountsWithHttpInfo(string authorization, int operationIndex = 0);
+        ApiResponse<AccountControllerResponse> ListTronAccountsWithHttpInfo(string authorization);
         /// <summary>
         /// 
         /// </summary>
@@ -98,9 +91,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="tronTransactionInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse SignTronTransaction(string authorization, string accountName, TronTransactionInput tronTransactionInput, int operationIndex = 0);
+        AccountControllerResponse SignTronTransaction(string authorization, string accountName, TronTransactionInput tronTransactionInput);
 
         /// <summary>
         /// 
@@ -112,9 +104,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="tronTransactionInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> SignTronTransactionWithHttpInfo(string authorization, string accountName, TronTransactionInput tronTransactionInput, int operationIndex = 0);
+        ApiResponse<AccountControllerResponse> SignTronTransactionWithHttpInfo(string authorization, string accountName, TronTransactionInput tronTransactionInput);
         #endregion Synchronous Operations
     }
 
@@ -133,10 +124,9 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="tronInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> CreateTronAccountAsync(string authorization, TronInput tronInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountControllerResponse> CreateTronAccountAsync(string authorization, TronInput tronInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -147,10 +137,9 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="tronInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> CreateTronAccountWithHttpInfoAsync(string authorization, TronInput tronInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> CreateTronAccountWithHttpInfoAsync(string authorization, TronInput tronInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -160,10 +149,9 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> GetTronAccountAsync(string authorization, string accountName, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountControllerResponse> GetTronAccountAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -174,10 +162,9 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> GetTronAccountWithHttpInfoAsync(string authorization, string accountName, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> GetTronAccountWithHttpInfoAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -186,10 +173,9 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> ListTronAccountsAsync(string authorization, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountControllerResponse> ListTronAccountsAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -199,10 +185,9 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> ListTronAccountsWithHttpInfoAsync(string authorization, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> ListTronAccountsWithHttpInfoAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -213,10 +198,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="tronTransactionInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> SignTronTransactionAsync(string authorization, string accountName, TronTransactionInput tronTransactionInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountControllerResponse> SignTronTransactionAsync(string authorization, string accountName, TronTransactionInput tronTransactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -228,10 +212,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="tronTransactionInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> SignTronTransactionWithHttpInfoAsync(string authorization, string accountName, TronTransactionInput tronTransactionInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> SignTronTransactionWithHttpInfoAsync(string authorization, string accountName, TronTransactionInput tronTransactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -246,12 +229,14 @@ namespace Org.OpenAPITools.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class TronApi : ITronApi
+    public partial class TronApi : IDisposable, ITronApi
     {
         private Org.OpenAPITools.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="TronApi"/> class.
+        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
+        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
         /// <returns></returns>
         public TronApi() : this((string)null)
@@ -260,7 +245,11 @@ namespace Org.OpenAPITools.Api
 
         /// <summary>
         /// Initializes a new instance of the <see cref="TronApi"/> class.
+        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
+        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
+        /// <param name="basePath">The target service's base path in URL format.</param>
+        /// <exception cref="ArgumentException"></exception>
         /// <returns></returns>
         public TronApi(string basePath)
         {
@@ -268,16 +257,19 @@ namespace Org.OpenAPITools.Api
                 Org.OpenAPITools.Client.GlobalConfiguration.Instance,
                 new Org.OpenAPITools.Client.Configuration { BasePath = basePath }
             );
-            this.Client = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.ApiClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.Client =  this.ApiClient;
+            this.AsynchronousClient = this.ApiClient;
             this.ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="TronApi"/> class
-        /// using Configuration object
+        /// Initializes a new instance of the <see cref="TronApi"/> class using Configuration object.
+        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
+        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
-        /// <param name="configuration">An instance of Configuration</param>
+        /// <param name="configuration">An instance of Configuration.</param>
+        /// <exception cref="ArgumentNullException"></exception>
         /// <returns></returns>
         public TronApi(Org.OpenAPITools.Client.Configuration configuration)
         {
@@ -287,8 +279,9 @@ namespace Org.OpenAPITools.Api
                 Org.OpenAPITools.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.ApiClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = this.ApiClient;
+            this.AsynchronousClient = this.ApiClient;
             ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -299,6 +292,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
+        /// <exception cref="ArgumentNullException"></exception>
         public TronApi(Org.OpenAPITools.Client.ISynchronousClient client, Org.OpenAPITools.Client.IAsynchronousClient asyncClient, Org.OpenAPITools.Client.IReadableConfiguration configuration)
         {
             if (client == null) throw new ArgumentNullException("client");
@@ -310,6 +304,19 @@ namespace Org.OpenAPITools.Api
             this.Configuration = configuration;
             this.ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
         }
+
+        /// <summary>
+        /// Disposes resources if they were created by us
+        /// </summary>
+        public void Dispose()
+        {
+            this.ApiClient?.Dispose();
+        }
+
+        /// <summary>
+        /// Holds the ApiClient if created
+        /// </summary>
+        public Org.OpenAPITools.Client.ApiClient ApiClient { get; set; } = null;
 
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
@@ -358,9 +365,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="tronInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse CreateTronAccount(string authorization, TronInput tronInput, int operationIndex = 0)
+        public AccountControllerResponse CreateTronAccount(string authorization, TronInput tronInput)
         {
             Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = CreateTronAccountWithHttpInfo(authorization, tronInput);
             return localVarResponse.Data;
@@ -372,21 +378,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="tronInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> CreateTronAccountWithHttpInfo(string authorization, TronInput tronInput, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> CreateTronAccountWithHttpInfo(string authorization, TronInput tronInput)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling TronApi->CreateTronAccount");
-            }
 
             // verify the required parameter 'tronInput' is set
             if (tronInput == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'tronInput' when calling TronApi->CreateTronAccount");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -400,22 +401,13 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = tronInput;
-
-            localVarRequestOptions.Operation = "TronApi.CreateTronAccount";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -430,13 +422,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<AccountControllerResponse>("/tron", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateTronAccount", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -448,12 +438,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="tronInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> CreateTronAccountAsync(string authorization, TronInput tronInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountControllerResponse> CreateTronAccountAsync(string authorization, TronInput tronInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await CreateTronAccountWithHttpInfoAsync(authorization, tronInput, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = CreateTronAccountWithHttpInfoAsync(authorization, tronInput, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -463,22 +457,17 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="tronInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> CreateTronAccountWithHttpInfoAsync(string authorization, TronInput tronInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> CreateTronAccountWithHttpInfoAsync(string authorization, TronInput tronInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling TronApi->CreateTronAccount");
-            }
 
             // verify the required parameter 'tronInput' is set
             if (tronInput == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'tronInput' when calling TronApi->CreateTronAccount");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -492,23 +481,15 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = tronInput;
-
-            localVarRequestOptions.Operation = "TronApi.CreateTronAccount";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -522,15 +503,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<AccountControllerResponse>("/tron", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/tron", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateTronAccount", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -542,9 +527,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse GetTronAccount(string authorization, string accountName, int operationIndex = 0)
+        public AccountControllerResponse GetTronAccount(string authorization, string accountName)
         {
             Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = GetTronAccountWithHttpInfo(authorization, accountName);
             return localVarResponse.Data;
@@ -556,21 +540,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> GetTronAccountWithHttpInfo(string authorization, string accountName, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> GetTronAccountWithHttpInfo(string authorization, string accountName)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling TronApi->GetTronAccount");
-            }
 
             // verify the required parameter 'accountName' is set
             if (accountName == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'accountName' when calling TronApi->GetTronAccount");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -583,22 +562,13 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("accountName", Org.OpenAPITools.Client.ClientUtils.ParameterToString(accountName)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "TronApi.GetTronAccount";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -613,13 +583,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<AccountControllerResponse>("/tron/{accountName}", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetTronAccount", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -631,12 +599,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> GetTronAccountAsync(string authorization, string accountName, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountControllerResponse> GetTronAccountAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await GetTronAccountWithHttpInfoAsync(authorization, accountName, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = GetTronAccountWithHttpInfoAsync(authorization, accountName, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -646,22 +618,17 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> GetTronAccountWithHttpInfoAsync(string authorization, string accountName, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> GetTronAccountWithHttpInfoAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling TronApi->GetTronAccount");
-            }
 
             // verify the required parameter 'accountName' is set
             if (accountName == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'accountName' when calling TronApi->GetTronAccount");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -674,23 +641,15 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("accountName", Org.OpenAPITools.Client.ClientUtils.ParameterToString(accountName)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "TronApi.GetTronAccount";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -704,15 +663,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<AccountControllerResponse>("/tron/{accountName}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.GetAsync<AccountControllerResponse>("/tron/{accountName}", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetTronAccount", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -723,9 +686,8 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse ListTronAccounts(string authorization, int operationIndex = 0)
+        public AccountControllerResponse ListTronAccounts(string authorization)
         {
             Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = ListTronAccountsWithHttpInfo(authorization);
             return localVarResponse.Data;
@@ -736,15 +698,12 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> ListTronAccountsWithHttpInfo(string authorization, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> ListTronAccountsWithHttpInfo(string authorization)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling TronApi->ListTronAccounts");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -757,21 +716,12 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "TronApi.ListTronAccounts";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -786,13 +736,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<AccountControllerResponse>("/tron", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListTronAccounts", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -803,12 +751,16 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> ListTronAccountsAsync(string authorization, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountControllerResponse> ListTronAccountsAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await ListTronAccountsWithHttpInfoAsync(authorization, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = ListTronAccountsWithHttpInfoAsync(authorization, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -817,16 +769,13 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> ListTronAccountsWithHttpInfoAsync(string authorization, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> ListTronAccountsWithHttpInfoAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling TronApi->ListTronAccounts");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -839,22 +788,14 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "TronApi.ListTronAccounts";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -868,15 +809,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<AccountControllerResponse>("/tron", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.GetAsync<AccountControllerResponse>("/tron", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListTronAccounts", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -889,9 +834,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="tronTransactionInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse SignTronTransaction(string authorization, string accountName, TronTransactionInput tronTransactionInput, int operationIndex = 0)
+        public AccountControllerResponse SignTronTransaction(string authorization, string accountName, TronTransactionInput tronTransactionInput)
         {
             Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = SignTronTransactionWithHttpInfo(authorization, accountName, tronTransactionInput);
             return localVarResponse.Data;
@@ -904,27 +848,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="tronTransactionInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> SignTronTransactionWithHttpInfo(string authorization, string accountName, TronTransactionInput tronTransactionInput, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> SignTronTransactionWithHttpInfo(string authorization, string accountName, TronTransactionInput tronTransactionInput)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling TronApi->SignTronTransaction");
-            }
 
             // verify the required parameter 'accountName' is set
             if (accountName == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'accountName' when calling TronApi->SignTronTransaction");
-            }
 
             // verify the required parameter 'tronTransactionInput' is set
             if (tronTransactionInput == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'tronTransactionInput' when calling TronApi->SignTronTransaction");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -938,23 +875,14 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("accountName", Org.OpenAPITools.Client.ClientUtils.ParameterToString(accountName)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = tronTransactionInput;
-
-            localVarRequestOptions.Operation = "TronApi.SignTronTransaction";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -969,13 +897,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<AccountControllerResponse>("/tron/{accountName}/sign-tx", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SignTronTransaction", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -988,12 +914,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="tronTransactionInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> SignTronTransactionAsync(string authorization, string accountName, TronTransactionInput tronTransactionInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountControllerResponse> SignTronTransactionAsync(string authorization, string accountName, TronTransactionInput tronTransactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await SignTronTransactionWithHttpInfoAsync(authorization, accountName, tronTransactionInput, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = SignTronTransactionWithHttpInfoAsync(authorization, accountName, tronTransactionInput, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -1004,28 +934,21 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="tronTransactionInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> SignTronTransactionWithHttpInfoAsync(string authorization, string accountName, TronTransactionInput tronTransactionInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<AccountControllerResponse>> SignTronTransactionWithHttpInfoAsync(string authorization, string accountName, TronTransactionInput tronTransactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling TronApi->SignTronTransaction");
-            }
 
             // verify the required parameter 'accountName' is set
             if (accountName == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'accountName' when calling TronApi->SignTronTransaction");
-            }
 
             // verify the required parameter 'tronTransactionInput' is set
             if (tronTransactionInput == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'tronTransactionInput' when calling TronApi->SignTronTransaction");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1039,24 +962,16 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("accountName", Org.OpenAPITools.Client.ClientUtils.ParameterToString(accountName)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = tronTransactionInput;
-
-            localVarRequestOptions.Operation = "TronApi.SignTronTransaction";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1070,15 +985,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<AccountControllerResponse>("/tron/{accountName}/sign-tx", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/tron/{accountName}/sign-tx", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SignTronTransaction", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;

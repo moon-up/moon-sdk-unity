@@ -14,7 +14,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 | [**OnRamperGetSupportedPaymentTypes**](OnramperApi.md#onrampergetsupportedpaymenttypes) | **GET** /onramper/payment-types |  |
 | [**OnRamperGetSupportedPaymentTypesFiat**](OnramperApi.md#onrampergetsupportedpaymenttypesfiat) | **GET** /onramper/payment-types/fiat |  |
 
-<a id="onrampercheckout"></a>
+<a name="onrampercheckout"></a>
 # **OnRamperCheckout**
 > Object OnRamperCheckout (string authorization, string accountName, TransactionInput transactionInput)
 
@@ -114,9 +114,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="onrampergetquotesbuy"></a>
+<a name="onrampergetquotesbuy"></a>
 # **OnRamperGetQuotesBuy**
-> List&lt;Quote&gt; OnRamperGetQuotesBuy (string authorization, string fiat, string crypto, double amount, string? paymentMethod = null, string? uuid = null, string? clientName = null, string? country = null)
+> List&lt;Quote&gt; OnRamperGetQuotesBuy (string authorization, string fiat, string crypto, double amount, string paymentMethod = null, string uuid = null, string clientName = null, string country = null)
 
 
 
@@ -150,10 +150,10 @@ namespace Example
             var fiat = "fiat_example";  // string | 
             var crypto = "crypto_example";  // string | 
             var amount = 1.2D;  // double | 
-            var paymentMethod = "\"creditcard\"";  // string? |  (optional)  (default to "creditcard")
-            var uuid = "\"\"";  // string? |  (optional)  (default to "")
-            var clientName = "\"\"";  // string? |  (optional)  (default to "")
-            var country = "\"\"";  // string? |  (optional)  (default to "")
+            var paymentMethod = "\"creditcard\"";  // string |  (optional)  (default to "creditcard")
+            var uuid = "\"\"";  // string |  (optional)  (default to "")
+            var clientName = "\"\"";  // string |  (optional)  (default to "")
+            var country = "\"\"";  // string |  (optional)  (default to "")
 
             try
             {
@@ -198,10 +198,10 @@ catch (ApiException e)
 | **fiat** | **string** |  |  |
 | **crypto** | **string** |  |  |
 | **amount** | **double** |  |  |
-| **paymentMethod** | **string?** |  | [optional] [default to &quot;creditcard&quot;] |
-| **uuid** | **string?** |  | [optional] [default to &quot;&quot;] |
-| **clientName** | **string?** |  | [optional] [default to &quot;&quot;] |
-| **country** | **string?** |  | [optional] [default to &quot;&quot;] |
+| **paymentMethod** | **string** |  | [optional] [default to &quot;creditcard&quot;] |
+| **uuid** | **string** |  | [optional] [default to &quot;&quot;] |
+| **clientName** | **string** |  | [optional] [default to &quot;&quot;] |
+| **country** | **string** |  | [optional] [default to &quot;&quot;] |
 
 ### Return type
 
@@ -224,9 +224,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="onrampergetquotessell"></a>
+<a name="onrampergetquotessell"></a>
 # **OnRamperGetQuotesSell**
-> List&lt;SellQuote&gt; OnRamperGetQuotesSell (string authorization, string fiat, string crypto, double amount, string? paymentMethod = null, string? uuid = null, string? clientName = null, string? country = null)
+> List&lt;SellQuote&gt; OnRamperGetQuotesSell (string authorization, string fiat, string crypto, double amount, string paymentMethod = null, string uuid = null, string clientName = null, string country = null)
 
 
 
@@ -260,10 +260,10 @@ namespace Example
             var fiat = "fiat_example";  // string | 
             var crypto = "crypto_example";  // string | 
             var amount = 1.2D;  // double | 
-            var paymentMethod = "\"creditcard\"";  // string? |  (optional)  (default to "creditcard")
-            var uuid = "\"\"";  // string? |  (optional)  (default to "")
-            var clientName = "\"\"";  // string? |  (optional)  (default to "")
-            var country = "\"\"";  // string? |  (optional)  (default to "")
+            var paymentMethod = "\"creditcard\"";  // string |  (optional)  (default to "creditcard")
+            var uuid = "\"\"";  // string |  (optional)  (default to "")
+            var clientName = "\"\"";  // string |  (optional)  (default to "")
+            var country = "\"\"";  // string |  (optional)  (default to "")
 
             try
             {
@@ -308,10 +308,10 @@ catch (ApiException e)
 | **fiat** | **string** |  |  |
 | **crypto** | **string** |  |  |
 | **amount** | **double** |  |  |
-| **paymentMethod** | **string?** |  | [optional] [default to &quot;creditcard&quot;] |
-| **uuid** | **string?** |  | [optional] [default to &quot;&quot;] |
-| **clientName** | **string?** |  | [optional] [default to &quot;&quot;] |
-| **country** | **string?** |  | [optional] [default to &quot;&quot;] |
+| **paymentMethod** | **string** |  | [optional] [default to &quot;creditcard&quot;] |
+| **uuid** | **string** |  | [optional] [default to &quot;&quot;] |
+| **clientName** | **string** |  | [optional] [default to &quot;&quot;] |
+| **country** | **string** |  | [optional] [default to &quot;&quot;] |
 
 ### Return type
 
@@ -334,7 +334,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="onrampergetsupportedassets"></a>
+<a name="onrampergetsupportedassets"></a>
 # **OnRamperGetSupportedAssets**
 > SupportedAssetResponse OnRamperGetSupportedAssets (string authorization, string source, string country)
 
@@ -434,7 +434,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="onrampergetsupportedcurrencies"></a>
+<a name="onrampergetsupportedcurrencies"></a>
 # **OnRamperGetSupportedCurrencies**
 > SupportedCurrenciesResponse OnRamperGetSupportedCurrencies (string authorization, string type)
 
@@ -532,7 +532,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="onrampergetsupporteddefaultsall"></a>
+<a name="onrampergetsupporteddefaultsall"></a>
 # **OnRamperGetSupportedDefaultsAll**
 > SupportedDefaultResponse OnRamperGetSupportedDefaultsAll (string authorization, string country, string type)
 
@@ -632,7 +632,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="onrampergetsupportedonrampsall"></a>
+<a name="onrampergetsupportedonrampsall"></a>
 # **OnRamperGetSupportedOnRampsAll**
 > GetSupportedOnRampsResponse OnRamperGetSupportedOnRampsAll (string authorization)
 
@@ -728,7 +728,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="onrampergetsupportedpaymenttypes"></a>
+<a name="onrampergetsupportedpaymenttypes"></a>
 # **OnRamperGetSupportedPaymentTypes**
 > SupportedPaymentTypesCurrencyResponse OnRamperGetSupportedPaymentTypes (string authorization, string fiat, string country, string type)
 
@@ -830,7 +830,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="onrampergetsupportedpaymenttypesfiat"></a>
+<a name="onrampergetsupportedpaymenttypesfiat"></a>
 # **OnRamperGetSupportedPaymentTypesFiat**
 > SupportedPaymentTypesCurrencyResponse OnRamperGetSupportedPaymentTypesFiat (string authorization, string fiat, string country)
 

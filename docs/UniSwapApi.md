@@ -9,7 +9,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 | [**SwapExactETHForTokens**](UniSwapApi.md#swapexactethfortokens) | **POST** /uniswap/{name}/swap-exact-eth-for-tokens |  |
 | [**SwapExactTokensForTokens**](UniSwapApi.md#swapexacttokensfortokens) | **POST** /uniswap/{name}/swap-exact-tokens-for-tokens |  |
 
-<a id="addliquidity"></a>
+<a name="addliquidity"></a>
 # **AddLiquidity**
 > AccountControllerResponse AddLiquidity (string authorization, string name, UniswapInput uniswapInput)
 
@@ -109,7 +109,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="removeliquidity"></a>
+<a name="removeliquidity"></a>
 # **RemoveLiquidity**
 > AccountControllerResponse RemoveLiquidity (string authorization, string name, UniswapInput uniswapInput)
 
@@ -209,7 +209,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="swapexactethfortokens"></a>
+<a name="swapexactethfortokens"></a>
 # **SwapExactETHForTokens**
 > AccountControllerResponse SwapExactETHForTokens (string authorization, string name, UniswapInput uniswapInput)
 
@@ -309,7 +309,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="swapexacttokensfortokens"></a>
+<a name="swapexacttokensfortokens"></a>
 # **SwapExactTokensForTokens**
 > AccountControllerResponse SwapExactTokensForTokens (string authorization, string name, UniswapInput uniswapInput)
 

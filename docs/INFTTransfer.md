@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **TokenName** | **string** |  | 
 **TokenSymbol** | **string** |  | 
 **Triggers** | [**List&lt;TriggerOutput&gt;**](TriggerOutput.md) |  | [optional] 
-**VarOperator** | **string** |  | 
+**Operator** | **string** |  | 
 **From** | **string** |  | 
 **To** | **string** |  | 
 **TokenId** | **string** |  | 

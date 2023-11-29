@@ -17,7 +17,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 | [**SignTypedData**](AccountsApi.md#signtypeddata) | **POST** /accounts/{accountName}/sign-typed-data |  |
 | [**TransferEth**](AccountsApi.md#transfereth) | **POST** /accounts/{accountName}/transfer-eth |  |
 
-<a id="broadcasttx"></a>
+<a name="broadcasttx"></a>
 # **BroadcastTx**
 > AccountControllerResponse BroadcastTx (string authorization, string accountName, BroadcastInput broadcastInput)
 
@@ -117,7 +117,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="createaccount"></a>
+<a name="createaccount"></a>
 # **CreateAccount**
 > AccountControllerResponse CreateAccount (string authorization, CreateAccountInput createAccountInput)
 
@@ -215,7 +215,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="deleteaccount"></a>
+<a name="deleteaccount"></a>
 # **DeleteAccount**
 > AccountControllerResponse DeleteAccount (string authorization, string accountName)
 
@@ -313,7 +313,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="deploycontract"></a>
+<a name="deploycontract"></a>
 # **DeployContract**
 > AccountControllerResponse DeployContract (string authorization, string accountName, DeployInput deployInput)
 
@@ -413,7 +413,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="getaccount"></a>
+<a name="getaccount"></a>
 # **GetAccount**
 > AccountControllerResponse GetAccount (string authorization, string accountName)
 
@@ -511,7 +511,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="getbalance"></a>
+<a name="getbalance"></a>
 # **GetBalance**
 > AccountControllerResponse GetBalance (string accountName, string authorization, string chainId)
 
@@ -611,7 +611,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="getnonce"></a>
+<a name="getnonce"></a>
 # **GetNonce**
 > AccountControllerResponse GetNonce (string accountName, string authorization)
 
@@ -709,7 +709,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="listaccounts"></a>
+<a name="listaccounts"></a>
 # **ListAccounts**
 > AccountControllerResponse ListAccounts (string authorization)
 
@@ -805,7 +805,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="signmessage"></a>
+<a name="signmessage"></a>
 # **SignMessage**
 > AccountControllerResponse SignMessage (string accountName, string authorization, SignMessage signMessage)
 
@@ -905,7 +905,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="signtransaction"></a>
+<a name="signtransaction"></a>
 # **SignTransaction**
 > AccountControllerResponse SignTransaction (string accountName, string authorization, InputBody inputBody)
 
@@ -1005,7 +1005,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="signtypeddata"></a>
+<a name="signtypeddata"></a>
 # **SignTypedData**
 > AccountControllerResponse SignTypedData (string accountName, string authorization, SignTypedData signTypedData)
 
@@ -1105,7 +1105,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="transfereth"></a>
+<a name="transfereth"></a>
 # **TransferEth**
 > AccountControllerResponse TransferEth (string accountName, string authorization, InputBody inputBody)
 

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **TokenName** | **string** |  | 
 **TokenSymbol** | **string** |  | 
 **Account** | **string** |  | 
-**VarOperator** | **string** |  | 
+**Operator** | **string** |  | 
 **ApprovedAll** | **bool** |  | 
 **TokenId** | **string** |  | 
 

@@ -13,7 +13,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 | [**PaymentUpdatePaymentIntent**](PaymentApi.md#paymentupdatepaymentintent) | **PUT** /payment/{id} |  |
 | [**TatumWebhook**](PaymentApi.md#tatumwebhook) | **POST** /payment/tatum/webhook/{id} |  |
 
-<a id="moraliswebhook"></a>
+<a name="moraliswebhook"></a>
 # **MoralisWebhook**
 > Object MoralisWebhook (string id, IWebhook iWebhook)
 
@@ -111,7 +111,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="paymentcreatepaymentintent"></a>
+<a name="paymentcreatepaymentintent"></a>
 # **PaymentCreatePaymentIntent**
 > PaymentIntentResponse PaymentCreatePaymentIntent (string authorization, CreatePaymentIntentInput createPaymentIntentInput)
 
@@ -209,7 +209,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="paymentdeletepaymentintent"></a>
+<a name="paymentdeletepaymentintent"></a>
 # **PaymentDeletePaymentIntent**
 > PaymentIntentResponse PaymentDeletePaymentIntent (string authorization, string id)
 
@@ -307,7 +307,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="paymentgetallpaymentintents"></a>
+<a name="paymentgetallpaymentintents"></a>
 # **PaymentGetAllPaymentIntents**
 > List&lt;PaymentIntentResponse&gt; PaymentGetAllPaymentIntents (string authorization)
 
@@ -403,7 +403,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="paymentgetavailablechains"></a>
+<a name="paymentgetavailablechains"></a>
 # **PaymentGetAvailableChains**
 > List&lt;string&gt; PaymentGetAvailableChains ()
 
@@ -494,7 +494,7 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="paymentgetpaymentintent"></a>
+<a name="paymentgetpaymentintent"></a>
 # **PaymentGetPaymentIntent**
 > PaymentIntentResponse PaymentGetPaymentIntent (string authorization, string id)
 
@@ -592,7 +592,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="paymentupdatepaymentintent"></a>
+<a name="paymentupdatepaymentintent"></a>
 # **PaymentUpdatePaymentIntent**
 > PaymentIntentResponse PaymentUpdatePaymentIntent (string authorization, string id, CreatePaymentIntentInput createPaymentIntentInput)
 
@@ -692,7 +692,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="tatumwebhook"></a>
+<a name="tatumwebhook"></a>
 # **TatumWebhook**
 > Object TatumWebhook (string id, Object body)
 

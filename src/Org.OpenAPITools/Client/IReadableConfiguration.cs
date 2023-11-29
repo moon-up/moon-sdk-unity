@@ -11,9 +11,7 @@
 using System;
 using System.Collections.Generic;
 using System.Net;
-using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
-using Org.OpenAPITools.Client.Auth;
 
 namespace Org.OpenAPITools.Client
 {
@@ -27,30 +25,6 @@ namespace Org.OpenAPITools.Client
         /// </summary>
         /// <value>Access token.</value>
         string AccessToken { get; }
-
-        /// <summary>
-        /// Gets the OAuth token URL.
-        /// </summary>
-        /// <value>OAuth Token URL.</value>
-        string OAuthTokenUrl { get; }
-
-        /// <summary>
-        /// Gets the OAuth client ID.
-        /// </summary>
-        /// <value>OAuth Client ID.</value>
-        string OAuthClientId { get; }
-
-        /// <summary>
-        /// Gets the OAuth client secret.
-        /// </summary>
-        /// <value>OAuth Client Secret.</value>
-        string OAuthClientSecret { get; }
-
-        /// <summary>
-        /// Gets the OAuth flow.
-        /// </summary>
-        /// <value>OAuth Flow.</value>
-        OAuthFlow? OAuthFlow { get; }
 
         /// <summary>
         /// Gets the API key.
@@ -126,11 +100,6 @@ namespace Org.OpenAPITools.Client
         string Password { get; }
 
         /// <summary>
-        /// Determine whether or not the "default credentials" (e.g. the user account under which the current process is running) will be sent along to the server. The default is false.
-        /// </summary>
-        bool UseDefaultCredentials { get; }
-
-        /// <summary>
         /// Get the servers associated with the operation.
         /// </summary>
         /// <value>Operation servers.</value>
@@ -156,11 +125,5 @@ namespace Org.OpenAPITools.Client
         /// </summary>
         /// <value>X509 Certificate collection.</value>
         X509CertificateCollection ClientCertificates { get; }
-
-        /// <summary>
-        /// Callback function for handling the validation of remote certificates. Useful for certificate pinning and
-        /// overriding certificate errors in the scope of a request.
-        /// </summary>
-        RemoteCertificateValidationCallback RemoteCertificateValidationCallback { get; }
     }
 }

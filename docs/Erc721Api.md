@@ -17,7 +17,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 | [**Transfer**](Erc721Api.md#transfer) | **POST** /erc721/{name}/transfer |  |
 | [**TransferFrom**](Erc721Api.md#transferfrom) | **POST** /erc721/{name}/transfer-from |  |
 
-<a id="approve"></a>
+<a name="approve"></a>
 # **Approve**
 > AccountControllerResponse Approve (string authorization, string name, Erc721Request erc721Request)
 
@@ -117,7 +117,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="balanceof"></a>
+<a name="balanceof"></a>
 # **BalanceOf**
 > AccountControllerResponse BalanceOf (string authorization, string name, Erc721Request erc721Request)
 
@@ -217,7 +217,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="getapproved"></a>
+<a name="getapproved"></a>
 # **GetApproved**
 > AccountControllerResponse GetApproved (string authorization, string name, Erc721Request erc721Request)
 
@@ -317,7 +317,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="isapprovedforall"></a>
+<a name="isapprovedforall"></a>
 # **IsApprovedForAll**
 > AccountControllerResponse IsApprovedForAll (string authorization, string name, Erc721Request erc721Request)
 
@@ -417,7 +417,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="name"></a>
+<a name="name"></a>
 # **Name**
 > AccountControllerResponse Name (string authorization, string name, Erc721Request erc721Request)
 
@@ -517,7 +517,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="ownerof"></a>
+<a name="ownerof"></a>
 # **OwnerOf**
 > AccountControllerResponse OwnerOf (string authorization, string name, Erc721Request erc721Request)
 
@@ -617,7 +617,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="safetransferfrom"></a>
+<a name="safetransferfrom"></a>
 # **SafeTransferFrom**
 > AccountControllerResponse SafeTransferFrom (string authorization, string name, Erc721Request erc721Request)
 
@@ -717,7 +717,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="setapprovalforall"></a>
+<a name="setapprovalforall"></a>
 # **SetApprovalForAll**
 > AccountControllerResponse SetApprovalForAll (string authorization, string name, Erc721Request erc721Request)
 
@@ -817,7 +817,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="symbol"></a>
+<a name="symbol"></a>
 # **Symbol**
 > AccountControllerResponse Symbol (string authorization, string name, Erc721Request erc721Request)
 
@@ -917,7 +917,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="tokenuri"></a>
+<a name="tokenuri"></a>
 # **TokenUri**
 > AccountControllerResponse TokenUri (string authorization, string name, Erc721Request erc721Request)
 
@@ -1017,7 +1017,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="transfer"></a>
+<a name="transfer"></a>
 # **Transfer**
 > AccountControllerResponse Transfer (string authorization, string name, Erc721Request erc721Request)
 
@@ -1117,7 +1117,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="transferfrom"></a>
+<a name="transferfrom"></a>
 # **TransferFrom**
 > AccountControllerResponse TransferFrom (string authorization, string name, Erc721Request erc721Request)
 

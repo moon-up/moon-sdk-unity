@@ -15,7 +15,6 @@ using System.Linq;
 using System.Net;
 using System.Net.Mime;
 using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Client.Auth;
 using Org.OpenAPITools.Model;
 
 namespace Org.OpenAPITools.Api
@@ -33,9 +32,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="iWebhook"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Object</returns>
-        Object MoralisWebhook(string id, IWebhook iWebhook, int operationIndex = 0);
+        Object MoralisWebhook(string id, IWebhook iWebhook);
 
         /// <summary>
         /// 
@@ -46,18 +44,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="iWebhook"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> MoralisWebhookWithHttpInfo(string id, IWebhook iWebhook, int operationIndex = 0);
+        ApiResponse<Object> MoralisWebhookWithHttpInfo(string id, IWebhook iWebhook);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="createPaymentIntentInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>PaymentIntentResponse</returns>
-        PaymentIntentResponse PaymentCreatePaymentIntent(string authorization, CreatePaymentIntentInput createPaymentIntentInput, int operationIndex = 0);
+        PaymentIntentResponse PaymentCreatePaymentIntent(string authorization, CreatePaymentIntentInput createPaymentIntentInput);
 
         /// <summary>
         /// 
@@ -68,18 +64,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="createPaymentIntentInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of PaymentIntentResponse</returns>
-        ApiResponse<PaymentIntentResponse> PaymentCreatePaymentIntentWithHttpInfo(string authorization, CreatePaymentIntentInput createPaymentIntentInput, int operationIndex = 0);
+        ApiResponse<PaymentIntentResponse> PaymentCreatePaymentIntentWithHttpInfo(string authorization, CreatePaymentIntentInput createPaymentIntentInput);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="id"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>PaymentIntentResponse</returns>
-        PaymentIntentResponse PaymentDeletePaymentIntent(string authorization, string id, int operationIndex = 0);
+        PaymentIntentResponse PaymentDeletePaymentIntent(string authorization, string id);
 
         /// <summary>
         /// 
@@ -90,17 +84,15 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="id"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of PaymentIntentResponse</returns>
-        ApiResponse<PaymentIntentResponse> PaymentDeletePaymentIntentWithHttpInfo(string authorization, string id, int operationIndex = 0);
+        ApiResponse<PaymentIntentResponse> PaymentDeletePaymentIntentWithHttpInfo(string authorization, string id);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;PaymentIntentResponse&gt;</returns>
-        List<PaymentIntentResponse> PaymentGetAllPaymentIntents(string authorization, int operationIndex = 0);
+        List<PaymentIntentResponse> PaymentGetAllPaymentIntents(string authorization);
 
         /// <summary>
         /// 
@@ -110,16 +102,14 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;PaymentIntentResponse&gt;</returns>
-        ApiResponse<List<PaymentIntentResponse>> PaymentGetAllPaymentIntentsWithHttpInfo(string authorization, int operationIndex = 0);
+        ApiResponse<List<PaymentIntentResponse>> PaymentGetAllPaymentIntentsWithHttpInfo(string authorization);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;string&gt;</returns>
-        List<string> PaymentGetAvailableChains(int operationIndex = 0);
+        List<string> PaymentGetAvailableChains();
 
         /// <summary>
         /// 
@@ -128,18 +118,16 @@ namespace Org.OpenAPITools.Api
         /// 
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        ApiResponse<List<string>> PaymentGetAvailableChainsWithHttpInfo(int operationIndex = 0);
+        ApiResponse<List<string>> PaymentGetAvailableChainsWithHttpInfo();
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="id"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>PaymentIntentResponse</returns>
-        PaymentIntentResponse PaymentGetPaymentIntent(string authorization, string id, int operationIndex = 0);
+        PaymentIntentResponse PaymentGetPaymentIntent(string authorization, string id);
 
         /// <summary>
         /// 
@@ -150,9 +138,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="id"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of PaymentIntentResponse</returns>
-        ApiResponse<PaymentIntentResponse> PaymentGetPaymentIntentWithHttpInfo(string authorization, string id, int operationIndex = 0);
+        ApiResponse<PaymentIntentResponse> PaymentGetPaymentIntentWithHttpInfo(string authorization, string id);
         /// <summary>
         /// 
         /// </summary>
@@ -160,9 +147,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="id"></param>
         /// <param name="createPaymentIntentInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>PaymentIntentResponse</returns>
-        PaymentIntentResponse PaymentUpdatePaymentIntent(string authorization, string id, CreatePaymentIntentInput createPaymentIntentInput, int operationIndex = 0);
+        PaymentIntentResponse PaymentUpdatePaymentIntent(string authorization, string id, CreatePaymentIntentInput createPaymentIntentInput);
 
         /// <summary>
         /// 
@@ -174,18 +160,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="id"></param>
         /// <param name="createPaymentIntentInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of PaymentIntentResponse</returns>
-        ApiResponse<PaymentIntentResponse> PaymentUpdatePaymentIntentWithHttpInfo(string authorization, string id, CreatePaymentIntentInput createPaymentIntentInput, int operationIndex = 0);
+        ApiResponse<PaymentIntentResponse> PaymentUpdatePaymentIntentWithHttpInfo(string authorization, string id, CreatePaymentIntentInput createPaymentIntentInput);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Object</returns>
-        Object TatumWebhook(string id, Object body, int operationIndex = 0);
+        Object TatumWebhook(string id, Object body);
 
         /// <summary>
         /// 
@@ -196,9 +180,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> TatumWebhookWithHttpInfo(string id, Object body, int operationIndex = 0);
+        ApiResponse<Object> TatumWebhookWithHttpInfo(string id, Object body);
         #endregion Synchronous Operations
     }
 
@@ -217,10 +200,9 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="iWebhook"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> MoralisWebhookAsync(string id, IWebhook iWebhook, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> MoralisWebhookAsync(string id, IWebhook iWebhook, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -231,10 +213,9 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="iWebhook"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> MoralisWebhookWithHttpInfoAsync(string id, IWebhook iWebhook, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> MoralisWebhookWithHttpInfoAsync(string id, IWebhook iWebhook, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -244,10 +225,9 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="createPaymentIntentInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PaymentIntentResponse</returns>
-        System.Threading.Tasks.Task<PaymentIntentResponse> PaymentCreatePaymentIntentAsync(string authorization, CreatePaymentIntentInput createPaymentIntentInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<PaymentIntentResponse> PaymentCreatePaymentIntentAsync(string authorization, CreatePaymentIntentInput createPaymentIntentInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -258,10 +238,9 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="createPaymentIntentInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PaymentIntentResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaymentIntentResponse>> PaymentCreatePaymentIntentWithHttpInfoAsync(string authorization, CreatePaymentIntentInput createPaymentIntentInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<PaymentIntentResponse>> PaymentCreatePaymentIntentWithHttpInfoAsync(string authorization, CreatePaymentIntentInput createPaymentIntentInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -271,10 +250,9 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="id"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PaymentIntentResponse</returns>
-        System.Threading.Tasks.Task<PaymentIntentResponse> PaymentDeletePaymentIntentAsync(string authorization, string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<PaymentIntentResponse> PaymentDeletePaymentIntentAsync(string authorization, string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -285,10 +263,9 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="id"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PaymentIntentResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaymentIntentResponse>> PaymentDeletePaymentIntentWithHttpInfoAsync(string authorization, string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<PaymentIntentResponse>> PaymentDeletePaymentIntentWithHttpInfoAsync(string authorization, string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -297,10 +274,9 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;PaymentIntentResponse&gt;</returns>
-        System.Threading.Tasks.Task<List<PaymentIntentResponse>> PaymentGetAllPaymentIntentsAsync(string authorization, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<PaymentIntentResponse>> PaymentGetAllPaymentIntentsAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -310,10 +286,9 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;PaymentIntentResponse&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<PaymentIntentResponse>>> PaymentGetAllPaymentIntentsWithHttpInfoAsync(string authorization, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<PaymentIntentResponse>>> PaymentGetAllPaymentIntentsWithHttpInfoAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -321,10 +296,9 @@ namespace Org.OpenAPITools.Api
         /// 
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;string&gt;</returns>
-        System.Threading.Tasks.Task<List<string>> PaymentGetAvailableChainsAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<string>> PaymentGetAvailableChainsAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -333,10 +307,9 @@ namespace Org.OpenAPITools.Api
         /// 
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<string>>> PaymentGetAvailableChainsWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<string>>> PaymentGetAvailableChainsWithHttpInfoAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -346,10 +319,9 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="id"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PaymentIntentResponse</returns>
-        System.Threading.Tasks.Task<PaymentIntentResponse> PaymentGetPaymentIntentAsync(string authorization, string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<PaymentIntentResponse> PaymentGetPaymentIntentAsync(string authorization, string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -360,10 +332,9 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="id"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PaymentIntentResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaymentIntentResponse>> PaymentGetPaymentIntentWithHttpInfoAsync(string authorization, string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<PaymentIntentResponse>> PaymentGetPaymentIntentWithHttpInfoAsync(string authorization, string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -374,10 +345,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="id"></param>
         /// <param name="createPaymentIntentInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PaymentIntentResponse</returns>
-        System.Threading.Tasks.Task<PaymentIntentResponse> PaymentUpdatePaymentIntentAsync(string authorization, string id, CreatePaymentIntentInput createPaymentIntentInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<PaymentIntentResponse> PaymentUpdatePaymentIntentAsync(string authorization, string id, CreatePaymentIntentInput createPaymentIntentInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -389,10 +359,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="id"></param>
         /// <param name="createPaymentIntentInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PaymentIntentResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaymentIntentResponse>> PaymentUpdatePaymentIntentWithHttpInfoAsync(string authorization, string id, CreatePaymentIntentInput createPaymentIntentInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<PaymentIntentResponse>> PaymentUpdatePaymentIntentWithHttpInfoAsync(string authorization, string id, CreatePaymentIntentInput createPaymentIntentInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -402,10 +371,9 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> TatumWebhookAsync(string id, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> TatumWebhookAsync(string id, Object body, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -416,10 +384,9 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> TatumWebhookWithHttpInfoAsync(string id, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> TatumWebhookWithHttpInfoAsync(string id, Object body, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -434,12 +401,14 @@ namespace Org.OpenAPITools.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class PaymentApi : IPaymentApi
+    public partial class PaymentApi : IDisposable, IPaymentApi
     {
         private Org.OpenAPITools.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="PaymentApi"/> class.
+        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
+        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
         /// <returns></returns>
         public PaymentApi() : this((string)null)
@@ -448,7 +417,11 @@ namespace Org.OpenAPITools.Api
 
         /// <summary>
         /// Initializes a new instance of the <see cref="PaymentApi"/> class.
+        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
+        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
+        /// <param name="basePath">The target service's base path in URL format.</param>
+        /// <exception cref="ArgumentException"></exception>
         /// <returns></returns>
         public PaymentApi(string basePath)
         {
@@ -456,16 +429,19 @@ namespace Org.OpenAPITools.Api
                 Org.OpenAPITools.Client.GlobalConfiguration.Instance,
                 new Org.OpenAPITools.Client.Configuration { BasePath = basePath }
             );
-            this.Client = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.ApiClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.Client =  this.ApiClient;
+            this.AsynchronousClient = this.ApiClient;
             this.ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PaymentApi"/> class
-        /// using Configuration object
+        /// Initializes a new instance of the <see cref="PaymentApi"/> class using Configuration object.
+        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
+        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
-        /// <param name="configuration">An instance of Configuration</param>
+        /// <param name="configuration">An instance of Configuration.</param>
+        /// <exception cref="ArgumentNullException"></exception>
         /// <returns></returns>
         public PaymentApi(Org.OpenAPITools.Client.Configuration configuration)
         {
@@ -475,8 +451,9 @@ namespace Org.OpenAPITools.Api
                 Org.OpenAPITools.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.ApiClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = this.ApiClient;
+            this.AsynchronousClient = this.ApiClient;
             ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -487,6 +464,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
+        /// <exception cref="ArgumentNullException"></exception>
         public PaymentApi(Org.OpenAPITools.Client.ISynchronousClient client, Org.OpenAPITools.Client.IAsynchronousClient asyncClient, Org.OpenAPITools.Client.IReadableConfiguration configuration)
         {
             if (client == null) throw new ArgumentNullException("client");
@@ -498,6 +476,19 @@ namespace Org.OpenAPITools.Api
             this.Configuration = configuration;
             this.ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
         }
+
+        /// <summary>
+        /// Disposes resources if they were created by us
+        /// </summary>
+        public void Dispose()
+        {
+            this.ApiClient?.Dispose();
+        }
+
+        /// <summary>
+        /// Holds the ApiClient if created
+        /// </summary>
+        public Org.OpenAPITools.Client.ApiClient ApiClient { get; set; } = null;
 
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
@@ -546,9 +537,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="iWebhook"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Object</returns>
-        public Object MoralisWebhook(string id, IWebhook iWebhook, int operationIndex = 0)
+        public Object MoralisWebhook(string id, IWebhook iWebhook)
         {
             Org.OpenAPITools.Client.ApiResponse<Object> localVarResponse = MoralisWebhookWithHttpInfo(id, iWebhook);
             return localVarResponse.Data;
@@ -560,21 +550,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="iWebhook"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object</returns>
-        public Org.OpenAPITools.Client.ApiResponse<Object> MoralisWebhookWithHttpInfo(string id, IWebhook iWebhook, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<Object> MoralisWebhookWithHttpInfo(string id, IWebhook iWebhook)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling PaymentApi->MoralisWebhook");
-            }
 
             // verify the required parameter 'iWebhook' is set
             if (iWebhook == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'iWebhook' when calling PaymentApi->MoralisWebhook");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -588,22 +573,13 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.Data = iWebhook;
-
-            localVarRequestOptions.Operation = "PaymentApi.MoralisWebhook";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -618,13 +594,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/payment/webhook/{id}", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("MoralisWebhook", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -636,12 +610,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="iWebhook"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> MoralisWebhookAsync(string id, IWebhook iWebhook, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> MoralisWebhookAsync(string id, IWebhook iWebhook, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<Object> localVarResponse = await MoralisWebhookWithHttpInfoAsync(id, iWebhook, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = MoralisWebhookWithHttpInfoAsync(id, iWebhook, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<Object> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<Object> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -651,22 +629,17 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="iWebhook"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<Object>> MoralisWebhookWithHttpInfoAsync(string id, IWebhook iWebhook, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<Object>> MoralisWebhookWithHttpInfoAsync(string id, IWebhook iWebhook, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling PaymentApi->MoralisWebhook");
-            }
 
             // verify the required parameter 'iWebhook' is set
             if (iWebhook == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'iWebhook' when calling PaymentApi->MoralisWebhook");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -680,23 +653,15 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.Data = iWebhook;
-
-            localVarRequestOptions.Operation = "PaymentApi.MoralisWebhook";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -710,15 +675,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/payment/webhook/{id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.PostAsync<Object>("/payment/webhook/{id}", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("MoralisWebhook", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -730,9 +699,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="createPaymentIntentInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>PaymentIntentResponse</returns>
-        public PaymentIntentResponse PaymentCreatePaymentIntent(string authorization, CreatePaymentIntentInput createPaymentIntentInput, int operationIndex = 0)
+        public PaymentIntentResponse PaymentCreatePaymentIntent(string authorization, CreatePaymentIntentInput createPaymentIntentInput)
         {
             Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse> localVarResponse = PaymentCreatePaymentIntentWithHttpInfo(authorization, createPaymentIntentInput);
             return localVarResponse.Data;
@@ -744,21 +712,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="createPaymentIntentInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of PaymentIntentResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse> PaymentCreatePaymentIntentWithHttpInfo(string authorization, CreatePaymentIntentInput createPaymentIntentInput, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse> PaymentCreatePaymentIntentWithHttpInfo(string authorization, CreatePaymentIntentInput createPaymentIntentInput)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling PaymentApi->PaymentCreatePaymentIntent");
-            }
 
             // verify the required parameter 'createPaymentIntentInput' is set
             if (createPaymentIntentInput == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'createPaymentIntentInput' when calling PaymentApi->PaymentCreatePaymentIntent");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -772,22 +735,13 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = createPaymentIntentInput;
-
-            localVarRequestOptions.Operation = "PaymentApi.PaymentCreatePaymentIntent";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -802,13 +756,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<PaymentIntentResponse>("/payment", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PaymentCreatePaymentIntent", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -820,12 +772,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="createPaymentIntentInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PaymentIntentResponse</returns>
-        public async System.Threading.Tasks.Task<PaymentIntentResponse> PaymentCreatePaymentIntentAsync(string authorization, CreatePaymentIntentInput createPaymentIntentInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<PaymentIntentResponse> PaymentCreatePaymentIntentAsync(string authorization, CreatePaymentIntentInput createPaymentIntentInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse> localVarResponse = await PaymentCreatePaymentIntentWithHttpInfoAsync(authorization, createPaymentIntentInput, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = PaymentCreatePaymentIntentWithHttpInfoAsync(authorization, createPaymentIntentInput, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -835,22 +791,17 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="createPaymentIntentInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PaymentIntentResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse>> PaymentCreatePaymentIntentWithHttpInfoAsync(string authorization, CreatePaymentIntentInput createPaymentIntentInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse>> PaymentCreatePaymentIntentWithHttpInfoAsync(string authorization, CreatePaymentIntentInput createPaymentIntentInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling PaymentApi->PaymentCreatePaymentIntent");
-            }
 
             // verify the required parameter 'createPaymentIntentInput' is set
             if (createPaymentIntentInput == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'createPaymentIntentInput' when calling PaymentApi->PaymentCreatePaymentIntent");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -864,23 +815,15 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = createPaymentIntentInput;
-
-            localVarRequestOptions.Operation = "PaymentApi.PaymentCreatePaymentIntent";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -894,15 +837,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<PaymentIntentResponse>("/payment", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.PostAsync<PaymentIntentResponse>("/payment", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PaymentCreatePaymentIntent", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -914,9 +861,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="id"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>PaymentIntentResponse</returns>
-        public PaymentIntentResponse PaymentDeletePaymentIntent(string authorization, string id, int operationIndex = 0)
+        public PaymentIntentResponse PaymentDeletePaymentIntent(string authorization, string id)
         {
             Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse> localVarResponse = PaymentDeletePaymentIntentWithHttpInfo(authorization, id);
             return localVarResponse.Data;
@@ -928,21 +874,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="id"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of PaymentIntentResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse> PaymentDeletePaymentIntentWithHttpInfo(string authorization, string id, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse> PaymentDeletePaymentIntentWithHttpInfo(string authorization, string id)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling PaymentApi->PaymentDeletePaymentIntent");
-            }
 
             // verify the required parameter 'id' is set
             if (id == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling PaymentApi->PaymentDeletePaymentIntent");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -955,22 +896,13 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "PaymentApi.PaymentDeletePaymentIntent";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -985,13 +917,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Delete<PaymentIntentResponse>("/payment/{id}", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PaymentDeletePaymentIntent", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1003,12 +933,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="id"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PaymentIntentResponse</returns>
-        public async System.Threading.Tasks.Task<PaymentIntentResponse> PaymentDeletePaymentIntentAsync(string authorization, string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<PaymentIntentResponse> PaymentDeletePaymentIntentAsync(string authorization, string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse> localVarResponse = await PaymentDeletePaymentIntentWithHttpInfoAsync(authorization, id, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = PaymentDeletePaymentIntentWithHttpInfoAsync(authorization, id, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -1018,22 +952,17 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="id"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PaymentIntentResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse>> PaymentDeletePaymentIntentWithHttpInfoAsync(string authorization, string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse>> PaymentDeletePaymentIntentWithHttpInfoAsync(string authorization, string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling PaymentApi->PaymentDeletePaymentIntent");
-            }
 
             // verify the required parameter 'id' is set
             if (id == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling PaymentApi->PaymentDeletePaymentIntent");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1046,23 +975,15 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "PaymentApi.PaymentDeletePaymentIntent";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1076,15 +997,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<PaymentIntentResponse>("/payment/{id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.DeleteAsync<PaymentIntentResponse>("/payment/{id}", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PaymentDeletePaymentIntent", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1095,9 +1020,8 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;PaymentIntentResponse&gt;</returns>
-        public List<PaymentIntentResponse> PaymentGetAllPaymentIntents(string authorization, int operationIndex = 0)
+        public List<PaymentIntentResponse> PaymentGetAllPaymentIntents(string authorization)
         {
             Org.OpenAPITools.Client.ApiResponse<List<PaymentIntentResponse>> localVarResponse = PaymentGetAllPaymentIntentsWithHttpInfo(authorization);
             return localVarResponse.Data;
@@ -1108,15 +1032,12 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;PaymentIntentResponse&gt;</returns>
-        public Org.OpenAPITools.Client.ApiResponse<List<PaymentIntentResponse>> PaymentGetAllPaymentIntentsWithHttpInfo(string authorization, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<List<PaymentIntentResponse>> PaymentGetAllPaymentIntentsWithHttpInfo(string authorization)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling PaymentApi->PaymentGetAllPaymentIntents");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1129,21 +1050,12 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "PaymentApi.PaymentGetAllPaymentIntents";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1158,13 +1070,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<List<PaymentIntentResponse>>("/payment", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PaymentGetAllPaymentIntents", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1175,12 +1085,16 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;PaymentIntentResponse&gt;</returns>
-        public async System.Threading.Tasks.Task<List<PaymentIntentResponse>> PaymentGetAllPaymentIntentsAsync(string authorization, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<PaymentIntentResponse>> PaymentGetAllPaymentIntentsAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<List<PaymentIntentResponse>> localVarResponse = await PaymentGetAllPaymentIntentsWithHttpInfoAsync(authorization, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = PaymentGetAllPaymentIntentsWithHttpInfoAsync(authorization, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<List<PaymentIntentResponse>> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<List<PaymentIntentResponse>> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -1189,16 +1103,13 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;PaymentIntentResponse&gt;)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<List<PaymentIntentResponse>>> PaymentGetAllPaymentIntentsWithHttpInfoAsync(string authorization, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<List<PaymentIntentResponse>>> PaymentGetAllPaymentIntentsWithHttpInfoAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling PaymentApi->PaymentGetAllPaymentIntents");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1211,22 +1122,14 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "PaymentApi.PaymentGetAllPaymentIntents";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1240,15 +1143,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<PaymentIntentResponse>>("/payment", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.GetAsync<List<PaymentIntentResponse>>("/payment", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PaymentGetAllPaymentIntents", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1258,9 +1165,8 @@ namespace Org.OpenAPITools.Api
         ///  
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;string&gt;</returns>
-        public List<string> PaymentGetAvailableChains(int operationIndex = 0)
+        public List<string> PaymentGetAvailableChains()
         {
             Org.OpenAPITools.Client.ApiResponse<List<string>> localVarResponse = PaymentGetAvailableChainsWithHttpInfo();
             return localVarResponse.Data;
@@ -1270,9 +1176,8 @@ namespace Org.OpenAPITools.Api
         ///  
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        public Org.OpenAPITools.Client.ApiResponse<List<string>> PaymentGetAvailableChainsWithHttpInfo(int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<List<string>> PaymentGetAvailableChainsWithHttpInfo()
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1285,20 +1190,11 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-
-            localVarRequestOptions.Operation = "PaymentApi.PaymentGetAvailableChains";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1313,13 +1209,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<List<string>>("/payment/chains", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PaymentGetAvailableChains", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1329,12 +1223,16 @@ namespace Org.OpenAPITools.Api
         ///  
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;string&gt;</returns>
-        public async System.Threading.Tasks.Task<List<string>> PaymentGetAvailableChainsAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<string>> PaymentGetAvailableChainsAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<List<string>> localVarResponse = await PaymentGetAvailableChainsWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = PaymentGetAvailableChainsWithHttpInfoAsync(cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<List<string>> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<List<string>> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -1342,10 +1240,9 @@ namespace Org.OpenAPITools.Api
         ///  
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<List<string>>> PaymentGetAvailableChainsWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<List<string>>> PaymentGetAvailableChainsWithHttpInfoAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1358,21 +1255,13 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-
-            localVarRequestOptions.Operation = "PaymentApi.PaymentGetAvailableChains";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1386,15 +1275,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<string>>("/payment/chains", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.GetAsync<List<string>>("/payment/chains", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PaymentGetAvailableChains", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1406,9 +1299,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="id"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>PaymentIntentResponse</returns>
-        public PaymentIntentResponse PaymentGetPaymentIntent(string authorization, string id, int operationIndex = 0)
+        public PaymentIntentResponse PaymentGetPaymentIntent(string authorization, string id)
         {
             Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse> localVarResponse = PaymentGetPaymentIntentWithHttpInfo(authorization, id);
             return localVarResponse.Data;
@@ -1420,21 +1312,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="id"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of PaymentIntentResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse> PaymentGetPaymentIntentWithHttpInfo(string authorization, string id, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse> PaymentGetPaymentIntentWithHttpInfo(string authorization, string id)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling PaymentApi->PaymentGetPaymentIntent");
-            }
 
             // verify the required parameter 'id' is set
             if (id == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling PaymentApi->PaymentGetPaymentIntent");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1447,22 +1334,13 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "PaymentApi.PaymentGetPaymentIntent";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1477,13 +1355,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<PaymentIntentResponse>("/payment/{id}", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PaymentGetPaymentIntent", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1495,12 +1371,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="id"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PaymentIntentResponse</returns>
-        public async System.Threading.Tasks.Task<PaymentIntentResponse> PaymentGetPaymentIntentAsync(string authorization, string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<PaymentIntentResponse> PaymentGetPaymentIntentAsync(string authorization, string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse> localVarResponse = await PaymentGetPaymentIntentWithHttpInfoAsync(authorization, id, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = PaymentGetPaymentIntentWithHttpInfoAsync(authorization, id, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -1510,22 +1390,17 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="id"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PaymentIntentResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse>> PaymentGetPaymentIntentWithHttpInfoAsync(string authorization, string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse>> PaymentGetPaymentIntentWithHttpInfoAsync(string authorization, string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling PaymentApi->PaymentGetPaymentIntent");
-            }
 
             // verify the required parameter 'id' is set
             if (id == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling PaymentApi->PaymentGetPaymentIntent");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1538,23 +1413,15 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
-
-            localVarRequestOptions.Operation = "PaymentApi.PaymentGetPaymentIntent";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1568,15 +1435,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaymentIntentResponse>("/payment/{id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.GetAsync<PaymentIntentResponse>("/payment/{id}", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PaymentGetPaymentIntent", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1589,9 +1460,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="id"></param>
         /// <param name="createPaymentIntentInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>PaymentIntentResponse</returns>
-        public PaymentIntentResponse PaymentUpdatePaymentIntent(string authorization, string id, CreatePaymentIntentInput createPaymentIntentInput, int operationIndex = 0)
+        public PaymentIntentResponse PaymentUpdatePaymentIntent(string authorization, string id, CreatePaymentIntentInput createPaymentIntentInput)
         {
             Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse> localVarResponse = PaymentUpdatePaymentIntentWithHttpInfo(authorization, id, createPaymentIntentInput);
             return localVarResponse.Data;
@@ -1604,27 +1474,20 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="id"></param>
         /// <param name="createPaymentIntentInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of PaymentIntentResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse> PaymentUpdatePaymentIntentWithHttpInfo(string authorization, string id, CreatePaymentIntentInput createPaymentIntentInput, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse> PaymentUpdatePaymentIntentWithHttpInfo(string authorization, string id, CreatePaymentIntentInput createPaymentIntentInput)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling PaymentApi->PaymentUpdatePaymentIntent");
-            }
 
             // verify the required parameter 'id' is set
             if (id == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling PaymentApi->PaymentUpdatePaymentIntent");
-            }
 
             // verify the required parameter 'createPaymentIntentInput' is set
             if (createPaymentIntentInput == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'createPaymentIntentInput' when calling PaymentApi->PaymentUpdatePaymentIntent");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1638,23 +1501,14 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = createPaymentIntentInput;
-
-            localVarRequestOptions.Operation = "PaymentApi.PaymentUpdatePaymentIntent";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1669,13 +1523,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Put<PaymentIntentResponse>("/payment/{id}", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PaymentUpdatePaymentIntent", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1688,12 +1540,16 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="id"></param>
         /// <param name="createPaymentIntentInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PaymentIntentResponse</returns>
-        public async System.Threading.Tasks.Task<PaymentIntentResponse> PaymentUpdatePaymentIntentAsync(string authorization, string id, CreatePaymentIntentInput createPaymentIntentInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<PaymentIntentResponse> PaymentUpdatePaymentIntentAsync(string authorization, string id, CreatePaymentIntentInput createPaymentIntentInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse> localVarResponse = await PaymentUpdatePaymentIntentWithHttpInfoAsync(authorization, id, createPaymentIntentInput, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = PaymentUpdatePaymentIntentWithHttpInfoAsync(authorization, id, createPaymentIntentInput, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -1704,28 +1560,21 @@ namespace Org.OpenAPITools.Api
         /// <param name="authorization"></param>
         /// <param name="id"></param>
         /// <param name="createPaymentIntentInput"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PaymentIntentResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse>> PaymentUpdatePaymentIntentWithHttpInfoAsync(string authorization, string id, CreatePaymentIntentInput createPaymentIntentInput, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<PaymentIntentResponse>> PaymentUpdatePaymentIntentWithHttpInfoAsync(string authorization, string id, CreatePaymentIntentInput createPaymentIntentInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'authorization' when calling PaymentApi->PaymentUpdatePaymentIntent");
-            }
 
             // verify the required parameter 'id' is set
             if (id == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling PaymentApi->PaymentUpdatePaymentIntent");
-            }
 
             // verify the required parameter 'createPaymentIntentInput' is set
             if (createPaymentIntentInput == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'createPaymentIntentInput' when calling PaymentApi->PaymentUpdatePaymentIntent");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1739,24 +1588,16 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("Authorization", Org.OpenAPITools.Client.ClientUtils.ParameterToString(authorization)); // header parameter
             localVarRequestOptions.Data = createPaymentIntentInput;
-
-            localVarRequestOptions.Operation = "PaymentApi.PaymentUpdatePaymentIntent";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1770,15 +1611,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<PaymentIntentResponse>("/payment/{id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.PutAsync<PaymentIntentResponse>("/payment/{id}", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PaymentUpdatePaymentIntent", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1790,9 +1635,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Object</returns>
-        public Object TatumWebhook(string id, Object body, int operationIndex = 0)
+        public Object TatumWebhook(string id, Object body)
         {
             Org.OpenAPITools.Client.ApiResponse<Object> localVarResponse = TatumWebhookWithHttpInfo(id, body);
             return localVarResponse.Data;
@@ -1804,21 +1648,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object</returns>
-        public Org.OpenAPITools.Client.ApiResponse<Object> TatumWebhookWithHttpInfo(string id, Object body, int operationIndex = 0)
+        public Org.OpenAPITools.Client.ApiResponse<Object> TatumWebhookWithHttpInfo(string id, Object body)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling PaymentApi->TatumWebhook");
-            }
 
             // verify the required parameter 'body' is set
             if (body == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'body' when calling PaymentApi->TatumWebhook");
-            }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1832,22 +1671,13 @@ namespace Org.OpenAPITools.Api
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "PaymentApi.TatumWebhook";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1862,13 +1692,11 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/payment/tatum/webhook/{id}", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("TatumWebhook", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1880,12 +1708,16 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> TatumWebhookAsync(string id, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> TatumWebhookAsync(string id, Object body, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<Object> localVarResponse = await TatumWebhookWithHttpInfoAsync(id, body, operationIndex, cancellationToken).ConfigureAwait(false);
+            var task = TatumWebhookWithHttpInfoAsync(id, body, cancellationToken);
+#if UNITY_EDITOR || !UNITY_WEBGL
+            Org.OpenAPITools.Client.ApiResponse<Object> localVarResponse = await task.ConfigureAwait(false);
+#else
+            Org.OpenAPITools.Client.ApiResponse<Object> localVarResponse = await task;
+#endif
             return localVarResponse.Data;
         }
 
@@ -1895,22 +1727,17 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<Object>> TatumWebhookWithHttpInfoAsync(string id, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<Object>> TatumWebhookWithHttpInfoAsync(string id, Object body, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling PaymentApi->TatumWebhook");
-            }
 
             // verify the required parameter 'body' is set
             if (body == null)
-            {
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'body' when calling PaymentApi->TatumWebhook");
-            }
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1924,23 +1751,15 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
+
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "PaymentApi.TatumWebhook";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKeyAuth) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1954,15 +1773,19 @@ namespace Org.OpenAPITools.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/payment/tatum/webhook/{id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            var task = this.AsynchronousClient.PostAsync<Object>("/payment/tatum/webhook/{id}", localVarRequestOptions, this.Configuration, cancellationToken);
+
+#if UNITY_EDITOR || !UNITY_WEBGL
+            var localVarResponse = await task.ConfigureAwait(false);
+#else
+            var localVarResponse = await task;
+#endif
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("TatumWebhook", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;

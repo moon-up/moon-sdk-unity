@@ -7,7 +7,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 | [**GetAddress**](Erc4337Api.md#getaddress) | **POST** /erc4337/{accountName}/address |  |
 | [**SignBroadcastUserOpTx**](Erc4337Api.md#signbroadcastuseroptx) | **POST** /erc4337/{accountName}/sign-broadcast-userop-tx |  |
 
-<a id="getaddress"></a>
+<a name="getaddress"></a>
 # **GetAddress**
 > AccountControllerResponse GetAddress (string authorization, string accountName, InputBody inputBody)
 
@@ -107,7 +107,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="signbroadcastuseroptx"></a>
+<a name="signbroadcastuseroptx"></a>
 # **SignBroadcastUserOpTx**
 > AccountControllerResponse SignBroadcastUserOpTx (string authorization, string accountName, InputBody inputBody)
 

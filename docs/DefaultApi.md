@@ -6,7 +6,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 |--------|--------------|-------------|
 | [**GetMessage**](DefaultApi.md#getmessage) | **GET** /ping |  |
 
-<a id="getmessage"></a>
+<a name="getmessage"></a>
 # **GetMessage**
 > PingResponse GetMessage ()
 

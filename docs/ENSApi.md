@@ -6,7 +6,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 |--------|--------------|-------------|
 | [**Resolve**](ENSApi.md#resolve) | **POST** /ens/resolve |  |
 
-<a id="resolve"></a>
+<a name="resolve"></a>
 # **Resolve**
 > AccountControllerResponse Resolve (string authorization, EnsResolveInput ensResolveInput)
 

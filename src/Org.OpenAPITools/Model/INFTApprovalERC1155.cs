@@ -20,7 +20,6 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
-using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Org.OpenAPITools.Client.OpenAPIDateConverter;
 
 namespace Org.OpenAPITools.Model
@@ -29,7 +28,7 @@ namespace Org.OpenAPITools.Model
     /// INFTApprovalERC1155
     /// </summary>
     [DataContract(Name = "INFTApprovalERC1155")]
-    public partial class INFTApprovalERC1155 : IEquatable<INFTApprovalERC1155>, IValidatableObject
+    public partial class INFTApprovalERC1155 : IEquatable<INFTApprovalERC1155>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="INFTApprovalERC1155" /> class.
@@ -43,12 +42,12 @@ namespace Org.OpenAPITools.Model
         /// <param name="contract">contract (required).</param>
         /// <param name="logIndex">logIndex (required).</param>
         /// <param name="account">account (required).</param>
-        /// <param name="varOperator">varOperator (required).</param>
+        /// <param name="_operator">_operator (required).</param>
         /// <param name="approved">approved (required).</param>
         /// <param name="tokenContractType">tokenContractType (required).</param>
         /// <param name="tokenName">tokenName (required).</param>
         /// <param name="tokenSymbol">tokenSymbol (required).</param>
-        public INFTApprovalERC1155(string transactionHash = default(string), string contract = default(string), string logIndex = default(string), string account = default(string), string varOperator = default(string), bool approved = default(bool), string tokenContractType = default(string), string tokenName = default(string), string tokenSymbol = default(string))
+        public INFTApprovalERC1155(string transactionHash = default(string), string contract = default(string), string logIndex = default(string), string account = default(string), string _operator = default(string), bool approved = default(bool), string tokenContractType = default(string), string tokenName = default(string), string tokenSymbol = default(string))
         {
             // to ensure "transactionHash" is required (not null)
             if (transactionHash == null)
@@ -74,12 +73,12 @@ namespace Org.OpenAPITools.Model
                 throw new ArgumentNullException("account is a required property for INFTApprovalERC1155 and cannot be null");
             }
             this.Account = account;
-            // to ensure "varOperator" is required (not null)
-            if (varOperator == null)
+            // to ensure "_operator" is required (not null)
+            if (_operator == null)
             {
-                throw new ArgumentNullException("varOperator is a required property for INFTApprovalERC1155 and cannot be null");
+                throw new ArgumentNullException("_operator is a required property for INFTApprovalERC1155 and cannot be null");
             }
-            this.VarOperator = varOperator;
+            this.Operator = _operator;
             this.Approved = approved;
             // to ensure "tokenContractType" is required (not null)
             if (tokenContractType == null)
@@ -126,10 +125,10 @@ namespace Org.OpenAPITools.Model
         public string Account { get; set; }
 
         /// <summary>
-        /// Gets or Sets VarOperator
+        /// Gets or Sets Operator
         /// </summary>
         [DataMember(Name = "operator", IsRequired = true, EmitDefaultValue = true)]
-        public string VarOperator { get; set; }
+        public string Operator { get; set; }
 
         /// <summary>
         /// Gets or Sets Approved
@@ -167,7 +166,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  Contract: ").Append(Contract).Append("\n");
             sb.Append("  LogIndex: ").Append(LogIndex).Append("\n");
             sb.Append("  Account: ").Append(Account).Append("\n");
-            sb.Append("  VarOperator: ").Append(VarOperator).Append("\n");
+            sb.Append("  Operator: ").Append(Operator).Append("\n");
             sb.Append("  Approved: ").Append(Approved).Append("\n");
             sb.Append("  TokenContractType: ").Append(TokenContractType).Append("\n");
             sb.Append("  TokenName: ").Append(TokenName).Append("\n");
@@ -228,9 +227,9 @@ namespace Org.OpenAPITools.Model
                     this.Account.Equals(input.Account))
                 ) && 
                 (
-                    this.VarOperator == input.VarOperator ||
-                    (this.VarOperator != null &&
-                    this.VarOperator.Equals(input.VarOperator))
+                    this.Operator == input.Operator ||
+                    (this.Operator != null &&
+                    this.Operator.Equals(input.Operator))
                 ) && 
                 (
                     this.Approved == input.Approved ||
@@ -278,9 +277,9 @@ namespace Org.OpenAPITools.Model
                 {
                     hashCode = (hashCode * 59) + this.Account.GetHashCode();
                 }
-                if (this.VarOperator != null)
+                if (this.Operator != null)
                 {
-                    hashCode = (hashCode * 59) + this.VarOperator.GetHashCode();
+                    hashCode = (hashCode * 59) + this.Operator.GetHashCode();
                 }
                 hashCode = (hashCode * 59) + this.Approved.GetHashCode();
                 if (this.TokenContractType != null)
@@ -299,15 +298,6 @@ namespace Org.OpenAPITools.Model
             }
         }
 
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
 
 }

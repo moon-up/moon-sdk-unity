@@ -9,7 +9,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 | [**ListRippleAccounts**](RippleApi.md#listrippleaccounts) | **GET** /ripple |  |
 | [**SignRippleTransaction**](RippleApi.md#signrippletransaction) | **POST** /ripple/{accountName}/sign-tx |  |
 
-<a id="createrippleaccount"></a>
+<a name="createrippleaccount"></a>
 # **CreateRippleAccount**
 > AccountControllerResponse CreateRippleAccount (string authorization, RippleInput rippleInput)
 
@@ -107,7 +107,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="getrippleaccount"></a>
+<a name="getrippleaccount"></a>
 # **GetRippleAccount**
 > AccountControllerResponse GetRippleAccount (string authorization, string accountName)
 
@@ -205,7 +205,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="listrippleaccounts"></a>
+<a name="listrippleaccounts"></a>
 # **ListRippleAccounts**
 > AccountControllerResponse ListRippleAccounts (string authorization)
 
@@ -301,7 +301,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="signrippletransaction"></a>
+<a name="signrippletransaction"></a>
 # **SignRippleTransaction**
 > AccountControllerResponse SignRippleTransaction (string authorization, string accountName, RippleTransactionInput rippleTransactionInput)
 

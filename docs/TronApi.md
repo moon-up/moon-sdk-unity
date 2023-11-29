@@ -9,7 +9,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 | [**ListTronAccounts**](TronApi.md#listtronaccounts) | **GET** /tron |  |
 | [**SignTronTransaction**](TronApi.md#signtrontransaction) | **POST** /tron/{accountName}/sign-tx |  |
 
-<a id="createtronaccount"></a>
+<a name="createtronaccount"></a>
 # **CreateTronAccount**
 > AccountControllerResponse CreateTronAccount (string authorization, TronInput tronInput)
 
@@ -107,7 +107,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="gettronaccount"></a>
+<a name="gettronaccount"></a>
 # **GetTronAccount**
 > AccountControllerResponse GetTronAccount (string authorization, string accountName)
 
@@ -205,7 +205,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="listtronaccounts"></a>
+<a name="listtronaccounts"></a>
 # **ListTronAccounts**
 > AccountControllerResponse ListTronAccounts (string authorization)
 
@@ -301,7 +301,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="signtrontransaction"></a>
+<a name="signtrontransaction"></a>
 # **SignTronTransaction**
 > AccountControllerResponse SignTronTransaction (string authorization, string accountName, TronTransactionInput tronTransactionInput)
 
