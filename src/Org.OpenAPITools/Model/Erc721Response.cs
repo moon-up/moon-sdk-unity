@@ -34,20 +34,23 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Erc721Response" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected Erc721Response() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Erc721Response" /> class.
-        /// </summary>
-        /// <param name="moonScanUrl">moonScanUrl.</param>
-        /// <param name="transactionHash">transactionHash (required).</param>
-        /// <param name="signedTransaction">signedTransaction (required).</param>
-        /// <param name="signedMessage">signedMessage.</param>
-        /// <param name="rawTransaction">rawTransaction.</param>
-        /// <param name="signature">signature.</param>
-        /// <param name="transaction">transaction.</param>
-        /// <param name="userOps">userOps.</param>
-        /// <param name="useropTransaction">useropTransaction.</param>
+        /// <param name="type">type.</param>
+        /// <param name="chainId">chainId.</param>
+        /// <param name="data">data.</param>
+        /// <param name="gas">gas.</param>
+        /// <param name="gasPrice">gasPrice.</param>
+        /// <param name="gasTipCap">gasTipCap.</param>
+        /// <param name="gasFeeCap">gasFeeCap.</param>
+        /// <param name="value">value.</param>
+        /// <param name="nonce">nonce.</param>
+        /// <param name="from">from.</param>
+        /// <param name="to">to.</param>
+        /// <param name="blobGas">blobGas.</param>
+        /// <param name="blobGasFeeCap">blobGasFeeCap.</param>
+        /// <param name="blobHashes">blobHashes.</param>
+        /// <param name="v">v.</param>
+        /// <param name="r">r.</param>
+        /// <param name="s">s.</param>
         /// <param name="name">name.</param>
         /// <param name="symbol">symbol.</param>
         /// <param name="balanceOf">balanceOf.</param>
@@ -55,27 +58,25 @@ namespace Org.OpenAPITools.Model
         /// <param name="tokenUri">tokenUri.</param>
         /// <param name="contractAddress">contractAddress.</param>
         /// <param name="isApprovedForAll">isApprovedForAll.</param>
-        public Erc721Response(string moonScanUrl = default(string), string transactionHash = default(string), string signedTransaction = default(string), string signedMessage = default(string), string rawTransaction = default(string), string signature = default(string), Dictionary<string, Tx> transaction = default(Dictionary<string, Tx>), List<TransactionRequest> userOps = default(List<TransactionRequest>), string useropTransaction = default(string), string name = default(string), string symbol = default(string), string balanceOf = default(string), string ownerOf = default(string), string tokenUri = default(string), string contractAddress = default(string), string isApprovedForAll = default(string))
+        public Erc721Response(double type = default(double), double chainId = default(double), string data = default(string), string gas = default(string), string gasPrice = default(string), string gasTipCap = default(string), string gasFeeCap = default(string), string value = default(string), double nonce = default(double), string from = default(string), string to = default(string), string blobGas = default(string), string blobGasFeeCap = default(string), List<string> blobHashes = default(List<string>), string v = default(string), string r = default(string), string s = default(string), string name = default(string), string symbol = default(string), string balanceOf = default(string), string ownerOf = default(string), string tokenUri = default(string), string contractAddress = default(string), string isApprovedForAll = default(string))
         {
-            // to ensure "transactionHash" is required (not null)
-            if (transactionHash == null)
-            {
-                throw new ArgumentNullException("transactionHash is a required property for Erc721Response and cannot be null");
-            }
-            this.TransactionHash = transactionHash;
-            // to ensure "signedTransaction" is required (not null)
-            if (signedTransaction == null)
-            {
-                throw new ArgumentNullException("signedTransaction is a required property for Erc721Response and cannot be null");
-            }
-            this.SignedTransaction = signedTransaction;
-            this.MoonScanUrl = moonScanUrl;
-            this.SignedMessage = signedMessage;
-            this.RawTransaction = rawTransaction;
-            this.Signature = signature;
-            this.Transaction = transaction;
-            this.UserOps = userOps;
-            this.UseropTransaction = useropTransaction;
+            this.Type = type;
+            this.ChainId = chainId;
+            this.Data = data;
+            this.Gas = gas;
+            this.GasPrice = gasPrice;
+            this.GasTipCap = gasTipCap;
+            this.GasFeeCap = gasFeeCap;
+            this.Value = value;
+            this.Nonce = nonce;
+            this.From = from;
+            this.To = to;
+            this.BlobGas = blobGas;
+            this.BlobGasFeeCap = blobGasFeeCap;
+            this.BlobHashes = blobHashes;
+            this.V = v;
+            this.R = r;
+            this.S = s;
             this.Name = name;
             this.Symbol = symbol;
             this.BalanceOf = balanceOf;
@@ -86,58 +87,106 @@ namespace Org.OpenAPITools.Model
         }
 
         /// <summary>
-        /// Gets or Sets MoonScanUrl
+        /// Gets or Sets Type
         /// </summary>
-        [DataMember(Name = "moon_scan_url", EmitDefaultValue = false)]
-        public string MoonScanUrl { get; set; }
+        [DataMember(Name = "type", EmitDefaultValue = false)]
+        public double Type { get; set; }
 
         /// <summary>
-        /// Gets or Sets TransactionHash
+        /// Gets or Sets ChainId
         /// </summary>
-        [DataMember(Name = "transaction_hash", IsRequired = true, EmitDefaultValue = true)]
-        public string TransactionHash { get; set; }
+        [DataMember(Name = "chain_id", EmitDefaultValue = false)]
+        public double ChainId { get; set; }
 
         /// <summary>
-        /// Gets or Sets SignedTransaction
+        /// Gets or Sets Data
         /// </summary>
-        [DataMember(Name = "signed_transaction", IsRequired = true, EmitDefaultValue = true)]
-        public string SignedTransaction { get; set; }
+        [DataMember(Name = "data", EmitDefaultValue = false)]
+        public string Data { get; set; }
 
         /// <summary>
-        /// Gets or Sets SignedMessage
+        /// Gets or Sets Gas
         /// </summary>
-        [DataMember(Name = "signed_message", EmitDefaultValue = false)]
-        public string SignedMessage { get; set; }
+        [DataMember(Name = "gas", EmitDefaultValue = false)]
+        public string Gas { get; set; }
 
         /// <summary>
-        /// Gets or Sets RawTransaction
+        /// Gets or Sets GasPrice
         /// </summary>
-        [DataMember(Name = "raw_transaction", EmitDefaultValue = false)]
-        public string RawTransaction { get; set; }
+        [DataMember(Name = "gas_price", EmitDefaultValue = false)]
+        public string GasPrice { get; set; }
 
         /// <summary>
-        /// Gets or Sets Signature
+        /// Gets or Sets GasTipCap
         /// </summary>
-        [DataMember(Name = "signature", EmitDefaultValue = false)]
-        public string Signature { get; set; }
+        [DataMember(Name = "gas_tip_cap", EmitDefaultValue = true)]
+        public string GasTipCap { get; set; }
 
         /// <summary>
-        /// Gets or Sets Transaction
+        /// Gets or Sets GasFeeCap
         /// </summary>
-        [DataMember(Name = "transaction", EmitDefaultValue = false)]
-        public Dictionary<string, Tx> Transaction { get; set; }
+        [DataMember(Name = "gas_fee_cap", EmitDefaultValue = true)]
+        public string GasFeeCap { get; set; }
 
         /// <summary>
-        /// Gets or Sets UserOps
+        /// Gets or Sets Value
         /// </summary>
-        [DataMember(Name = "userOps", EmitDefaultValue = false)]
-        public List<TransactionRequest> UserOps { get; set; }
+        [DataMember(Name = "value", EmitDefaultValue = false)]
+        public string Value { get; set; }
 
         /// <summary>
-        /// Gets or Sets UseropTransaction
+        /// Gets or Sets Nonce
         /// </summary>
-        [DataMember(Name = "userop_transaction", EmitDefaultValue = false)]
-        public string UseropTransaction { get; set; }
+        [DataMember(Name = "nonce", EmitDefaultValue = false)]
+        public double Nonce { get; set; }
+
+        /// <summary>
+        /// Gets or Sets From
+        /// </summary>
+        [DataMember(Name = "from", EmitDefaultValue = false)]
+        public string From { get; set; }
+
+        /// <summary>
+        /// Gets or Sets To
+        /// </summary>
+        [DataMember(Name = "to", EmitDefaultValue = true)]
+        public string To { get; set; }
+
+        /// <summary>
+        /// Gets or Sets BlobGas
+        /// </summary>
+        [DataMember(Name = "blob_gas", EmitDefaultValue = true)]
+        public string BlobGas { get; set; }
+
+        /// <summary>
+        /// Gets or Sets BlobGasFeeCap
+        /// </summary>
+        [DataMember(Name = "blob_gas_fee_cap", EmitDefaultValue = true)]
+        public string BlobGasFeeCap { get; set; }
+
+        /// <summary>
+        /// Gets or Sets BlobHashes
+        /// </summary>
+        [DataMember(Name = "blob_hashes", EmitDefaultValue = true)]
+        public List<string> BlobHashes { get; set; }
+
+        /// <summary>
+        /// Gets or Sets V
+        /// </summary>
+        [DataMember(Name = "v", EmitDefaultValue = false)]
+        public string V { get; set; }
+
+        /// <summary>
+        /// Gets or Sets R
+        /// </summary>
+        [DataMember(Name = "r", EmitDefaultValue = false)]
+        public string R { get; set; }
+
+        /// <summary>
+        /// Gets or Sets S
+        /// </summary>
+        [DataMember(Name = "s", EmitDefaultValue = false)]
+        public string S { get; set; }
 
         /// <summary>
         /// Gets or Sets Name
@@ -189,15 +238,23 @@ namespace Org.OpenAPITools.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class Erc721Response {\n");
-            sb.Append("  MoonScanUrl: ").Append(MoonScanUrl).Append("\n");
-            sb.Append("  TransactionHash: ").Append(TransactionHash).Append("\n");
-            sb.Append("  SignedTransaction: ").Append(SignedTransaction).Append("\n");
-            sb.Append("  SignedMessage: ").Append(SignedMessage).Append("\n");
-            sb.Append("  RawTransaction: ").Append(RawTransaction).Append("\n");
-            sb.Append("  Signature: ").Append(Signature).Append("\n");
-            sb.Append("  Transaction: ").Append(Transaction).Append("\n");
-            sb.Append("  UserOps: ").Append(UserOps).Append("\n");
-            sb.Append("  UseropTransaction: ").Append(UseropTransaction).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  ChainId: ").Append(ChainId).Append("\n");
+            sb.Append("  Data: ").Append(Data).Append("\n");
+            sb.Append("  Gas: ").Append(Gas).Append("\n");
+            sb.Append("  GasPrice: ").Append(GasPrice).Append("\n");
+            sb.Append("  GasTipCap: ").Append(GasTipCap).Append("\n");
+            sb.Append("  GasFeeCap: ").Append(GasFeeCap).Append("\n");
+            sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("  Nonce: ").Append(Nonce).Append("\n");
+            sb.Append("  From: ").Append(From).Append("\n");
+            sb.Append("  To: ").Append(To).Append("\n");
+            sb.Append("  BlobGas: ").Append(BlobGas).Append("\n");
+            sb.Append("  BlobGasFeeCap: ").Append(BlobGasFeeCap).Append("\n");
+            sb.Append("  BlobHashes: ").Append(BlobHashes).Append("\n");
+            sb.Append("  V: ").Append(V).Append("\n");
+            sb.Append("  R: ").Append(R).Append("\n");
+            sb.Append("  S: ").Append(S).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Symbol: ").Append(Symbol).Append("\n");
             sb.Append("  BalanceOf: ").Append(BalanceOf).Append("\n");
@@ -241,51 +298,87 @@ namespace Org.OpenAPITools.Model
             }
             return 
                 (
-                    this.MoonScanUrl == input.MoonScanUrl ||
-                    (this.MoonScanUrl != null &&
-                    this.MoonScanUrl.Equals(input.MoonScanUrl))
+                    this.Type == input.Type ||
+                    this.Type.Equals(input.Type)
                 ) && 
                 (
-                    this.TransactionHash == input.TransactionHash ||
-                    (this.TransactionHash != null &&
-                    this.TransactionHash.Equals(input.TransactionHash))
+                    this.ChainId == input.ChainId ||
+                    this.ChainId.Equals(input.ChainId)
                 ) && 
                 (
-                    this.SignedTransaction == input.SignedTransaction ||
-                    (this.SignedTransaction != null &&
-                    this.SignedTransaction.Equals(input.SignedTransaction))
+                    this.Data == input.Data ||
+                    (this.Data != null &&
+                    this.Data.Equals(input.Data))
                 ) && 
                 (
-                    this.SignedMessage == input.SignedMessage ||
-                    (this.SignedMessage != null &&
-                    this.SignedMessage.Equals(input.SignedMessage))
+                    this.Gas == input.Gas ||
+                    (this.Gas != null &&
+                    this.Gas.Equals(input.Gas))
                 ) && 
                 (
-                    this.RawTransaction == input.RawTransaction ||
-                    (this.RawTransaction != null &&
-                    this.RawTransaction.Equals(input.RawTransaction))
+                    this.GasPrice == input.GasPrice ||
+                    (this.GasPrice != null &&
+                    this.GasPrice.Equals(input.GasPrice))
                 ) && 
                 (
-                    this.Signature == input.Signature ||
-                    (this.Signature != null &&
-                    this.Signature.Equals(input.Signature))
+                    this.GasTipCap == input.GasTipCap ||
+                    (this.GasTipCap != null &&
+                    this.GasTipCap.Equals(input.GasTipCap))
                 ) && 
                 (
-                    this.Transaction == input.Transaction ||
-                    this.Transaction != null &&
-                    input.Transaction != null &&
-                    this.Transaction.SequenceEqual(input.Transaction)
+                    this.GasFeeCap == input.GasFeeCap ||
+                    (this.GasFeeCap != null &&
+                    this.GasFeeCap.Equals(input.GasFeeCap))
                 ) && 
                 (
-                    this.UserOps == input.UserOps ||
-                    this.UserOps != null &&
-                    input.UserOps != null &&
-                    this.UserOps.SequenceEqual(input.UserOps)
+                    this.Value == input.Value ||
+                    (this.Value != null &&
+                    this.Value.Equals(input.Value))
                 ) && 
                 (
-                    this.UseropTransaction == input.UseropTransaction ||
-                    (this.UseropTransaction != null &&
-                    this.UseropTransaction.Equals(input.UseropTransaction))
+                    this.Nonce == input.Nonce ||
+                    this.Nonce.Equals(input.Nonce)
+                ) && 
+                (
+                    this.From == input.From ||
+                    (this.From != null &&
+                    this.From.Equals(input.From))
+                ) && 
+                (
+                    this.To == input.To ||
+                    (this.To != null &&
+                    this.To.Equals(input.To))
+                ) && 
+                (
+                    this.BlobGas == input.BlobGas ||
+                    (this.BlobGas != null &&
+                    this.BlobGas.Equals(input.BlobGas))
+                ) && 
+                (
+                    this.BlobGasFeeCap == input.BlobGasFeeCap ||
+                    (this.BlobGasFeeCap != null &&
+                    this.BlobGasFeeCap.Equals(input.BlobGasFeeCap))
+                ) && 
+                (
+                    this.BlobHashes == input.BlobHashes ||
+                    this.BlobHashes != null &&
+                    input.BlobHashes != null &&
+                    this.BlobHashes.SequenceEqual(input.BlobHashes)
+                ) && 
+                (
+                    this.V == input.V ||
+                    (this.V != null &&
+                    this.V.Equals(input.V))
+                ) && 
+                (
+                    this.R == input.R ||
+                    (this.R != null &&
+                    this.R.Equals(input.R))
+                ) && 
+                (
+                    this.S == input.S ||
+                    (this.S != null &&
+                    this.S.Equals(input.S))
                 ) && 
                 (
                     this.Name == input.Name ||
@@ -333,41 +426,64 @@ namespace Org.OpenAPITools.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.MoonScanUrl != null)
+                hashCode = (hashCode * 59) + this.Type.GetHashCode();
+                hashCode = (hashCode * 59) + this.ChainId.GetHashCode();
+                if (this.Data != null)
                 {
-                    hashCode = (hashCode * 59) + this.MoonScanUrl.GetHashCode();
+                    hashCode = (hashCode * 59) + this.Data.GetHashCode();
                 }
-                if (this.TransactionHash != null)
+                if (this.Gas != null)
                 {
-                    hashCode = (hashCode * 59) + this.TransactionHash.GetHashCode();
+                    hashCode = (hashCode * 59) + this.Gas.GetHashCode();
                 }
-                if (this.SignedTransaction != null)
+                if (this.GasPrice != null)
                 {
-                    hashCode = (hashCode * 59) + this.SignedTransaction.GetHashCode();
+                    hashCode = (hashCode * 59) + this.GasPrice.GetHashCode();
                 }
-                if (this.SignedMessage != null)
+                if (this.GasTipCap != null)
                 {
-                    hashCode = (hashCode * 59) + this.SignedMessage.GetHashCode();
+                    hashCode = (hashCode * 59) + this.GasTipCap.GetHashCode();
                 }
-                if (this.RawTransaction != null)
+                if (this.GasFeeCap != null)
                 {
-                    hashCode = (hashCode * 59) + this.RawTransaction.GetHashCode();
+                    hashCode = (hashCode * 59) + this.GasFeeCap.GetHashCode();
                 }
-                if (this.Signature != null)
+                if (this.Value != null)
                 {
-                    hashCode = (hashCode * 59) + this.Signature.GetHashCode();
+                    hashCode = (hashCode * 59) + this.Value.GetHashCode();
                 }
-                if (this.Transaction != null)
+                hashCode = (hashCode * 59) + this.Nonce.GetHashCode();
+                if (this.From != null)
                 {
-                    hashCode = (hashCode * 59) + this.Transaction.GetHashCode();
+                    hashCode = (hashCode * 59) + this.From.GetHashCode();
                 }
-                if (this.UserOps != null)
+                if (this.To != null)
                 {
-                    hashCode = (hashCode * 59) + this.UserOps.GetHashCode();
+                    hashCode = (hashCode * 59) + this.To.GetHashCode();
                 }
-                if (this.UseropTransaction != null)
+                if (this.BlobGas != null)
                 {
-                    hashCode = (hashCode * 59) + this.UseropTransaction.GetHashCode();
+                    hashCode = (hashCode * 59) + this.BlobGas.GetHashCode();
+                }
+                if (this.BlobGasFeeCap != null)
+                {
+                    hashCode = (hashCode * 59) + this.BlobGasFeeCap.GetHashCode();
+                }
+                if (this.BlobHashes != null)
+                {
+                    hashCode = (hashCode * 59) + this.BlobHashes.GetHashCode();
+                }
+                if (this.V != null)
+                {
+                    hashCode = (hashCode * 59) + this.V.GetHashCode();
+                }
+                if (this.R != null)
+                {
+                    hashCode = (hashCode * 59) + this.R.GetHashCode();
+                }
+                if (this.S != null)
+                {
+                    hashCode = (hashCode * 59) + this.S.GetHashCode();
                 }
                 if (this.Name != null)
                 {

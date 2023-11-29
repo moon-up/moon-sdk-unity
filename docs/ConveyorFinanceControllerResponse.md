@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Input** | [**InputBody**](InputBody.md) |  | [optional] 
 **Convey** | [**TransactionResponse**](TransactionResponse.md) |  | [optional] 
-**Data** | [**Transaction**](Transaction.md) |  | [optional] 
+**Data** | [**TransactionData**](TransactionData.md) |  | [optional] 
 **Tx** | [**TransactionResponseTx**](TransactionResponseTx.md) |  | [optional] 
 **Signed** | [**Transaction**](Transaction.md) |  | [optional] 
 **Success** | **bool** |  | 

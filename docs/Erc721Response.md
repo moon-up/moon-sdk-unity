@@ -4,15 +4,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MoonScanUrl** | **string** |  | [optional] 
-**TransactionHash** | **string** |  | 
-**SignedTransaction** | **string** |  | 
-**SignedMessage** | **string** |  | [optional] 
-**RawTransaction** | **string** |  | [optional] 
-**Signature** | **string** |  | [optional] 
-**Transaction** | [**Dictionary&lt;string, Tx&gt;**](Tx.md) |  | [optional] 
-**UserOps** | [**List&lt;TransactionRequest&gt;**](TransactionRequest.md) |  | [optional] 
-**UseropTransaction** | **string** |  | [optional] 
+**Type** | **double** |  | [optional] 
+**ChainId** | **double** |  | [optional] 
+**Data** | **string** |  | [optional] 
+**Gas** | **string** |  | [optional] 
+**GasPrice** | **string** |  | [optional] 
+**GasTipCap** | **string** |  | [optional] 
+**GasFeeCap** | **string** |  | [optional] 
+**Value** | **string** |  | [optional] 
+**Nonce** | **double** |  | [optional] 
+**From** | **string** |  | [optional] 
+**To** | **string** |  | [optional] 
+**BlobGas** | **string** |  | [optional] 
+**BlobGasFeeCap** | **string** |  | [optional] 
+**BlobHashes** | **List&lt;string&gt;** |  | [optional] 
+**V** | **string** |  | [optional] 
+**R** | **string** |  | [optional] 
+**S** | **string** |  | [optional] 
 **Name** | **string** |  | [optional] 
 **Symbol** | **string** |  | [optional] 
 **BalanceOf** | **string** |  | [optional] 

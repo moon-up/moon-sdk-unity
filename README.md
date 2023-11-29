@@ -323,6 +323,7 @@ Class | Method | HTTP request | Description
  - [Model.SupportedPaymentTypesMessage](docs/SupportedPaymentTypesMessage.md)
  - [Model.TokenSwapParams](docs/TokenSwapParams.md)
  - [Model.Transaction](docs/Transaction.md)
+ - [Model.TransactionData](docs/TransactionData.md)
  - [Model.TransactionInput](docs/TransactionInput.md)
  - [Model.TransactionInputMetaData](docs/TransactionInputMetaData.md)
  - [Model.TransactionInputSupportedParams](docs/TransactionInputSupportedParams.md)

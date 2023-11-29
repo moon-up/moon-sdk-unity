@@ -46,7 +46,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="signed">signed.</param>
         /// <param name="success">success (required).</param>
         /// <param name="message">message (required).</param>
-        public ConveyorFinanceControllerResponse(InputBody input = default(InputBody), TransactionResponse convey = default(TransactionResponse), Transaction data = default(Transaction), TransactionResponseTx tx = default(TransactionResponseTx), Transaction signed = default(Transaction), bool success = default(bool), string message = default(string))
+        public ConveyorFinanceControllerResponse(InputBody input = default(InputBody), TransactionResponse convey = default(TransactionResponse), TransactionData data = default(TransactionData), TransactionResponseTx tx = default(TransactionResponseTx), Transaction signed = default(Transaction), bool success = default(bool), string message = default(string))
         {
             this.Success = success;
             // to ensure "message" is required (not null)
@@ -78,7 +78,7 @@ namespace Org.OpenAPITools.Model
         /// Gets or Sets Data
         /// </summary>
         [DataMember(Name = "data", EmitDefaultValue = false)]
-        public Transaction Data { get; set; }
+        public TransactionData Data { get; set; }
 
         /// <summary>
         /// Gets or Sets Tx
