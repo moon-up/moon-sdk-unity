@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.BroadcastInput
+# com.usemoon.MoonSDK.Model.BroadcastInput
 
 ## Properties
 

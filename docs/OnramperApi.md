@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.OnramperApi
+# com.usemoon.MoonSDK.Api.OnramperApi
 
 All URIs are relative to *https://vault-api.usemoon.ai*
 
@@ -14,7 +14,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 | [**OnRamperGetSupportedPaymentTypes**](OnramperApi.md#onrampergetsupportedpaymenttypes) | **GET** /onramper/payment-types |  |
 | [**OnRamperGetSupportedPaymentTypesFiat**](OnramperApi.md#onrampergetsupportedpaymenttypesfiat) | **GET** /onramper/payment-types/fiat |  |
 
-<a name="onrampercheckout"></a>
+<a id="onrampercheckout"></a>
 # **OnRamperCheckout**
 > Object OnRamperCheckout (string authorization, string accountName, TransactionInput transactionInput)
 
@@ -24,9 +24,9 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -114,9 +114,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="onrampergetquotesbuy"></a>
+<a id="onrampergetquotesbuy"></a>
 # **OnRamperGetQuotesBuy**
-> List&lt;Quote&gt; OnRamperGetQuotesBuy (string authorization, string fiat, string crypto, double amount, string paymentMethod = null, string uuid = null, string clientName = null, string country = null)
+> List&lt;Quote&gt; OnRamperGetQuotesBuy (string authorization, string fiat, string crypto, double amount, string? paymentMethod = null, string? uuid = null, string? clientName = null, string? country = null)
 
 
 
@@ -124,9 +124,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -150,10 +150,10 @@ namespace Example
             var fiat = "fiat_example";  // string | 
             var crypto = "crypto_example";  // string | 
             var amount = 1.2D;  // double | 
-            var paymentMethod = "\"creditcard\"";  // string |  (optional)  (default to "creditcard")
-            var uuid = "\"\"";  // string |  (optional)  (default to "")
-            var clientName = "\"\"";  // string |  (optional)  (default to "")
-            var country = "\"\"";  // string |  (optional)  (default to "")
+            var paymentMethod = "\"creditcard\"";  // string? |  (optional)  (default to "creditcard")
+            var uuid = "\"\"";  // string? |  (optional)  (default to "")
+            var clientName = "\"\"";  // string? |  (optional)  (default to "")
+            var country = "\"\"";  // string? |  (optional)  (default to "")
 
             try
             {
@@ -198,10 +198,10 @@ catch (ApiException e)
 | **fiat** | **string** |  |  |
 | **crypto** | **string** |  |  |
 | **amount** | **double** |  |  |
-| **paymentMethod** | **string** |  | [optional] [default to &quot;creditcard&quot;] |
-| **uuid** | **string** |  | [optional] [default to &quot;&quot;] |
-| **clientName** | **string** |  | [optional] [default to &quot;&quot;] |
-| **country** | **string** |  | [optional] [default to &quot;&quot;] |
+| **paymentMethod** | **string?** |  | [optional] [default to &quot;creditcard&quot;] |
+| **uuid** | **string?** |  | [optional] [default to &quot;&quot;] |
+| **clientName** | **string?** |  | [optional] [default to &quot;&quot;] |
+| **country** | **string?** |  | [optional] [default to &quot;&quot;] |
 
 ### Return type
 
@@ -224,9 +224,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="onrampergetquotessell"></a>
+<a id="onrampergetquotessell"></a>
 # **OnRamperGetQuotesSell**
-> List&lt;SellQuote&gt; OnRamperGetQuotesSell (string authorization, string fiat, string crypto, double amount, string paymentMethod = null, string uuid = null, string clientName = null, string country = null)
+> List&lt;SellQuote&gt; OnRamperGetQuotesSell (string authorization, string fiat, string crypto, double amount, string? paymentMethod = null, string? uuid = null, string? clientName = null, string? country = null)
 
 
 
@@ -234,9 +234,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -260,10 +260,10 @@ namespace Example
             var fiat = "fiat_example";  // string | 
             var crypto = "crypto_example";  // string | 
             var amount = 1.2D;  // double | 
-            var paymentMethod = "\"creditcard\"";  // string |  (optional)  (default to "creditcard")
-            var uuid = "\"\"";  // string |  (optional)  (default to "")
-            var clientName = "\"\"";  // string |  (optional)  (default to "")
-            var country = "\"\"";  // string |  (optional)  (default to "")
+            var paymentMethod = "\"creditcard\"";  // string? |  (optional)  (default to "creditcard")
+            var uuid = "\"\"";  // string? |  (optional)  (default to "")
+            var clientName = "\"\"";  // string? |  (optional)  (default to "")
+            var country = "\"\"";  // string? |  (optional)  (default to "")
 
             try
             {
@@ -308,10 +308,10 @@ catch (ApiException e)
 | **fiat** | **string** |  |  |
 | **crypto** | **string** |  |  |
 | **amount** | **double** |  |  |
-| **paymentMethod** | **string** |  | [optional] [default to &quot;creditcard&quot;] |
-| **uuid** | **string** |  | [optional] [default to &quot;&quot;] |
-| **clientName** | **string** |  | [optional] [default to &quot;&quot;] |
-| **country** | **string** |  | [optional] [default to &quot;&quot;] |
+| **paymentMethod** | **string?** |  | [optional] [default to &quot;creditcard&quot;] |
+| **uuid** | **string?** |  | [optional] [default to &quot;&quot;] |
+| **clientName** | **string?** |  | [optional] [default to &quot;&quot;] |
+| **country** | **string?** |  | [optional] [default to &quot;&quot;] |
 
 ### Return type
 
@@ -334,7 +334,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="onrampergetsupportedassets"></a>
+<a id="onrampergetsupportedassets"></a>
 # **OnRamperGetSupportedAssets**
 > SupportedAssetResponse OnRamperGetSupportedAssets (string authorization, string source, string country)
 
@@ -344,9 +344,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -434,7 +434,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="onrampergetsupportedcurrencies"></a>
+<a id="onrampergetsupportedcurrencies"></a>
 # **OnRamperGetSupportedCurrencies**
 > SupportedCurrenciesResponse OnRamperGetSupportedCurrencies (string authorization, string type)
 
@@ -444,9 +444,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -532,7 +532,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="onrampergetsupporteddefaultsall"></a>
+<a id="onrampergetsupporteddefaultsall"></a>
 # **OnRamperGetSupportedDefaultsAll**
 > SupportedDefaultResponse OnRamperGetSupportedDefaultsAll (string authorization, string country, string type)
 
@@ -542,9 +542,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -632,7 +632,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="onrampergetsupportedonrampsall"></a>
+<a id="onrampergetsupportedonrampsall"></a>
 # **OnRamperGetSupportedOnRampsAll**
 > GetSupportedOnRampsResponse OnRamperGetSupportedOnRampsAll (string authorization)
 
@@ -642,9 +642,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -728,7 +728,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="onrampergetsupportedpaymenttypes"></a>
+<a id="onrampergetsupportedpaymenttypes"></a>
 # **OnRamperGetSupportedPaymentTypes**
 > SupportedPaymentTypesCurrencyResponse OnRamperGetSupportedPaymentTypes (string authorization, string fiat, string country, string type)
 
@@ -738,9 +738,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -830,7 +830,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="onrampergetsupportedpaymenttypesfiat"></a>
+<a id="onrampergetsupportedpaymenttypesfiat"></a>
 # **OnRamperGetSupportedPaymentTypesFiat**
 > SupportedPaymentTypesCurrencyResponse OnRamperGetSupportedPaymentTypesFiat (string authorization, string fiat, string country)
 
@@ -840,9 +840,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {

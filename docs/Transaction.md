@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.Transaction
+# com.usemoon.MoonSDK.Model.Transaction
 
 ## Properties
 
@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **Transactions** | [**List&lt;TransactionData&gt;**](TransactionData.md) |  | [optional] 
 **MoonScanUrl** | **string** |  | [optional] 
 **Signature** | **string** |  | [optional] 
-**_Transaction** | [**Tx**](Tx.md) |  | [optional] 
+**VarTransaction** | [**Tx**](Tx.md) |  | [optional] 
 **UserOps** | [**List&lt;TransactionRequest&gt;**](TransactionRequest.md) |  | [optional] 
 **UseropTransaction** | **string** |  | [optional] 
 

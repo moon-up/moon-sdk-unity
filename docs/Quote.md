@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.Quote
+# com.usemoon.MoonSDK.Model.Quote
 
 ## Properties
 

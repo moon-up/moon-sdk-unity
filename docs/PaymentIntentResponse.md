@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.PaymentIntentResponse
+# com.usemoon.MoonSDK.Model.PaymentIntentResponse
 
 ## Properties
 

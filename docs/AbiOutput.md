@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.AbiOutput
+# com.usemoon.MoonSDK.Model.AbiOutput
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.INFTTransfer
+# com.usemoon.MoonSDK.Model.INFTTransfer
 
 ## Properties
 
@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **TokenName** | **string** |  | 
 **TokenSymbol** | **string** |  | 
 **Triggers** | [**List&lt;TriggerOutput&gt;**](TriggerOutput.md) |  | [optional] 
-**Operator** | **string** |  | 
+**VarOperator** | **string** |  | 
 **From** | **string** |  | 
 **To** | **string** |  | 
 **TokenId** | **string** |  | 

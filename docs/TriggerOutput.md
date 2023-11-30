@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.TriggerOutput
+# com.usemoon.MoonSDK.Model.TriggerOutput
 
 ## Properties
 

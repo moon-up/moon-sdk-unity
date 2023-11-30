@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.AbiItem
+# com.usemoon.MoonSDK.Model.AbiItem
 The abi to parse the log object of the contract
 
 ## Properties

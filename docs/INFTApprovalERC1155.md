@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.INFTApprovalERC1155
+# com.usemoon.MoonSDK.Model.INFTApprovalERC1155
 
 ## Properties
 
@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **Contract** | **string** |  | 
 **LogIndex** | **string** |  | 
 **Account** | **string** |  | 
-**Operator** | **string** |  | 
+**VarOperator** | **string** |  | 
 **Approved** | **bool** |  | 
 **TokenContractType** | **string** |  | 
 **TokenName** | **string** |  | 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.AccountsApi
+# com.usemoon.MoonSDK.Api.AccountsApi
 
 All URIs are relative to *https://vault-api.usemoon.ai*
 
@@ -17,7 +17,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 | [**SignTypedData**](AccountsApi.md#signtypeddata) | **POST** /accounts/{accountName}/sign-typed-data |  |
 | [**TransferEth**](AccountsApi.md#transfereth) | **POST** /accounts/{accountName}/transfer-eth |  |
 
-<a name="broadcasttx"></a>
+<a id="broadcasttx"></a>
 # **BroadcastTx**
 > AccountControllerResponse BroadcastTx (string authorization, string accountName, BroadcastInput broadcastInput)
 
@@ -27,9 +27,9 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -117,7 +117,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="createaccount"></a>
+<a id="createaccount"></a>
 # **CreateAccount**
 > AccountControllerResponse CreateAccount (string authorization, CreateAccountInput createAccountInput)
 
@@ -127,9 +127,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -215,7 +215,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteaccount"></a>
+<a id="deleteaccount"></a>
 # **DeleteAccount**
 > AccountControllerResponse DeleteAccount (string authorization, string accountName)
 
@@ -225,9 +225,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -313,7 +313,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deploycontract"></a>
+<a id="deploycontract"></a>
 # **DeployContract**
 > AccountControllerResponse DeployContract (string authorization, string accountName, DeployInput deployInput)
 
@@ -323,9 +323,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -413,7 +413,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getaccount"></a>
+<a id="getaccount"></a>
 # **GetAccount**
 > AccountControllerResponse GetAccount (string authorization, string accountName)
 
@@ -423,9 +423,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -511,7 +511,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getbalance"></a>
+<a id="getbalance"></a>
 # **GetBalance**
 > AccountControllerResponse GetBalance (string accountName, string authorization, string chainId)
 
@@ -521,9 +521,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -611,7 +611,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getnonce"></a>
+<a id="getnonce"></a>
 # **GetNonce**
 > AccountControllerResponse GetNonce (string accountName, string authorization)
 
@@ -621,9 +621,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -709,7 +709,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listaccounts"></a>
+<a id="listaccounts"></a>
 # **ListAccounts**
 > AccountControllerResponse ListAccounts (string authorization)
 
@@ -719,9 +719,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -805,7 +805,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="signmessage"></a>
+<a id="signmessage"></a>
 # **SignMessage**
 > AccountControllerResponse SignMessage (string accountName, string authorization, SignMessage signMessage)
 
@@ -815,9 +815,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -905,7 +905,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="signtransaction"></a>
+<a id="signtransaction"></a>
 # **SignTransaction**
 > AccountControllerResponse SignTransaction (string accountName, string authorization, InputBody inputBody)
 
@@ -915,9 +915,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -1005,7 +1005,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="signtypeddata"></a>
+<a id="signtypeddata"></a>
 # **SignTypedData**
 > AccountControllerResponse SignTypedData (string accountName, string authorization, SignTypedData signTypedData)
 
@@ -1015,9 +1015,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -1105,7 +1105,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="transfereth"></a>
+<a id="transfereth"></a>
 # **TransferEth**
 > AccountControllerResponse TransferEth (string accountName, string authorization, InputBody inputBody)
 
@@ -1115,9 +1115,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {

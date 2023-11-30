@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.AaveApi
+# com.usemoon.MoonSDK.Api.AaveApi
 
 All URIs are relative to *https://vault-api.usemoon.ai*
 
@@ -9,7 +9,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 | [**Repay**](AaveApi.md#repay) | **POST** /aave/{name}/repay |  |
 | [**UserReserveData**](AaveApi.md#userreservedata) | **POST** /aave/{name}/user-reserve-data |  |
 
-<a name="borrow"></a>
+<a id="borrow"></a>
 # **Borrow**
 > AccountControllerResponse Borrow (string authorization, string name, AaveInput aaveInput)
 
@@ -19,9 +19,9 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -109,7 +109,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="lend"></a>
+<a id="lend"></a>
 # **Lend**
 > AccountControllerResponse Lend (string authorization, string name, AaveInput aaveInput)
 
@@ -119,9 +119,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -209,7 +209,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="repay"></a>
+<a id="repay"></a>
 # **Repay**
 > AccountControllerResponse Repay (string authorization, string name, AaveInput aaveInput)
 
@@ -219,9 +219,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -309,7 +309,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="userreservedata"></a>
+<a id="userreservedata"></a>
 # **UserReserveData**
 > AccountControllerResponse UserReserveData (string authorization, string name, AaveInput aaveInput)
 
@@ -319,9 +319,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {

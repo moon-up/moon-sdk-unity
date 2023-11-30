@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.INFTApproval
+# com.usemoon.MoonSDK.Model.INFTApproval
 
 ## Properties
 
@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **TokenName** | **string** |  | 
 **TokenSymbol** | **string** |  | 
 **Account** | **string** |  | 
-**Operator** | **string** |  | 
+**VarOperator** | **string** |  | 
 **ApprovedAll** | **bool** |  | 
 **TokenId** | **string** |  | 
 

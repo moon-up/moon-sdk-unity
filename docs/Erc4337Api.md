@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.Erc4337Api
+# com.usemoon.MoonSDK.Api.Erc4337Api
 
 All URIs are relative to *https://vault-api.usemoon.ai*
 
@@ -7,7 +7,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 | [**GetAddress**](Erc4337Api.md#getaddress) | **POST** /erc4337/{accountName}/address |  |
 | [**SignBroadcastUserOpTx**](Erc4337Api.md#signbroadcastuseroptx) | **POST** /erc4337/{accountName}/sign-broadcast-userop-tx |  |
 
-<a name="getaddress"></a>
+<a id="getaddress"></a>
 # **GetAddress**
 > AccountControllerResponse GetAddress (string authorization, string accountName, InputBody inputBody)
 
@@ -17,9 +17,9 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -107,7 +107,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="signbroadcastuseroptx"></a>
+<a id="signbroadcastuseroptx"></a>
 # **SignBroadcastUserOpTx**
 > AccountControllerResponse SignBroadcastUserOpTx (string authorization, string accountName, InputBody inputBody)
 
@@ -117,9 +117,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {

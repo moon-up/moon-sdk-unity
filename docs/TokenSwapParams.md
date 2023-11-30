@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.TokenSwapParams
+# com.usemoon.MoonSDK.Model.TokenSwapParams
 
 ## Properties
 

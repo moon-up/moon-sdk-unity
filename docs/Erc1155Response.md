@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.Erc1155Response
+# com.usemoon.MoonSDK.Model.Erc1155Response
 
 ## Properties
 

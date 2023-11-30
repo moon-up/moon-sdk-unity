@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.Log
+# com.usemoon.MoonSDK.Model.Log
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.IWebhook
+# com.usemoon.MoonSDK.Model.IWebhook
 
 ## Properties
 

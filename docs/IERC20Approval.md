@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.IERC20Approval
+# com.usemoon.MoonSDK.Model.IERC20Approval
 
 ## Properties
 

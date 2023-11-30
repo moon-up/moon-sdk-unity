@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.EosTransactionInput
+# com.usemoon.MoonSDK.Model.EosTransactionInput
 
 ## Properties
 

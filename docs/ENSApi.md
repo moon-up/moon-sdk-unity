@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.ENSApi
+# com.usemoon.MoonSDK.Api.ENSApi
 
 All URIs are relative to *https://vault-api.usemoon.ai*
 
@@ -6,7 +6,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 |--------|--------------|-------------|
 | [**Resolve**](ENSApi.md#resolve) | **POST** /ens/resolve |  |
 
-<a name="resolve"></a>
+<a id="resolve"></a>
 # **Resolve**
 > AccountControllerResponse Resolve (string authorization, EnsResolveInput ensResolveInput)
 
@@ -16,9 +16,9 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {

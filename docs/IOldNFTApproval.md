@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.IOldNFTApproval
+# com.usemoon.MoonSDK.Model.IOldNFTApproval
 
 ## Properties
 

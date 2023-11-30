@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.DeployInput
+# com.usemoon.MoonSDK.Model.DeployInput
 
 ## Properties
 

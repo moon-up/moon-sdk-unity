@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.AbiInput
+# com.usemoon.MoonSDK.Model.AbiInput
 
 ## Properties
 

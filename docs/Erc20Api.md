@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.Erc20Api
+# com.usemoon.MoonSDK.Api.Erc20Api
 
 All URIs are relative to *https://vault-api.usemoon.ai*
 
@@ -14,7 +14,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 | [**TransferErc20**](Erc20Api.md#transfererc20) | **POST** /erc20/{name}/transfer |  |
 | [**TransferFromErc20**](Erc20Api.md#transferfromerc20) | **POST** /erc20/{name}/transfer-from |  |
 
-<a name="allowanceerc20"></a>
+<a id="allowanceerc20"></a>
 # **AllowanceErc20**
 > AccountControllerResponse AllowanceErc20 (string authorization, string name, InputBody inputBody)
 
@@ -24,9 +24,9 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -114,7 +114,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="approveerc20"></a>
+<a id="approveerc20"></a>
 # **ApproveErc20**
 > AccountControllerResponse ApproveErc20 (string authorization, string name, InputBody inputBody)
 
@@ -124,9 +124,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -214,7 +214,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="balanceoferc20"></a>
+<a id="balanceoferc20"></a>
 # **BalanceOfErc20**
 > AccountControllerResponse BalanceOfErc20 (string authorization, string name, InputBody inputBody)
 
@@ -224,9 +224,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -314,7 +314,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="decimalserc20"></a>
+<a id="decimalserc20"></a>
 # **DecimalsErc20**
 > AccountControllerResponse DecimalsErc20 (string authorization, string name, InputBody inputBody)
 
@@ -324,9 +324,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -414,7 +414,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="nameerc20"></a>
+<a id="nameerc20"></a>
 # **NameErc20**
 > AccountControllerResponse NameErc20 (string authorization, string name, InputBody inputBody)
 
@@ -424,9 +424,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -514,7 +514,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="symbolerc20"></a>
+<a id="symbolerc20"></a>
 # **SymbolErc20**
 > AccountControllerResponse SymbolErc20 (string authorization, string name, InputBody inputBody)
 
@@ -524,9 +524,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -614,7 +614,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="totalsupplyerc20"></a>
+<a id="totalsupplyerc20"></a>
 # **TotalSupplyErc20**
 > AccountControllerResponse TotalSupplyErc20 (string authorization, string name, InputBody inputBody)
 
@@ -624,9 +624,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -714,7 +714,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="transfererc20"></a>
+<a id="transfererc20"></a>
 # **TransferErc20**
 > AccountControllerResponse TransferErc20 (string authorization, string name, InputBody inputBody)
 
@@ -724,9 +724,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -814,7 +814,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="transferfromerc20"></a>
+<a id="transferfromerc20"></a>
 # **TransferFromErc20**
 > AccountControllerResponse TransferFromErc20 (string authorization, string name, InputBody inputBody)
 
@@ -824,9 +824,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {

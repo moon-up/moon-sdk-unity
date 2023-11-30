@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.INFTApprovalERC721
+# com.usemoon.MoonSDK.Model.INFTApprovalERC721
 
 ## Properties
 

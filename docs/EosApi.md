@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.EosApi
+# com.usemoon.MoonSDK.Api.EosApi
 
 All URIs are relative to *https://vault-api.usemoon.ai*
 
@@ -9,7 +9,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 | [**ListEosAccounts**](EosApi.md#listeosaccounts) | **GET** /eos |  |
 | [**SignEosTransaction**](EosApi.md#signeostransaction) | **POST** /eos/{accountName}/sign-tx |  |
 
-<a name="createeosaccount"></a>
+<a id="createeosaccount"></a>
 # **CreateEosAccount**
 > AccountControllerResponse CreateEosAccount (string authorization, EosInput eosInput)
 
@@ -19,9 +19,9 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -107,7 +107,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="geteosaccount"></a>
+<a id="geteosaccount"></a>
 # **GetEosAccount**
 > AccountControllerResponse GetEosAccount (string authorization, string accountName)
 
@@ -117,9 +117,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -205,7 +205,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listeosaccounts"></a>
+<a id="listeosaccounts"></a>
 # **ListEosAccounts**
 > AccountControllerResponse ListEosAccounts (string authorization)
 
@@ -215,9 +215,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -301,7 +301,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="signeostransaction"></a>
+<a id="signeostransaction"></a>
 # **SignEosTransaction**
 > AccountControllerResponse SignEosTransaction (string authorization, string accountName, EosTransactionInput eosTransactionInput)
 
@@ -311,9 +311,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {

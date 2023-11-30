@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.ERC1155Api
+# com.usemoon.MoonSDK.Api.ERC1155Api
 
 All URIs are relative to *https://vault-api.usemoon.ai*
 
@@ -11,7 +11,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 | [**SafeTransferFrom**](ERC1155Api.md#safetransferfrom) | **POST** /erc1155/{name}/safe-transfer-from |  |
 | [**SetApprovalForAll**](ERC1155Api.md#setapprovalforall) | **POST** /erc1155/{name}/set-approval-for-all |  |
 
-<a name="balanceof"></a>
+<a id="balanceof"></a>
 # **BalanceOf**
 > AccountControllerResponse BalanceOf (string name, string authorization, Erc1155Request erc1155Request)
 
@@ -21,9 +21,9 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -111,7 +111,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="balanceofbatch"></a>
+<a id="balanceofbatch"></a>
 # **BalanceOfBatch**
 > AccountControllerResponse BalanceOfBatch (string name, string authorization, Erc1155Request erc1155Request)
 
@@ -121,9 +121,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -211,7 +211,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="isapprovedforall"></a>
+<a id="isapprovedforall"></a>
 # **IsApprovedForAll**
 > AccountControllerResponse IsApprovedForAll (string name, string authorization, Erc1155Request erc1155Request)
 
@@ -221,9 +221,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -311,7 +311,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="safebatchtransferfrom"></a>
+<a id="safebatchtransferfrom"></a>
 # **SafeBatchTransferFrom**
 > AccountControllerResponse SafeBatchTransferFrom (string name, string authorization, Erc1155Request erc1155Request)
 
@@ -321,9 +321,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -411,7 +411,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="safetransferfrom"></a>
+<a id="safetransferfrom"></a>
 # **SafeTransferFrom**
 > AccountControllerResponse SafeTransferFrom (string name, string authorization, Erc1155Request erc1155Request)
 
@@ -421,9 +421,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -511,7 +511,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="setapprovalforall"></a>
+<a id="setapprovalforall"></a>
 # **SetApprovalForAll**
 > AccountControllerResponse SetApprovalForAll (string name, string authorization, Erc1155Request erc1155Request)
 
@@ -521,9 +521,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {

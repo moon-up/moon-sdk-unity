@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.IERC20Transfer
+# com.usemoon.MoonSDK.Model.IERC20Transfer
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.SolanaApi
+# com.usemoon.MoonSDK.Api.SolanaApi
 
 All URIs are relative to *https://vault-api.usemoon.ai*
 
@@ -9,7 +9,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 | [**ListSolanaAccounts**](SolanaApi.md#listsolanaaccounts) | **GET** /solana |  |
 | [**SignSolanaTransaction**](SolanaApi.md#signsolanatransaction) | **POST** /solana/{accountName}/sign-tx |  |
 
-<a name="createsolanaaccount"></a>
+<a id="createsolanaaccount"></a>
 # **CreateSolanaAccount**
 > AccountControllerResponse CreateSolanaAccount (string authorization, SolanaInput solanaInput)
 
@@ -19,9 +19,9 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -107,7 +107,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getsolanaaccount"></a>
+<a id="getsolanaaccount"></a>
 # **GetSolanaAccount**
 > AccountControllerResponse GetSolanaAccount (string authorization, string accountName)
 
@@ -117,9 +117,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -205,7 +205,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listsolanaaccounts"></a>
+<a id="listsolanaaccounts"></a>
 # **ListSolanaAccounts**
 > AccountControllerResponse ListSolanaAccounts (string authorization)
 
@@ -215,9 +215,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -301,7 +301,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="signsolanatransaction"></a>
+<a id="signsolanatransaction"></a>
 # **SignSolanaTransaction**
 > AccountControllerResponse SignSolanaTransaction (string authorization, string accountName, SolanaTransactionInput solanaTransactionInput)
 
@@ -311,9 +311,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {

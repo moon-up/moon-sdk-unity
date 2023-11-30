@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.UniSwapApi
+# com.usemoon.MoonSDK.Api.UniSwapApi
 
 All URIs are relative to *https://vault-api.usemoon.ai*
 
@@ -9,7 +9,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 | [**SwapExactETHForTokens**](UniSwapApi.md#swapexactethfortokens) | **POST** /uniswap/{name}/swap-exact-eth-for-tokens |  |
 | [**SwapExactTokensForTokens**](UniSwapApi.md#swapexacttokensfortokens) | **POST** /uniswap/{name}/swap-exact-tokens-for-tokens |  |
 
-<a name="addliquidity"></a>
+<a id="addliquidity"></a>
 # **AddLiquidity**
 > AccountControllerResponse AddLiquidity (string authorization, string name, UniswapInput uniswapInput)
 
@@ -19,9 +19,9 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -109,7 +109,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="removeliquidity"></a>
+<a id="removeliquidity"></a>
 # **RemoveLiquidity**
 > AccountControllerResponse RemoveLiquidity (string authorization, string name, UniswapInput uniswapInput)
 
@@ -119,9 +119,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -209,7 +209,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="swapexactethfortokens"></a>
+<a id="swapexactethfortokens"></a>
 # **SwapExactETHForTokens**
 > AccountControllerResponse SwapExactETHForTokens (string authorization, string name, UniswapInput uniswapInput)
 
@@ -219,9 +219,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -309,7 +309,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="swapexacttokensfortokens"></a>
+<a id="swapexacttokensfortokens"></a>
 # **SwapExactTokensForTokens**
 > AccountControllerResponse SwapExactTokensForTokens (string authorization, string name, UniswapInput uniswapInput)
 
@@ -319,9 +319,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {

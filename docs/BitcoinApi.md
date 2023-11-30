@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.BitcoinApi
+# com.usemoon.MoonSDK.Api.BitcoinApi
 
 All URIs are relative to *https://vault-api.usemoon.ai*
 
@@ -9,7 +9,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 | [**ListBitcoinAccounts**](BitcoinApi.md#listbitcoinaccounts) | **GET** /bitcoin |  |
 | [**SignBitcoinTransaction**](BitcoinApi.md#signbitcointransaction) | **POST** /bitcoin/{accountName}/sign-tx |  |
 
-<a name="createbitcoinaccount"></a>
+<a id="createbitcoinaccount"></a>
 # **CreateBitcoinAccount**
 > AccountControllerResponse CreateBitcoinAccount (string authorization, BitcoinInput bitcoinInput)
 
@@ -19,9 +19,9 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -107,7 +107,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getbitcoinaccount"></a>
+<a id="getbitcoinaccount"></a>
 # **GetBitcoinAccount**
 > AccountControllerResponse GetBitcoinAccount (string authorization, string accountName)
 
@@ -117,9 +117,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -205,7 +205,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listbitcoinaccounts"></a>
+<a id="listbitcoinaccounts"></a>
 # **ListBitcoinAccounts**
 > AccountControllerResponse ListBitcoinAccounts (string authorization)
 
@@ -215,9 +215,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -301,7 +301,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="signbitcointransaction"></a>
+<a id="signbitcointransaction"></a>
 # **SignBitcoinTransaction**
 > AccountControllerResponse SignBitcoinTransaction (string authorization, string accountName, BitcoinTransactionInput bitcoinTransactionInput)
 
@@ -311,9 +311,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {

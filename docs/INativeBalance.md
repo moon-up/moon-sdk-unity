@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.INativeBalance
+# com.usemoon.MoonSDK.Model.INativeBalance
 
 ## Properties
 

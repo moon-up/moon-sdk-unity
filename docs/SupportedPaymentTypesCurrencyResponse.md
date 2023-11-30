@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SupportedPaymentTypesCurrencyResponse
+# com.usemoon.MoonSDK.Model.SupportedPaymentTypesCurrencyResponse
 
 ## Properties
 

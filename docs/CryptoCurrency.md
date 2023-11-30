@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.CryptoCurrency
+# com.usemoon.MoonSDK.Model.CryptoCurrency
 
 ## Properties
 

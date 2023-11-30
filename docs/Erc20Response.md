@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.Erc20Response
+# com.usemoon.MoonSDK.Model.Erc20Response
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.NonceResponse
+# com.usemoon.MoonSDK.Model.NonceResponse
 
 ## Properties
 

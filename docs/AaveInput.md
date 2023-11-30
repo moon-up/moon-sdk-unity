@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.AaveInput
+# com.usemoon.MoonSDK.Model.AaveInput
 
 ## Properties
 

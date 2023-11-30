@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.ConveyorFinanceControllerResponse
+# com.usemoon.MoonSDK.Model.ConveyorFinanceControllerResponse
 
 ## Properties
 

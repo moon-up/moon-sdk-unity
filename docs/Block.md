@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.Block
+# com.usemoon.MoonSDK.Model.Block
 
 ## Properties
 

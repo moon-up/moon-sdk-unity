@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.GetSupportedOnRampsResponseMessageInner
+# com.usemoon.MoonSDK.Model.GetSupportedOnRampsResponseMessageInner
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.PaymentApi
+# com.usemoon.MoonSDK.Api.PaymentApi
 
 All URIs are relative to *https://vault-api.usemoon.ai*
 
@@ -13,7 +13,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 | [**PaymentUpdatePaymentIntent**](PaymentApi.md#paymentupdatepaymentintent) | **PUT** /payment/{id} |  |
 | [**TatumWebhook**](PaymentApi.md#tatumwebhook) | **POST** /payment/tatum/webhook/{id} |  |
 
-<a name="moraliswebhook"></a>
+<a id="moraliswebhook"></a>
 # **MoralisWebhook**
 > Object MoralisWebhook (string id, IWebhook iWebhook)
 
@@ -23,9 +23,9 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -111,7 +111,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="paymentcreatepaymentintent"></a>
+<a id="paymentcreatepaymentintent"></a>
 # **PaymentCreatePaymentIntent**
 > PaymentIntentResponse PaymentCreatePaymentIntent (string authorization, CreatePaymentIntentInput createPaymentIntentInput)
 
@@ -121,9 +121,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -209,7 +209,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="paymentdeletepaymentintent"></a>
+<a id="paymentdeletepaymentintent"></a>
 # **PaymentDeletePaymentIntent**
 > PaymentIntentResponse PaymentDeletePaymentIntent (string authorization, string id)
 
@@ -219,9 +219,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -307,7 +307,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="paymentgetallpaymentintents"></a>
+<a id="paymentgetallpaymentintents"></a>
 # **PaymentGetAllPaymentIntents**
 > List&lt;PaymentIntentResponse&gt; PaymentGetAllPaymentIntents (string authorization)
 
@@ -317,9 +317,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -403,7 +403,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="paymentgetavailablechains"></a>
+<a id="paymentgetavailablechains"></a>
 # **PaymentGetAvailableChains**
 > List&lt;string&gt; PaymentGetAvailableChains ()
 
@@ -413,9 +413,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -494,7 +494,7 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="paymentgetpaymentintent"></a>
+<a id="paymentgetpaymentintent"></a>
 # **PaymentGetPaymentIntent**
 > PaymentIntentResponse PaymentGetPaymentIntent (string authorization, string id)
 
@@ -504,9 +504,9 @@ This endpoint does not need any parameter.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -592,7 +592,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="paymentupdatepaymentintent"></a>
+<a id="paymentupdatepaymentintent"></a>
 # **PaymentUpdatePaymentIntent**
 > PaymentIntentResponse PaymentUpdatePaymentIntent (string authorization, string id, CreatePaymentIntentInput createPaymentIntentInput)
 
@@ -602,9 +602,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -692,7 +692,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="tatumwebhook"></a>
+<a id="tatumwebhook"></a>
 # **TatumWebhook**
 > Object TatumWebhook (string id, Object body)
 
@@ -702,9 +702,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {

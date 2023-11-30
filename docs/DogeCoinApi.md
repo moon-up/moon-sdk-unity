@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.DogeCoinApi
+# com.usemoon.MoonSDK.Api.DogeCoinApi
 
 All URIs are relative to *https://vault-api.usemoon.ai*
 
@@ -9,7 +9,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 | [**ListDogeCoinAccounts**](DogeCoinApi.md#listdogecoinaccounts) | **GET** /dogecoin |  |
 | [**SignDogeCoinTransaction**](DogeCoinApi.md#signdogecointransaction) | **POST** /dogecoin/{accountName}/sign-tx |  |
 
-<a name="createdogecoinaccount"></a>
+<a id="createdogecoinaccount"></a>
 # **CreateDogeCoinAccount**
 > AccountControllerResponse CreateDogeCoinAccount (string authorization, DogeCoinInput dogeCoinInput)
 
@@ -19,9 +19,9 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -107,7 +107,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getdogecoinaccount"></a>
+<a id="getdogecoinaccount"></a>
 # **GetDogeCoinAccount**
 > AccountControllerResponse GetDogeCoinAccount (string authorization, string accountName)
 
@@ -117,9 +117,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -205,7 +205,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listdogecoinaccounts"></a>
+<a id="listdogecoinaccounts"></a>
 # **ListDogeCoinAccounts**
 > AccountControllerResponse ListDogeCoinAccounts (string authorization)
 
@@ -215,9 +215,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -301,7 +301,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="signdogecointransaction"></a>
+<a id="signdogecointransaction"></a>
 # **SignDogeCoinTransaction**
 > AccountControllerResponse SignDogeCoinTransaction (string authorization, string accountName, DogeCoinTransactionInput dogeCoinTransactionInput)
 
@@ -311,9 +311,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.YearnApi
+# com.usemoon.MoonSDK.Api.YearnApi
 
 All URIs are relative to *https://vault-api.usemoon.ai*
 
@@ -9,7 +9,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 | [**RemoveLiquidity**](YearnApi.md#removeliquidity) | **POST** /yearn/{name}/remove-liquidity |  |
 | [**RemoveLiquidityWeth**](YearnApi.md#removeliquidityweth) | **POST** /yearn/{name}/remove-liquidity-weth |  |
 
-<a name="addliquidity"></a>
+<a id="addliquidity"></a>
 # **AddLiquidity**
 > AccountControllerResponse AddLiquidity (string authorization, string name, InputBody inputBody)
 
@@ -19,9 +19,9 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -109,7 +109,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="addliquidityweth"></a>
+<a id="addliquidityweth"></a>
 # **AddLiquidityWeth**
 > AccountControllerResponse AddLiquidityWeth (string authorization, string name, InputBody inputBody)
 
@@ -119,9 +119,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -209,7 +209,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="removeliquidity"></a>
+<a id="removeliquidity"></a>
 # **RemoveLiquidity**
 > AccountControllerResponse RemoveLiquidity (string authorization, string name, InputBody inputBody)
 
@@ -219,9 +219,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -309,7 +309,7 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="removeliquidityweth"></a>
+<a id="removeliquidityweth"></a>
 # **RemoveLiquidityWeth**
 > AccountControllerResponse RemoveLiquidityWeth (string authorization, string name, InputBody inputBody)
 
@@ -319,9 +319,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {

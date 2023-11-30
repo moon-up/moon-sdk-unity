@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.InternalTransaction
+# com.usemoon.MoonSDK.Model.InternalTransaction
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.CreatePaymentIntentInput
+# com.usemoon.MoonSDK.Model.CreatePaymentIntentInput
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.ConveyorFinanceApi
+# com.usemoon.MoonSDK.Api.ConveyorFinanceApi
 
 All URIs are relative to *https://vault-api.usemoon.ai*
 
@@ -6,7 +6,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 |--------|--------------|-------------|
 | [**Swap**](ConveyorFinanceApi.md#swap) | **POST** /conveyorfinance/{name}/swap |  |
 
-<a name="swap"></a>
+<a id="swap"></a>
 # **Swap**
 > ConveyorFinanceControllerResponse Swap (string authorization, string name, TokenSwapParams tokenSwapParams)
 
@@ -16,9 +16,9 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
