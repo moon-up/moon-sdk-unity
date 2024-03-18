@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// SupportedAssetResponseAssetsInner
     /// </summary>
     [DataContract(Name = "SupportedAssetResponse_assets_inner")]
-    public partial class SupportedAssetResponseAssetsInner : IEquatable<SupportedAssetResponseAssetsInner>
+    public partial class SupportedAssetResponseAssetsInner
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportedAssetResponseAssetsInner" /> class.
@@ -103,72 +103,6 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as SupportedAssetResponseAssetsInner);
-        }
-
-        /// <summary>
-        /// Returns true if SupportedAssetResponseAssetsInner instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SupportedAssetResponseAssetsInner to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SupportedAssetResponseAssetsInner input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Crypto == input.Crypto ||
-                    this.Crypto != null &&
-                    input.Crypto != null &&
-                    this.Crypto.SequenceEqual(input.Crypto)
-                ) && 
-                (
-                    this.PaymentMethods == input.PaymentMethods ||
-                    this.PaymentMethods != null &&
-                    input.PaymentMethods != null &&
-                    this.PaymentMethods.SequenceEqual(input.PaymentMethods)
-                ) && 
-                (
-                    this.Fiat == input.Fiat ||
-                    (this.Fiat != null &&
-                    this.Fiat.Equals(input.Fiat))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.Crypto != null)
-                {
-                    hashCode = (hashCode * 59) + this.Crypto.GetHashCode();
-                }
-                if (this.PaymentMethods != null)
-                {
-                    hashCode = (hashCode * 59) + this.PaymentMethods.GetHashCode();
-                }
-                if (this.Fiat != null)
-                {
-                    hashCode = (hashCode * 59) + this.Fiat.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
     }

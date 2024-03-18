@@ -32,8 +32,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="bitcoinCashInput"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse CreateBitcoinCashAccount(string authorization, BitcoinCashInput bitcoinCashInput);
+        /// <returns>AccountAPIResponse</returns>
+        AccountAPIResponse CreateBitcoinCashAccount(string authorization, BitcoinCashInput bitcoinCashInput);
 
         /// <summary>
         /// 
@@ -44,16 +44,16 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="bitcoinCashInput"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> CreateBitcoinCashAccountWithHttpInfo(string authorization, BitcoinCashInput bitcoinCashInput);
+        /// <returns>ApiResponse of AccountAPIResponse</returns>
+        ApiResponse<AccountAPIResponse> CreateBitcoinCashAccountWithHttpInfo(string authorization, BitcoinCashInput bitcoinCashInput);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse GetBitcoinCashAccount(string authorization, string accountName);
+        /// <returns>AccountAPIResponse</returns>
+        AccountAPIResponse GetBitcoinCashAccount(string authorization, string accountName);
 
         /// <summary>
         /// 
@@ -64,15 +64,15 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> GetBitcoinCashAccountWithHttpInfo(string authorization, string accountName);
+        /// <returns>ApiResponse of AccountAPIResponse</returns>
+        ApiResponse<AccountAPIResponse> GetBitcoinCashAccountWithHttpInfo(string authorization, string accountName);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse ListBitcoinCashAccounts(string authorization);
+        /// <returns>AccountAPIResponse</returns>
+        AccountAPIResponse ListBitcoinCashAccounts(string authorization);
 
         /// <summary>
         /// 
@@ -82,8 +82,8 @@ namespace com.usemoon.MoonSDK.Api
         /// </remarks>
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> ListBitcoinCashAccountsWithHttpInfo(string authorization);
+        /// <returns>ApiResponse of AccountAPIResponse</returns>
+        ApiResponse<AccountAPIResponse> ListBitcoinCashAccountsWithHttpInfo(string authorization);
         /// <summary>
         /// 
         /// </summary>
@@ -91,8 +91,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="bitcoinCashTransactionInput"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse SignBitcoinCashTransaction(string authorization, string accountName, BitcoinCashTransactionInput bitcoinCashTransactionInput);
+        /// <returns>BitcoinCashAPIResponse</returns>
+        BitcoinCashAPIResponse SignBitcoinCashTransaction(string authorization, string accountName, BitcoinCashTransactionInput bitcoinCashTransactionInput);
 
         /// <summary>
         /// 
@@ -104,8 +104,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="bitcoinCashTransactionInput"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> SignBitcoinCashTransactionWithHttpInfo(string authorization, string accountName, BitcoinCashTransactionInput bitcoinCashTransactionInput);
+        /// <returns>ApiResponse of BitcoinCashAPIResponse</returns>
+        ApiResponse<BitcoinCashAPIResponse> SignBitcoinCashTransactionWithHttpInfo(string authorization, string accountName, BitcoinCashTransactionInput bitcoinCashTransactionInput);
         #endregion Synchronous Operations
     }
 
@@ -125,8 +125,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="bitcoinCashInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> CreateBitcoinCashAccountAsync(string authorization, BitcoinCashInput bitcoinCashInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of AccountAPIResponse</returns>
+        System.Threading.Tasks.Task<AccountAPIResponse> CreateBitcoinCashAccountAsync(string authorization, BitcoinCashInput bitcoinCashInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -138,8 +138,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="bitcoinCashInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> CreateBitcoinCashAccountWithHttpInfoAsync(string authorization, BitcoinCashInput bitcoinCashInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (AccountAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AccountAPIResponse>> CreateBitcoinCashAccountWithHttpInfoAsync(string authorization, BitcoinCashInput bitcoinCashInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -150,8 +150,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> GetBitcoinCashAccountAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of AccountAPIResponse</returns>
+        System.Threading.Tasks.Task<AccountAPIResponse> GetBitcoinCashAccountAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -163,8 +163,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> GetBitcoinCashAccountWithHttpInfoAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (AccountAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AccountAPIResponse>> GetBitcoinCashAccountWithHttpInfoAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -174,8 +174,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> ListBitcoinCashAccountsAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of AccountAPIResponse</returns>
+        System.Threading.Tasks.Task<AccountAPIResponse> ListBitcoinCashAccountsAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -186,8 +186,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> ListBitcoinCashAccountsWithHttpInfoAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (AccountAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AccountAPIResponse>> ListBitcoinCashAccountsWithHttpInfoAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -199,8 +199,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="accountName"></param>
         /// <param name="bitcoinCashTransactionInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> SignBitcoinCashTransactionAsync(string authorization, string accountName, BitcoinCashTransactionInput bitcoinCashTransactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of BitcoinCashAPIResponse</returns>
+        System.Threading.Tasks.Task<BitcoinCashAPIResponse> SignBitcoinCashTransactionAsync(string authorization, string accountName, BitcoinCashTransactionInput bitcoinCashTransactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -213,8 +213,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="accountName"></param>
         /// <param name="bitcoinCashTransactionInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> SignBitcoinCashTransactionWithHttpInfoAsync(string authorization, string accountName, BitcoinCashTransactionInput bitcoinCashTransactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (BitcoinCashAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BitcoinCashAPIResponse>> SignBitcoinCashTransactionWithHttpInfoAsync(string authorization, string accountName, BitcoinCashTransactionInput bitcoinCashTransactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -365,10 +365,10 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="bitcoinCashInput"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse CreateBitcoinCashAccount(string authorization, BitcoinCashInput bitcoinCashInput)
+        /// <returns>AccountAPIResponse</returns>
+        public AccountAPIResponse CreateBitcoinCashAccount(string authorization, BitcoinCashInput bitcoinCashInput)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = CreateBitcoinCashAccountWithHttpInfo(authorization, bitcoinCashInput);
+            com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> localVarResponse = CreateBitcoinCashAccountWithHttpInfo(authorization, bitcoinCashInput);
             return localVarResponse.Data;
         }
 
@@ -378,8 +378,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="bitcoinCashInput"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> CreateBitcoinCashAccountWithHttpInfo(string authorization, BitcoinCashInput bitcoinCashInput)
+        /// <returns>ApiResponse of AccountAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> CreateBitcoinCashAccountWithHttpInfo(string authorization, BitcoinCashInput bitcoinCashInput)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -421,7 +421,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<AccountControllerResponse>("/bitcoincash", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<AccountAPIResponse>("/bitcoincash", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -439,14 +439,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="bitcoinCashInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> CreateBitcoinCashAccountAsync(string authorization, BitcoinCashInput bitcoinCashInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of AccountAPIResponse</returns>
+        public async System.Threading.Tasks.Task<AccountAPIResponse> CreateBitcoinCashAccountAsync(string authorization, BitcoinCashInput bitcoinCashInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = CreateBitcoinCashAccountWithHttpInfoAsync(authorization, bitcoinCashInput, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -458,8 +458,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="bitcoinCashInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> CreateBitcoinCashAccountWithHttpInfoAsync(string authorization, BitcoinCashInput bitcoinCashInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (AccountAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse>> CreateBitcoinCashAccountWithHttpInfoAsync(string authorization, BitcoinCashInput bitcoinCashInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -504,7 +504,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/bitcoincash", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.PostAsync<AccountAPIResponse>("/bitcoincash", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);
@@ -527,10 +527,10 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse GetBitcoinCashAccount(string authorization, string accountName)
+        /// <returns>AccountAPIResponse</returns>
+        public AccountAPIResponse GetBitcoinCashAccount(string authorization, string accountName)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = GetBitcoinCashAccountWithHttpInfo(authorization, accountName);
+            com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> localVarResponse = GetBitcoinCashAccountWithHttpInfo(authorization, accountName);
             return localVarResponse.Data;
         }
 
@@ -540,8 +540,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> GetBitcoinCashAccountWithHttpInfo(string authorization, string accountName)
+        /// <returns>ApiResponse of AccountAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> GetBitcoinCashAccountWithHttpInfo(string authorization, string accountName)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -582,7 +582,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<AccountControllerResponse>("/bitcoincash/{accountName}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<AccountAPIResponse>("/bitcoincash/{accountName}", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -600,14 +600,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> GetBitcoinCashAccountAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of AccountAPIResponse</returns>
+        public async System.Threading.Tasks.Task<AccountAPIResponse> GetBitcoinCashAccountAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = GetBitcoinCashAccountWithHttpInfoAsync(authorization, accountName, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -619,8 +619,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> GetBitcoinCashAccountWithHttpInfoAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (AccountAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse>> GetBitcoinCashAccountWithHttpInfoAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -664,7 +664,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.GetAsync<AccountControllerResponse>("/bitcoincash/{accountName}", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.GetAsync<AccountAPIResponse>("/bitcoincash/{accountName}", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);
@@ -686,10 +686,10 @@ namespace com.usemoon.MoonSDK.Api
         /// </summary>
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse ListBitcoinCashAccounts(string authorization)
+        /// <returns>AccountAPIResponse</returns>
+        public AccountAPIResponse ListBitcoinCashAccounts(string authorization)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = ListBitcoinCashAccountsWithHttpInfo(authorization);
+            com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> localVarResponse = ListBitcoinCashAccountsWithHttpInfo(authorization);
             return localVarResponse.Data;
         }
 
@@ -698,8 +698,8 @@ namespace com.usemoon.MoonSDK.Api
         /// </summary>
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> ListBitcoinCashAccountsWithHttpInfo(string authorization)
+        /// <returns>ApiResponse of AccountAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> ListBitcoinCashAccountsWithHttpInfo(string authorization)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -735,7 +735,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<AccountControllerResponse>("/bitcoincash", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<AccountAPIResponse>("/bitcoincash", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -752,14 +752,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> ListBitcoinCashAccountsAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of AccountAPIResponse</returns>
+        public async System.Threading.Tasks.Task<AccountAPIResponse> ListBitcoinCashAccountsAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = ListBitcoinCashAccountsWithHttpInfoAsync(authorization, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -770,8 +770,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> ListBitcoinCashAccountsWithHttpInfoAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (AccountAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse>> ListBitcoinCashAccountsWithHttpInfoAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -810,7 +810,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.GetAsync<AccountControllerResponse>("/bitcoincash", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.GetAsync<AccountAPIResponse>("/bitcoincash", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);
@@ -834,10 +834,10 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="bitcoinCashTransactionInput"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse SignBitcoinCashTransaction(string authorization, string accountName, BitcoinCashTransactionInput bitcoinCashTransactionInput)
+        /// <returns>BitcoinCashAPIResponse</returns>
+        public BitcoinCashAPIResponse SignBitcoinCashTransaction(string authorization, string accountName, BitcoinCashTransactionInput bitcoinCashTransactionInput)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = SignBitcoinCashTransactionWithHttpInfo(authorization, accountName, bitcoinCashTransactionInput);
+            com.usemoon.MoonSDK.Client.ApiResponse<BitcoinCashAPIResponse> localVarResponse = SignBitcoinCashTransactionWithHttpInfo(authorization, accountName, bitcoinCashTransactionInput);
             return localVarResponse.Data;
         }
 
@@ -848,8 +848,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="bitcoinCashTransactionInput"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> SignBitcoinCashTransactionWithHttpInfo(string authorization, string accountName, BitcoinCashTransactionInput bitcoinCashTransactionInput)
+        /// <returns>ApiResponse of BitcoinCashAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<BitcoinCashAPIResponse> SignBitcoinCashTransactionWithHttpInfo(string authorization, string accountName, BitcoinCashTransactionInput bitcoinCashTransactionInput)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -896,7 +896,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<AccountControllerResponse>("/bitcoincash/{accountName}/sign-tx", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<BitcoinCashAPIResponse>("/bitcoincash/{accountName}/sign-tx", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -915,14 +915,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="accountName"></param>
         /// <param name="bitcoinCashTransactionInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> SignBitcoinCashTransactionAsync(string authorization, string accountName, BitcoinCashTransactionInput bitcoinCashTransactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of BitcoinCashAPIResponse</returns>
+        public async System.Threading.Tasks.Task<BitcoinCashAPIResponse> SignBitcoinCashTransactionAsync(string authorization, string accountName, BitcoinCashTransactionInput bitcoinCashTransactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = SignBitcoinCashTransactionWithHttpInfoAsync(authorization, accountName, bitcoinCashTransactionInput, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<BitcoinCashAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<BitcoinCashAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -935,8 +935,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="accountName"></param>
         /// <param name="bitcoinCashTransactionInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> SignBitcoinCashTransactionWithHttpInfoAsync(string authorization, string accountName, BitcoinCashTransactionInput bitcoinCashTransactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (BitcoinCashAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<BitcoinCashAPIResponse>> SignBitcoinCashTransactionWithHttpInfoAsync(string authorization, string accountName, BitcoinCashTransactionInput bitcoinCashTransactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -986,7 +986,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/bitcoincash/{accountName}/sign-tx", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.PostAsync<BitcoinCashAPIResponse>("/bitcoincash/{accountName}/sign-tx", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);

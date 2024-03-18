@@ -1,6 +1,6 @@
 # com.usemoon.MoonSDK.Api.UniSwapApi
 
-All URIs are relative to *https://vault-api.usemoon.ai*
+All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -11,7 +11,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 
 <a id="addliquidity"></a>
 # **AddLiquidity**
-> AccountControllerResponse AddLiquidity (string authorization, string name, UniswapInput uniswapInput)
+> TransactionAPIResponse AddLiquidity (string authorization, string name, UniswapInput uniswapInput)
 
 
 
@@ -30,7 +30,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -47,7 +47,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.AddLiquidity(authorization, name, uniswapInput);
+                TransactionAPIResponse result = apiInstance.AddLiquidity(authorization, name, uniswapInput);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -67,7 +67,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.AddLiquidityWithHttpInfo(authorization, name, uniswapInput);
+    ApiResponse<TransactionAPIResponse> response = apiInstance.AddLiquidityWithHttpInfo(authorization, name, uniswapInput);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -90,7 +90,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**TransactionAPIResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -111,7 +111,7 @@ catch (ApiException e)
 
 <a id="removeliquidity"></a>
 # **RemoveLiquidity**
-> AccountControllerResponse RemoveLiquidity (string authorization, string name, UniswapInput uniswapInput)
+> TransactionAPIResponse RemoveLiquidity (string authorization, string name, UniswapInput uniswapInput)
 
 
 
@@ -130,7 +130,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -147,7 +147,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.RemoveLiquidity(authorization, name, uniswapInput);
+                TransactionAPIResponse result = apiInstance.RemoveLiquidity(authorization, name, uniswapInput);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -167,7 +167,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.RemoveLiquidityWithHttpInfo(authorization, name, uniswapInput);
+    ApiResponse<TransactionAPIResponse> response = apiInstance.RemoveLiquidityWithHttpInfo(authorization, name, uniswapInput);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -190,7 +190,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**TransactionAPIResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -211,7 +211,7 @@ catch (ApiException e)
 
 <a id="swapexactethfortokens"></a>
 # **SwapExactETHForTokens**
-> AccountControllerResponse SwapExactETHForTokens (string authorization, string name, UniswapInput uniswapInput)
+> TransactionAPIResponse SwapExactETHForTokens (string authorization, string name, UniswapInput uniswapInput)
 
 
 
@@ -230,7 +230,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -247,7 +247,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.SwapExactETHForTokens(authorization, name, uniswapInput);
+                TransactionAPIResponse result = apiInstance.SwapExactETHForTokens(authorization, name, uniswapInput);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -267,7 +267,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.SwapExactETHForTokensWithHttpInfo(authorization, name, uniswapInput);
+    ApiResponse<TransactionAPIResponse> response = apiInstance.SwapExactETHForTokensWithHttpInfo(authorization, name, uniswapInput);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -290,7 +290,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**TransactionAPIResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -311,7 +311,7 @@ catch (ApiException e)
 
 <a id="swapexacttokensfortokens"></a>
 # **SwapExactTokensForTokens**
-> AccountControllerResponse SwapExactTokensForTokens (string authorization, string name, UniswapInput uniswapInput)
+> TransactionAPIResponse SwapExactTokensForTokens (string authorization, string name, UniswapInput uniswapInput)
 
 
 
@@ -330,7 +330,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -347,7 +347,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.SwapExactTokensForTokens(authorization, name, uniswapInput);
+                TransactionAPIResponse result = apiInstance.SwapExactTokensForTokens(authorization, name, uniswapInput);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -367,7 +367,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.SwapExactTokensForTokensWithHttpInfo(authorization, name, uniswapInput);
+    ApiResponse<TransactionAPIResponse> response = apiInstance.SwapExactTokensForTokensWithHttpInfo(authorization, name, uniswapInput);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -390,7 +390,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**TransactionAPIResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 

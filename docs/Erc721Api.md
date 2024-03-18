@@ -1,6 +1,6 @@
 # com.usemoon.MoonSDK.Api.Erc721Api
 
-All URIs are relative to *https://vault-api.usemoon.ai*
+All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -19,7 +19,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 
 <a id="approve"></a>
 # **Approve**
-> AccountControllerResponse Approve (string authorization, string name, Erc721Request erc721Request)
+> TransactionAPIResponse Approve (string authorization, string name, Erc721Request erc721Request)
 
 
 
@@ -38,7 +38,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -55,7 +55,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.Approve(authorization, name, erc721Request);
+                TransactionAPIResponse result = apiInstance.Approve(authorization, name, erc721Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -75,7 +75,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.ApproveWithHttpInfo(authorization, name, erc721Request);
+    ApiResponse<TransactionAPIResponse> response = apiInstance.ApproveWithHttpInfo(authorization, name, erc721Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -98,7 +98,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**TransactionAPIResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -119,7 +119,7 @@ catch (ApiException e)
 
 <a id="balanceof"></a>
 # **BalanceOf**
-> AccountControllerResponse BalanceOf (string authorization, string name, Erc721Request erc721Request)
+> TransactionAPIResponse BalanceOf (string authorization, string name, Erc721Request erc721Request)
 
 
 
@@ -138,7 +138,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -155,7 +155,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.BalanceOf(authorization, name, erc721Request);
+                TransactionAPIResponse result = apiInstance.BalanceOf(authorization, name, erc721Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -175,7 +175,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.BalanceOfWithHttpInfo(authorization, name, erc721Request);
+    ApiResponse<TransactionAPIResponse> response = apiInstance.BalanceOfWithHttpInfo(authorization, name, erc721Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -198,7 +198,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**TransactionAPIResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ catch (ApiException e)
 
 <a id="getapproved"></a>
 # **GetApproved**
-> AccountControllerResponse GetApproved (string authorization, string name, Erc721Request erc721Request)
+> TransactionAPIResponse GetApproved (string authorization, string name, Erc721Request erc721Request)
 
 
 
@@ -238,7 +238,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -255,7 +255,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.GetApproved(authorization, name, erc721Request);
+                TransactionAPIResponse result = apiInstance.GetApproved(authorization, name, erc721Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -275,7 +275,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.GetApprovedWithHttpInfo(authorization, name, erc721Request);
+    ApiResponse<TransactionAPIResponse> response = apiInstance.GetApprovedWithHttpInfo(authorization, name, erc721Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -298,7 +298,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**TransactionAPIResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -319,7 +319,7 @@ catch (ApiException e)
 
 <a id="isapprovedforall"></a>
 # **IsApprovedForAll**
-> AccountControllerResponse IsApprovedForAll (string authorization, string name, Erc721Request erc721Request)
+> TransactionAPIResponse IsApprovedForAll (string authorization, string name, Erc721Request erc721Request)
 
 
 
@@ -338,7 +338,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -355,7 +355,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.IsApprovedForAll(authorization, name, erc721Request);
+                TransactionAPIResponse result = apiInstance.IsApprovedForAll(authorization, name, erc721Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -375,7 +375,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.IsApprovedForAllWithHttpInfo(authorization, name, erc721Request);
+    ApiResponse<TransactionAPIResponse> response = apiInstance.IsApprovedForAllWithHttpInfo(authorization, name, erc721Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -398,7 +398,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**TransactionAPIResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -419,7 +419,7 @@ catch (ApiException e)
 
 <a id="name"></a>
 # **Name**
-> AccountControllerResponse Name (string authorization, string name, Erc721Request erc721Request)
+> TransactionAPIResponse Name (string authorization, string name, Erc721Request erc721Request)
 
 
 
@@ -438,7 +438,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -455,7 +455,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.Name(authorization, name, erc721Request);
+                TransactionAPIResponse result = apiInstance.Name(authorization, name, erc721Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -475,7 +475,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.NameWithHttpInfo(authorization, name, erc721Request);
+    ApiResponse<TransactionAPIResponse> response = apiInstance.NameWithHttpInfo(authorization, name, erc721Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -498,7 +498,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**TransactionAPIResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -519,7 +519,7 @@ catch (ApiException e)
 
 <a id="ownerof"></a>
 # **OwnerOf**
-> AccountControllerResponse OwnerOf (string authorization, string name, Erc721Request erc721Request)
+> TransactionAPIResponse OwnerOf (string authorization, string name, Erc721Request erc721Request)
 
 
 
@@ -538,7 +538,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -555,7 +555,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.OwnerOf(authorization, name, erc721Request);
+                TransactionAPIResponse result = apiInstance.OwnerOf(authorization, name, erc721Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -575,7 +575,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.OwnerOfWithHttpInfo(authorization, name, erc721Request);
+    ApiResponse<TransactionAPIResponse> response = apiInstance.OwnerOfWithHttpInfo(authorization, name, erc721Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -598,7 +598,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**TransactionAPIResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -619,7 +619,7 @@ catch (ApiException e)
 
 <a id="safetransferfrom"></a>
 # **SafeTransferFrom**
-> AccountControllerResponse SafeTransferFrom (string authorization, string name, Erc721Request erc721Request)
+> TransactionAPIResponse SafeTransferFrom (string authorization, string name, Erc721Request erc721Request)
 
 
 
@@ -638,7 +638,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -655,7 +655,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.SafeTransferFrom(authorization, name, erc721Request);
+                TransactionAPIResponse result = apiInstance.SafeTransferFrom(authorization, name, erc721Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -675,7 +675,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.SafeTransferFromWithHttpInfo(authorization, name, erc721Request);
+    ApiResponse<TransactionAPIResponse> response = apiInstance.SafeTransferFromWithHttpInfo(authorization, name, erc721Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -698,7 +698,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**TransactionAPIResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -719,7 +719,7 @@ catch (ApiException e)
 
 <a id="setapprovalforall"></a>
 # **SetApprovalForAll**
-> AccountControllerResponse SetApprovalForAll (string authorization, string name, Erc721Request erc721Request)
+> TransactionAPIResponse SetApprovalForAll (string authorization, string name, Erc721Request erc721Request)
 
 
 
@@ -738,7 +738,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -755,7 +755,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.SetApprovalForAll(authorization, name, erc721Request);
+                TransactionAPIResponse result = apiInstance.SetApprovalForAll(authorization, name, erc721Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -775,7 +775,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.SetApprovalForAllWithHttpInfo(authorization, name, erc721Request);
+    ApiResponse<TransactionAPIResponse> response = apiInstance.SetApprovalForAllWithHttpInfo(authorization, name, erc721Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -798,7 +798,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**TransactionAPIResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -819,7 +819,7 @@ catch (ApiException e)
 
 <a id="symbol"></a>
 # **Symbol**
-> AccountControllerResponse Symbol (string authorization, string name, Erc721Request erc721Request)
+> TransactionAPIResponse Symbol (string authorization, string name, Erc721Request erc721Request)
 
 
 
@@ -838,7 +838,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -855,7 +855,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.Symbol(authorization, name, erc721Request);
+                TransactionAPIResponse result = apiInstance.Symbol(authorization, name, erc721Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -875,7 +875,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.SymbolWithHttpInfo(authorization, name, erc721Request);
+    ApiResponse<TransactionAPIResponse> response = apiInstance.SymbolWithHttpInfo(authorization, name, erc721Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -898,7 +898,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**TransactionAPIResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -919,7 +919,7 @@ catch (ApiException e)
 
 <a id="tokenuri"></a>
 # **TokenUri**
-> AccountControllerResponse TokenUri (string authorization, string name, Erc721Request erc721Request)
+> TransactionAPIResponse TokenUri (string authorization, string name, Erc721Request erc721Request)
 
 
 
@@ -938,7 +938,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -955,7 +955,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.TokenUri(authorization, name, erc721Request);
+                TransactionAPIResponse result = apiInstance.TokenUri(authorization, name, erc721Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -975,7 +975,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.TokenUriWithHttpInfo(authorization, name, erc721Request);
+    ApiResponse<TransactionAPIResponse> response = apiInstance.TokenUriWithHttpInfo(authorization, name, erc721Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -998,7 +998,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**TransactionAPIResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -1019,7 +1019,7 @@ catch (ApiException e)
 
 <a id="transfer"></a>
 # **Transfer**
-> AccountControllerResponse Transfer (string authorization, string name, Erc721Request erc721Request)
+> TransactionAPIResponse Transfer (string authorization, string name, Erc721Request erc721Request)
 
 
 
@@ -1038,7 +1038,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -1055,7 +1055,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.Transfer(authorization, name, erc721Request);
+                TransactionAPIResponse result = apiInstance.Transfer(authorization, name, erc721Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1075,7 +1075,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.TransferWithHttpInfo(authorization, name, erc721Request);
+    ApiResponse<TransactionAPIResponse> response = apiInstance.TransferWithHttpInfo(authorization, name, erc721Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1098,7 +1098,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**TransactionAPIResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -1119,7 +1119,7 @@ catch (ApiException e)
 
 <a id="transferfrom"></a>
 # **TransferFrom**
-> AccountControllerResponse TransferFrom (string authorization, string name, Erc721Request erc721Request)
+> TransactionAPIResponse TransferFrom (string authorization, string name, Erc721Request erc721Request)
 
 
 
@@ -1138,7 +1138,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -1155,7 +1155,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.TransferFrom(authorization, name, erc721Request);
+                TransactionAPIResponse result = apiInstance.TransferFrom(authorization, name, erc721Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1175,7 +1175,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.TransferFromWithHttpInfo(authorization, name, erc721Request);
+    ApiResponse<TransactionAPIResponse> response = apiInstance.TransferFromWithHttpInfo(authorization, name, erc721Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1198,7 +1198,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**TransactionAPIResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 

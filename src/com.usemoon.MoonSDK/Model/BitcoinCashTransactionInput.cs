@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// BitcoinCashTransactionInput
     /// </summary>
     [DataContract(Name = "BitcoinCashTransactionInput")]
-    public partial class BitcoinCashTransactionInput : IEquatable<BitcoinCashTransactionInput>
+    public partial class BitcoinCashTransactionInput
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BitcoinCashTransactionInput" /> class.
@@ -92,71 +92,6 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as BitcoinCashTransactionInput);
-        }
-
-        /// <summary>
-        /// Returns true if BitcoinCashTransactionInput instances are equal
-        /// </summary>
-        /// <param name="input">Instance of BitcoinCashTransactionInput to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(BitcoinCashTransactionInput input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.To == input.To ||
-                    (this.To != null &&
-                    this.To.Equals(input.To))
-                ) && 
-                (
-                    this.Value == input.Value ||
-                    this.Value.Equals(input.Value)
-                ) && 
-                (
-                    this.Network == input.Network ||
-                    (this.Network != null &&
-                    this.Network.Equals(input.Network))
-                ) && 
-                (
-                    this.Compress == input.Compress ||
-                    this.Compress.Equals(input.Compress)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.To != null)
-                {
-                    hashCode = (hashCode * 59) + this.To.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Value.GetHashCode();
-                if (this.Network != null)
-                {
-                    hashCode = (hashCode * 59) + this.Network.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Compress.GetHashCode();
-                return hashCode;
-            }
         }
 
     }

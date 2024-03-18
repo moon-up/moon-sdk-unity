@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// AvailablePaymentMethod
     /// </summary>
     [DataContract(Name = "AvailablePaymentMethod")]
-    public partial class AvailablePaymentMethod : IEquatable<AvailablePaymentMethod>
+    public partial class AvailablePaymentMethod
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AvailablePaymentMethod" /> class.
@@ -103,70 +103,6 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as AvailablePaymentMethod);
-        }
-
-        /// <summary>
-        /// Returns true if AvailablePaymentMethod instances are equal
-        /// </summary>
-        /// <param name="input">Instance of AvailablePaymentMethod to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(AvailablePaymentMethod input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Icon == input.Icon ||
-                    (this.Icon != null &&
-                    this.Icon.Equals(input.Icon))
-                ) && 
-                (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
-                ) && 
-                (
-                    this.PaymentTypeId == input.PaymentTypeId ||
-                    (this.PaymentTypeId != null &&
-                    this.PaymentTypeId.Equals(input.PaymentTypeId))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.Icon != null)
-                {
-                    hashCode = (hashCode * 59) + this.Icon.GetHashCode();
-                }
-                if (this.Name != null)
-                {
-                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
-                }
-                if (this.PaymentTypeId != null)
-                {
-                    hashCode = (hashCode * 59) + this.PaymentTypeId.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
     }

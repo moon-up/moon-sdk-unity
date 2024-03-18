@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// TransactionResponse
     /// </summary>
     [DataContract(Name = "TransactionResponse")]
-    public partial class TransactionResponse : IEquatable<TransactionResponse>
+    public partial class TransactionResponse
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TransactionResponse" /> class.
@@ -121,80 +121,6 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as TransactionResponse);
-        }
-
-        /// <summary>
-        /// Returns true if TransactionResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of TransactionResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(TransactionResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Message == input.Message ||
-                    (this.Message != null &&
-                    this.Message.Equals(input.Message))
-                ) && 
-                (
-                    this.Tx == input.Tx ||
-                    (this.Tx != null &&
-                    this.Tx.Equals(input.Tx))
-                ) && 
-                (
-                    this.Info == input.Info ||
-                    (this.Info != null &&
-                    this.Info.Equals(input.Info))
-                ) && 
-                (
-                    this.ChainId == input.ChainId ||
-                    this.ChainId.Equals(input.ChainId)
-                ) && 
-                (
-                    this.CurrentBlockNumber == input.CurrentBlockNumber ||
-                    this.CurrentBlockNumber.Equals(input.CurrentBlockNumber)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.Message != null)
-                {
-                    hashCode = (hashCode * 59) + this.Message.GetHashCode();
-                }
-                if (this.Tx != null)
-                {
-                    hashCode = (hashCode * 59) + this.Tx.GetHashCode();
-                }
-                if (this.Info != null)
-                {
-                    hashCode = (hashCode * 59) + this.Info.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.ChainId.GetHashCode();
-                hashCode = (hashCode * 59) + this.CurrentBlockNumber.GetHashCode();
-                return hashCode;
-            }
         }
 
     }

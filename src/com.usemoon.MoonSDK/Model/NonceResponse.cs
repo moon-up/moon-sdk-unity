@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// NonceResponse
     /// </summary>
     [DataContract(Name = "NonceResponse")]
-    public partial class NonceResponse : IEquatable<NonceResponse>
+    public partial class NonceResponse
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="NonceResponse" /> class.
@@ -70,48 +70,6 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as NonceResponse);
-        }
-
-        /// <summary>
-        /// Returns true if NonceResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of NonceResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(NonceResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Nonce == input.Nonce ||
-                    this.Nonce.Equals(input.Nonce)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.Nonce.GetHashCode();
-                return hashCode;
-            }
         }
 
     }

@@ -28,30 +28,32 @@ namespace com.usemoon.MoonSDK.Model
     /// AccountResponse
     /// </summary>
     [DataContract(Name = "AccountResponse")]
-    public partial class AccountResponse : IEquatable<AccountResponse>
+    public partial class AccountResponse
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AccountResponse" /> class.
         /// </summary>
-        /// <param name="keys">keys.</param>
-        /// <param name="address">address.</param>
-        public AccountResponse(List<string> keys = default(List<string>), string address = default(string))
+        [JsonConstructorAttribute]
+        protected AccountResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AccountResponse" /> class.
+        /// </summary>
+        /// <param name="data">data (required).</param>
+        public AccountResponse(AccountData data = default(AccountData))
         {
-            this.Keys = keys;
-            this.Address = address;
+            // to ensure "data" is required (not null)
+            if (data == null)
+            {
+                throw new ArgumentNullException("data is a required property for AccountResponse and cannot be null");
+            }
+            this.Data = data;
         }
 
         /// <summary>
-        /// Gets or Sets Keys
+        /// Gets or Sets Data
         /// </summary>
-        [DataMember(Name = "keys", EmitDefaultValue = false)]
-        public List<string> Keys { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Address
-        /// </summary>
-        [DataMember(Name = "address", EmitDefaultValue = false)]
-        public string Address { get; set; }
+        [DataMember(Name = "data", IsRequired = true, EmitDefaultValue = true)]
+        public AccountData Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -61,8 +63,7 @@ namespace com.usemoon.MoonSDK.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class AccountResponse {\n");
-            sb.Append("  Keys: ").Append(Keys).Append("\n");
-            sb.Append("  Address: ").Append(Address).Append("\n");
+            sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -74,62 +75,6 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as AccountResponse);
-        }
-
-        /// <summary>
-        /// Returns true if AccountResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of AccountResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(AccountResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Keys == input.Keys ||
-                    this.Keys != null &&
-                    input.Keys != null &&
-                    this.Keys.SequenceEqual(input.Keys)
-                ) && 
-                (
-                    this.Address == input.Address ||
-                    (this.Address != null &&
-                    this.Address.Equals(input.Address))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.Keys != null)
-                {
-                    hashCode = (hashCode * 59) + this.Keys.GetHashCode();
-                }
-                if (this.Address != null)
-                {
-                    hashCode = (hashCode * 59) + this.Address.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
     }

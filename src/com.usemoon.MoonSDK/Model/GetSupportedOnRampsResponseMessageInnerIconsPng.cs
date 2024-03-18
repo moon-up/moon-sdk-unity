@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// GetSupportedOnRampsResponseMessageInnerIconsPng
     /// </summary>
     [DataContract(Name = "GetSupportedOnRampsResponse_message_inner_icons_png")]
-    public partial class GetSupportedOnRampsResponseMessageInnerIconsPng : IEquatable<GetSupportedOnRampsResponseMessageInnerIconsPng>
+    public partial class GetSupportedOnRampsResponseMessageInnerIconsPng
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="GetSupportedOnRampsResponseMessageInnerIconsPng" /> class.
@@ -89,61 +89,6 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as GetSupportedOnRampsResponseMessageInnerIconsPng);
-        }
-
-        /// <summary>
-        /// Returns true if GetSupportedOnRampsResponseMessageInnerIconsPng instances are equal
-        /// </summary>
-        /// <param name="input">Instance of GetSupportedOnRampsResponseMessageInnerIconsPng to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(GetSupportedOnRampsResponseMessageInnerIconsPng input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Var160x160 == input.Var160x160 ||
-                    (this.Var160x160 != null &&
-                    this.Var160x160.Equals(input.Var160x160))
-                ) && 
-                (
-                    this.Var32x32 == input.Var32x32 ||
-                    (this.Var32x32 != null &&
-                    this.Var32x32.Equals(input.Var32x32))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.Var160x160 != null)
-                {
-                    hashCode = (hashCode * 59) + this.Var160x160.GetHashCode();
-                }
-                if (this.Var32x32 != null)
-                {
-                    hashCode = (hashCode * 59) + this.Var32x32.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
     }

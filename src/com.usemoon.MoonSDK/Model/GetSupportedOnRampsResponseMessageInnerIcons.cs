@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// GetSupportedOnRampsResponseMessageInnerIcons
     /// </summary>
     [DataContract(Name = "GetSupportedOnRampsResponse_message_inner_icons")]
-    public partial class GetSupportedOnRampsResponseMessageInnerIcons : IEquatable<GetSupportedOnRampsResponseMessageInnerIcons>
+    public partial class GetSupportedOnRampsResponseMessageInnerIcons
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="GetSupportedOnRampsResponseMessageInnerIcons" /> class.
@@ -89,61 +89,6 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as GetSupportedOnRampsResponseMessageInnerIcons);
-        }
-
-        /// <summary>
-        /// Returns true if GetSupportedOnRampsResponseMessageInnerIcons instances are equal
-        /// </summary>
-        /// <param name="input">Instance of GetSupportedOnRampsResponseMessageInnerIcons to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(GetSupportedOnRampsResponseMessageInnerIcons input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Png == input.Png ||
-                    (this.Png != null &&
-                    this.Png.Equals(input.Png))
-                ) && 
-                (
-                    this.Svg == input.Svg ||
-                    (this.Svg != null &&
-                    this.Svg.Equals(input.Svg))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.Png != null)
-                {
-                    hashCode = (hashCode * 59) + this.Png.GetHashCode();
-                }
-                if (this.Svg != null)
-                {
-                    hashCode = (hashCode * 59) + this.Svg.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
     }

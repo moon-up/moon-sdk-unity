@@ -32,8 +32,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="dogeCoinInput"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse CreateDogeCoinAccount(string authorization, DogeCoinInput dogeCoinInput);
+        /// <returns>AccountAPIResponse</returns>
+        AccountAPIResponse CreateDogeCoinAccount(string authorization, DogeCoinInput dogeCoinInput);
 
         /// <summary>
         /// 
@@ -44,16 +44,16 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="dogeCoinInput"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> CreateDogeCoinAccountWithHttpInfo(string authorization, DogeCoinInput dogeCoinInput);
+        /// <returns>ApiResponse of AccountAPIResponse</returns>
+        ApiResponse<AccountAPIResponse> CreateDogeCoinAccountWithHttpInfo(string authorization, DogeCoinInput dogeCoinInput);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse GetDogeCoinAccount(string authorization, string accountName);
+        /// <returns>AccountAPIResponse</returns>
+        AccountAPIResponse GetDogeCoinAccount(string authorization, string accountName);
 
         /// <summary>
         /// 
@@ -64,15 +64,15 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> GetDogeCoinAccountWithHttpInfo(string authorization, string accountName);
+        /// <returns>ApiResponse of AccountAPIResponse</returns>
+        ApiResponse<AccountAPIResponse> GetDogeCoinAccountWithHttpInfo(string authorization, string accountName);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse ListDogeCoinAccounts(string authorization);
+        /// <returns>AccountAPIResponse</returns>
+        AccountAPIResponse ListDogeCoinAccounts(string authorization);
 
         /// <summary>
         /// 
@@ -82,8 +82,8 @@ namespace com.usemoon.MoonSDK.Api
         /// </remarks>
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> ListDogeCoinAccountsWithHttpInfo(string authorization);
+        /// <returns>ApiResponse of AccountAPIResponse</returns>
+        ApiResponse<AccountAPIResponse> ListDogeCoinAccountsWithHttpInfo(string authorization);
         /// <summary>
         /// 
         /// </summary>
@@ -91,8 +91,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="dogeCoinTransactionInput"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse SignDogeCoinTransaction(string authorization, string accountName, DogeCoinTransactionInput dogeCoinTransactionInput);
+        /// <returns>DogeCoinAPIResponse</returns>
+        DogeCoinAPIResponse SignDogeCoinTransaction(string authorization, string accountName, DogeCoinTransactionInput dogeCoinTransactionInput);
 
         /// <summary>
         /// 
@@ -104,8 +104,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="dogeCoinTransactionInput"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> SignDogeCoinTransactionWithHttpInfo(string authorization, string accountName, DogeCoinTransactionInput dogeCoinTransactionInput);
+        /// <returns>ApiResponse of DogeCoinAPIResponse</returns>
+        ApiResponse<DogeCoinAPIResponse> SignDogeCoinTransactionWithHttpInfo(string authorization, string accountName, DogeCoinTransactionInput dogeCoinTransactionInput);
         #endregion Synchronous Operations
     }
 
@@ -125,8 +125,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="dogeCoinInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> CreateDogeCoinAccountAsync(string authorization, DogeCoinInput dogeCoinInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of AccountAPIResponse</returns>
+        System.Threading.Tasks.Task<AccountAPIResponse> CreateDogeCoinAccountAsync(string authorization, DogeCoinInput dogeCoinInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -138,8 +138,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="dogeCoinInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> CreateDogeCoinAccountWithHttpInfoAsync(string authorization, DogeCoinInput dogeCoinInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (AccountAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AccountAPIResponse>> CreateDogeCoinAccountWithHttpInfoAsync(string authorization, DogeCoinInput dogeCoinInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -150,8 +150,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> GetDogeCoinAccountAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of AccountAPIResponse</returns>
+        System.Threading.Tasks.Task<AccountAPIResponse> GetDogeCoinAccountAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -163,8 +163,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> GetDogeCoinAccountWithHttpInfoAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (AccountAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AccountAPIResponse>> GetDogeCoinAccountWithHttpInfoAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -174,8 +174,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> ListDogeCoinAccountsAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of AccountAPIResponse</returns>
+        System.Threading.Tasks.Task<AccountAPIResponse> ListDogeCoinAccountsAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -186,8 +186,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> ListDogeCoinAccountsWithHttpInfoAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (AccountAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AccountAPIResponse>> ListDogeCoinAccountsWithHttpInfoAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -199,8 +199,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="accountName"></param>
         /// <param name="dogeCoinTransactionInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> SignDogeCoinTransactionAsync(string authorization, string accountName, DogeCoinTransactionInput dogeCoinTransactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of DogeCoinAPIResponse</returns>
+        System.Threading.Tasks.Task<DogeCoinAPIResponse> SignDogeCoinTransactionAsync(string authorization, string accountName, DogeCoinTransactionInput dogeCoinTransactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -213,8 +213,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="accountName"></param>
         /// <param name="dogeCoinTransactionInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> SignDogeCoinTransactionWithHttpInfoAsync(string authorization, string accountName, DogeCoinTransactionInput dogeCoinTransactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (DogeCoinAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DogeCoinAPIResponse>> SignDogeCoinTransactionWithHttpInfoAsync(string authorization, string accountName, DogeCoinTransactionInput dogeCoinTransactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -365,10 +365,10 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="dogeCoinInput"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse CreateDogeCoinAccount(string authorization, DogeCoinInput dogeCoinInput)
+        /// <returns>AccountAPIResponse</returns>
+        public AccountAPIResponse CreateDogeCoinAccount(string authorization, DogeCoinInput dogeCoinInput)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = CreateDogeCoinAccountWithHttpInfo(authorization, dogeCoinInput);
+            com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> localVarResponse = CreateDogeCoinAccountWithHttpInfo(authorization, dogeCoinInput);
             return localVarResponse.Data;
         }
 
@@ -378,8 +378,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="dogeCoinInput"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> CreateDogeCoinAccountWithHttpInfo(string authorization, DogeCoinInput dogeCoinInput)
+        /// <returns>ApiResponse of AccountAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> CreateDogeCoinAccountWithHttpInfo(string authorization, DogeCoinInput dogeCoinInput)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -421,7 +421,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<AccountControllerResponse>("/dogecoin", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<AccountAPIResponse>("/dogecoin", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -439,14 +439,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="dogeCoinInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> CreateDogeCoinAccountAsync(string authorization, DogeCoinInput dogeCoinInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of AccountAPIResponse</returns>
+        public async System.Threading.Tasks.Task<AccountAPIResponse> CreateDogeCoinAccountAsync(string authorization, DogeCoinInput dogeCoinInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = CreateDogeCoinAccountWithHttpInfoAsync(authorization, dogeCoinInput, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -458,8 +458,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="dogeCoinInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> CreateDogeCoinAccountWithHttpInfoAsync(string authorization, DogeCoinInput dogeCoinInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (AccountAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse>> CreateDogeCoinAccountWithHttpInfoAsync(string authorization, DogeCoinInput dogeCoinInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -504,7 +504,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/dogecoin", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.PostAsync<AccountAPIResponse>("/dogecoin", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);
@@ -527,10 +527,10 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse GetDogeCoinAccount(string authorization, string accountName)
+        /// <returns>AccountAPIResponse</returns>
+        public AccountAPIResponse GetDogeCoinAccount(string authorization, string accountName)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = GetDogeCoinAccountWithHttpInfo(authorization, accountName);
+            com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> localVarResponse = GetDogeCoinAccountWithHttpInfo(authorization, accountName);
             return localVarResponse.Data;
         }
 
@@ -540,8 +540,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> GetDogeCoinAccountWithHttpInfo(string authorization, string accountName)
+        /// <returns>ApiResponse of AccountAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> GetDogeCoinAccountWithHttpInfo(string authorization, string accountName)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -582,7 +582,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<AccountControllerResponse>("/dogecoin/{accountName}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<AccountAPIResponse>("/dogecoin/{accountName}", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -600,14 +600,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> GetDogeCoinAccountAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of AccountAPIResponse</returns>
+        public async System.Threading.Tasks.Task<AccountAPIResponse> GetDogeCoinAccountAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = GetDogeCoinAccountWithHttpInfoAsync(authorization, accountName, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -619,8 +619,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> GetDogeCoinAccountWithHttpInfoAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (AccountAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse>> GetDogeCoinAccountWithHttpInfoAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -664,7 +664,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.GetAsync<AccountControllerResponse>("/dogecoin/{accountName}", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.GetAsync<AccountAPIResponse>("/dogecoin/{accountName}", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);
@@ -686,10 +686,10 @@ namespace com.usemoon.MoonSDK.Api
         /// </summary>
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse ListDogeCoinAccounts(string authorization)
+        /// <returns>AccountAPIResponse</returns>
+        public AccountAPIResponse ListDogeCoinAccounts(string authorization)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = ListDogeCoinAccountsWithHttpInfo(authorization);
+            com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> localVarResponse = ListDogeCoinAccountsWithHttpInfo(authorization);
             return localVarResponse.Data;
         }
 
@@ -698,8 +698,8 @@ namespace com.usemoon.MoonSDK.Api
         /// </summary>
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> ListDogeCoinAccountsWithHttpInfo(string authorization)
+        /// <returns>ApiResponse of AccountAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> ListDogeCoinAccountsWithHttpInfo(string authorization)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -735,7 +735,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<AccountControllerResponse>("/dogecoin", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<AccountAPIResponse>("/dogecoin", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -752,14 +752,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> ListDogeCoinAccountsAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of AccountAPIResponse</returns>
+        public async System.Threading.Tasks.Task<AccountAPIResponse> ListDogeCoinAccountsAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = ListDogeCoinAccountsWithHttpInfoAsync(authorization, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -770,8 +770,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> ListDogeCoinAccountsWithHttpInfoAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (AccountAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse>> ListDogeCoinAccountsWithHttpInfoAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -810,7 +810,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.GetAsync<AccountControllerResponse>("/dogecoin", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.GetAsync<AccountAPIResponse>("/dogecoin", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);
@@ -834,10 +834,10 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="dogeCoinTransactionInput"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse SignDogeCoinTransaction(string authorization, string accountName, DogeCoinTransactionInput dogeCoinTransactionInput)
+        /// <returns>DogeCoinAPIResponse</returns>
+        public DogeCoinAPIResponse SignDogeCoinTransaction(string authorization, string accountName, DogeCoinTransactionInput dogeCoinTransactionInput)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = SignDogeCoinTransactionWithHttpInfo(authorization, accountName, dogeCoinTransactionInput);
+            com.usemoon.MoonSDK.Client.ApiResponse<DogeCoinAPIResponse> localVarResponse = SignDogeCoinTransactionWithHttpInfo(authorization, accountName, dogeCoinTransactionInput);
             return localVarResponse.Data;
         }
 
@@ -848,8 +848,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="dogeCoinTransactionInput"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> SignDogeCoinTransactionWithHttpInfo(string authorization, string accountName, DogeCoinTransactionInput dogeCoinTransactionInput)
+        /// <returns>ApiResponse of DogeCoinAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<DogeCoinAPIResponse> SignDogeCoinTransactionWithHttpInfo(string authorization, string accountName, DogeCoinTransactionInput dogeCoinTransactionInput)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -896,7 +896,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<AccountControllerResponse>("/dogecoin/{accountName}/sign-tx", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<DogeCoinAPIResponse>("/dogecoin/{accountName}/sign-tx", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -915,14 +915,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="accountName"></param>
         /// <param name="dogeCoinTransactionInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> SignDogeCoinTransactionAsync(string authorization, string accountName, DogeCoinTransactionInput dogeCoinTransactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of DogeCoinAPIResponse</returns>
+        public async System.Threading.Tasks.Task<DogeCoinAPIResponse> SignDogeCoinTransactionAsync(string authorization, string accountName, DogeCoinTransactionInput dogeCoinTransactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = SignDogeCoinTransactionWithHttpInfoAsync(authorization, accountName, dogeCoinTransactionInput, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<DogeCoinAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<DogeCoinAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -935,8 +935,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="accountName"></param>
         /// <param name="dogeCoinTransactionInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> SignDogeCoinTransactionWithHttpInfoAsync(string authorization, string accountName, DogeCoinTransactionInput dogeCoinTransactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (DogeCoinAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<DogeCoinAPIResponse>> SignDogeCoinTransactionWithHttpInfoAsync(string authorization, string accountName, DogeCoinTransactionInput dogeCoinTransactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -986,7 +986,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/dogecoin/{accountName}/sign-tx", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.PostAsync<DogeCoinAPIResponse>("/dogecoin/{accountName}/sign-tx", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);

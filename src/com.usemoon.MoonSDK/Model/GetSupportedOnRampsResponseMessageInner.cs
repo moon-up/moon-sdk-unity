@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// GetSupportedOnRampsResponseMessageInner
     /// </summary>
     [DataContract(Name = "GetSupportedOnRampsResponse_message_inner")]
-    public partial class GetSupportedOnRampsResponseMessageInner : IEquatable<GetSupportedOnRampsResponseMessageInner>
+    public partial class GetSupportedOnRampsResponseMessageInner
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="GetSupportedOnRampsResponseMessageInner" /> class.
@@ -117,79 +117,6 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as GetSupportedOnRampsResponseMessageInner);
-        }
-
-        /// <summary>
-        /// Returns true if GetSupportedOnRampsResponseMessageInner instances are equal
-        /// </summary>
-        /// <param name="input">Instance of GetSupportedOnRampsResponseMessageInner to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(GetSupportedOnRampsResponseMessageInner input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Id == input.Id ||
-                    (this.Id != null &&
-                    this.Id.Equals(input.Id))
-                ) && 
-                (
-                    this.DisplayName == input.DisplayName ||
-                    (this.DisplayName != null &&
-                    this.DisplayName.Equals(input.DisplayName))
-                ) && 
-                (
-                    this.Icons == input.Icons ||
-                    (this.Icons != null &&
-                    this.Icons.Equals(input.Icons))
-                ) && 
-                (
-                    this.Icon == input.Icon ||
-                    (this.Icon != null &&
-                    this.Icon.Equals(input.Icon))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.Id != null)
-                {
-                    hashCode = (hashCode * 59) + this.Id.GetHashCode();
-                }
-                if (this.DisplayName != null)
-                {
-                    hashCode = (hashCode * 59) + this.DisplayName.GetHashCode();
-                }
-                if (this.Icons != null)
-                {
-                    hashCode = (hashCode * 59) + this.Icons.GetHashCode();
-                }
-                if (this.Icon != null)
-                {
-                    hashCode = (hashCode * 59) + this.Icon.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
     }

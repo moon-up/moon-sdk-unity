@@ -32,8 +32,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="litecoinInput"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse CreateLitecoinAccount(string authorization, LitecoinInput litecoinInput);
+        /// <returns>AccountAPIResponse</returns>
+        AccountAPIResponse CreateLitecoinAccount(string authorization, LitecoinInput litecoinInput);
 
         /// <summary>
         /// 
@@ -44,16 +44,16 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="litecoinInput"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> CreateLitecoinAccountWithHttpInfo(string authorization, LitecoinInput litecoinInput);
+        /// <returns>ApiResponse of AccountAPIResponse</returns>
+        ApiResponse<AccountAPIResponse> CreateLitecoinAccountWithHttpInfo(string authorization, LitecoinInput litecoinInput);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse GetLitecoinAccount(string authorization, string accountName);
+        /// <returns>AccountAPIResponse</returns>
+        AccountAPIResponse GetLitecoinAccount(string authorization, string accountName);
 
         /// <summary>
         /// 
@@ -64,15 +64,15 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> GetLitecoinAccountWithHttpInfo(string authorization, string accountName);
+        /// <returns>ApiResponse of AccountAPIResponse</returns>
+        ApiResponse<AccountAPIResponse> GetLitecoinAccountWithHttpInfo(string authorization, string accountName);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse ListLitecoinAccounts(string authorization);
+        /// <returns>AccountAPIResponse</returns>
+        AccountAPIResponse ListLitecoinAccounts(string authorization);
 
         /// <summary>
         /// 
@@ -82,8 +82,8 @@ namespace com.usemoon.MoonSDK.Api
         /// </remarks>
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> ListLitecoinAccountsWithHttpInfo(string authorization);
+        /// <returns>ApiResponse of AccountAPIResponse</returns>
+        ApiResponse<AccountAPIResponse> ListLitecoinAccountsWithHttpInfo(string authorization);
         /// <summary>
         /// 
         /// </summary>
@@ -91,8 +91,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="litecoinTransactionInput"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse SignLitecoinTransaction(string authorization, string accountName, LitecoinTransactionInput litecoinTransactionInput);
+        /// <returns>LitecoinAPIResponse</returns>
+        LitecoinAPIResponse SignLitecoinTransaction(string authorization, string accountName, LitecoinTransactionInput litecoinTransactionInput);
 
         /// <summary>
         /// 
@@ -104,8 +104,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="litecoinTransactionInput"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> SignLitecoinTransactionWithHttpInfo(string authorization, string accountName, LitecoinTransactionInput litecoinTransactionInput);
+        /// <returns>ApiResponse of LitecoinAPIResponse</returns>
+        ApiResponse<LitecoinAPIResponse> SignLitecoinTransactionWithHttpInfo(string authorization, string accountName, LitecoinTransactionInput litecoinTransactionInput);
         #endregion Synchronous Operations
     }
 
@@ -125,8 +125,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="litecoinInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> CreateLitecoinAccountAsync(string authorization, LitecoinInput litecoinInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of AccountAPIResponse</returns>
+        System.Threading.Tasks.Task<AccountAPIResponse> CreateLitecoinAccountAsync(string authorization, LitecoinInput litecoinInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -138,8 +138,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="litecoinInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> CreateLitecoinAccountWithHttpInfoAsync(string authorization, LitecoinInput litecoinInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (AccountAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AccountAPIResponse>> CreateLitecoinAccountWithHttpInfoAsync(string authorization, LitecoinInput litecoinInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -150,8 +150,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> GetLitecoinAccountAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of AccountAPIResponse</returns>
+        System.Threading.Tasks.Task<AccountAPIResponse> GetLitecoinAccountAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -163,8 +163,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> GetLitecoinAccountWithHttpInfoAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (AccountAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AccountAPIResponse>> GetLitecoinAccountWithHttpInfoAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -174,8 +174,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> ListLitecoinAccountsAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of AccountAPIResponse</returns>
+        System.Threading.Tasks.Task<AccountAPIResponse> ListLitecoinAccountsAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -186,8 +186,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> ListLitecoinAccountsWithHttpInfoAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (AccountAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AccountAPIResponse>> ListLitecoinAccountsWithHttpInfoAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -199,8 +199,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="accountName"></param>
         /// <param name="litecoinTransactionInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> SignLitecoinTransactionAsync(string authorization, string accountName, LitecoinTransactionInput litecoinTransactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of LitecoinAPIResponse</returns>
+        System.Threading.Tasks.Task<LitecoinAPIResponse> SignLitecoinTransactionAsync(string authorization, string accountName, LitecoinTransactionInput litecoinTransactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -213,8 +213,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="accountName"></param>
         /// <param name="litecoinTransactionInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> SignLitecoinTransactionWithHttpInfoAsync(string authorization, string accountName, LitecoinTransactionInput litecoinTransactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (LitecoinAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LitecoinAPIResponse>> SignLitecoinTransactionWithHttpInfoAsync(string authorization, string accountName, LitecoinTransactionInput litecoinTransactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -365,10 +365,10 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="litecoinInput"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse CreateLitecoinAccount(string authorization, LitecoinInput litecoinInput)
+        /// <returns>AccountAPIResponse</returns>
+        public AccountAPIResponse CreateLitecoinAccount(string authorization, LitecoinInput litecoinInput)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = CreateLitecoinAccountWithHttpInfo(authorization, litecoinInput);
+            com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> localVarResponse = CreateLitecoinAccountWithHttpInfo(authorization, litecoinInput);
             return localVarResponse.Data;
         }
 
@@ -378,8 +378,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="litecoinInput"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> CreateLitecoinAccountWithHttpInfo(string authorization, LitecoinInput litecoinInput)
+        /// <returns>ApiResponse of AccountAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> CreateLitecoinAccountWithHttpInfo(string authorization, LitecoinInput litecoinInput)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -421,7 +421,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<AccountControllerResponse>("/litecoin", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<AccountAPIResponse>("/litecoin", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -439,14 +439,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="litecoinInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> CreateLitecoinAccountAsync(string authorization, LitecoinInput litecoinInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of AccountAPIResponse</returns>
+        public async System.Threading.Tasks.Task<AccountAPIResponse> CreateLitecoinAccountAsync(string authorization, LitecoinInput litecoinInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = CreateLitecoinAccountWithHttpInfoAsync(authorization, litecoinInput, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -458,8 +458,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="litecoinInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> CreateLitecoinAccountWithHttpInfoAsync(string authorization, LitecoinInput litecoinInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (AccountAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse>> CreateLitecoinAccountWithHttpInfoAsync(string authorization, LitecoinInput litecoinInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -504,7 +504,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/litecoin", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.PostAsync<AccountAPIResponse>("/litecoin", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);
@@ -527,10 +527,10 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse GetLitecoinAccount(string authorization, string accountName)
+        /// <returns>AccountAPIResponse</returns>
+        public AccountAPIResponse GetLitecoinAccount(string authorization, string accountName)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = GetLitecoinAccountWithHttpInfo(authorization, accountName);
+            com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> localVarResponse = GetLitecoinAccountWithHttpInfo(authorization, accountName);
             return localVarResponse.Data;
         }
 
@@ -540,8 +540,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> GetLitecoinAccountWithHttpInfo(string authorization, string accountName)
+        /// <returns>ApiResponse of AccountAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> GetLitecoinAccountWithHttpInfo(string authorization, string accountName)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -582,7 +582,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<AccountControllerResponse>("/litecoin/{accountName}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<AccountAPIResponse>("/litecoin/{accountName}", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -600,14 +600,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> GetLitecoinAccountAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of AccountAPIResponse</returns>
+        public async System.Threading.Tasks.Task<AccountAPIResponse> GetLitecoinAccountAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = GetLitecoinAccountWithHttpInfoAsync(authorization, accountName, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -619,8 +619,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> GetLitecoinAccountWithHttpInfoAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (AccountAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse>> GetLitecoinAccountWithHttpInfoAsync(string authorization, string accountName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -664,7 +664,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.GetAsync<AccountControllerResponse>("/litecoin/{accountName}", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.GetAsync<AccountAPIResponse>("/litecoin/{accountName}", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);
@@ -686,10 +686,10 @@ namespace com.usemoon.MoonSDK.Api
         /// </summary>
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse ListLitecoinAccounts(string authorization)
+        /// <returns>AccountAPIResponse</returns>
+        public AccountAPIResponse ListLitecoinAccounts(string authorization)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = ListLitecoinAccountsWithHttpInfo(authorization);
+            com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> localVarResponse = ListLitecoinAccountsWithHttpInfo(authorization);
             return localVarResponse.Data;
         }
 
@@ -698,8 +698,8 @@ namespace com.usemoon.MoonSDK.Api
         /// </summary>
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> ListLitecoinAccountsWithHttpInfo(string authorization)
+        /// <returns>ApiResponse of AccountAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> ListLitecoinAccountsWithHttpInfo(string authorization)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -735,7 +735,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<AccountControllerResponse>("/litecoin", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<AccountAPIResponse>("/litecoin", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -752,14 +752,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> ListLitecoinAccountsAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of AccountAPIResponse</returns>
+        public async System.Threading.Tasks.Task<AccountAPIResponse> ListLitecoinAccountsAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = ListLitecoinAccountsWithHttpInfoAsync(authorization, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -770,8 +770,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> ListLitecoinAccountsWithHttpInfoAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (AccountAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountAPIResponse>> ListLitecoinAccountsWithHttpInfoAsync(string authorization, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -810,7 +810,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.GetAsync<AccountControllerResponse>("/litecoin", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.GetAsync<AccountAPIResponse>("/litecoin", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);
@@ -834,10 +834,10 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="litecoinTransactionInput"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse SignLitecoinTransaction(string authorization, string accountName, LitecoinTransactionInput litecoinTransactionInput)
+        /// <returns>LitecoinAPIResponse</returns>
+        public LitecoinAPIResponse SignLitecoinTransaction(string authorization, string accountName, LitecoinTransactionInput litecoinTransactionInput)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = SignLitecoinTransactionWithHttpInfo(authorization, accountName, litecoinTransactionInput);
+            com.usemoon.MoonSDK.Client.ApiResponse<LitecoinAPIResponse> localVarResponse = SignLitecoinTransactionWithHttpInfo(authorization, accountName, litecoinTransactionInput);
             return localVarResponse.Data;
         }
 
@@ -848,8 +848,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="accountName"></param>
         /// <param name="litecoinTransactionInput"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> SignLitecoinTransactionWithHttpInfo(string authorization, string accountName, LitecoinTransactionInput litecoinTransactionInput)
+        /// <returns>ApiResponse of LitecoinAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<LitecoinAPIResponse> SignLitecoinTransactionWithHttpInfo(string authorization, string accountName, LitecoinTransactionInput litecoinTransactionInput)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -896,7 +896,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<AccountControllerResponse>("/litecoin/{accountName}/sign-tx", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<LitecoinAPIResponse>("/litecoin/{accountName}/sign-tx", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -915,14 +915,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="accountName"></param>
         /// <param name="litecoinTransactionInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> SignLitecoinTransactionAsync(string authorization, string accountName, LitecoinTransactionInput litecoinTransactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of LitecoinAPIResponse</returns>
+        public async System.Threading.Tasks.Task<LitecoinAPIResponse> SignLitecoinTransactionAsync(string authorization, string accountName, LitecoinTransactionInput litecoinTransactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = SignLitecoinTransactionWithHttpInfoAsync(authorization, accountName, litecoinTransactionInput, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<LitecoinAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<LitecoinAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -935,8 +935,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="accountName"></param>
         /// <param name="litecoinTransactionInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> SignLitecoinTransactionWithHttpInfoAsync(string authorization, string accountName, LitecoinTransactionInput litecoinTransactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (LitecoinAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<LitecoinAPIResponse>> SignLitecoinTransactionWithHttpInfoAsync(string authorization, string accountName, LitecoinTransactionInput litecoinTransactionInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -986,7 +986,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/litecoin/{accountName}/sign-tx", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.PostAsync<LitecoinAPIResponse>("/litecoin/{accountName}/sign-tx", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);

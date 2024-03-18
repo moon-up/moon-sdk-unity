@@ -1,6 +1,6 @@
 # com.usemoon.MoonSDK.Api.RippleApi
 
-All URIs are relative to *https://vault-api.usemoon.ai*
+All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -11,7 +11,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 
 <a id="createrippleaccount"></a>
 # **CreateRippleAccount**
-> AccountControllerResponse CreateRippleAccount (string authorization, RippleInput rippleInput)
+> AccountAPIResponse CreateRippleAccount (string authorization, RippleInput rippleInput)
 
 
 
@@ -30,7 +30,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -46,7 +46,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.CreateRippleAccount(authorization, rippleInput);
+                AccountAPIResponse result = apiInstance.CreateRippleAccount(authorization, rippleInput);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -66,7 +66,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.CreateRippleAccountWithHttpInfo(authorization, rippleInput);
+    ApiResponse<AccountAPIResponse> response = apiInstance.CreateRippleAccountWithHttpInfo(authorization, rippleInput);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -88,7 +88,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**AccountAPIResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -109,7 +109,7 @@ catch (ApiException e)
 
 <a id="getrippleaccount"></a>
 # **GetRippleAccount**
-> AccountControllerResponse GetRippleAccount (string authorization, string accountName)
+> AccountAPIResponse GetRippleAccount (string authorization, string accountName)
 
 
 
@@ -128,7 +128,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -144,7 +144,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.GetRippleAccount(authorization, accountName);
+                AccountAPIResponse result = apiInstance.GetRippleAccount(authorization, accountName);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -164,7 +164,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.GetRippleAccountWithHttpInfo(authorization, accountName);
+    ApiResponse<AccountAPIResponse> response = apiInstance.GetRippleAccountWithHttpInfo(authorization, accountName);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -186,7 +186,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**AccountAPIResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -207,7 +207,7 @@ catch (ApiException e)
 
 <a id="listrippleaccounts"></a>
 # **ListRippleAccounts**
-> AccountControllerResponse ListRippleAccounts (string authorization)
+> AccountAPIResponse ListRippleAccounts (string authorization)
 
 
 
@@ -226,7 +226,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -241,7 +241,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.ListRippleAccounts(authorization);
+                AccountAPIResponse result = apiInstance.ListRippleAccounts(authorization);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -261,7 +261,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.ListRippleAccountsWithHttpInfo(authorization);
+    ApiResponse<AccountAPIResponse> response = apiInstance.ListRippleAccountsWithHttpInfo(authorization);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -282,7 +282,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**AccountAPIResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -303,7 +303,7 @@ catch (ApiException e)
 
 <a id="signrippletransaction"></a>
 # **SignRippleTransaction**
-> AccountControllerResponse SignRippleTransaction (string authorization, string accountName, RippleTransactionInput rippleTransactionInput)
+> RippleAPIResponse SignRippleTransaction (string authorization, string accountName, RippleTransactionInput rippleTransactionInput)
 
 
 
@@ -322,7 +322,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -339,7 +339,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.SignRippleTransaction(authorization, accountName, rippleTransactionInput);
+                RippleAPIResponse result = apiInstance.SignRippleTransaction(authorization, accountName, rippleTransactionInput);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -359,7 +359,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.SignRippleTransactionWithHttpInfo(authorization, accountName, rippleTransactionInput);
+    ApiResponse<RippleAPIResponse> response = apiInstance.SignRippleTransactionWithHttpInfo(authorization, accountName, rippleTransactionInput);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -382,7 +382,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**RippleAPIResponse**](RippleAPIResponse.md)
 
 ### Authorization
 

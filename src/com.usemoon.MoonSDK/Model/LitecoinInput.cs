@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// LitecoinInput
     /// </summary>
     [DataContract(Name = "LitecoinInput")]
-    public partial class LitecoinInput : IEquatable<LitecoinInput>
+    public partial class LitecoinInput
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="LitecoinInput" /> class.
@@ -74,61 +74,6 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as LitecoinInput);
-        }
-
-        /// <summary>
-        /// Returns true if LitecoinInput instances are equal
-        /// </summary>
-        /// <param name="input">Instance of LitecoinInput to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(LitecoinInput input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Network == input.Network ||
-                    (this.Network != null &&
-                    this.Network.Equals(input.Network))
-                ) && 
-                (
-                    this.PrivateKey == input.PrivateKey ||
-                    (this.PrivateKey != null &&
-                    this.PrivateKey.Equals(input.PrivateKey))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.Network != null)
-                {
-                    hashCode = (hashCode * 59) + this.Network.GetHashCode();
-                }
-                if (this.PrivateKey != null)
-                {
-                    hashCode = (hashCode * 59) + this.PrivateKey.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
     }

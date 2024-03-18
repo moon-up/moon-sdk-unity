@@ -33,8 +33,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse AddLiquidity(string authorization, string name, InputBody inputBody);
+        /// <returns>TransactionAPIResponse</returns>
+        TransactionAPIResponse AddLiquidity(string authorization, string name, InputBody inputBody);
 
         /// <summary>
         /// 
@@ -46,8 +46,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> AddLiquidityWithHttpInfo(string authorization, string name, InputBody inputBody);
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        ApiResponse<TransactionAPIResponse> AddLiquidityWithHttpInfo(string authorization, string name, InputBody inputBody);
         /// <summary>
         /// 
         /// </summary>
@@ -55,8 +55,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse AddLiquidityWeth(string authorization, string name, InputBody inputBody);
+        /// <returns>TransactionAPIResponse</returns>
+        TransactionAPIResponse AddLiquidityWeth(string authorization, string name, InputBody inputBody);
 
         /// <summary>
         /// 
@@ -68,8 +68,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> AddLiquidityWethWithHttpInfo(string authorization, string name, InputBody inputBody);
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        ApiResponse<TransactionAPIResponse> AddLiquidityWethWithHttpInfo(string authorization, string name, InputBody inputBody);
         /// <summary>
         /// 
         /// </summary>
@@ -77,8 +77,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse RemoveLiquidity(string authorization, string name, InputBody inputBody);
+        /// <returns>TransactionAPIResponse</returns>
+        TransactionAPIResponse RemoveLiquidity(string authorization, string name, InputBody inputBody);
 
         /// <summary>
         /// 
@@ -90,8 +90,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> RemoveLiquidityWithHttpInfo(string authorization, string name, InputBody inputBody);
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        ApiResponse<TransactionAPIResponse> RemoveLiquidityWithHttpInfo(string authorization, string name, InputBody inputBody);
         /// <summary>
         /// 
         /// </summary>
@@ -99,8 +99,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse RemoveLiquidityWeth(string authorization, string name, InputBody inputBody);
+        /// <returns>TransactionAPIResponse</returns>
+        TransactionAPIResponse RemoveLiquidityWeth(string authorization, string name, InputBody inputBody);
 
         /// <summary>
         /// 
@@ -112,8 +112,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> RemoveLiquidityWethWithHttpInfo(string authorization, string name, InputBody inputBody);
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        ApiResponse<TransactionAPIResponse> RemoveLiquidityWethWithHttpInfo(string authorization, string name, InputBody inputBody);
         #endregion Synchronous Operations
     }
 
@@ -134,8 +134,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> AddLiquidityAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of TransactionAPIResponse</returns>
+        System.Threading.Tasks.Task<TransactionAPIResponse> AddLiquidityAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -148,8 +148,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> AddLiquidityWithHttpInfoAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransactionAPIResponse>> AddLiquidityWithHttpInfoAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -161,8 +161,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> AddLiquidityWethAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of TransactionAPIResponse</returns>
+        System.Threading.Tasks.Task<TransactionAPIResponse> AddLiquidityWethAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -175,8 +175,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> AddLiquidityWethWithHttpInfoAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransactionAPIResponse>> AddLiquidityWethWithHttpInfoAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -188,8 +188,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> RemoveLiquidityAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of TransactionAPIResponse</returns>
+        System.Threading.Tasks.Task<TransactionAPIResponse> RemoveLiquidityAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -202,8 +202,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> RemoveLiquidityWithHttpInfoAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransactionAPIResponse>> RemoveLiquidityWithHttpInfoAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -215,8 +215,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> RemoveLiquidityWethAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of TransactionAPIResponse</returns>
+        System.Threading.Tasks.Task<TransactionAPIResponse> RemoveLiquidityWethAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -229,8 +229,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> RemoveLiquidityWethWithHttpInfoAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransactionAPIResponse>> RemoveLiquidityWethWithHttpInfoAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -382,10 +382,10 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse AddLiquidity(string authorization, string name, InputBody inputBody)
+        /// <returns>TransactionAPIResponse</returns>
+        public TransactionAPIResponse AddLiquidity(string authorization, string name, InputBody inputBody)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = AddLiquidityWithHttpInfo(authorization, name, inputBody);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = AddLiquidityWithHttpInfo(authorization, name, inputBody);
             return localVarResponse.Data;
         }
 
@@ -396,8 +396,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> AddLiquidityWithHttpInfo(string authorization, string name, InputBody inputBody)
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> AddLiquidityWithHttpInfo(string authorization, string name, InputBody inputBody)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -444,7 +444,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<AccountControllerResponse>("/yearn/{name}/add-liquidity", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<TransactionAPIResponse>("/yearn/{name}/add-liquidity", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -463,14 +463,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> AddLiquidityAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of TransactionAPIResponse</returns>
+        public async System.Threading.Tasks.Task<TransactionAPIResponse> AddLiquidityAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = AddLiquidityWithHttpInfoAsync(authorization, name, inputBody, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -483,8 +483,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> AddLiquidityWithHttpInfoAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse>> AddLiquidityWithHttpInfoAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -534,7 +534,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/yearn/{name}/add-liquidity", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.PostAsync<TransactionAPIResponse>("/yearn/{name}/add-liquidity", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);
@@ -558,10 +558,10 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse AddLiquidityWeth(string authorization, string name, InputBody inputBody)
+        /// <returns>TransactionAPIResponse</returns>
+        public TransactionAPIResponse AddLiquidityWeth(string authorization, string name, InputBody inputBody)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = AddLiquidityWethWithHttpInfo(authorization, name, inputBody);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = AddLiquidityWethWithHttpInfo(authorization, name, inputBody);
             return localVarResponse.Data;
         }
 
@@ -572,8 +572,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> AddLiquidityWethWithHttpInfo(string authorization, string name, InputBody inputBody)
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> AddLiquidityWethWithHttpInfo(string authorization, string name, InputBody inputBody)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -620,7 +620,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<AccountControllerResponse>("/yearn/{name}/add-liquidity-weth", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<TransactionAPIResponse>("/yearn/{name}/add-liquidity-weth", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -639,14 +639,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> AddLiquidityWethAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of TransactionAPIResponse</returns>
+        public async System.Threading.Tasks.Task<TransactionAPIResponse> AddLiquidityWethAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = AddLiquidityWethWithHttpInfoAsync(authorization, name, inputBody, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -659,8 +659,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> AddLiquidityWethWithHttpInfoAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse>> AddLiquidityWethWithHttpInfoAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -710,7 +710,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/yearn/{name}/add-liquidity-weth", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.PostAsync<TransactionAPIResponse>("/yearn/{name}/add-liquidity-weth", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);
@@ -734,10 +734,10 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse RemoveLiquidity(string authorization, string name, InputBody inputBody)
+        /// <returns>TransactionAPIResponse</returns>
+        public TransactionAPIResponse RemoveLiquidity(string authorization, string name, InputBody inputBody)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = RemoveLiquidityWithHttpInfo(authorization, name, inputBody);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = RemoveLiquidityWithHttpInfo(authorization, name, inputBody);
             return localVarResponse.Data;
         }
 
@@ -748,8 +748,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> RemoveLiquidityWithHttpInfo(string authorization, string name, InputBody inputBody)
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> RemoveLiquidityWithHttpInfo(string authorization, string name, InputBody inputBody)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -796,7 +796,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<AccountControllerResponse>("/yearn/{name}/remove-liquidity", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<TransactionAPIResponse>("/yearn/{name}/remove-liquidity", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -815,14 +815,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> RemoveLiquidityAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of TransactionAPIResponse</returns>
+        public async System.Threading.Tasks.Task<TransactionAPIResponse> RemoveLiquidityAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = RemoveLiquidityWithHttpInfoAsync(authorization, name, inputBody, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -835,8 +835,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> RemoveLiquidityWithHttpInfoAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse>> RemoveLiquidityWithHttpInfoAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -886,7 +886,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/yearn/{name}/remove-liquidity", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.PostAsync<TransactionAPIResponse>("/yearn/{name}/remove-liquidity", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);
@@ -910,10 +910,10 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse RemoveLiquidityWeth(string authorization, string name, InputBody inputBody)
+        /// <returns>TransactionAPIResponse</returns>
+        public TransactionAPIResponse RemoveLiquidityWeth(string authorization, string name, InputBody inputBody)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = RemoveLiquidityWethWithHttpInfo(authorization, name, inputBody);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = RemoveLiquidityWethWithHttpInfo(authorization, name, inputBody);
             return localVarResponse.Data;
         }
 
@@ -924,8 +924,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> RemoveLiquidityWethWithHttpInfo(string authorization, string name, InputBody inputBody)
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> RemoveLiquidityWethWithHttpInfo(string authorization, string name, InputBody inputBody)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -972,7 +972,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<AccountControllerResponse>("/yearn/{name}/remove-liquidity-weth", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<TransactionAPIResponse>("/yearn/{name}/remove-liquidity-weth", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -991,14 +991,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> RemoveLiquidityWethAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of TransactionAPIResponse</returns>
+        public async System.Threading.Tasks.Task<TransactionAPIResponse> RemoveLiquidityWethAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = RemoveLiquidityWethWithHttpInfoAsync(authorization, name, inputBody, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -1011,8 +1011,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="inputBody"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> RemoveLiquidityWethWithHttpInfoAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse>> RemoveLiquidityWethWithHttpInfoAsync(string authorization, string name, InputBody inputBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -1062,7 +1062,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/yearn/{name}/remove-liquidity-weth", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.PostAsync<TransactionAPIResponse>("/yearn/{name}/remove-liquidity-weth", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);

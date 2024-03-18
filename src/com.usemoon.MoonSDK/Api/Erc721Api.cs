@@ -33,8 +33,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse Approve(string authorization, string name, Erc721Request erc721Request);
+        /// <returns>TransactionAPIResponse</returns>
+        TransactionAPIResponse Approve(string authorization, string name, Erc721Request erc721Request);
 
         /// <summary>
         /// 
@@ -46,8 +46,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> ApproveWithHttpInfo(string authorization, string name, Erc721Request erc721Request);
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        ApiResponse<TransactionAPIResponse> ApproveWithHttpInfo(string authorization, string name, Erc721Request erc721Request);
         /// <summary>
         /// 
         /// </summary>
@@ -55,8 +55,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse BalanceOf(string authorization, string name, Erc721Request erc721Request);
+        /// <returns>TransactionAPIResponse</returns>
+        TransactionAPIResponse BalanceOf(string authorization, string name, Erc721Request erc721Request);
 
         /// <summary>
         /// 
@@ -68,8 +68,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> BalanceOfWithHttpInfo(string authorization, string name, Erc721Request erc721Request);
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        ApiResponse<TransactionAPIResponse> BalanceOfWithHttpInfo(string authorization, string name, Erc721Request erc721Request);
         /// <summary>
         /// 
         /// </summary>
@@ -77,8 +77,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse GetApproved(string authorization, string name, Erc721Request erc721Request);
+        /// <returns>TransactionAPIResponse</returns>
+        TransactionAPIResponse GetApproved(string authorization, string name, Erc721Request erc721Request);
 
         /// <summary>
         /// 
@@ -90,8 +90,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> GetApprovedWithHttpInfo(string authorization, string name, Erc721Request erc721Request);
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        ApiResponse<TransactionAPIResponse> GetApprovedWithHttpInfo(string authorization, string name, Erc721Request erc721Request);
         /// <summary>
         /// 
         /// </summary>
@@ -99,8 +99,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse IsApprovedForAll(string authorization, string name, Erc721Request erc721Request);
+        /// <returns>TransactionAPIResponse</returns>
+        TransactionAPIResponse IsApprovedForAll(string authorization, string name, Erc721Request erc721Request);
 
         /// <summary>
         /// 
@@ -112,8 +112,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> IsApprovedForAllWithHttpInfo(string authorization, string name, Erc721Request erc721Request);
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        ApiResponse<TransactionAPIResponse> IsApprovedForAllWithHttpInfo(string authorization, string name, Erc721Request erc721Request);
         /// <summary>
         /// 
         /// </summary>
@@ -121,8 +121,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse Name(string authorization, string name, Erc721Request erc721Request);
+        /// <returns>TransactionAPIResponse</returns>
+        TransactionAPIResponse Name(string authorization, string name, Erc721Request erc721Request);
 
         /// <summary>
         /// 
@@ -134,8 +134,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> NameWithHttpInfo(string authorization, string name, Erc721Request erc721Request);
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        ApiResponse<TransactionAPIResponse> NameWithHttpInfo(string authorization, string name, Erc721Request erc721Request);
         /// <summary>
         /// 
         /// </summary>
@@ -143,8 +143,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse OwnerOf(string authorization, string name, Erc721Request erc721Request);
+        /// <returns>TransactionAPIResponse</returns>
+        TransactionAPIResponse OwnerOf(string authorization, string name, Erc721Request erc721Request);
 
         /// <summary>
         /// 
@@ -156,8 +156,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> OwnerOfWithHttpInfo(string authorization, string name, Erc721Request erc721Request);
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        ApiResponse<TransactionAPIResponse> OwnerOfWithHttpInfo(string authorization, string name, Erc721Request erc721Request);
         /// <summary>
         /// 
         /// </summary>
@@ -165,8 +165,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse SafeTransferFrom(string authorization, string name, Erc721Request erc721Request);
+        /// <returns>TransactionAPIResponse</returns>
+        TransactionAPIResponse SafeTransferFrom(string authorization, string name, Erc721Request erc721Request);
 
         /// <summary>
         /// 
@@ -178,8 +178,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> SafeTransferFromWithHttpInfo(string authorization, string name, Erc721Request erc721Request);
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        ApiResponse<TransactionAPIResponse> SafeTransferFromWithHttpInfo(string authorization, string name, Erc721Request erc721Request);
         /// <summary>
         /// 
         /// </summary>
@@ -187,8 +187,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse SetApprovalForAll(string authorization, string name, Erc721Request erc721Request);
+        /// <returns>TransactionAPIResponse</returns>
+        TransactionAPIResponse SetApprovalForAll(string authorization, string name, Erc721Request erc721Request);
 
         /// <summary>
         /// 
@@ -200,8 +200,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> SetApprovalForAllWithHttpInfo(string authorization, string name, Erc721Request erc721Request);
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        ApiResponse<TransactionAPIResponse> SetApprovalForAllWithHttpInfo(string authorization, string name, Erc721Request erc721Request);
         /// <summary>
         /// 
         /// </summary>
@@ -209,8 +209,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse Symbol(string authorization, string name, Erc721Request erc721Request);
+        /// <returns>TransactionAPIResponse</returns>
+        TransactionAPIResponse Symbol(string authorization, string name, Erc721Request erc721Request);
 
         /// <summary>
         /// 
@@ -222,8 +222,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> SymbolWithHttpInfo(string authorization, string name, Erc721Request erc721Request);
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        ApiResponse<TransactionAPIResponse> SymbolWithHttpInfo(string authorization, string name, Erc721Request erc721Request);
         /// <summary>
         /// 
         /// </summary>
@@ -231,8 +231,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse TokenUri(string authorization, string name, Erc721Request erc721Request);
+        /// <returns>TransactionAPIResponse</returns>
+        TransactionAPIResponse TokenUri(string authorization, string name, Erc721Request erc721Request);
 
         /// <summary>
         /// 
@@ -244,8 +244,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> TokenUriWithHttpInfo(string authorization, string name, Erc721Request erc721Request);
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        ApiResponse<TransactionAPIResponse> TokenUriWithHttpInfo(string authorization, string name, Erc721Request erc721Request);
         /// <summary>
         /// 
         /// </summary>
@@ -253,8 +253,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse Transfer(string authorization, string name, Erc721Request erc721Request);
+        /// <returns>TransactionAPIResponse</returns>
+        TransactionAPIResponse Transfer(string authorization, string name, Erc721Request erc721Request);
 
         /// <summary>
         /// 
@@ -266,8 +266,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> TransferWithHttpInfo(string authorization, string name, Erc721Request erc721Request);
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        ApiResponse<TransactionAPIResponse> TransferWithHttpInfo(string authorization, string name, Erc721Request erc721Request);
         /// <summary>
         /// 
         /// </summary>
@@ -275,8 +275,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse TransferFrom(string authorization, string name, Erc721Request erc721Request);
+        /// <returns>TransactionAPIResponse</returns>
+        TransactionAPIResponse TransferFrom(string authorization, string name, Erc721Request erc721Request);
 
         /// <summary>
         /// 
@@ -288,8 +288,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> TransferFromWithHttpInfo(string authorization, string name, Erc721Request erc721Request);
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        ApiResponse<TransactionAPIResponse> TransferFromWithHttpInfo(string authorization, string name, Erc721Request erc721Request);
         #endregion Synchronous Operations
     }
 
@@ -310,8 +310,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> ApproveAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of TransactionAPIResponse</returns>
+        System.Threading.Tasks.Task<TransactionAPIResponse> ApproveAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -324,8 +324,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> ApproveWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransactionAPIResponse>> ApproveWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -337,8 +337,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> BalanceOfAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of TransactionAPIResponse</returns>
+        System.Threading.Tasks.Task<TransactionAPIResponse> BalanceOfAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -351,8 +351,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> BalanceOfWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransactionAPIResponse>> BalanceOfWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -364,8 +364,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> GetApprovedAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of TransactionAPIResponse</returns>
+        System.Threading.Tasks.Task<TransactionAPIResponse> GetApprovedAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -378,8 +378,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> GetApprovedWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransactionAPIResponse>> GetApprovedWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -391,8 +391,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> IsApprovedForAllAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of TransactionAPIResponse</returns>
+        System.Threading.Tasks.Task<TransactionAPIResponse> IsApprovedForAllAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -405,8 +405,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> IsApprovedForAllWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransactionAPIResponse>> IsApprovedForAllWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -418,8 +418,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> NameAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of TransactionAPIResponse</returns>
+        System.Threading.Tasks.Task<TransactionAPIResponse> NameAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -432,8 +432,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> NameWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransactionAPIResponse>> NameWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -445,8 +445,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> OwnerOfAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of TransactionAPIResponse</returns>
+        System.Threading.Tasks.Task<TransactionAPIResponse> OwnerOfAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -459,8 +459,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> OwnerOfWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransactionAPIResponse>> OwnerOfWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -472,8 +472,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> SafeTransferFromAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of TransactionAPIResponse</returns>
+        System.Threading.Tasks.Task<TransactionAPIResponse> SafeTransferFromAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -486,8 +486,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> SafeTransferFromWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransactionAPIResponse>> SafeTransferFromWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -499,8 +499,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> SetApprovalForAllAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of TransactionAPIResponse</returns>
+        System.Threading.Tasks.Task<TransactionAPIResponse> SetApprovalForAllAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -513,8 +513,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> SetApprovalForAllWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransactionAPIResponse>> SetApprovalForAllWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -526,8 +526,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> SymbolAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of TransactionAPIResponse</returns>
+        System.Threading.Tasks.Task<TransactionAPIResponse> SymbolAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -540,8 +540,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> SymbolWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransactionAPIResponse>> SymbolWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -553,8 +553,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> TokenUriAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of TransactionAPIResponse</returns>
+        System.Threading.Tasks.Task<TransactionAPIResponse> TokenUriAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -567,8 +567,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> TokenUriWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransactionAPIResponse>> TokenUriWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -580,8 +580,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> TransferAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of TransactionAPIResponse</returns>
+        System.Threading.Tasks.Task<TransactionAPIResponse> TransferAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -594,8 +594,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> TransferWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransactionAPIResponse>> TransferWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -607,8 +607,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> TransferFromAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of TransactionAPIResponse</returns>
+        System.Threading.Tasks.Task<TransactionAPIResponse> TransferFromAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -621,8 +621,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> TransferFromWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransactionAPIResponse>> TransferFromWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -774,10 +774,10 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse Approve(string authorization, string name, Erc721Request erc721Request)
+        /// <returns>TransactionAPIResponse</returns>
+        public TransactionAPIResponse Approve(string authorization, string name, Erc721Request erc721Request)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = ApproveWithHttpInfo(authorization, name, erc721Request);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = ApproveWithHttpInfo(authorization, name, erc721Request);
             return localVarResponse.Data;
         }
 
@@ -788,8 +788,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> ApproveWithHttpInfo(string authorization, string name, Erc721Request erc721Request)
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> ApproveWithHttpInfo(string authorization, string name, Erc721Request erc721Request)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -836,7 +836,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<AccountControllerResponse>("/erc721/{name}/approve", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<TransactionAPIResponse>("/erc721/{name}/approve", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -855,14 +855,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> ApproveAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of TransactionAPIResponse</returns>
+        public async System.Threading.Tasks.Task<TransactionAPIResponse> ApproveAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = ApproveWithHttpInfoAsync(authorization, name, erc721Request, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -875,8 +875,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> ApproveWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse>> ApproveWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -926,7 +926,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/erc721/{name}/approve", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.PostAsync<TransactionAPIResponse>("/erc721/{name}/approve", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);
@@ -950,10 +950,10 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse BalanceOf(string authorization, string name, Erc721Request erc721Request)
+        /// <returns>TransactionAPIResponse</returns>
+        public TransactionAPIResponse BalanceOf(string authorization, string name, Erc721Request erc721Request)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = BalanceOfWithHttpInfo(authorization, name, erc721Request);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = BalanceOfWithHttpInfo(authorization, name, erc721Request);
             return localVarResponse.Data;
         }
 
@@ -964,8 +964,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> BalanceOfWithHttpInfo(string authorization, string name, Erc721Request erc721Request)
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> BalanceOfWithHttpInfo(string authorization, string name, Erc721Request erc721Request)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -1012,7 +1012,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<AccountControllerResponse>("/erc721/{name}/balance-of", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<TransactionAPIResponse>("/erc721/{name}/balance-of", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -1031,14 +1031,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> BalanceOfAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of TransactionAPIResponse</returns>
+        public async System.Threading.Tasks.Task<TransactionAPIResponse> BalanceOfAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = BalanceOfWithHttpInfoAsync(authorization, name, erc721Request, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -1051,8 +1051,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> BalanceOfWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse>> BalanceOfWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -1102,7 +1102,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/erc721/{name}/balance-of", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.PostAsync<TransactionAPIResponse>("/erc721/{name}/balance-of", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);
@@ -1126,10 +1126,10 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse GetApproved(string authorization, string name, Erc721Request erc721Request)
+        /// <returns>TransactionAPIResponse</returns>
+        public TransactionAPIResponse GetApproved(string authorization, string name, Erc721Request erc721Request)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = GetApprovedWithHttpInfo(authorization, name, erc721Request);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = GetApprovedWithHttpInfo(authorization, name, erc721Request);
             return localVarResponse.Data;
         }
 
@@ -1140,8 +1140,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> GetApprovedWithHttpInfo(string authorization, string name, Erc721Request erc721Request)
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> GetApprovedWithHttpInfo(string authorization, string name, Erc721Request erc721Request)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -1188,7 +1188,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<AccountControllerResponse>("/erc721/{name}/get-approved", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<TransactionAPIResponse>("/erc721/{name}/get-approved", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -1207,14 +1207,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> GetApprovedAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of TransactionAPIResponse</returns>
+        public async System.Threading.Tasks.Task<TransactionAPIResponse> GetApprovedAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = GetApprovedWithHttpInfoAsync(authorization, name, erc721Request, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -1227,8 +1227,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> GetApprovedWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse>> GetApprovedWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -1278,7 +1278,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/erc721/{name}/get-approved", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.PostAsync<TransactionAPIResponse>("/erc721/{name}/get-approved", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);
@@ -1302,10 +1302,10 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse IsApprovedForAll(string authorization, string name, Erc721Request erc721Request)
+        /// <returns>TransactionAPIResponse</returns>
+        public TransactionAPIResponse IsApprovedForAll(string authorization, string name, Erc721Request erc721Request)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = IsApprovedForAllWithHttpInfo(authorization, name, erc721Request);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = IsApprovedForAllWithHttpInfo(authorization, name, erc721Request);
             return localVarResponse.Data;
         }
 
@@ -1316,8 +1316,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> IsApprovedForAllWithHttpInfo(string authorization, string name, Erc721Request erc721Request)
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> IsApprovedForAllWithHttpInfo(string authorization, string name, Erc721Request erc721Request)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -1364,7 +1364,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<AccountControllerResponse>("/erc721/{name}/is-approved-for-all", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<TransactionAPIResponse>("/erc721/{name}/is-approved-for-all", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -1383,14 +1383,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> IsApprovedForAllAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of TransactionAPIResponse</returns>
+        public async System.Threading.Tasks.Task<TransactionAPIResponse> IsApprovedForAllAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = IsApprovedForAllWithHttpInfoAsync(authorization, name, erc721Request, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -1403,8 +1403,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> IsApprovedForAllWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse>> IsApprovedForAllWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -1454,7 +1454,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/erc721/{name}/is-approved-for-all", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.PostAsync<TransactionAPIResponse>("/erc721/{name}/is-approved-for-all", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);
@@ -1478,10 +1478,10 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse Name(string authorization, string name, Erc721Request erc721Request)
+        /// <returns>TransactionAPIResponse</returns>
+        public TransactionAPIResponse Name(string authorization, string name, Erc721Request erc721Request)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = NameWithHttpInfo(authorization, name, erc721Request);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = NameWithHttpInfo(authorization, name, erc721Request);
             return localVarResponse.Data;
         }
 
@@ -1492,8 +1492,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> NameWithHttpInfo(string authorization, string name, Erc721Request erc721Request)
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> NameWithHttpInfo(string authorization, string name, Erc721Request erc721Request)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -1540,7 +1540,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<AccountControllerResponse>("/erc721/{name}/name", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<TransactionAPIResponse>("/erc721/{name}/name", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -1559,14 +1559,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> NameAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of TransactionAPIResponse</returns>
+        public async System.Threading.Tasks.Task<TransactionAPIResponse> NameAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = NameWithHttpInfoAsync(authorization, name, erc721Request, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -1579,8 +1579,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> NameWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse>> NameWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -1630,7 +1630,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/erc721/{name}/name", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.PostAsync<TransactionAPIResponse>("/erc721/{name}/name", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);
@@ -1654,10 +1654,10 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse OwnerOf(string authorization, string name, Erc721Request erc721Request)
+        /// <returns>TransactionAPIResponse</returns>
+        public TransactionAPIResponse OwnerOf(string authorization, string name, Erc721Request erc721Request)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = OwnerOfWithHttpInfo(authorization, name, erc721Request);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = OwnerOfWithHttpInfo(authorization, name, erc721Request);
             return localVarResponse.Data;
         }
 
@@ -1668,8 +1668,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> OwnerOfWithHttpInfo(string authorization, string name, Erc721Request erc721Request)
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> OwnerOfWithHttpInfo(string authorization, string name, Erc721Request erc721Request)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -1716,7 +1716,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<AccountControllerResponse>("/erc721/{name}/owner-of", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<TransactionAPIResponse>("/erc721/{name}/owner-of", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -1735,14 +1735,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> OwnerOfAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of TransactionAPIResponse</returns>
+        public async System.Threading.Tasks.Task<TransactionAPIResponse> OwnerOfAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = OwnerOfWithHttpInfoAsync(authorization, name, erc721Request, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -1755,8 +1755,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> OwnerOfWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse>> OwnerOfWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -1806,7 +1806,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/erc721/{name}/owner-of", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.PostAsync<TransactionAPIResponse>("/erc721/{name}/owner-of", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);
@@ -1830,10 +1830,10 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse SafeTransferFrom(string authorization, string name, Erc721Request erc721Request)
+        /// <returns>TransactionAPIResponse</returns>
+        public TransactionAPIResponse SafeTransferFrom(string authorization, string name, Erc721Request erc721Request)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = SafeTransferFromWithHttpInfo(authorization, name, erc721Request);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = SafeTransferFromWithHttpInfo(authorization, name, erc721Request);
             return localVarResponse.Data;
         }
 
@@ -1844,8 +1844,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> SafeTransferFromWithHttpInfo(string authorization, string name, Erc721Request erc721Request)
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> SafeTransferFromWithHttpInfo(string authorization, string name, Erc721Request erc721Request)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -1892,7 +1892,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<AccountControllerResponse>("/erc721/{name}/safe-transfer-from", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<TransactionAPIResponse>("/erc721/{name}/safe-transfer-from", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -1911,14 +1911,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> SafeTransferFromAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of TransactionAPIResponse</returns>
+        public async System.Threading.Tasks.Task<TransactionAPIResponse> SafeTransferFromAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = SafeTransferFromWithHttpInfoAsync(authorization, name, erc721Request, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -1931,8 +1931,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> SafeTransferFromWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse>> SafeTransferFromWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -1982,7 +1982,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/erc721/{name}/safe-transfer-from", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.PostAsync<TransactionAPIResponse>("/erc721/{name}/safe-transfer-from", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);
@@ -2006,10 +2006,10 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse SetApprovalForAll(string authorization, string name, Erc721Request erc721Request)
+        /// <returns>TransactionAPIResponse</returns>
+        public TransactionAPIResponse SetApprovalForAll(string authorization, string name, Erc721Request erc721Request)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = SetApprovalForAllWithHttpInfo(authorization, name, erc721Request);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = SetApprovalForAllWithHttpInfo(authorization, name, erc721Request);
             return localVarResponse.Data;
         }
 
@@ -2020,8 +2020,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> SetApprovalForAllWithHttpInfo(string authorization, string name, Erc721Request erc721Request)
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> SetApprovalForAllWithHttpInfo(string authorization, string name, Erc721Request erc721Request)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -2068,7 +2068,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<AccountControllerResponse>("/erc721/{name}/set-approval-for-all", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<TransactionAPIResponse>("/erc721/{name}/set-approval-for-all", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -2087,14 +2087,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> SetApprovalForAllAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of TransactionAPIResponse</returns>
+        public async System.Threading.Tasks.Task<TransactionAPIResponse> SetApprovalForAllAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = SetApprovalForAllWithHttpInfoAsync(authorization, name, erc721Request, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -2107,8 +2107,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> SetApprovalForAllWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse>> SetApprovalForAllWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -2158,7 +2158,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/erc721/{name}/set-approval-for-all", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.PostAsync<TransactionAPIResponse>("/erc721/{name}/set-approval-for-all", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);
@@ -2182,10 +2182,10 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse Symbol(string authorization, string name, Erc721Request erc721Request)
+        /// <returns>TransactionAPIResponse</returns>
+        public TransactionAPIResponse Symbol(string authorization, string name, Erc721Request erc721Request)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = SymbolWithHttpInfo(authorization, name, erc721Request);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = SymbolWithHttpInfo(authorization, name, erc721Request);
             return localVarResponse.Data;
         }
 
@@ -2196,8 +2196,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> SymbolWithHttpInfo(string authorization, string name, Erc721Request erc721Request)
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> SymbolWithHttpInfo(string authorization, string name, Erc721Request erc721Request)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -2244,7 +2244,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<AccountControllerResponse>("/erc721/{name}/symbol", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<TransactionAPIResponse>("/erc721/{name}/symbol", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -2263,14 +2263,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> SymbolAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of TransactionAPIResponse</returns>
+        public async System.Threading.Tasks.Task<TransactionAPIResponse> SymbolAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = SymbolWithHttpInfoAsync(authorization, name, erc721Request, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -2283,8 +2283,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> SymbolWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse>> SymbolWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -2334,7 +2334,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/erc721/{name}/symbol", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.PostAsync<TransactionAPIResponse>("/erc721/{name}/symbol", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);
@@ -2358,10 +2358,10 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse TokenUri(string authorization, string name, Erc721Request erc721Request)
+        /// <returns>TransactionAPIResponse</returns>
+        public TransactionAPIResponse TokenUri(string authorization, string name, Erc721Request erc721Request)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = TokenUriWithHttpInfo(authorization, name, erc721Request);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = TokenUriWithHttpInfo(authorization, name, erc721Request);
             return localVarResponse.Data;
         }
 
@@ -2372,8 +2372,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> TokenUriWithHttpInfo(string authorization, string name, Erc721Request erc721Request)
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> TokenUriWithHttpInfo(string authorization, string name, Erc721Request erc721Request)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -2420,7 +2420,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<AccountControllerResponse>("/erc721/{name}/token-uri", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<TransactionAPIResponse>("/erc721/{name}/token-uri", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -2439,14 +2439,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> TokenUriAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of TransactionAPIResponse</returns>
+        public async System.Threading.Tasks.Task<TransactionAPIResponse> TokenUriAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = TokenUriWithHttpInfoAsync(authorization, name, erc721Request, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -2459,8 +2459,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> TokenUriWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse>> TokenUriWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -2510,7 +2510,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/erc721/{name}/token-uri", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.PostAsync<TransactionAPIResponse>("/erc721/{name}/token-uri", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);
@@ -2534,10 +2534,10 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse Transfer(string authorization, string name, Erc721Request erc721Request)
+        /// <returns>TransactionAPIResponse</returns>
+        public TransactionAPIResponse Transfer(string authorization, string name, Erc721Request erc721Request)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = TransferWithHttpInfo(authorization, name, erc721Request);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = TransferWithHttpInfo(authorization, name, erc721Request);
             return localVarResponse.Data;
         }
 
@@ -2548,8 +2548,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> TransferWithHttpInfo(string authorization, string name, Erc721Request erc721Request)
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> TransferWithHttpInfo(string authorization, string name, Erc721Request erc721Request)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -2596,7 +2596,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<AccountControllerResponse>("/erc721/{name}/transfer", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<TransactionAPIResponse>("/erc721/{name}/transfer", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -2615,14 +2615,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> TransferAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of TransactionAPIResponse</returns>
+        public async System.Threading.Tasks.Task<TransactionAPIResponse> TransferAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = TransferWithHttpInfoAsync(authorization, name, erc721Request, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -2635,8 +2635,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> TransferWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse>> TransferWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -2686,7 +2686,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/erc721/{name}/transfer", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.PostAsync<TransactionAPIResponse>("/erc721/{name}/transfer", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);
@@ -2710,10 +2710,10 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse TransferFrom(string authorization, string name, Erc721Request erc721Request)
+        /// <returns>TransactionAPIResponse</returns>
+        public TransactionAPIResponse TransferFrom(string authorization, string name, Erc721Request erc721Request)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = TransferFromWithHttpInfo(authorization, name, erc721Request);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = TransferFromWithHttpInfo(authorization, name, erc721Request);
             return localVarResponse.Data;
         }
 
@@ -2724,8 +2724,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> TransferFromWithHttpInfo(string authorization, string name, Erc721Request erc721Request)
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> TransferFromWithHttpInfo(string authorization, string name, Erc721Request erc721Request)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -2772,7 +2772,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<AccountControllerResponse>("/erc721/{name}/transfer-from", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<TransactionAPIResponse>("/erc721/{name}/transfer-from", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -2791,14 +2791,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> TransferFromAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of TransactionAPIResponse</returns>
+        public async System.Threading.Tasks.Task<TransactionAPIResponse> TransferFromAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = TransferFromWithHttpInfoAsync(authorization, name, erc721Request, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -2811,8 +2811,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="erc721Request"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> TransferFromWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse>> TransferFromWithHttpInfoAsync(string authorization, string name, Erc721Request erc721Request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -2862,7 +2862,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/erc721/{name}/transfer-from", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.PostAsync<TransactionAPIResponse>("/erc721/{name}/transfer-from", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);

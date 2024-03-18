@@ -59,7 +59,7 @@ namespace com.usemoon.MoonSDKExample
         async void Start()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.ApiKey.Add("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -76,7 +76,7 @@ namespace com.usemoon.MoonSDKExample
 
             try
             {
-                AccountControllerResponse result = await apiInstance.BorrowAsync(authorization, name, aaveInput);
+                TransactionAPIResponse result = await apiInstance.BorrowAsync(authorization, name, aaveInput);
                 Debug.Log(result);
                 Debug.Log("Done!");
             }
@@ -95,7 +95,7 @@ namespace com.usemoon.MoonSDKExample
 <a id="documentation-for-api-endpoints"></a>
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://vault-api.usemoon.ai*
+All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -186,14 +186,6 @@ Class | Method | HTTP request | Description
 *OnramperApi* | [**OnRamperGetSupportedOnRampsAll**](OnramperApi.md#onrampergetsupportedonrampsall) | **GET** /onramper/onramps | 
 *OnramperApi* | [**OnRamperGetSupportedPaymentTypes**](OnramperApi.md#onrampergetsupportedpaymenttypes) | **GET** /onramper/payment-types | 
 *OnramperApi* | [**OnRamperGetSupportedPaymentTypesFiat**](OnramperApi.md#onrampergetsupportedpaymenttypesfiat) | **GET** /onramper/payment-types/fiat | 
-*PaymentApi* | [**MoralisWebhook**](PaymentApi.md#moraliswebhook) | **POST** /payment/webhook/{id} | 
-*PaymentApi* | [**PaymentCreatePaymentIntent**](PaymentApi.md#paymentcreatepaymentintent) | **POST** /payment | 
-*PaymentApi* | [**PaymentDeletePaymentIntent**](PaymentApi.md#paymentdeletepaymentintent) | **DELETE** /payment/{id} | 
-*PaymentApi* | [**PaymentGetAllPaymentIntents**](PaymentApi.md#paymentgetallpaymentintents) | **GET** /payment | 
-*PaymentApi* | [**PaymentGetAvailableChains**](PaymentApi.md#paymentgetavailablechains) | **GET** /payment/chains | 
-*PaymentApi* | [**PaymentGetPaymentIntent**](PaymentApi.md#paymentgetpaymentintent) | **GET** /payment/{id} | 
-*PaymentApi* | [**PaymentUpdatePaymentIntent**](PaymentApi.md#paymentupdatepaymentintent) | **PUT** /payment/{id} | 
-*PaymentApi* | [**TatumWebhook**](PaymentApi.md#tatumwebhook) | **POST** /payment/tatum/webhook/{id} | 
 *RippleApi* | [**CreateRippleAccount**](RippleApi.md#createrippleaccount) | **POST** /ripple | 
 *RippleApi* | [**GetRippleAccount**](RippleApi.md#getrippleaccount) | **GET** /ripple/{accountName} | 
 *RippleApi* | [**ListRippleAccounts**](RippleApi.md#listrippleaccounts) | **GET** /ripple | 
@@ -220,75 +212,75 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [Model.AaveInput](AaveInput.md)
+ - [Model.AaveReservesAPIResponse](AaveReservesAPIResponse.md)
  - [Model.AaveReservesData](AaveReservesData.md)
- - [Model.AbiInput](AbiInput.md)
- - [Model.AbiItem](AbiItem.md)
- - [Model.AbiOutput](AbiOutput.md)
- - [Model.AccountControllerResponse](AccountControllerResponse.md)
- - [Model.AccountControllerResponseData](AccountControllerResponseData.md)
+ - [Model.AccountAPIResponse](AccountAPIResponse.md)
+ - [Model.AccountData](AccountData.md)
  - [Model.AccountResponse](AccountResponse.md)
  - [Model.AvailablePaymentMethod](AvailablePaymentMethod.md)
+ - [Model.BalanceAPIResponse](BalanceAPIResponse.md)
  - [Model.BalanceResponse](BalanceResponse.md)
+ - [Model.BitcoinAPIResponse](BitcoinAPIResponse.md)
+ - [Model.BitcoinCashAPIResponse](BitcoinCashAPIResponse.md)
  - [Model.BitcoinCashInput](BitcoinCashInput.md)
  - [Model.BitcoinCashTransactionInput](BitcoinCashTransactionInput.md)
+ - [Model.BitcoinCashTransactionOutput](BitcoinCashTransactionOutput.md)
  - [Model.BitcoinInput](BitcoinInput.md)
  - [Model.BitcoinTransactionInput](BitcoinTransactionInput.md)
  - [Model.BitcoinTransactionOutput](BitcoinTransactionOutput.md)
- - [Model.Block](Block.md)
+ - [Model.BroadCastRawTransactionAPIResponse](BroadCastRawTransactionAPIResponse.md)
  - [Model.BroadCastRawTransactionResponse](BroadCastRawTransactionResponse.md)
  - [Model.BroadcastInput](BroadcastInput.md)
  - [Model.ConveyorFinanceControllerResponse](ConveyorFinanceControllerResponse.md)
+ - [Model.CosmosAPIResponse](CosmosAPIResponse.md)
  - [Model.CosmosInput](CosmosInput.md)
  - [Model.CosmosTransactionInput](CosmosTransactionInput.md)
+ - [Model.CosmosTransactionOutput](CosmosTransactionOutput.md)
  - [Model.CreateAccountInput](CreateAccountInput.md)
- - [Model.CreatePaymentIntentInput](CreatePaymentIntentInput.md)
  - [Model.CryptoCurrency](CryptoCurrency.md)
  - [Model.DeployInput](DeployInput.md)
+ - [Model.DogeCoinAPIResponse](DogeCoinAPIResponse.md)
  - [Model.DogeCoinInput](DogeCoinInput.md)
  - [Model.DogeCoinTransactionInput](DogeCoinTransactionInput.md)
- - [Model.ENSReverseResolveResponse](ENSReverseResolveResponse.md)
+ - [Model.DogeCoinTransactionOutput](DogeCoinTransactionOutput.md)
+ - [Model.EnsResolveAPIResponse](EnsResolveAPIResponse.md)
  - [Model.EnsResolveInput](EnsResolveInput.md)
  - [Model.EnsResolveResponse](EnsResolveResponse.md)
+ - [Model.EosAPIResponse](EosAPIResponse.md)
  - [Model.EosInput](EosInput.md)
  - [Model.EosTransactionInput](EosTransactionInput.md)
+ - [Model.EosTransactionOutput](EosTransactionOutput.md)
  - [Model.Erc1155Request](Erc1155Request.md)
- - [Model.Erc1155Response](Erc1155Response.md)
- - [Model.Erc20Response](Erc20Response.md)
  - [Model.Erc721Request](Erc721Request.md)
- - [Model.Erc721Response](Erc721Response.md)
  - [Model.FiatCurrency](FiatCurrency.md)
  - [Model.GetSupportedOnRampsResponse](GetSupportedOnRampsResponse.md)
  - [Model.GetSupportedOnRampsResponseMessageInner](GetSupportedOnRampsResponseMessageInner.md)
  - [Model.GetSupportedOnRampsResponseMessageInnerIcons](GetSupportedOnRampsResponseMessageInnerIcons.md)
  - [Model.GetSupportedOnRampsResponseMessageInnerIconsPng](GetSupportedOnRampsResponseMessageInnerIconsPng.md)
  - [Model.GetSwapDto](GetSwapDto.md)
- - [Model.IERC20Approval](IERC20Approval.md)
- - [Model.IERC20Transfer](IERC20Transfer.md)
- - [Model.INFTApproval](INFTApproval.md)
- - [Model.INFTApprovalERC1155](INFTApprovalERC1155.md)
- - [Model.INFTApprovalERC721](INFTApprovalERC721.md)
- - [Model.INFTTransfer](INFTTransfer.md)
- - [Model.INativeBalance](INativeBalance.md)
- - [Model.IOldNFTApproval](IOldNFTApproval.md)
- - [Model.IWebhook](IWebhook.md)
  - [Model.InputBody](InputBody.md)
- - [Model.InternalTransaction](InternalTransaction.md)
+ - [Model.LitecoinAPIResponse](LitecoinAPIResponse.md)
  - [Model.LitecoinInput](LitecoinInput.md)
  - [Model.LitecoinTransactionInput](LitecoinTransactionInput.md)
- - [Model.Log](Log.md)
+ - [Model.LitecoinTransactionOutput](LitecoinTransactionOutput.md)
  - [Model.Message](Message.md)
+ - [Model.NonceAPIResponse](NonceAPIResponse.md)
  - [Model.NonceResponse](NonceResponse.md)
- - [Model.PaymentIntentResponse](PaymentIntentResponse.md)
  - [Model.PaymentType](PaymentType.md)
  - [Model.PingResponse](PingResponse.md)
  - [Model.Quote](Quote.md)
+ - [Model.RippleAPIResponse](RippleAPIResponse.md)
  - [Model.RippleInput](RippleInput.md)
  - [Model.RippleTransactionInput](RippleTransactionInput.md)
+ - [Model.RippleTransactionOutput](RippleTransactionOutput.md)
  - [Model.SellQuote](SellQuote.md)
  - [Model.SignMessage](SignMessage.md)
+ - [Model.SignMessageAPIResponse](SignMessageAPIResponse.md)
  - [Model.SignTypedData](SignTypedData.md)
+ - [Model.SolanaAPIResponse](SolanaAPIResponse.md)
  - [Model.SolanaInput](SolanaInput.md)
  - [Model.SolanaTransactionInput](SolanaTransactionInput.md)
+ - [Model.SolanaTransactionOutput](SolanaTransactionOutput.md)
  - [Model.SupportedAssetResponse](SupportedAssetResponse.md)
  - [Model.SupportedAssetResponseAssetsInner](SupportedAssetResponseAssetsInner.md)
  - [Model.SupportedCurrenciesResponse](SupportedCurrenciesResponse.md)
@@ -299,6 +291,7 @@ Class | Method | HTTP request | Description
  - [Model.SupportedPaymentTypesMessage](SupportedPaymentTypesMessage.md)
  - [Model.TokenSwapParams](TokenSwapParams.md)
  - [Model.Transaction](Transaction.md)
+ - [Model.TransactionAPIResponse](TransactionAPIResponse.md)
  - [Model.TransactionData](TransactionData.md)
  - [Model.TransactionInput](TransactionInput.md)
  - [Model.TransactionInputMetaData](TransactionInputMetaData.md)
@@ -311,9 +304,10 @@ Class | Method | HTTP request | Description
  - [Model.TransactionResponse](TransactionResponse.md)
  - [Model.TransactionResponseInfo](TransactionResponseInfo.md)
  - [Model.TransactionResponseTx](TransactionResponseTx.md)
- - [Model.TriggerOutput](TriggerOutput.md)
+ - [Model.TronAPIResponse](TronAPIResponse.md)
  - [Model.TronInput](TronInput.md)
  - [Model.TronTransactionInput](TronTransactionInput.md)
+ - [Model.TronTransactionOutput](TronTransactionOutput.md)
  - [Model.Tx](Tx.md)
  - [Model.UniswapInput](UniswapInput.md)
 

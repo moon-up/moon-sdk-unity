@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// TransactionInputWallet
     /// </summary>
     [DataContract(Name = "TransactionInput_wallet")]
-    public partial class TransactionInputWallet : IEquatable<TransactionInputWallet>
+    public partial class TransactionInputWallet
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TransactionInputWallet" /> class.
@@ -75,52 +75,6 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as TransactionInputWallet);
-        }
-
-        /// <summary>
-        /// Returns true if TransactionInputWallet instances are equal
-        /// </summary>
-        /// <param name="input">Instance of TransactionInputWallet to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(TransactionInputWallet input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Address == input.Address ||
-                    (this.Address != null &&
-                    this.Address.Equals(input.Address))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.Address != null)
-                {
-                    hashCode = (hashCode * 59) + this.Address.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
     }

@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// DeployInput
     /// </summary>
     [DataContract(Name = "DeployInput")]
-    public partial class DeployInput : IEquatable<DeployInput>
+    public partial class DeployInput
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DeployInput" /> class.
@@ -107,79 +107,6 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as DeployInput);
-        }
-
-        /// <summary>
-        /// Returns true if DeployInput instances are equal
-        /// </summary>
-        /// <param name="input">Instance of DeployInput to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(DeployInput input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ChainId == input.ChainId ||
-                    (this.ChainId != null &&
-                    this.ChainId.Equals(input.ChainId))
-                ) && 
-                (
-                    this.Abi == input.Abi ||
-                    (this.Abi != null &&
-                    this.Abi.Equals(input.Abi))
-                ) && 
-                (
-                    this.Bytecode == input.Bytecode ||
-                    (this.Bytecode != null &&
-                    this.Bytecode.Equals(input.Bytecode))
-                ) && 
-                (
-                    this.ConstructorArgs == input.ConstructorArgs ||
-                    (this.ConstructorArgs != null &&
-                    this.ConstructorArgs.Equals(input.ConstructorArgs))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ChainId != null)
-                {
-                    hashCode = (hashCode * 59) + this.ChainId.GetHashCode();
-                }
-                if (this.Abi != null)
-                {
-                    hashCode = (hashCode * 59) + this.Abi.GetHashCode();
-                }
-                if (this.Bytecode != null)
-                {
-                    hashCode = (hashCode * 59) + this.Bytecode.GetHashCode();
-                }
-                if (this.ConstructorArgs != null)
-                {
-                    hashCode = (hashCode * 59) + this.ConstructorArgs.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
     }

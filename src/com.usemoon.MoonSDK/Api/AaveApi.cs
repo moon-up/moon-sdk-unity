@@ -33,8 +33,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse Borrow(string authorization, string name, AaveInput aaveInput);
+        /// <returns>TransactionAPIResponse</returns>
+        TransactionAPIResponse Borrow(string authorization, string name, AaveInput aaveInput);
 
         /// <summary>
         /// 
@@ -46,8 +46,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> BorrowWithHttpInfo(string authorization, string name, AaveInput aaveInput);
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        ApiResponse<TransactionAPIResponse> BorrowWithHttpInfo(string authorization, string name, AaveInput aaveInput);
         /// <summary>
         /// 
         /// </summary>
@@ -55,8 +55,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse Lend(string authorization, string name, AaveInput aaveInput);
+        /// <returns>TransactionAPIResponse</returns>
+        TransactionAPIResponse Lend(string authorization, string name, AaveInput aaveInput);
 
         /// <summary>
         /// 
@@ -68,8 +68,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> LendWithHttpInfo(string authorization, string name, AaveInput aaveInput);
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        ApiResponse<TransactionAPIResponse> LendWithHttpInfo(string authorization, string name, AaveInput aaveInput);
         /// <summary>
         /// 
         /// </summary>
@@ -77,8 +77,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse Repay(string authorization, string name, AaveInput aaveInput);
+        /// <returns>TransactionAPIResponse</returns>
+        TransactionAPIResponse Repay(string authorization, string name, AaveInput aaveInput);
 
         /// <summary>
         /// 
@@ -90,8 +90,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> RepayWithHttpInfo(string authorization, string name, AaveInput aaveInput);
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        ApiResponse<TransactionAPIResponse> RepayWithHttpInfo(string authorization, string name, AaveInput aaveInput);
         /// <summary>
         /// 
         /// </summary>
@@ -99,8 +99,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse UserReserveData(string authorization, string name, AaveInput aaveInput);
+        /// <returns>AaveReservesAPIResponse</returns>
+        AaveReservesAPIResponse UserReserveData(string authorization, string name, AaveInput aaveInput);
 
         /// <summary>
         /// 
@@ -112,8 +112,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> UserReserveDataWithHttpInfo(string authorization, string name, AaveInput aaveInput);
+        /// <returns>ApiResponse of AaveReservesAPIResponse</returns>
+        ApiResponse<AaveReservesAPIResponse> UserReserveDataWithHttpInfo(string authorization, string name, AaveInput aaveInput);
         #endregion Synchronous Operations
     }
 
@@ -134,8 +134,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> BorrowAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of TransactionAPIResponse</returns>
+        System.Threading.Tasks.Task<TransactionAPIResponse> BorrowAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -148,8 +148,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> BorrowWithHttpInfoAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransactionAPIResponse>> BorrowWithHttpInfoAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -161,8 +161,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> LendAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of TransactionAPIResponse</returns>
+        System.Threading.Tasks.Task<TransactionAPIResponse> LendAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -175,8 +175,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> LendWithHttpInfoAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransactionAPIResponse>> LendWithHttpInfoAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -188,8 +188,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> RepayAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of TransactionAPIResponse</returns>
+        System.Threading.Tasks.Task<TransactionAPIResponse> RepayAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -202,8 +202,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> RepayWithHttpInfoAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransactionAPIResponse>> RepayWithHttpInfoAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -215,8 +215,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> UserReserveDataAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of AaveReservesAPIResponse</returns>
+        System.Threading.Tasks.Task<AaveReservesAPIResponse> UserReserveDataAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -229,8 +229,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> UserReserveDataWithHttpInfoAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (AaveReservesAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AaveReservesAPIResponse>> UserReserveDataWithHttpInfoAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -382,10 +382,10 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse Borrow(string authorization, string name, AaveInput aaveInput)
+        /// <returns>TransactionAPIResponse</returns>
+        public TransactionAPIResponse Borrow(string authorization, string name, AaveInput aaveInput)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = BorrowWithHttpInfo(authorization, name, aaveInput);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = BorrowWithHttpInfo(authorization, name, aaveInput);
             return localVarResponse.Data;
         }
 
@@ -396,8 +396,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> BorrowWithHttpInfo(string authorization, string name, AaveInput aaveInput)
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> BorrowWithHttpInfo(string authorization, string name, AaveInput aaveInput)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -444,7 +444,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<AccountControllerResponse>("/aave/{name}/borrow", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<TransactionAPIResponse>("/aave/{name}/borrow", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -463,14 +463,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> BorrowAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of TransactionAPIResponse</returns>
+        public async System.Threading.Tasks.Task<TransactionAPIResponse> BorrowAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = BorrowWithHttpInfoAsync(authorization, name, aaveInput, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -483,8 +483,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> BorrowWithHttpInfoAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse>> BorrowWithHttpInfoAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -534,7 +534,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/aave/{name}/borrow", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.PostAsync<TransactionAPIResponse>("/aave/{name}/borrow", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);
@@ -558,10 +558,10 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse Lend(string authorization, string name, AaveInput aaveInput)
+        /// <returns>TransactionAPIResponse</returns>
+        public TransactionAPIResponse Lend(string authorization, string name, AaveInput aaveInput)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = LendWithHttpInfo(authorization, name, aaveInput);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = LendWithHttpInfo(authorization, name, aaveInput);
             return localVarResponse.Data;
         }
 
@@ -572,8 +572,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> LendWithHttpInfo(string authorization, string name, AaveInput aaveInput)
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> LendWithHttpInfo(string authorization, string name, AaveInput aaveInput)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -620,7 +620,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<AccountControllerResponse>("/aave/{name}/lend", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<TransactionAPIResponse>("/aave/{name}/lend", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -639,14 +639,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> LendAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of TransactionAPIResponse</returns>
+        public async System.Threading.Tasks.Task<TransactionAPIResponse> LendAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = LendWithHttpInfoAsync(authorization, name, aaveInput, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -659,8 +659,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> LendWithHttpInfoAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse>> LendWithHttpInfoAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -710,7 +710,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/aave/{name}/lend", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.PostAsync<TransactionAPIResponse>("/aave/{name}/lend", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);
@@ -734,10 +734,10 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse Repay(string authorization, string name, AaveInput aaveInput)
+        /// <returns>TransactionAPIResponse</returns>
+        public TransactionAPIResponse Repay(string authorization, string name, AaveInput aaveInput)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = RepayWithHttpInfo(authorization, name, aaveInput);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = RepayWithHttpInfo(authorization, name, aaveInput);
             return localVarResponse.Data;
         }
 
@@ -748,8 +748,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> RepayWithHttpInfo(string authorization, string name, AaveInput aaveInput)
+        /// <returns>ApiResponse of TransactionAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> RepayWithHttpInfo(string authorization, string name, AaveInput aaveInput)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -796,7 +796,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<AccountControllerResponse>("/aave/{name}/repay", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<TransactionAPIResponse>("/aave/{name}/repay", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -815,14 +815,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> RepayAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of TransactionAPIResponse</returns>
+        public async System.Threading.Tasks.Task<TransactionAPIResponse> RepayAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = RepayWithHttpInfoAsync(authorization, name, aaveInput, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -835,8 +835,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> RepayWithHttpInfoAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (TransactionAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<TransactionAPIResponse>> RepayWithHttpInfoAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -886,7 +886,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/aave/{name}/repay", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.PostAsync<TransactionAPIResponse>("/aave/{name}/repay", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);
@@ -910,10 +910,10 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse UserReserveData(string authorization, string name, AaveInput aaveInput)
+        /// <returns>AaveReservesAPIResponse</returns>
+        public AaveReservesAPIResponse UserReserveData(string authorization, string name, AaveInput aaveInput)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = UserReserveDataWithHttpInfo(authorization, name, aaveInput);
+            com.usemoon.MoonSDK.Client.ApiResponse<AaveReservesAPIResponse> localVarResponse = UserReserveDataWithHttpInfo(authorization, name, aaveInput);
             return localVarResponse.Data;
         }
 
@@ -924,8 +924,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> UserReserveDataWithHttpInfo(string authorization, string name, AaveInput aaveInput)
+        /// <returns>ApiResponse of AaveReservesAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<AaveReservesAPIResponse> UserReserveDataWithHttpInfo(string authorization, string name, AaveInput aaveInput)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -972,7 +972,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<AccountControllerResponse>("/aave/{name}/user-reserve-data", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<AaveReservesAPIResponse>("/aave/{name}/user-reserve-data", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -991,14 +991,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> UserReserveDataAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of AaveReservesAPIResponse</returns>
+        public async System.Threading.Tasks.Task<AaveReservesAPIResponse> UserReserveDataAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = UserReserveDataWithHttpInfoAsync(authorization, name, aaveInput, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<AaveReservesAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<AaveReservesAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -1011,8 +1011,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="name"></param>
         /// <param name="aaveInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> UserReserveDataWithHttpInfoAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (AaveReservesAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AaveReservesAPIResponse>> UserReserveDataWithHttpInfoAsync(string authorization, string name, AaveInput aaveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -1062,7 +1062,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/aave/{name}/user-reserve-data", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.PostAsync<AaveReservesAPIResponse>("/aave/{name}/user-reserve-data", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);

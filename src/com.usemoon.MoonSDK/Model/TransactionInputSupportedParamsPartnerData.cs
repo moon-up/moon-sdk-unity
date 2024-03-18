@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// TransactionInputSupportedParamsPartnerData
     /// </summary>
     [DataContract(Name = "TransactionInput_supportedParams_partnerData")]
-    public partial class TransactionInputSupportedParamsPartnerData : IEquatable<TransactionInputSupportedParamsPartnerData>
+    public partial class TransactionInputSupportedParamsPartnerData
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TransactionInputSupportedParamsPartnerData" /> class.
@@ -75,52 +75,6 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as TransactionInputSupportedParamsPartnerData);
-        }
-
-        /// <summary>
-        /// Returns true if TransactionInputSupportedParamsPartnerData instances are equal
-        /// </summary>
-        /// <param name="input">Instance of TransactionInputSupportedParamsPartnerData to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(TransactionInputSupportedParamsPartnerData input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.RedirectUrl == input.RedirectUrl ||
-                    (this.RedirectUrl != null &&
-                    this.RedirectUrl.Equals(input.RedirectUrl))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.RedirectUrl != null)
-                {
-                    hashCode = (hashCode * 59) + this.RedirectUrl.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
     }

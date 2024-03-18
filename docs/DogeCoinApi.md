@@ -1,6 +1,6 @@
 # com.usemoon.MoonSDK.Api.DogeCoinApi
 
-All URIs are relative to *https://vault-api.usemoon.ai*
+All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -11,7 +11,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 
 <a id="createdogecoinaccount"></a>
 # **CreateDogeCoinAccount**
-> AccountControllerResponse CreateDogeCoinAccount (string authorization, DogeCoinInput dogeCoinInput)
+> AccountAPIResponse CreateDogeCoinAccount (string authorization, DogeCoinInput dogeCoinInput)
 
 
 
@@ -30,7 +30,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -46,7 +46,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.CreateDogeCoinAccount(authorization, dogeCoinInput);
+                AccountAPIResponse result = apiInstance.CreateDogeCoinAccount(authorization, dogeCoinInput);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -66,7 +66,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.CreateDogeCoinAccountWithHttpInfo(authorization, dogeCoinInput);
+    ApiResponse<AccountAPIResponse> response = apiInstance.CreateDogeCoinAccountWithHttpInfo(authorization, dogeCoinInput);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -88,7 +88,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**AccountAPIResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -109,7 +109,7 @@ catch (ApiException e)
 
 <a id="getdogecoinaccount"></a>
 # **GetDogeCoinAccount**
-> AccountControllerResponse GetDogeCoinAccount (string authorization, string accountName)
+> AccountAPIResponse GetDogeCoinAccount (string authorization, string accountName)
 
 
 
@@ -128,7 +128,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -144,7 +144,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.GetDogeCoinAccount(authorization, accountName);
+                AccountAPIResponse result = apiInstance.GetDogeCoinAccount(authorization, accountName);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -164,7 +164,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.GetDogeCoinAccountWithHttpInfo(authorization, accountName);
+    ApiResponse<AccountAPIResponse> response = apiInstance.GetDogeCoinAccountWithHttpInfo(authorization, accountName);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -186,7 +186,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**AccountAPIResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -207,7 +207,7 @@ catch (ApiException e)
 
 <a id="listdogecoinaccounts"></a>
 # **ListDogeCoinAccounts**
-> AccountControllerResponse ListDogeCoinAccounts (string authorization)
+> AccountAPIResponse ListDogeCoinAccounts (string authorization)
 
 
 
@@ -226,7 +226,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -241,7 +241,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.ListDogeCoinAccounts(authorization);
+                AccountAPIResponse result = apiInstance.ListDogeCoinAccounts(authorization);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -261,7 +261,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.ListDogeCoinAccountsWithHttpInfo(authorization);
+    ApiResponse<AccountAPIResponse> response = apiInstance.ListDogeCoinAccountsWithHttpInfo(authorization);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -282,7 +282,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**AccountAPIResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -303,7 +303,7 @@ catch (ApiException e)
 
 <a id="signdogecointransaction"></a>
 # **SignDogeCoinTransaction**
-> AccountControllerResponse SignDogeCoinTransaction (string authorization, string accountName, DogeCoinTransactionInput dogeCoinTransactionInput)
+> DogeCoinAPIResponse SignDogeCoinTransaction (string authorization, string accountName, DogeCoinTransactionInput dogeCoinTransactionInput)
 
 
 
@@ -322,7 +322,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -339,7 +339,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.SignDogeCoinTransaction(authorization, accountName, dogeCoinTransactionInput);
+                DogeCoinAPIResponse result = apiInstance.SignDogeCoinTransaction(authorization, accountName, dogeCoinTransactionInput);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -359,7 +359,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.SignDogeCoinTransactionWithHttpInfo(authorization, accountName, dogeCoinTransactionInput);
+    ApiResponse<DogeCoinAPIResponse> response = apiInstance.SignDogeCoinTransactionWithHttpInfo(authorization, accountName, dogeCoinTransactionInput);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -382,7 +382,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**DogeCoinAPIResponse**](DogeCoinAPIResponse.md)
 
 ### Authorization
 

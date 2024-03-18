@@ -1,6 +1,6 @@
 # com.usemoon.MoonSDK.Api.LitecoinApi
 
-All URIs are relative to *https://vault-api.usemoon.ai*
+All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -11,7 +11,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 
 <a id="createlitecoinaccount"></a>
 # **CreateLitecoinAccount**
-> AccountControllerResponse CreateLitecoinAccount (string authorization, LitecoinInput litecoinInput)
+> AccountAPIResponse CreateLitecoinAccount (string authorization, LitecoinInput litecoinInput)
 
 
 
@@ -30,7 +30,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -46,7 +46,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.CreateLitecoinAccount(authorization, litecoinInput);
+                AccountAPIResponse result = apiInstance.CreateLitecoinAccount(authorization, litecoinInput);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -66,7 +66,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.CreateLitecoinAccountWithHttpInfo(authorization, litecoinInput);
+    ApiResponse<AccountAPIResponse> response = apiInstance.CreateLitecoinAccountWithHttpInfo(authorization, litecoinInput);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -88,7 +88,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**AccountAPIResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -109,7 +109,7 @@ catch (ApiException e)
 
 <a id="getlitecoinaccount"></a>
 # **GetLitecoinAccount**
-> AccountControllerResponse GetLitecoinAccount (string authorization, string accountName)
+> AccountAPIResponse GetLitecoinAccount (string authorization, string accountName)
 
 
 
@@ -128,7 +128,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -144,7 +144,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.GetLitecoinAccount(authorization, accountName);
+                AccountAPIResponse result = apiInstance.GetLitecoinAccount(authorization, accountName);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -164,7 +164,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.GetLitecoinAccountWithHttpInfo(authorization, accountName);
+    ApiResponse<AccountAPIResponse> response = apiInstance.GetLitecoinAccountWithHttpInfo(authorization, accountName);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -186,7 +186,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**AccountAPIResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -207,7 +207,7 @@ catch (ApiException e)
 
 <a id="listlitecoinaccounts"></a>
 # **ListLitecoinAccounts**
-> AccountControllerResponse ListLitecoinAccounts (string authorization)
+> AccountAPIResponse ListLitecoinAccounts (string authorization)
 
 
 
@@ -226,7 +226,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -241,7 +241,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.ListLitecoinAccounts(authorization);
+                AccountAPIResponse result = apiInstance.ListLitecoinAccounts(authorization);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -261,7 +261,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.ListLitecoinAccountsWithHttpInfo(authorization);
+    ApiResponse<AccountAPIResponse> response = apiInstance.ListLitecoinAccountsWithHttpInfo(authorization);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -282,7 +282,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**AccountAPIResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -303,7 +303,7 @@ catch (ApiException e)
 
 <a id="signlitecointransaction"></a>
 # **SignLitecoinTransaction**
-> AccountControllerResponse SignLitecoinTransaction (string authorization, string accountName, LitecoinTransactionInput litecoinTransactionInput)
+> LitecoinAPIResponse SignLitecoinTransaction (string authorization, string accountName, LitecoinTransactionInput litecoinTransactionInput)
 
 
 
@@ -322,7 +322,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -339,7 +339,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.SignLitecoinTransaction(authorization, accountName, litecoinTransactionInput);
+                LitecoinAPIResponse result = apiInstance.SignLitecoinTransaction(authorization, accountName, litecoinTransactionInput);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -359,7 +359,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.SignLitecoinTransactionWithHttpInfo(authorization, accountName, litecoinTransactionInput);
+    ApiResponse<LitecoinAPIResponse> response = apiInstance.SignLitecoinTransactionWithHttpInfo(authorization, accountName, litecoinTransactionInput);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -382,7 +382,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**LitecoinAPIResponse**](LitecoinAPIResponse.md)
 
 ### Authorization
 

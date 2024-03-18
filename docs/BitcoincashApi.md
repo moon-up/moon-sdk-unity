@@ -1,6 +1,6 @@
 # com.usemoon.MoonSDK.Api.BitcoincashApi
 
-All URIs are relative to *https://vault-api.usemoon.ai*
+All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -11,7 +11,7 @@ All URIs are relative to *https://vault-api.usemoon.ai*
 
 <a id="createbitcoincashaccount"></a>
 # **CreateBitcoinCashAccount**
-> AccountControllerResponse CreateBitcoinCashAccount (string authorization, BitcoinCashInput bitcoinCashInput)
+> AccountAPIResponse CreateBitcoinCashAccount (string authorization, BitcoinCashInput bitcoinCashInput)
 
 
 
@@ -30,7 +30,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -46,7 +46,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.CreateBitcoinCashAccount(authorization, bitcoinCashInput);
+                AccountAPIResponse result = apiInstance.CreateBitcoinCashAccount(authorization, bitcoinCashInput);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -66,7 +66,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.CreateBitcoinCashAccountWithHttpInfo(authorization, bitcoinCashInput);
+    ApiResponse<AccountAPIResponse> response = apiInstance.CreateBitcoinCashAccountWithHttpInfo(authorization, bitcoinCashInput);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -88,7 +88,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**AccountAPIResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -109,7 +109,7 @@ catch (ApiException e)
 
 <a id="getbitcoincashaccount"></a>
 # **GetBitcoinCashAccount**
-> AccountControllerResponse GetBitcoinCashAccount (string authorization, string accountName)
+> AccountAPIResponse GetBitcoinCashAccount (string authorization, string accountName)
 
 
 
@@ -128,7 +128,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -144,7 +144,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.GetBitcoinCashAccount(authorization, accountName);
+                AccountAPIResponse result = apiInstance.GetBitcoinCashAccount(authorization, accountName);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -164,7 +164,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.GetBitcoinCashAccountWithHttpInfo(authorization, accountName);
+    ApiResponse<AccountAPIResponse> response = apiInstance.GetBitcoinCashAccountWithHttpInfo(authorization, accountName);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -186,7 +186,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**AccountAPIResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -207,7 +207,7 @@ catch (ApiException e)
 
 <a id="listbitcoincashaccounts"></a>
 # **ListBitcoinCashAccounts**
-> AccountControllerResponse ListBitcoinCashAccounts (string authorization)
+> AccountAPIResponse ListBitcoinCashAccounts (string authorization)
 
 
 
@@ -226,7 +226,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -241,7 +241,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.ListBitcoinCashAccounts(authorization);
+                AccountAPIResponse result = apiInstance.ListBitcoinCashAccounts(authorization);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -261,7 +261,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.ListBitcoinCashAccountsWithHttpInfo(authorization);
+    ApiResponse<AccountAPIResponse> response = apiInstance.ListBitcoinCashAccountsWithHttpInfo(authorization);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -282,7 +282,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**AccountAPIResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -303,7 +303,7 @@ catch (ApiException e)
 
 <a id="signbitcoincashtransaction"></a>
 # **SignBitcoinCashTransaction**
-> AccountControllerResponse SignBitcoinCashTransaction (string authorization, string accountName, BitcoinCashTransactionInput bitcoinCashTransactionInput)
+> BitcoinCashAPIResponse SignBitcoinCashTransaction (string authorization, string accountName, BitcoinCashTransactionInput bitcoinCashTransactionInput)
 
 
 
@@ -322,7 +322,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://vault-api.usemoon.ai";
+            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -339,7 +339,7 @@ namespace Example
 
             try
             {
-                AccountControllerResponse result = apiInstance.SignBitcoinCashTransaction(authorization, accountName, bitcoinCashTransactionInput);
+                BitcoinCashAPIResponse result = apiInstance.SignBitcoinCashTransaction(authorization, accountName, bitcoinCashTransactionInput);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -359,7 +359,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<AccountControllerResponse> response = apiInstance.SignBitcoinCashTransactionWithHttpInfo(authorization, accountName, bitcoinCashTransactionInput);
+    ApiResponse<BitcoinCashAPIResponse> response = apiInstance.SignBitcoinCashTransactionWithHttpInfo(authorization, accountName, bitcoinCashTransactionInput);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -382,7 +382,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**BitcoinCashAPIResponse**](BitcoinCashAPIResponse.md)
 
 ### Authorization
 

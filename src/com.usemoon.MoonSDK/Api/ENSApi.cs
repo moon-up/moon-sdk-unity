@@ -32,8 +32,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="ensResolveInput"></param>
-        /// <returns>AccountControllerResponse</returns>
-        AccountControllerResponse Resolve(string authorization, EnsResolveInput ensResolveInput);
+        /// <returns>EnsResolveAPIResponse</returns>
+        EnsResolveAPIResponse Resolve(string authorization, EnsResolveInput ensResolveInput);
 
         /// <summary>
         /// 
@@ -44,8 +44,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="ensResolveInput"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        ApiResponse<AccountControllerResponse> ResolveWithHttpInfo(string authorization, EnsResolveInput ensResolveInput);
+        /// <returns>ApiResponse of EnsResolveAPIResponse</returns>
+        ApiResponse<EnsResolveAPIResponse> ResolveWithHttpInfo(string authorization, EnsResolveInput ensResolveInput);
         #endregion Synchronous Operations
     }
 
@@ -65,8 +65,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="ensResolveInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        System.Threading.Tasks.Task<AccountControllerResponse> ResolveAsync(string authorization, EnsResolveInput ensResolveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of EnsResolveAPIResponse</returns>
+        System.Threading.Tasks.Task<EnsResolveAPIResponse> ResolveAsync(string authorization, EnsResolveInput ensResolveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -78,8 +78,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="ensResolveInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountControllerResponse>> ResolveWithHttpInfoAsync(string authorization, EnsResolveInput ensResolveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (EnsResolveAPIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EnsResolveAPIResponse>> ResolveWithHttpInfoAsync(string authorization, EnsResolveInput ensResolveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -230,10 +230,10 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="ensResolveInput"></param>
-        /// <returns>AccountControllerResponse</returns>
-        public AccountControllerResponse Resolve(string authorization, EnsResolveInput ensResolveInput)
+        /// <returns>EnsResolveAPIResponse</returns>
+        public EnsResolveAPIResponse Resolve(string authorization, EnsResolveInput ensResolveInput)
         {
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = ResolveWithHttpInfo(authorization, ensResolveInput);
+            com.usemoon.MoonSDK.Client.ApiResponse<EnsResolveAPIResponse> localVarResponse = ResolveWithHttpInfo(authorization, ensResolveInput);
             return localVarResponse.Data;
         }
 
@@ -243,8 +243,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <exception cref="com.usemoon.MoonSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authorization"></param>
         /// <param name="ensResolveInput"></param>
-        /// <returns>ApiResponse of AccountControllerResponse</returns>
-        public com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> ResolveWithHttpInfo(string authorization, EnsResolveInput ensResolveInput)
+        /// <returns>ApiResponse of EnsResolveAPIResponse</returns>
+        public com.usemoon.MoonSDK.Client.ApiResponse<EnsResolveAPIResponse> ResolveWithHttpInfo(string authorization, EnsResolveInput ensResolveInput)
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -286,7 +286,7 @@ namespace com.usemoon.MoonSDK.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<AccountControllerResponse>("/ens/resolve", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<EnsResolveAPIResponse>("/ens/resolve", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -304,14 +304,14 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="ensResolveInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AccountControllerResponse</returns>
-        public async System.Threading.Tasks.Task<AccountControllerResponse> ResolveAsync(string authorization, EnsResolveInput ensResolveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of EnsResolveAPIResponse</returns>
+        public async System.Threading.Tasks.Task<EnsResolveAPIResponse> ResolveAsync(string authorization, EnsResolveInput ensResolveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = ResolveWithHttpInfoAsync(authorization, ensResolveInput, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task.ConfigureAwait(false);
+            com.usemoon.MoonSDK.Client.ApiResponse<EnsResolveAPIResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse> localVarResponse = await task;
+            com.usemoon.MoonSDK.Client.ApiResponse<EnsResolveAPIResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -323,8 +323,8 @@ namespace com.usemoon.MoonSDK.Api
         /// <param name="authorization"></param>
         /// <param name="ensResolveInput"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AccountControllerResponse)</returns>
-        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<AccountControllerResponse>> ResolveWithHttpInfoAsync(string authorization, EnsResolveInput ensResolveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (EnsResolveAPIResponse)</returns>
+        public async System.Threading.Tasks.Task<com.usemoon.MoonSDK.Client.ApiResponse<EnsResolveAPIResponse>> ResolveWithHttpInfoAsync(string authorization, EnsResolveInput ensResolveInput, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authorization' is set
             if (authorization == null)
@@ -369,7 +369,7 @@ namespace com.usemoon.MoonSDK.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.PostAsync<AccountControllerResponse>("/ens/resolve", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.PostAsync<EnsResolveAPIResponse>("/ens/resolve", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);

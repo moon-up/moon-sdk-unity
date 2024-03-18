@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// CryptoCurrency
     /// </summary>
     [DataContract(Name = "CryptoCurrency")]
-    public partial class CryptoCurrency : IEquatable<CryptoCurrency>
+    public partial class CryptoCurrency
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CryptoCurrency" /> class.
@@ -191,125 +191,6 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CryptoCurrency);
-        }
-
-        /// <summary>
-        /// Returns true if CryptoCurrency instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CryptoCurrency to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CryptoCurrency input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.NetworkDisplayName == input.NetworkDisplayName ||
-                    (this.NetworkDisplayName != null &&
-                    this.NetworkDisplayName.Equals(input.NetworkDisplayName))
-                ) && 
-                (
-                    this.Icon == input.Icon ||
-                    (this.Icon != null &&
-                    this.Icon.Equals(input.Icon))
-                ) && 
-                (
-                    this.ChainId == input.ChainId ||
-                    this.ChainId.Equals(input.ChainId)
-                ) && 
-                (
-                    this.Address == input.Address ||
-                    (this.Address != null &&
-                    this.Address.Equals(input.Address))
-                ) && 
-                (
-                    this.Decimals == input.Decimals ||
-                    this.Decimals.Equals(input.Decimals)
-                ) && 
-                (
-                    this.Network == input.Network ||
-                    (this.Network != null &&
-                    this.Network.Equals(input.Network))
-                ) && 
-                (
-                    this.Symbol == input.Symbol ||
-                    (this.Symbol != null &&
-                    this.Symbol.Equals(input.Symbol))
-                ) && 
-                (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
-                ) && 
-                (
-                    this.Code == input.Code ||
-                    (this.Code != null &&
-                    this.Code.Equals(input.Code))
-                ) && 
-                (
-                    this.Id == input.Id ||
-                    (this.Id != null &&
-                    this.Id.Equals(input.Id))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.NetworkDisplayName != null)
-                {
-                    hashCode = (hashCode * 59) + this.NetworkDisplayName.GetHashCode();
-                }
-                if (this.Icon != null)
-                {
-                    hashCode = (hashCode * 59) + this.Icon.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.ChainId.GetHashCode();
-                if (this.Address != null)
-                {
-                    hashCode = (hashCode * 59) + this.Address.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Decimals.GetHashCode();
-                if (this.Network != null)
-                {
-                    hashCode = (hashCode * 59) + this.Network.GetHashCode();
-                }
-                if (this.Symbol != null)
-                {
-                    hashCode = (hashCode * 59) + this.Symbol.GetHashCode();
-                }
-                if (this.Name != null)
-                {
-                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
-                }
-                if (this.Code != null)
-                {
-                    hashCode = (hashCode * 59) + this.Code.GetHashCode();
-                }
-                if (this.Id != null)
-                {
-                    hashCode = (hashCode * 59) + this.Id.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
     }

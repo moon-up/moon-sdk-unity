@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// TransactionRequest
     /// </summary>
     [DataContract(Name = "TransactionRequest")]
-    public partial class TransactionRequest : IEquatable<TransactionRequest>
+    public partial class TransactionRequest
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TransactionRequest" /> class.
@@ -119,106 +119,6 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as TransactionRequest);
-        }
-
-        /// <summary>
-        /// Returns true if TransactionRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of TransactionRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(TransactionRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Nonce == input.Nonce ||
-                    (this.Nonce != null &&
-                    this.Nonce.Equals(input.Nonce))
-                ) && 
-                (
-                    this.Data == input.Data ||
-                    (this.Data != null &&
-                    this.Data.Equals(input.Data))
-                ) && 
-                (
-                    this.Value == input.Value ||
-                    (this.Value != null &&
-                    this.Value.Equals(input.Value))
-                ) && 
-                (
-                    this.To == input.To ||
-                    (this.To != null &&
-                    this.To.Equals(input.To))
-                ) && 
-                (
-                    this.From == input.From ||
-                    (this.From != null &&
-                    this.From.Equals(input.From))
-                ) && 
-                (
-                    this.MaxFeePerGas == input.MaxFeePerGas ||
-                    (this.MaxFeePerGas != null &&
-                    this.MaxFeePerGas.Equals(input.MaxFeePerGas))
-                ) && 
-                (
-                    this.MaxPriorityFeePerGas == input.MaxPriorityFeePerGas ||
-                    (this.MaxPriorityFeePerGas != null &&
-                    this.MaxPriorityFeePerGas.Equals(input.MaxPriorityFeePerGas))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.Nonce != null)
-                {
-                    hashCode = (hashCode * 59) + this.Nonce.GetHashCode();
-                }
-                if (this.Data != null)
-                {
-                    hashCode = (hashCode * 59) + this.Data.GetHashCode();
-                }
-                if (this.Value != null)
-                {
-                    hashCode = (hashCode * 59) + this.Value.GetHashCode();
-                }
-                if (this.To != null)
-                {
-                    hashCode = (hashCode * 59) + this.To.GetHashCode();
-                }
-                if (this.From != null)
-                {
-                    hashCode = (hashCode * 59) + this.From.GetHashCode();
-                }
-                if (this.MaxFeePerGas != null)
-                {
-                    hashCode = (hashCode * 59) + this.MaxFeePerGas.GetHashCode();
-                }
-                if (this.MaxPriorityFeePerGas != null)
-                {
-                    hashCode = (hashCode * 59) + this.MaxPriorityFeePerGas.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
     }

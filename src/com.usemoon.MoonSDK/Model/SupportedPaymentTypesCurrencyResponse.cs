@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// SupportedPaymentTypesCurrencyResponse
     /// </summary>
     [DataContract(Name = "SupportedPaymentTypesCurrencyResponse")]
-    public partial class SupportedPaymentTypesCurrencyResponse : IEquatable<SupportedPaymentTypesCurrencyResponse>
+    public partial class SupportedPaymentTypesCurrencyResponse
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportedPaymentTypesCurrencyResponse" /> class.
@@ -75,52 +75,6 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
-
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as SupportedPaymentTypesCurrencyResponse);
-        }
-
-        /// <summary>
-        /// Returns true if SupportedPaymentTypesCurrencyResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SupportedPaymentTypesCurrencyResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SupportedPaymentTypesCurrencyResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Message == input.Message ||
-                    (this.Message != null &&
-                    this.Message.Equals(input.Message))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.Message != null)
-                {
-                    hashCode = (hashCode * 59) + this.Message.GetHashCode();
-                }
-                return hashCode;
-            }
         }
 
     }
