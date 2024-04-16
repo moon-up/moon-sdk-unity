@@ -1,4 +1,4 @@
-# com.usemoon.MoonSDK.Model.SignMessage
+# Org.OpenAPITools.Model.SignMessage
 
 ## Properties
 

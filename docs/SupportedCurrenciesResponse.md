@@ -1,4 +1,4 @@
-# com.usemoon.MoonSDK.Model.SupportedCurrenciesResponse
+# Org.OpenAPITools.Model.SupportedCurrenciesResponse
 
 ## Properties
 

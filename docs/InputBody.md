@@ -1,4 +1,4 @@
-# com.usemoon.MoonSDK.Model.InputBody
+# Org.OpenAPITools.Model.InputBody
 
 ## Properties
 

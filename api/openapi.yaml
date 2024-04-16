@@ -6,7 +6,7 @@ info:
   title: moon-vault-api
   version: 1.0.0
 servers:
-- url: https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app
+- url: https://beta.usemoon.ai
 paths:
   /oneinch/tokens:
     post:
@@ -1929,80 +1929,6 @@ paths:
       - ApiKeyAuth: []
       tags:
       - Erc20
-  /erc4337/{accountName}/address:
-    post:
-      operationId: GetAddress
-      parameters:
-      - explode: false
-        in: header
-        name: Authorization
-        required: true
-        schema:
-          type: string
-        style: simple
-      - explode: false
-        in: path
-        name: accountName
-        required: true
-        schema:
-          type: string
-        style: simple
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/InputBody'
-        required: true
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/AccountAPIResponse'
-          description: Ok
-      security:
-      - BearerAuth: []
-      - Oauth2: []
-      - ApiKeyAuth: []
-      tags:
-      - Erc4337
-  /erc4337/{accountName}/sign-broadcast-userop-tx:
-    post:
-      operationId: SignBroadcastUserOpTx
-      parameters:
-      - explode: false
-        in: header
-        name: Authorization
-        required: true
-        schema:
-          type: string
-        style: simple
-      - explode: false
-        in: path
-        name: accountName
-        required: true
-        schema:
-          type: string
-        style: simple
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/InputBody'
-        required: true
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/TransactionAPIResponse'
-          description: Ok
-      security:
-      - BearerAuth: []
-      - Oauth2: []
-      - ApiKeyAuth: []
-      tags:
-      - Erc4337
   /erc721/{name}/token-uri:
     post:
       operationId: TokenUri
@@ -3742,17 +3668,88 @@ components:
       required:
       - nonce
       type: object
+    InputBody:
+      additionalProperties: false
+      example:
+        broadcast: true
+        token_ids: token_ids
+        data: data
+        chain_id: chain_id
+        encoding: encoding
+        contract_address: contract_address
+        nonce: nonce
+        input: input
+        approved: true
+        token_id: token_id
+        EOA: true
+        gas: gas
+        to: to
+        value: value
+        gasPrice: gasPrice
+      properties:
+        to:
+          type: string
+        data:
+          type: string
+        input:
+          type: string
+        value:
+          type: string
+        nonce:
+          type: string
+        gas:
+          type: string
+        gasPrice:
+          type: string
+        chain_id:
+          type: string
+        encoding:
+          type: string
+        EOA:
+          type: boolean
+        contract_address:
+          type: string
+        token_id:
+          type: string
+        token_ids:
+          type: string
+        approved:
+          type: boolean
+        broadcast:
+          type: boolean
+      type: object
     NonceAPIResponse:
       additionalProperties: false
       example:
+        address: address
         data:
           nonce: 0.8008281904610115
         success: true
         message: message
+        body:
+          broadcast: true
+          token_ids: token_ids
+          data: data
+          chain_id: chain_id
+          encoding: encoding
+          contract_address: contract_address
+          nonce: nonce
+          input: input
+          approved: true
+          token_id: token_id
+          EOA: true
+          gas: gas
+          to: to
+          value: value
+          gasPrice: gasPrice
       properties:
         success:
           type: boolean
         message:
+          type: string
+        body:
+          $ref: '#/components/schemas/InputBody'
+        address:
           type: string
         data:
           $ref: '#/components/schemas/NonceResponse'
@@ -3773,14 +3770,35 @@ components:
     BalanceAPIResponse:
       additionalProperties: false
       example:
+        address: address
         data:
           balance: balance
         success: true
         message: message
+        body:
+          broadcast: true
+          token_ids: token_ids
+          data: data
+          chain_id: chain_id
+          encoding: encoding
+          contract_address: contract_address
+          nonce: nonce
+          input: input
+          approved: true
+          token_id: token_id
+          EOA: true
+          gas: gas
+          to: to
+          value: value
+          gasPrice: gasPrice
       properties:
         success:
           type: boolean
         message:
+          type: string
+        body:
+          $ref: '#/components/schemas/InputBody'
+        address:
           type: string
         data:
           $ref: '#/components/schemas/BalanceResponse'
@@ -4113,6 +4131,7 @@ components:
     TransactionAPIResponse:
       additionalProperties: false
       example:
+        address: address
         data:
           signed_transaction: signed_transaction
           raw_transaction: raw_transaction
@@ -4242,71 +4261,46 @@ components:
             to: to
             value: value
         success: true
+        signedTx: ""
         message: message
+        body:
+          broadcast: true
+          token_ids: token_ids
+          data: data
+          chain_id: chain_id
+          encoding: encoding
+          contract_address: contract_address
+          nonce: nonce
+          input: input
+          approved: true
+          token_id: token_id
+          EOA: true
+          gas: gas
+          to: to
+          value: value
+          gasPrice: gasPrice
+        transaction_hash: ""
       properties:
         success:
           type: boolean
         message:
           type: string
+        body:
+          $ref: '#/components/schemas/InputBody'
+        address:
+          type: string
+        transaction_hash: {}
+        signedTx: {}
         data:
           $ref: '#/components/schemas/Transaction'
       required:
       - message
       - success
       type: object
-    InputBody:
-      additionalProperties: false
-      example:
-        broadcast: true
-        token_ids: token_ids
-        data: data
-        chain_id: chain_id
-        encoding: encoding
-        contract_address: contract_address
-        nonce: nonce
-        input: input
-        approved: true
-        token_id: token_id
-        EOA: true
-        gas: gas
-        to: to
-        value: value
-        gasPrice: gasPrice
-      properties:
-        to:
-          type: string
-        data:
-          type: string
-        input:
-          type: string
-        value:
-          type: string
-        nonce:
-          type: string
-        gas:
-          type: string
-        gasPrice:
-          type: string
-        chain_id:
-          type: string
-        encoding:
-          type: string
-        EOA:
-          type: boolean
-        contract_address:
-          type: string
-        token_id:
-          type: string
-        token_ids:
-          type: string
-        approved:
-          type: boolean
-        broadcast:
-          type: boolean
-      type: object
     SignMessageAPIResponse:
       additionalProperties: false
       example:
+        address: address
         data:
           signed_transaction: signed_transaction
           raw_transaction: raw_transaction
@@ -4352,10 +4346,30 @@ components:
             value: value
         success: true
         message: message
+        body:
+          broadcast: true
+          token_ids: token_ids
+          data: data
+          chain_id: chain_id
+          encoding: encoding
+          contract_address: contract_address
+          nonce: nonce
+          input: input
+          approved: true
+          token_id: token_id
+          EOA: true
+          gas: gas
+          to: to
+          value: value
+          gasPrice: gasPrice
       properties:
         success:
           type: boolean
         message:
+          type: string
+        body:
+          $ref: '#/components/schemas/InputBody'
+        address:
           type: string
         data:
           $ref: '#/components/schemas/TransactionData'
@@ -4427,6 +4441,7 @@ components:
     AccountAPIResponse:
       additionalProperties: false
       example:
+        address: address
         data:
           data:
             address: address
@@ -4435,10 +4450,30 @@ components:
             - keys
         success: true
         message: message
+        body:
+          broadcast: true
+          token_ids: token_ids
+          data: data
+          chain_id: chain_id
+          encoding: encoding
+          contract_address: contract_address
+          nonce: nonce
+          input: input
+          approved: true
+          token_id: token_id
+          EOA: true
+          gas: gas
+          to: to
+          value: value
+          gasPrice: gasPrice
       properties:
         success:
           type: boolean
         message:
+          type: string
+        body:
+          $ref: '#/components/schemas/InputBody'
+        address:
           type: string
         data:
           $ref: '#/components/schemas/AccountResponse'
@@ -4495,16 +4530,37 @@ components:
     BroadCastRawTransactionAPIResponse:
       additionalProperties: false
       example:
+        address: address
         data:
           data: data
           success: true
           message: message
         success: true
         message: message
+        body:
+          broadcast: true
+          token_ids: token_ids
+          data: data
+          chain_id: chain_id
+          encoding: encoding
+          contract_address: contract_address
+          nonce: nonce
+          input: input
+          approved: true
+          token_id: token_id
+          EOA: true
+          gas: gas
+          to: to
+          value: value
+          gasPrice: gasPrice
       properties:
         success:
           type: boolean
         message:
+          type: string
+        body:
+          $ref: '#/components/schemas/InputBody'
+        address:
           type: string
         data:
           $ref: '#/components/schemas/BroadCastRawTransactionResponse'
@@ -4640,6 +4696,7 @@ components:
     AaveReservesAPIResponse:
       additionalProperties: false
       example:
+        address: address
         data:
           current_borrow_balance: current_borrow_balance
           borrow_rate: borrow_rate
@@ -4653,10 +4710,30 @@ components:
           variable_borrow_index: variable_borrow_index
         success: true
         message: message
+        body:
+          broadcast: true
+          token_ids: token_ids
+          data: data
+          chain_id: chain_id
+          encoding: encoding
+          contract_address: contract_address
+          nonce: nonce
+          input: input
+          approved: true
+          token_id: token_id
+          EOA: true
+          gas: gas
+          to: to
+          value: value
+          gasPrice: gasPrice
       properties:
         success:
           type: boolean
         message:
+          type: string
+        body:
+          $ref: '#/components/schemas/InputBody'
+        address:
           type: string
         data:
           $ref: '#/components/schemas/AaveReservesData'
@@ -4689,15 +4766,36 @@ components:
     BitcoinAPIResponse:
       additionalProperties: false
       example:
+        address: address
         data:
           signedTx: signedTx
           transaction_hash: transaction_hash
         success: true
         message: message
+        body:
+          broadcast: true
+          token_ids: token_ids
+          data: data
+          chain_id: chain_id
+          encoding: encoding
+          contract_address: contract_address
+          nonce: nonce
+          input: input
+          approved: true
+          token_id: token_id
+          EOA: true
+          gas: gas
+          to: to
+          value: value
+          gasPrice: gasPrice
       properties:
         success:
           type: boolean
         message:
+          type: string
+        body:
+          $ref: '#/components/schemas/InputBody'
+        address:
           type: string
         data:
           $ref: '#/components/schemas/BitcoinTransactionOutput'
@@ -4748,15 +4846,36 @@ components:
     BitcoinCashAPIResponse:
       additionalProperties: false
       example:
+        address: address
         data:
           signedTx: signedTx
           transaction_hash: transaction_hash
         success: true
         message: message
+        body:
+          broadcast: true
+          token_ids: token_ids
+          data: data
+          chain_id: chain_id
+          encoding: encoding
+          contract_address: contract_address
+          nonce: nonce
+          input: input
+          approved: true
+          token_id: token_id
+          EOA: true
+          gas: gas
+          to: to
+          value: value
+          gasPrice: gasPrice
       properties:
         success:
           type: boolean
         message:
+          type: string
+        body:
+          $ref: '#/components/schemas/InputBody'
+        address:
           type: string
         data:
           $ref: '#/components/schemas/BitcoinCashTransactionOutput'
@@ -5166,15 +5285,36 @@ components:
     CosmosAPIResponse:
       additionalProperties: false
       example:
+        address: address
         data:
           signedTx: signedTx
           transaction_hash: transaction_hash
         success: true
         message: message
+        body:
+          broadcast: true
+          token_ids: token_ids
+          data: data
+          chain_id: chain_id
+          encoding: encoding
+          contract_address: contract_address
+          nonce: nonce
+          input: input
+          approved: true
+          token_id: token_id
+          EOA: true
+          gas: gas
+          to: to
+          value: value
+          gasPrice: gasPrice
       properties:
         success:
           type: boolean
         message:
+          type: string
+        body:
+          $ref: '#/components/schemas/InputBody'
+        address:
           type: string
         data:
           $ref: '#/components/schemas/CosmosTransactionOutput'
@@ -5225,15 +5365,36 @@ components:
     DogeCoinAPIResponse:
       additionalProperties: false
       example:
+        address: address
         data:
           signedTx: signedTx
           transaction_hash: transaction_hash
         success: true
         message: message
+        body:
+          broadcast: true
+          token_ids: token_ids
+          data: data
+          chain_id: chain_id
+          encoding: encoding
+          contract_address: contract_address
+          nonce: nonce
+          input: input
+          approved: true
+          token_id: token_id
+          EOA: true
+          gas: gas
+          to: to
+          value: value
+          gasPrice: gasPrice
       properties:
         success:
           type: boolean
         message:
+          type: string
+        body:
+          $ref: '#/components/schemas/InputBody'
+        address:
           type: string
         data:
           $ref: '#/components/schemas/DogeCoinTransactionOutput'
@@ -5272,14 +5433,35 @@ components:
     EnsResolveAPIResponse:
       additionalProperties: false
       example:
+        address: address
         data:
           address: address
         success: true
         message: message
+        body:
+          broadcast: true
+          token_ids: token_ids
+          data: data
+          chain_id: chain_id
+          encoding: encoding
+          contract_address: contract_address
+          nonce: nonce
+          input: input
+          approved: true
+          token_id: token_id
+          EOA: true
+          gas: gas
+          to: to
+          value: value
+          gasPrice: gasPrice
       properties:
         success:
           type: boolean
         message:
+          type: string
+        body:
+          $ref: '#/components/schemas/InputBody'
+        address:
           type: string
         data:
           $ref: '#/components/schemas/EnsResolveResponse'
@@ -5326,15 +5508,36 @@ components:
     EosAPIResponse:
       additionalProperties: false
       example:
+        address: address
         data:
           signedTx: signedTx
           transaction_hash: transaction_hash
         success: true
         message: message
+        body:
+          broadcast: true
+          token_ids: token_ids
+          data: data
+          chain_id: chain_id
+          encoding: encoding
+          contract_address: contract_address
+          nonce: nonce
+          input: input
+          approved: true
+          token_id: token_id
+          EOA: true
+          gas: gas
+          to: to
+          value: value
+          gasPrice: gasPrice
       properties:
         success:
           type: boolean
         message:
+          type: string
+        body:
+          $ref: '#/components/schemas/InputBody'
+        address:
           type: string
         data:
           $ref: '#/components/schemas/EosTransactionOutput'
@@ -5485,15 +5688,36 @@ components:
     LitecoinAPIResponse:
       additionalProperties: false
       example:
+        address: address
         data:
           signedTx: signedTx
           transaction_hash: transaction_hash
         success: true
         message: message
+        body:
+          broadcast: true
+          token_ids: token_ids
+          data: data
+          chain_id: chain_id
+          encoding: encoding
+          contract_address: contract_address
+          nonce: nonce
+          input: input
+          approved: true
+          token_id: token_id
+          EOA: true
+          gas: gas
+          to: to
+          value: value
+          gasPrice: gasPrice
       properties:
         success:
           type: boolean
         message:
+          type: string
+        body:
+          $ref: '#/components/schemas/InputBody'
+        address:
           type: string
         data:
           $ref: '#/components/schemas/LitecoinTransactionOutput'
@@ -6057,15 +6281,36 @@ components:
     RippleAPIResponse:
       additionalProperties: false
       example:
+        address: address
         data:
           signedTx: signedTx
           transaction_hash: transaction_hash
         success: true
         message: message
+        body:
+          broadcast: true
+          token_ids: token_ids
+          data: data
+          chain_id: chain_id
+          encoding: encoding
+          contract_address: contract_address
+          nonce: nonce
+          input: input
+          approved: true
+          token_id: token_id
+          EOA: true
+          gas: gas
+          to: to
+          value: value
+          gasPrice: gasPrice
       properties:
         success:
           type: boolean
         message:
+          type: string
+        body:
+          $ref: '#/components/schemas/InputBody'
+        address:
           type: string
         data:
           $ref: '#/components/schemas/RippleTransactionOutput'
@@ -6116,15 +6361,36 @@ components:
     SolanaAPIResponse:
       additionalProperties: false
       example:
+        address: address
         data:
           signedTx: signedTx
           transaction_hash: transaction_hash
         success: true
         message: message
+        body:
+          broadcast: true
+          token_ids: token_ids
+          data: data
+          chain_id: chain_id
+          encoding: encoding
+          contract_address: contract_address
+          nonce: nonce
+          input: input
+          approved: true
+          token_id: token_id
+          EOA: true
+          gas: gas
+          to: to
+          value: value
+          gasPrice: gasPrice
       properties:
         success:
           type: boolean
         message:
+          type: string
+        body:
+          $ref: '#/components/schemas/InputBody'
+        address:
           type: string
         data:
           $ref: '#/components/schemas/SolanaTransactionOutput'
@@ -6175,15 +6441,36 @@ components:
     TronAPIResponse:
       additionalProperties: false
       example:
+        address: address
         data:
           signedTx: signedTx
           transaction_hash: transaction_hash
         success: true
         message: message
+        body:
+          broadcast: true
+          token_ids: token_ids
+          data: data
+          chain_id: chain_id
+          encoding: encoding
+          contract_address: contract_address
+          nonce: nonce
+          input: input
+          approved: true
+          token_id: token_id
+          EOA: true
+          gas: gas
+          to: to
+          value: value
+          gasPrice: gasPrice
       properties:
         success:
           type: boolean
         message:
+          type: string
+        body:
+          $ref: '#/components/schemas/InputBody'
+        address:
           type: string
         data:
           $ref: '#/components/schemas/TronTransactionOutput'

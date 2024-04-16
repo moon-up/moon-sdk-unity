@@ -1,4 +1,4 @@
-# com.usemoon.MoonSDK.Model.TransactionInputSupportedParamsPartnerDataRedirectUrl
+# Org.OpenAPITools.Model.TransactionInputSupportedParamsPartnerDataRedirectUrl
 
 ## Properties
 

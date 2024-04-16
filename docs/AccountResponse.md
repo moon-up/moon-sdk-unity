@@ -1,4 +1,4 @@
-# com.usemoon.MoonSDK.Model.AccountResponse
+# Org.OpenAPITools.Model.AccountResponse
 
 ## Properties
 

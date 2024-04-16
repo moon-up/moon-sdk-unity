@@ -1,4 +1,4 @@
-# com.usemoon.MoonSDK.Model.Transaction
+# Org.OpenAPITools.Model.Transaction
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# com.usemoon.MoonSDK.Model.PingResponse
+# Org.OpenAPITools.Model.PingResponse
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# com.usemoon.MoonSDK.Model.UniswapInput
+# Org.OpenAPITools.Model.UniswapInput
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# com.usemoon.MoonSDK.Model.GetSwapDto
+# Org.OpenAPITools.Model.GetSwapDto
 
 ## Properties
 

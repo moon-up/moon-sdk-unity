@@ -1,4 +1,4 @@
-# com.usemoon.MoonSDK.Model.BalanceResponse
+# Org.OpenAPITools.Model.BalanceResponse
 
 ## Properties
 

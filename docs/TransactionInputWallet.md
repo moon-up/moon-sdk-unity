@@ -1,4 +1,4 @@
-# com.usemoon.MoonSDK.Model.TransactionInputWallet
+# Org.OpenAPITools.Model.TransactionInputWallet
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# com.usemoon.MoonSDK.Model.AvailablePaymentMethod
+# Org.OpenAPITools.Model.AvailablePaymentMethod
 
 ## Properties
 

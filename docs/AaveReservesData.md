@@ -1,4 +1,4 @@
-# com.usemoon.MoonSDK.Model.AaveReservesData
+# Org.OpenAPITools.Model.AaveReservesData
 
 ## Properties
 

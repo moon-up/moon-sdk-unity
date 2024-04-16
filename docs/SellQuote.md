@@ -1,4 +1,4 @@
-# com.usemoon.MoonSDK.Model.SellQuote
+# Org.OpenAPITools.Model.SellQuote
 
 ## Properties
 

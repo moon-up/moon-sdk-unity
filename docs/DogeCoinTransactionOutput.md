@@ -1,4 +1,4 @@
-# com.usemoon.MoonSDK.Model.DogeCoinTransactionOutput
+# Org.OpenAPITools.Model.DogeCoinTransactionOutput
 
 ## Properties
 

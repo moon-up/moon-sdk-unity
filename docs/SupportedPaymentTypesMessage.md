@@ -1,4 +1,4 @@
-# com.usemoon.MoonSDK.Model.SupportedPaymentTypesMessage
+# Org.OpenAPITools.Model.SupportedPaymentTypesMessage
 
 ## Properties
 

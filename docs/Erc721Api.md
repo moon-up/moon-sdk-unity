@@ -1,6 +1,6 @@
-# com.usemoon.MoonSDK.Api.Erc721Api
+# Org.OpenAPITools.Api.Erc721Api
 
-All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
+All URIs are relative to *https://beta.usemoon.ai*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -27,9 +27,9 @@ All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonu
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using com.usemoon.MoonSDK.Api;
-using com.usemoon.MoonSDK.Client;
-using com.usemoon.MoonSDK.Model;
+using Org.OpenAPITools.Api;
+using Org.OpenAPITools.Client;
+using Org.OpenAPITools.Model;
 
 namespace Example
 {
@@ -38,7 +38,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
+            config.BasePath = "https://beta.usemoon.ai";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -127,9 +127,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using com.usemoon.MoonSDK.Api;
-using com.usemoon.MoonSDK.Client;
-using com.usemoon.MoonSDK.Model;
+using Org.OpenAPITools.Api;
+using Org.OpenAPITools.Client;
+using Org.OpenAPITools.Model;
 
 namespace Example
 {
@@ -138,7 +138,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
+            config.BasePath = "https://beta.usemoon.ai";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -227,9 +227,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using com.usemoon.MoonSDK.Api;
-using com.usemoon.MoonSDK.Client;
-using com.usemoon.MoonSDK.Model;
+using Org.OpenAPITools.Api;
+using Org.OpenAPITools.Client;
+using Org.OpenAPITools.Model;
 
 namespace Example
 {
@@ -238,7 +238,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
+            config.BasePath = "https://beta.usemoon.ai";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -327,9 +327,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using com.usemoon.MoonSDK.Api;
-using com.usemoon.MoonSDK.Client;
-using com.usemoon.MoonSDK.Model;
+using Org.OpenAPITools.Api;
+using Org.OpenAPITools.Client;
+using Org.OpenAPITools.Model;
 
 namespace Example
 {
@@ -338,7 +338,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
+            config.BasePath = "https://beta.usemoon.ai";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -427,9 +427,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using com.usemoon.MoonSDK.Api;
-using com.usemoon.MoonSDK.Client;
-using com.usemoon.MoonSDK.Model;
+using Org.OpenAPITools.Api;
+using Org.OpenAPITools.Client;
+using Org.OpenAPITools.Model;
 
 namespace Example
 {
@@ -438,7 +438,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
+            config.BasePath = "https://beta.usemoon.ai";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -527,9 +527,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using com.usemoon.MoonSDK.Api;
-using com.usemoon.MoonSDK.Client;
-using com.usemoon.MoonSDK.Model;
+using Org.OpenAPITools.Api;
+using Org.OpenAPITools.Client;
+using Org.OpenAPITools.Model;
 
 namespace Example
 {
@@ -538,7 +538,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
+            config.BasePath = "https://beta.usemoon.ai";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -627,9 +627,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using com.usemoon.MoonSDK.Api;
-using com.usemoon.MoonSDK.Client;
-using com.usemoon.MoonSDK.Model;
+using Org.OpenAPITools.Api;
+using Org.OpenAPITools.Client;
+using Org.OpenAPITools.Model;
 
 namespace Example
 {
@@ -638,7 +638,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
+            config.BasePath = "https://beta.usemoon.ai";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -727,9 +727,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using com.usemoon.MoonSDK.Api;
-using com.usemoon.MoonSDK.Client;
-using com.usemoon.MoonSDK.Model;
+using Org.OpenAPITools.Api;
+using Org.OpenAPITools.Client;
+using Org.OpenAPITools.Model;
 
 namespace Example
 {
@@ -738,7 +738,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
+            config.BasePath = "https://beta.usemoon.ai";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -827,9 +827,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using com.usemoon.MoonSDK.Api;
-using com.usemoon.MoonSDK.Client;
-using com.usemoon.MoonSDK.Model;
+using Org.OpenAPITools.Api;
+using Org.OpenAPITools.Client;
+using Org.OpenAPITools.Model;
 
 namespace Example
 {
@@ -838,7 +838,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
+            config.BasePath = "https://beta.usemoon.ai";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -927,9 +927,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using com.usemoon.MoonSDK.Api;
-using com.usemoon.MoonSDK.Client;
-using com.usemoon.MoonSDK.Model;
+using Org.OpenAPITools.Api;
+using Org.OpenAPITools.Client;
+using Org.OpenAPITools.Model;
 
 namespace Example
 {
@@ -938,7 +938,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
+            config.BasePath = "https://beta.usemoon.ai";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -1027,9 +1027,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using com.usemoon.MoonSDK.Api;
-using com.usemoon.MoonSDK.Client;
-using com.usemoon.MoonSDK.Model;
+using Org.OpenAPITools.Api;
+using Org.OpenAPITools.Client;
+using Org.OpenAPITools.Model;
 
 namespace Example
 {
@@ -1038,7 +1038,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
+            config.BasePath = "https://beta.usemoon.ai";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -1127,9 +1127,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using com.usemoon.MoonSDK.Api;
-using com.usemoon.MoonSDK.Client;
-using com.usemoon.MoonSDK.Model;
+using Org.OpenAPITools.Api;
+using Org.OpenAPITools.Client;
+using Org.OpenAPITools.Model;
 
 namespace Example
 {
@@ -1138,7 +1138,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
+            config.BasePath = "https://beta.usemoon.ai";
             // Configure API key authorization: ApiKeyAuth
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed

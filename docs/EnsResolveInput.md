@@ -1,4 +1,4 @@
-# com.usemoon.MoonSDK.Model.EnsResolveInput
+# Org.OpenAPITools.Model.EnsResolveInput
 
 ## Properties
 

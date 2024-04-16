@@ -1,4 +1,4 @@
-# com.usemoon.MoonSDK.Model.RippleInput
+# Org.OpenAPITools.Model.RippleInput
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# com.usemoon.MoonSDK.Model.TransactionInputSupportedParams
+# Org.OpenAPITools.Model.TransactionInputSupportedParams
 
 ## Properties
 

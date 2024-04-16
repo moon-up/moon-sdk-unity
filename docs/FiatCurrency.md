@@ -1,4 +1,4 @@
-# com.usemoon.MoonSDK.Model.FiatCurrency
+# Org.OpenAPITools.Model.FiatCurrency
 
 ## Properties
 

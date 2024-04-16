@@ -1,4 +1,4 @@
-# com.usemoon.MoonSDK.Model.TronInput
+# Org.OpenAPITools.Model.TronInput
 
 ## Properties
 

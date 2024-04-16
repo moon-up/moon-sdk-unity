@@ -1,4 +1,4 @@
-# com.usemoon.MoonSDK.Model.TransactionInputMetaData
+# Org.OpenAPITools.Model.TransactionInputMetaData
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# com.usemoon.MoonSDK.Model.SupportedAssetResponse
+# Org.OpenAPITools.Model.SupportedAssetResponse
 
 ## Properties
 

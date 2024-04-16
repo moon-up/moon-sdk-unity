@@ -1,4 +1,4 @@
-# com.usemoon.MoonSDK.Model.BroadCastRawTransactionResponse
+# Org.OpenAPITools.Model.BroadCastRawTransactionResponse
 
 ## Properties
 

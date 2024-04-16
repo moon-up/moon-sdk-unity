@@ -1,4 +1,4 @@
-# com.usemoon.MoonSDK.Model.RippleTransactionOutput
+# Org.OpenAPITools.Model.RippleTransactionOutput
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# com.usemoon.MoonSDK.Model.GetSupportedOnRampsResponseMessageInnerIconsPng
+# Org.OpenAPITools.Model.GetSupportedOnRampsResponseMessageInnerIconsPng
 
 ## Properties
 

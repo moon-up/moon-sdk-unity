@@ -1,4 +1,4 @@
-# com.usemoon.MoonSDK.Model.SupportedDefaultResponseDefaultsId
+# Org.OpenAPITools.Model.SupportedDefaultResponseDefaultsId
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# com.usemoon.MoonSDK.Model.SignTypedData
+# Org.OpenAPITools.Model.SignTypedData
 
 ## Properties
 
