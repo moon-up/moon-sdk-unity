@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.AccountData
+# com.usemoon.MoonSDK.Model.AccountData
 
 ## Properties
 

@@ -118,7 +118,7 @@ namespace com.usemoon.MoonSDK.Client
         {
             Proxy = null;
             UserAgent = WebUtility.UrlEncode("OpenAPI-Generator/1.0.0/csharp");
-            BasePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app";
+            BasePath = "https://beta.usemoon.ai";
             DefaultHeaders = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
             ApiKeyPrefix = new ConcurrentDictionary<string, string>();
@@ -126,7 +126,7 @@ namespace com.usemoon.MoonSDK.Client
             {
                 {
                     new Dictionary<string, object> {
-                        {"url", "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"},
+                        {"url", "https://beta.usemoon.ai"},
                         {"description", "No description provided"},
                     }
                 }
@@ -147,7 +147,7 @@ namespace com.usemoon.MoonSDK.Client
             IDictionary<string, string> defaultHeaders,
             IDictionary<string, string> apiKey,
             IDictionary<string, string> apiKeyPrefix,
-            string basePath = "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app") : this()
+            string basePath = "https://beta.usemoon.ai") : this()
         {
             if (string.IsNullOrWhiteSpace(basePath))
                 throw new ArgumentException("The provided basePath is invalid.", "basePath");

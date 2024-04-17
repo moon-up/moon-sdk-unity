@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// AaveInput
     /// </summary>
     [DataContract(Name = "AaveInput")]
-    public partial class AaveInput
+    public partial class AaveInput : IEquatable<AaveInput>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AaveInput" /> class.
@@ -236,6 +236,211 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        /// <param name="input">Object to be compared</param>
+        /// <returns>Boolean</returns>
+        public override bool Equals(object input)
+        {
+            return this.Equals(input as AaveInput);
+        }
+
+        /// <summary>
+        /// Returns true if AaveInput instances are equal
+        /// </summary>
+        /// <param name="input">Instance of AaveInput to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(AaveInput input)
+        {
+            if (input == null)
+            {
+                return false;
+            }
+            return 
+                (
+                    this.To == input.To ||
+                    (this.To != null &&
+                    this.To.Equals(input.To))
+                ) && 
+                (
+                    this.Data == input.Data ||
+                    (this.Data != null &&
+                    this.Data.Equals(input.Data))
+                ) && 
+                (
+                    this.Input == input.Input ||
+                    (this.Input != null &&
+                    this.Input.Equals(input.Input))
+                ) && 
+                (
+                    this.Value == input.Value ||
+                    (this.Value != null &&
+                    this.Value.Equals(input.Value))
+                ) && 
+                (
+                    this.Nonce == input.Nonce ||
+                    (this.Nonce != null &&
+                    this.Nonce.Equals(input.Nonce))
+                ) && 
+                (
+                    this.Gas == input.Gas ||
+                    (this.Gas != null &&
+                    this.Gas.Equals(input.Gas))
+                ) && 
+                (
+                    this.GasPrice == input.GasPrice ||
+                    (this.GasPrice != null &&
+                    this.GasPrice.Equals(input.GasPrice))
+                ) && 
+                (
+                    this.ChainId == input.ChainId ||
+                    (this.ChainId != null &&
+                    this.ChainId.Equals(input.ChainId))
+                ) && 
+                (
+                    this.Encoding == input.Encoding ||
+                    (this.Encoding != null &&
+                    this.Encoding.Equals(input.Encoding))
+                ) && 
+                (
+                    this.EOA == input.EOA ||
+                    this.EOA.Equals(input.EOA)
+                ) && 
+                (
+                    this.ContractAddress == input.ContractAddress ||
+                    (this.ContractAddress != null &&
+                    this.ContractAddress.Equals(input.ContractAddress))
+                ) && 
+                (
+                    this.TokenId == input.TokenId ||
+                    (this.TokenId != null &&
+                    this.TokenId.Equals(input.TokenId))
+                ) && 
+                (
+                    this.TokenIds == input.TokenIds ||
+                    (this.TokenIds != null &&
+                    this.TokenIds.Equals(input.TokenIds))
+                ) && 
+                (
+                    this.Approved == input.Approved ||
+                    this.Approved.Equals(input.Approved)
+                ) && 
+                (
+                    this.Broadcast == input.Broadcast ||
+                    this.Broadcast.Equals(input.Broadcast)
+                ) && 
+                (
+                    this.LendingPool == input.LendingPool ||
+                    (this.LendingPool != null &&
+                    this.LendingPool.Equals(input.LendingPool))
+                ) && 
+                (
+                    this.Amount == input.Amount ||
+                    (this.Amount != null &&
+                    this.Amount.Equals(input.Amount))
+                ) && 
+                (
+                    this.AtokenToRedeeem == input.AtokenToRedeeem ||
+                    (this.AtokenToRedeeem != null &&
+                    this.AtokenToRedeeem.Equals(input.AtokenToRedeeem))
+                ) && 
+                (
+                    this.RefCode == input.RefCode ||
+                    (this.RefCode != null &&
+                    this.RefCode.Equals(input.RefCode))
+                ) && 
+                (
+                    this.InterestRateMode == input.InterestRateMode ||
+                    (this.InterestRateMode != null &&
+                    this.InterestRateMode.Equals(input.InterestRateMode))
+                );
+        }
+
+        /// <summary>
+        /// Gets the hash code
+        /// </summary>
+        /// <returns>Hash code</returns>
+        public override int GetHashCode()
+        {
+            unchecked // Overflow is fine, just wrap
+            {
+                int hashCode = 41;
+                if (this.To != null)
+                {
+                    hashCode = (hashCode * 59) + this.To.GetHashCode();
+                }
+                if (this.Data != null)
+                {
+                    hashCode = (hashCode * 59) + this.Data.GetHashCode();
+                }
+                if (this.Input != null)
+                {
+                    hashCode = (hashCode * 59) + this.Input.GetHashCode();
+                }
+                if (this.Value != null)
+                {
+                    hashCode = (hashCode * 59) + this.Value.GetHashCode();
+                }
+                if (this.Nonce != null)
+                {
+                    hashCode = (hashCode * 59) + this.Nonce.GetHashCode();
+                }
+                if (this.Gas != null)
+                {
+                    hashCode = (hashCode * 59) + this.Gas.GetHashCode();
+                }
+                if (this.GasPrice != null)
+                {
+                    hashCode = (hashCode * 59) + this.GasPrice.GetHashCode();
+                }
+                if (this.ChainId != null)
+                {
+                    hashCode = (hashCode * 59) + this.ChainId.GetHashCode();
+                }
+                if (this.Encoding != null)
+                {
+                    hashCode = (hashCode * 59) + this.Encoding.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.EOA.GetHashCode();
+                if (this.ContractAddress != null)
+                {
+                    hashCode = (hashCode * 59) + this.ContractAddress.GetHashCode();
+                }
+                if (this.TokenId != null)
+                {
+                    hashCode = (hashCode * 59) + this.TokenId.GetHashCode();
+                }
+                if (this.TokenIds != null)
+                {
+                    hashCode = (hashCode * 59) + this.TokenIds.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Approved.GetHashCode();
+                hashCode = (hashCode * 59) + this.Broadcast.GetHashCode();
+                if (this.LendingPool != null)
+                {
+                    hashCode = (hashCode * 59) + this.LendingPool.GetHashCode();
+                }
+                if (this.Amount != null)
+                {
+                    hashCode = (hashCode * 59) + this.Amount.GetHashCode();
+                }
+                if (this.AtokenToRedeeem != null)
+                {
+                    hashCode = (hashCode * 59) + this.AtokenToRedeeem.GetHashCode();
+                }
+                if (this.RefCode != null)
+                {
+                    hashCode = (hashCode * 59) + this.RefCode.GetHashCode();
+                }
+                if (this.InterestRateMode != null)
+                {
+                    hashCode = (hashCode * 59) + this.InterestRateMode.GetHashCode();
+                }
+                return hashCode;
+            }
         }
 
     }

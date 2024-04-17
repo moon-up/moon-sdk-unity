@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.Erc721Api
+# com.usemoon.MoonSDK.Api.Erc721Api
 
 All URIs are relative to *https://beta.usemoon.ai*
 
@@ -27,9 +27,9 @@ All URIs are relative to *https://beta.usemoon.ai*
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -127,9 +127,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -227,9 +227,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -327,9 +327,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -427,9 +427,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -527,9 +527,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -627,9 +627,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -727,9 +727,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -827,9 +827,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -927,9 +927,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -1027,9 +1027,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {
@@ -1127,9 +1127,9 @@ catch (ApiException e)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {

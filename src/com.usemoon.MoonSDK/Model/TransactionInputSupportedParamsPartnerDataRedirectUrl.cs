@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// TransactionInputSupportedParamsPartnerDataRedirectUrl
     /// </summary>
     [DataContract(Name = "TransactionInput_supportedParams_partnerData_redirectUrl")]
-    public partial class TransactionInputSupportedParamsPartnerDataRedirectUrl
+    public partial class TransactionInputSupportedParamsPartnerDataRedirectUrl : IEquatable<TransactionInputSupportedParamsPartnerDataRedirectUrl>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TransactionInputSupportedParamsPartnerDataRedirectUrl" /> class.
@@ -75,6 +75,52 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        /// <param name="input">Object to be compared</param>
+        /// <returns>Boolean</returns>
+        public override bool Equals(object input)
+        {
+            return this.Equals(input as TransactionInputSupportedParamsPartnerDataRedirectUrl);
+        }
+
+        /// <summary>
+        /// Returns true if TransactionInputSupportedParamsPartnerDataRedirectUrl instances are equal
+        /// </summary>
+        /// <param name="input">Instance of TransactionInputSupportedParamsPartnerDataRedirectUrl to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(TransactionInputSupportedParamsPartnerDataRedirectUrl input)
+        {
+            if (input == null)
+            {
+                return false;
+            }
+            return 
+                (
+                    this.Success == input.Success ||
+                    (this.Success != null &&
+                    this.Success.Equals(input.Success))
+                );
+        }
+
+        /// <summary>
+        /// Gets the hash code
+        /// </summary>
+        /// <returns>Hash code</returns>
+        public override int GetHashCode()
+        {
+            unchecked // Overflow is fine, just wrap
+            {
+                int hashCode = 41;
+                if (this.Success != null)
+                {
+                    hashCode = (hashCode * 59) + this.Success.GetHashCode();
+                }
+                return hashCode;
+            }
         }
 
     }

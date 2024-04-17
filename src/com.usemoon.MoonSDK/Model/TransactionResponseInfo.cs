@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// TransactionResponseInfo
     /// </summary>
     [DataContract(Name = "TransactionResponse_info")]
-    public partial class TransactionResponseInfo
+    public partial class TransactionResponseInfo : IEquatable<TransactionResponseInfo>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TransactionResponseInfo" /> class.
@@ -131,6 +131,88 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        /// <param name="input">Object to be compared</param>
+        /// <returns>Boolean</returns>
+        public override bool Equals(object input)
+        {
+            return this.Equals(input as TransactionResponseInfo);
+        }
+
+        /// <summary>
+        /// Returns true if TransactionResponseInfo instances are equal
+        /// </summary>
+        /// <param name="input">Instance of TransactionResponseInfo to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(TransactionResponseInfo input)
+        {
+            if (input == null)
+            {
+                return false;
+            }
+            return 
+                (
+                    this.ConveyorGas == input.ConveyorGas ||
+                    (this.ConveyorGas != null &&
+                    this.ConveyorGas.Equals(input.ConveyorGas))
+                ) && 
+                (
+                    this.AffiliateGas == input.AffiliateGas ||
+                    (this.AffiliateGas != null &&
+                    this.AffiliateGas.Equals(input.AffiliateGas))
+                ) && 
+                (
+                    this.AffiliateAggregator == input.AffiliateAggregator ||
+                    (this.AffiliateAggregator != null &&
+                    this.AffiliateAggregator.Equals(input.AffiliateAggregator))
+                ) && 
+                (
+                    this.AmountOut == input.AmountOut ||
+                    (this.AmountOut != null &&
+                    this.AmountOut.Equals(input.AmountOut))
+                ) && 
+                (
+                    this.AmountOutMin == input.AmountOutMin ||
+                    (this.AmountOutMin != null &&
+                    this.AmountOutMin.Equals(input.AmountOutMin))
+                );
+        }
+
+        /// <summary>
+        /// Gets the hash code
+        /// </summary>
+        /// <returns>Hash code</returns>
+        public override int GetHashCode()
+        {
+            unchecked // Overflow is fine, just wrap
+            {
+                int hashCode = 41;
+                if (this.ConveyorGas != null)
+                {
+                    hashCode = (hashCode * 59) + this.ConveyorGas.GetHashCode();
+                }
+                if (this.AffiliateGas != null)
+                {
+                    hashCode = (hashCode * 59) + this.AffiliateGas.GetHashCode();
+                }
+                if (this.AffiliateAggregator != null)
+                {
+                    hashCode = (hashCode * 59) + this.AffiliateAggregator.GetHashCode();
+                }
+                if (this.AmountOut != null)
+                {
+                    hashCode = (hashCode * 59) + this.AmountOut.GetHashCode();
+                }
+                if (this.AmountOutMin != null)
+                {
+                    hashCode = (hashCode * 59) + this.AmountOutMin.GetHashCode();
+                }
+                return hashCode;
+            }
         }
 
     }

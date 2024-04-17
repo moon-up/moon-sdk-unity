@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.TronTransactionOutput
+# com.usemoon.MoonSDK.Model.TronTransactionOutput
 
 ## Properties
 

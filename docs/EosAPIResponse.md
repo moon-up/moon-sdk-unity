@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.EosAPIResponse
+# com.usemoon.MoonSDK.Model.EosAPIResponse
 
 ## Properties
 

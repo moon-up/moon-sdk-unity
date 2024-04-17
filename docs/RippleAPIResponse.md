@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.RippleAPIResponse
+# com.usemoon.MoonSDK.Model.RippleAPIResponse
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.LitecoinAPIResponse
+# com.usemoon.MoonSDK.Model.LitecoinAPIResponse
 
 ## Properties
 

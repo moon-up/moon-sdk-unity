@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// TransactionData
     /// </summary>
     [DataContract(Name = "TransactionData")]
-    public partial class TransactionData
+    public partial class TransactionData : IEquatable<TransactionData>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TransactionData" /> class.
@@ -152,6 +152,125 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        /// <param name="input">Object to be compared</param>
+        /// <returns>Boolean</returns>
+        public override bool Equals(object input)
+        {
+            return this.Equals(input as TransactionData);
+        }
+
+        /// <summary>
+        /// Returns true if TransactionData instances are equal
+        /// </summary>
+        /// <param name="input">Instance of TransactionData to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(TransactionData input)
+        {
+            if (input == null)
+            {
+                return false;
+            }
+            return 
+                (
+                    this.MoonScanUrl == input.MoonScanUrl ||
+                    (this.MoonScanUrl != null &&
+                    this.MoonScanUrl.Equals(input.MoonScanUrl))
+                ) && 
+                (
+                    this.TransactionHash == input.TransactionHash ||
+                    (this.TransactionHash != null &&
+                    this.TransactionHash.Equals(input.TransactionHash))
+                ) && 
+                (
+                    this.SignedTransaction == input.SignedTransaction ||
+                    (this.SignedTransaction != null &&
+                    this.SignedTransaction.Equals(input.SignedTransaction))
+                ) && 
+                (
+                    this.SignedMessage == input.SignedMessage ||
+                    (this.SignedMessage != null &&
+                    this.SignedMessage.Equals(input.SignedMessage))
+                ) && 
+                (
+                    this.RawTransaction == input.RawTransaction ||
+                    (this.RawTransaction != null &&
+                    this.RawTransaction.Equals(input.RawTransaction))
+                ) && 
+                (
+                    this.Signature == input.Signature ||
+                    (this.Signature != null &&
+                    this.Signature.Equals(input.Signature))
+                ) && 
+                (
+                    this.Transaction == input.Transaction ||
+                    (this.Transaction != null &&
+                    this.Transaction.Equals(input.Transaction))
+                ) && 
+                (
+                    this.UserOps == input.UserOps ||
+                    this.UserOps != null &&
+                    input.UserOps != null &&
+                    this.UserOps.SequenceEqual(input.UserOps)
+                ) && 
+                (
+                    this.UseropTransaction == input.UseropTransaction ||
+                    (this.UseropTransaction != null &&
+                    this.UseropTransaction.Equals(input.UseropTransaction))
+                );
+        }
+
+        /// <summary>
+        /// Gets the hash code
+        /// </summary>
+        /// <returns>Hash code</returns>
+        public override int GetHashCode()
+        {
+            unchecked // Overflow is fine, just wrap
+            {
+                int hashCode = 41;
+                if (this.MoonScanUrl != null)
+                {
+                    hashCode = (hashCode * 59) + this.MoonScanUrl.GetHashCode();
+                }
+                if (this.TransactionHash != null)
+                {
+                    hashCode = (hashCode * 59) + this.TransactionHash.GetHashCode();
+                }
+                if (this.SignedTransaction != null)
+                {
+                    hashCode = (hashCode * 59) + this.SignedTransaction.GetHashCode();
+                }
+                if (this.SignedMessage != null)
+                {
+                    hashCode = (hashCode * 59) + this.SignedMessage.GetHashCode();
+                }
+                if (this.RawTransaction != null)
+                {
+                    hashCode = (hashCode * 59) + this.RawTransaction.GetHashCode();
+                }
+                if (this.Signature != null)
+                {
+                    hashCode = (hashCode * 59) + this.Signature.GetHashCode();
+                }
+                if (this.Transaction != null)
+                {
+                    hashCode = (hashCode * 59) + this.Transaction.GetHashCode();
+                }
+                if (this.UserOps != null)
+                {
+                    hashCode = (hashCode * 59) + this.UserOps.GetHashCode();
+                }
+                if (this.UseropTransaction != null)
+                {
+                    hashCode = (hashCode * 59) + this.UseropTransaction.GetHashCode();
+                }
+                return hashCode;
+            }
         }
 
     }

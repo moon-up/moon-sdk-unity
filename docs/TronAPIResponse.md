@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.TronAPIResponse
+# com.usemoon.MoonSDK.Model.TronAPIResponse
 
 ## Properties
 

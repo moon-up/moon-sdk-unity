@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.DefaultApi
+# com.usemoon.MoonSDK.Api.DefaultApi
 
 All URIs are relative to *https://beta.usemoon.ai*
 
@@ -16,9 +16,9 @@ All URIs are relative to *https://beta.usemoon.ai*
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.usemoon.MoonSDK.Api;
+using com.usemoon.MoonSDK.Client;
+using com.usemoon.MoonSDK.Model;
 
 namespace Example
 {

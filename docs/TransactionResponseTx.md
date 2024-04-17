@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.TransactionResponseTx
+# com.usemoon.MoonSDK.Model.TransactionResponseTx
 
 ## Properties
 

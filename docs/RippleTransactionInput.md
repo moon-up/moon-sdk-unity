@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.RippleTransactionInput
+# com.usemoon.MoonSDK.Model.RippleTransactionInput
 
 ## Properties
 

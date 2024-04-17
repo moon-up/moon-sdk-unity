@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// Message
     /// </summary>
     [DataContract(Name = "Message")]
-    public partial class Message
+    public partial class Message : IEquatable<Message>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Message" /> class.
@@ -89,6 +89,63 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        /// <param name="input">Object to be compared</param>
+        /// <returns>Boolean</returns>
+        public override bool Equals(object input)
+        {
+            return this.Equals(input as Message);
+        }
+
+        /// <summary>
+        /// Returns true if Message instances are equal
+        /// </summary>
+        /// <param name="input">Instance of Message to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(Message input)
+        {
+            if (input == null)
+            {
+                return false;
+            }
+            return 
+                (
+                    this.Fiat == input.Fiat ||
+                    this.Fiat != null &&
+                    input.Fiat != null &&
+                    this.Fiat.SequenceEqual(input.Fiat)
+                ) && 
+                (
+                    this.Crypto == input.Crypto ||
+                    this.Crypto != null &&
+                    input.Crypto != null &&
+                    this.Crypto.SequenceEqual(input.Crypto)
+                );
+        }
+
+        /// <summary>
+        /// Gets the hash code
+        /// </summary>
+        /// <returns>Hash code</returns>
+        public override int GetHashCode()
+        {
+            unchecked // Overflow is fine, just wrap
+            {
+                int hashCode = 41;
+                if (this.Fiat != null)
+                {
+                    hashCode = (hashCode * 59) + this.Fiat.GetHashCode();
+                }
+                if (this.Crypto != null)
+                {
+                    hashCode = (hashCode * 59) + this.Crypto.GetHashCode();
+                }
+                return hashCode;
+            }
         }
 
     }

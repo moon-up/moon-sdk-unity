@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.LitecoinInput
+# com.usemoon.MoonSDK.Model.LitecoinInput
 
 ## Properties
 

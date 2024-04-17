@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.LitecoinTransactionOutput
+# com.usemoon.MoonSDK.Model.LitecoinTransactionOutput
 
 ## Properties
 

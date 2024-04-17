@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.CreateAccountInput
+# com.usemoon.MoonSDK.Model.CreateAccountInput
 
 ## Properties
 

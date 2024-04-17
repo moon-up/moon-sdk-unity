@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// SolanaAPIResponse
     /// </summary>
     [DataContract(Name = "SolanaAPIResponse")]
-    public partial class SolanaAPIResponse
+    public partial class SolanaAPIResponse : IEquatable<SolanaAPIResponse>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SolanaAPIResponse" /> class.
@@ -40,8 +40,10 @@ namespace com.usemoon.MoonSDK.Model
         /// </summary>
         /// <param name="success">success (required).</param>
         /// <param name="message">message (required).</param>
+        /// <param name="body">body.</param>
+        /// <param name="address">address.</param>
         /// <param name="data">data.</param>
-        public SolanaAPIResponse(bool success = default(bool), string message = default(string), SolanaTransactionOutput data = default(SolanaTransactionOutput))
+        public SolanaAPIResponse(bool success = default(bool), string message = default(string), InputBody body = default(InputBody), string address = default(string), SolanaTransactionOutput data = default(SolanaTransactionOutput))
         {
             this.Success = success;
             // to ensure "message" is required (not null)
@@ -50,6 +52,8 @@ namespace com.usemoon.MoonSDK.Model
                 throw new ArgumentNullException("message is a required property for SolanaAPIResponse and cannot be null");
             }
             this.Message = message;
+            this.Body = body;
+            this.Address = address;
             this.Data = data;
         }
 
@@ -64,6 +68,18 @@ namespace com.usemoon.MoonSDK.Model
         /// </summary>
         [DataMember(Name = "message", IsRequired = true, EmitDefaultValue = true)]
         public string Message { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Body
+        /// </summary>
+        [DataMember(Name = "body", EmitDefaultValue = false)]
+        public InputBody Body { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Address
+        /// </summary>
+        [DataMember(Name = "address", EmitDefaultValue = false)]
+        public string Address { get; set; }
 
         /// <summary>
         /// Gets or Sets Data
@@ -81,6 +97,8 @@ namespace com.usemoon.MoonSDK.Model
             sb.Append("class SolanaAPIResponse {\n");
             sb.Append("  Success: ").Append(Success).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
+            sb.Append("  Body: ").Append(Body).Append("\n");
+            sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -93,6 +111,84 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        /// <param name="input">Object to be compared</param>
+        /// <returns>Boolean</returns>
+        public override bool Equals(object input)
+        {
+            return this.Equals(input as SolanaAPIResponse);
+        }
+
+        /// <summary>
+        /// Returns true if SolanaAPIResponse instances are equal
+        /// </summary>
+        /// <param name="input">Instance of SolanaAPIResponse to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(SolanaAPIResponse input)
+        {
+            if (input == null)
+            {
+                return false;
+            }
+            return 
+                (
+                    this.Success == input.Success ||
+                    this.Success.Equals(input.Success)
+                ) && 
+                (
+                    this.Message == input.Message ||
+                    (this.Message != null &&
+                    this.Message.Equals(input.Message))
+                ) && 
+                (
+                    this.Body == input.Body ||
+                    (this.Body != null &&
+                    this.Body.Equals(input.Body))
+                ) && 
+                (
+                    this.Address == input.Address ||
+                    (this.Address != null &&
+                    this.Address.Equals(input.Address))
+                ) && 
+                (
+                    this.Data == input.Data ||
+                    (this.Data != null &&
+                    this.Data.Equals(input.Data))
+                );
+        }
+
+        /// <summary>
+        /// Gets the hash code
+        /// </summary>
+        /// <returns>Hash code</returns>
+        public override int GetHashCode()
+        {
+            unchecked // Overflow is fine, just wrap
+            {
+                int hashCode = 41;
+                hashCode = (hashCode * 59) + this.Success.GetHashCode();
+                if (this.Message != null)
+                {
+                    hashCode = (hashCode * 59) + this.Message.GetHashCode();
+                }
+                if (this.Body != null)
+                {
+                    hashCode = (hashCode * 59) + this.Body.GetHashCode();
+                }
+                if (this.Address != null)
+                {
+                    hashCode = (hashCode * 59) + this.Address.GetHashCode();
+                }
+                if (this.Data != null)
+                {
+                    hashCode = (hashCode * 59) + this.Data.GetHashCode();
+                }
+                return hashCode;
+            }
         }
 
     }

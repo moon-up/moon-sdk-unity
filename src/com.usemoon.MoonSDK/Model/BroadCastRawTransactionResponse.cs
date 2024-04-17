@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// BroadCastRawTransactionResponse
     /// </summary>
     [DataContract(Name = "BroadCastRawTransactionResponse")]
-    public partial class BroadCastRawTransactionResponse
+    public partial class BroadCastRawTransactionResponse : IEquatable<BroadCastRawTransactionResponse>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BroadCastRawTransactionResponse" /> class.
@@ -98,6 +98,66 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        /// <param name="input">Object to be compared</param>
+        /// <returns>Boolean</returns>
+        public override bool Equals(object input)
+        {
+            return this.Equals(input as BroadCastRawTransactionResponse);
+        }
+
+        /// <summary>
+        /// Returns true if BroadCastRawTransactionResponse instances are equal
+        /// </summary>
+        /// <param name="input">Instance of BroadCastRawTransactionResponse to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(BroadCastRawTransactionResponse input)
+        {
+            if (input == null)
+            {
+                return false;
+            }
+            return 
+                (
+                    this.Success == input.Success ||
+                    this.Success.Equals(input.Success)
+                ) && 
+                (
+                    this.Message == input.Message ||
+                    (this.Message != null &&
+                    this.Message.Equals(input.Message))
+                ) && 
+                (
+                    this.Data == input.Data ||
+                    (this.Data != null &&
+                    this.Data.Equals(input.Data))
+                );
+        }
+
+        /// <summary>
+        /// Gets the hash code
+        /// </summary>
+        /// <returns>Hash code</returns>
+        public override int GetHashCode()
+        {
+            unchecked // Overflow is fine, just wrap
+            {
+                int hashCode = 41;
+                hashCode = (hashCode * 59) + this.Success.GetHashCode();
+                if (this.Message != null)
+                {
+                    hashCode = (hashCode * 59) + this.Message.GetHashCode();
+                }
+                if (this.Data != null)
+                {
+                    hashCode = (hashCode * 59) + this.Data.GetHashCode();
+                }
+                return hashCode;
+            }
         }
 
     }

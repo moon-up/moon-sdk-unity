@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// SellQuote
     /// </summary>
     [DataContract(Name = "SellQuote")]
-    public partial class SellQuote
+    public partial class SellQuote : IEquatable<SellQuote>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SellQuote" /> class.
@@ -153,6 +153,100 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        /// <param name="input">Object to be compared</param>
+        /// <returns>Boolean</returns>
+        public override bool Equals(object input)
+        {
+            return this.Equals(input as SellQuote);
+        }
+
+        /// <summary>
+        /// Returns true if SellQuote instances are equal
+        /// </summary>
+        /// <param name="input">Instance of SellQuote to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(SellQuote input)
+        {
+            if (input == null)
+            {
+                return false;
+            }
+            return 
+                (
+                    this.Recommendations == input.Recommendations ||
+                    this.Recommendations != null &&
+                    input.Recommendations != null &&
+                    this.Recommendations.SequenceEqual(input.Recommendations)
+                ) && 
+                (
+                    this.QuoteId == input.QuoteId ||
+                    (this.QuoteId != null &&
+                    this.QuoteId.Equals(input.QuoteId))
+                ) && 
+                (
+                    this.PaymentMethod == input.PaymentMethod ||
+                    (this.PaymentMethod != null &&
+                    this.PaymentMethod.Equals(input.PaymentMethod))
+                ) && 
+                (
+                    this.Ramp == input.Ramp ||
+                    (this.Ramp != null &&
+                    this.Ramp.Equals(input.Ramp))
+                ) && 
+                (
+                    this.Payout == input.Payout ||
+                    this.Payout.Equals(input.Payout)
+                ) && 
+                (
+                    this.TransactionFee == input.TransactionFee ||
+                    this.TransactionFee.Equals(input.TransactionFee)
+                ) && 
+                (
+                    this.NetworkFee == input.NetworkFee ||
+                    this.NetworkFee.Equals(input.NetworkFee)
+                ) && 
+                (
+                    this.Rate == input.Rate ||
+                    this.Rate.Equals(input.Rate)
+                );
+        }
+
+        /// <summary>
+        /// Gets the hash code
+        /// </summary>
+        /// <returns>Hash code</returns>
+        public override int GetHashCode()
+        {
+            unchecked // Overflow is fine, just wrap
+            {
+                int hashCode = 41;
+                if (this.Recommendations != null)
+                {
+                    hashCode = (hashCode * 59) + this.Recommendations.GetHashCode();
+                }
+                if (this.QuoteId != null)
+                {
+                    hashCode = (hashCode * 59) + this.QuoteId.GetHashCode();
+                }
+                if (this.PaymentMethod != null)
+                {
+                    hashCode = (hashCode * 59) + this.PaymentMethod.GetHashCode();
+                }
+                if (this.Ramp != null)
+                {
+                    hashCode = (hashCode * 59) + this.Ramp.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Payout.GetHashCode();
+                hashCode = (hashCode * 59) + this.TransactionFee.GetHashCode();
+                hashCode = (hashCode * 59) + this.NetworkFee.GetHashCode();
+                hashCode = (hashCode * 59) + this.Rate.GetHashCode();
+                return hashCode;
+            }
         }
 
     }

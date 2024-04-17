@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.BitcoinCashAPIResponse
+# com.usemoon.MoonSDK.Model.BitcoinCashAPIResponse
 
 ## Properties
 

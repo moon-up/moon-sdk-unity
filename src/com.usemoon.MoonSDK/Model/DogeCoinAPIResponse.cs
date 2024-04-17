@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// DogeCoinAPIResponse
     /// </summary>
     [DataContract(Name = "DogeCoinAPIResponse")]
-    public partial class DogeCoinAPIResponse
+    public partial class DogeCoinAPIResponse : IEquatable<DogeCoinAPIResponse>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DogeCoinAPIResponse" /> class.
@@ -40,8 +40,10 @@ namespace com.usemoon.MoonSDK.Model
         /// </summary>
         /// <param name="success">success (required).</param>
         /// <param name="message">message (required).</param>
+        /// <param name="body">body.</param>
+        /// <param name="address">address.</param>
         /// <param name="data">data.</param>
-        public DogeCoinAPIResponse(bool success = default(bool), string message = default(string), DogeCoinTransactionOutput data = default(DogeCoinTransactionOutput))
+        public DogeCoinAPIResponse(bool success = default(bool), string message = default(string), InputBody body = default(InputBody), string address = default(string), DogeCoinTransactionOutput data = default(DogeCoinTransactionOutput))
         {
             this.Success = success;
             // to ensure "message" is required (not null)
@@ -50,6 +52,8 @@ namespace com.usemoon.MoonSDK.Model
                 throw new ArgumentNullException("message is a required property for DogeCoinAPIResponse and cannot be null");
             }
             this.Message = message;
+            this.Body = body;
+            this.Address = address;
             this.Data = data;
         }
 
@@ -64,6 +68,18 @@ namespace com.usemoon.MoonSDK.Model
         /// </summary>
         [DataMember(Name = "message", IsRequired = true, EmitDefaultValue = true)]
         public string Message { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Body
+        /// </summary>
+        [DataMember(Name = "body", EmitDefaultValue = false)]
+        public InputBody Body { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Address
+        /// </summary>
+        [DataMember(Name = "address", EmitDefaultValue = false)]
+        public string Address { get; set; }
 
         /// <summary>
         /// Gets or Sets Data
@@ -81,6 +97,8 @@ namespace com.usemoon.MoonSDK.Model
             sb.Append("class DogeCoinAPIResponse {\n");
             sb.Append("  Success: ").Append(Success).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
+            sb.Append("  Body: ").Append(Body).Append("\n");
+            sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -93,6 +111,84 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        /// <param name="input">Object to be compared</param>
+        /// <returns>Boolean</returns>
+        public override bool Equals(object input)
+        {
+            return this.Equals(input as DogeCoinAPIResponse);
+        }
+
+        /// <summary>
+        /// Returns true if DogeCoinAPIResponse instances are equal
+        /// </summary>
+        /// <param name="input">Instance of DogeCoinAPIResponse to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(DogeCoinAPIResponse input)
+        {
+            if (input == null)
+            {
+                return false;
+            }
+            return 
+                (
+                    this.Success == input.Success ||
+                    this.Success.Equals(input.Success)
+                ) && 
+                (
+                    this.Message == input.Message ||
+                    (this.Message != null &&
+                    this.Message.Equals(input.Message))
+                ) && 
+                (
+                    this.Body == input.Body ||
+                    (this.Body != null &&
+                    this.Body.Equals(input.Body))
+                ) && 
+                (
+                    this.Address == input.Address ||
+                    (this.Address != null &&
+                    this.Address.Equals(input.Address))
+                ) && 
+                (
+                    this.Data == input.Data ||
+                    (this.Data != null &&
+                    this.Data.Equals(input.Data))
+                );
+        }
+
+        /// <summary>
+        /// Gets the hash code
+        /// </summary>
+        /// <returns>Hash code</returns>
+        public override int GetHashCode()
+        {
+            unchecked // Overflow is fine, just wrap
+            {
+                int hashCode = 41;
+                hashCode = (hashCode * 59) + this.Success.GetHashCode();
+                if (this.Message != null)
+                {
+                    hashCode = (hashCode * 59) + this.Message.GetHashCode();
+                }
+                if (this.Body != null)
+                {
+                    hashCode = (hashCode * 59) + this.Body.GetHashCode();
+                }
+                if (this.Address != null)
+                {
+                    hashCode = (hashCode * 59) + this.Address.GetHashCode();
+                }
+                if (this.Data != null)
+                {
+                    hashCode = (hashCode * 59) + this.Data.GetHashCode();
+                }
+                return hashCode;
+            }
         }
 
     }

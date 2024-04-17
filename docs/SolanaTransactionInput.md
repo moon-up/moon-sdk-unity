@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SolanaTransactionInput
+# com.usemoon.MoonSDK.Model.SolanaTransactionInput
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SolanaAPIResponse
+# com.usemoon.MoonSDK.Model.SolanaAPIResponse
 
 ## Properties
 

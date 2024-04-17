@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.BitcoinCashTransactionInput
+# com.usemoon.MoonSDK.Model.BitcoinCashTransactionInput
 
 ## Properties
 

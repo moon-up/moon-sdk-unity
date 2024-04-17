@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// SupportedDefaultResponseDefaults
     /// </summary>
     [DataContract(Name = "SupportedDefaultResponse_defaults")]
-    public partial class SupportedDefaultResponseDefaults
+    public partial class SupportedDefaultResponseDefaults : IEquatable<SupportedDefaultResponseDefaults>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportedDefaultResponseDefaults" /> class.
@@ -75,6 +75,52 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        /// <param name="input">Object to be compared</param>
+        /// <returns>Boolean</returns>
+        public override bool Equals(object input)
+        {
+            return this.Equals(input as SupportedDefaultResponseDefaults);
+        }
+
+        /// <summary>
+        /// Returns true if SupportedDefaultResponseDefaults instances are equal
+        /// </summary>
+        /// <param name="input">Instance of SupportedDefaultResponseDefaults to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(SupportedDefaultResponseDefaults input)
+        {
+            if (input == null)
+            {
+                return false;
+            }
+            return 
+                (
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
+                );
+        }
+
+        /// <summary>
+        /// Gets the hash code
+        /// </summary>
+        /// <returns>Hash code</returns>
+        public override int GetHashCode()
+        {
+            unchecked // Overflow is fine, just wrap
+            {
+                int hashCode = 41;
+                if (this.Id != null)
+                {
+                    hashCode = (hashCode * 59) + this.Id.GetHashCode();
+                }
+                return hashCode;
+            }
         }
 
     }

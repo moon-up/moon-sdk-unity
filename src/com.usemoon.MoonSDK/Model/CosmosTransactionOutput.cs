@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// CosmosTransactionOutput
     /// </summary>
     [DataContract(Name = "CosmosTransactionOutput")]
-    public partial class CosmosTransactionOutput
+    public partial class CosmosTransactionOutput : IEquatable<CosmosTransactionOutput>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CosmosTransactionOutput" /> class.
@@ -74,6 +74,61 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        /// <param name="input">Object to be compared</param>
+        /// <returns>Boolean</returns>
+        public override bool Equals(object input)
+        {
+            return this.Equals(input as CosmosTransactionOutput);
+        }
+
+        /// <summary>
+        /// Returns true if CosmosTransactionOutput instances are equal
+        /// </summary>
+        /// <param name="input">Instance of CosmosTransactionOutput to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(CosmosTransactionOutput input)
+        {
+            if (input == null)
+            {
+                return false;
+            }
+            return 
+                (
+                    this.SignedTx == input.SignedTx ||
+                    (this.SignedTx != null &&
+                    this.SignedTx.Equals(input.SignedTx))
+                ) && 
+                (
+                    this.TransactionHash == input.TransactionHash ||
+                    (this.TransactionHash != null &&
+                    this.TransactionHash.Equals(input.TransactionHash))
+                );
+        }
+
+        /// <summary>
+        /// Gets the hash code
+        /// </summary>
+        /// <returns>Hash code</returns>
+        public override int GetHashCode()
+        {
+            unchecked // Overflow is fine, just wrap
+            {
+                int hashCode = 41;
+                if (this.SignedTx != null)
+                {
+                    hashCode = (hashCode * 59) + this.SignedTx.GetHashCode();
+                }
+                if (this.TransactionHash != null)
+                {
+                    hashCode = (hashCode * 59) + this.TransactionHash.GetHashCode();
+                }
+                return hashCode;
+            }
         }
 
     }

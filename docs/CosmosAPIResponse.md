@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.CosmosAPIResponse
+# com.usemoon.MoonSDK.Model.CosmosAPIResponse
 
 ## Properties
 

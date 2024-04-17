@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.EosInput
+# com.usemoon.MoonSDK.Model.EosInput
 
 ## Properties
 

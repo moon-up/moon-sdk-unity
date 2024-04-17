@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// GetSwapDto
     /// </summary>
     [DataContract(Name = "GetSwapDto")]
-    public partial class GetSwapDto
+    public partial class GetSwapDto : IEquatable<GetSwapDto>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="GetSwapDto" /> class.
@@ -279,6 +279,213 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        /// <param name="input">Object to be compared</param>
+        /// <returns>Boolean</returns>
+        public override bool Equals(object input)
+        {
+            return this.Equals(input as GetSwapDto);
+        }
+
+        /// <summary>
+        /// Returns true if GetSwapDto instances are equal
+        /// </summary>
+        /// <param name="input">Instance of GetSwapDto to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(GetSwapDto input)
+        {
+            if (input == null)
+            {
+                return false;
+            }
+            return 
+                (
+                    this.Src == input.Src ||
+                    (this.Src != null &&
+                    this.Src.Equals(input.Src))
+                ) && 
+                (
+                    this.Dst == input.Dst ||
+                    (this.Dst != null &&
+                    this.Dst.Equals(input.Dst))
+                ) && 
+                (
+                    this.Amount == input.Amount ||
+                    (this.Amount != null &&
+                    this.Amount.Equals(input.Amount))
+                ) && 
+                (
+                    this.From == input.From ||
+                    (this.From != null &&
+                    this.From.Equals(input.From))
+                ) && 
+                (
+                    this.Slippage == input.Slippage ||
+                    this.Slippage.Equals(input.Slippage)
+                ) && 
+                (
+                    this.Protocols == input.Protocols ||
+                    (this.Protocols != null &&
+                    this.Protocols.Equals(input.Protocols))
+                ) && 
+                (
+                    this.Fee == input.Fee ||
+                    (this.Fee != null &&
+                    this.Fee.Equals(input.Fee))
+                ) && 
+                (
+                    this.DisableEstimate == input.DisableEstimate ||
+                    this.DisableEstimate.Equals(input.DisableEstimate)
+                ) && 
+                (
+                    this.Permit == input.Permit ||
+                    (this.Permit != null &&
+                    this.Permit.Equals(input.Permit))
+                ) && 
+                (
+                    this.IncludeTokensInfo == input.IncludeTokensInfo ||
+                    this.IncludeTokensInfo.Equals(input.IncludeTokensInfo)
+                ) && 
+                (
+                    this.IncludeProtocols == input.IncludeProtocols ||
+                    this.IncludeProtocols.Equals(input.IncludeProtocols)
+                ) && 
+                (
+                    this.Compatibility == input.Compatibility ||
+                    this.Compatibility.Equals(input.Compatibility)
+                ) && 
+                (
+                    this.AllowPartialFill == input.AllowPartialFill ||
+                    this.AllowPartialFill.Equals(input.AllowPartialFill)
+                ) && 
+                (
+                    this.Parts == input.Parts ||
+                    (this.Parts != null &&
+                    this.Parts.Equals(input.Parts))
+                ) && 
+                (
+                    this.MainRouteParts == input.MainRouteParts ||
+                    (this.MainRouteParts != null &&
+                    this.MainRouteParts.Equals(input.MainRouteParts))
+                ) && 
+                (
+                    this.ConnectorTokens == input.ConnectorTokens ||
+                    (this.ConnectorTokens != null &&
+                    this.ConnectorTokens.Equals(input.ConnectorTokens))
+                ) && 
+                (
+                    this.ComplexityLevel == input.ComplexityLevel ||
+                    (this.ComplexityLevel != null &&
+                    this.ComplexityLevel.Equals(input.ComplexityLevel))
+                ) && 
+                (
+                    this.GasLimit == input.GasLimit ||
+                    (this.GasLimit != null &&
+                    this.GasLimit.Equals(input.GasLimit))
+                ) && 
+                (
+                    this.GasPrice == input.GasPrice ||
+                    (this.GasPrice != null &&
+                    this.GasPrice.Equals(input.GasPrice))
+                ) && 
+                (
+                    this.Referrer == input.Referrer ||
+                    (this.Referrer != null &&
+                    this.Referrer.Equals(input.Referrer))
+                ) && 
+                (
+                    this.Receiver == input.Receiver ||
+                    (this.Receiver != null &&
+                    this.Receiver.Equals(input.Receiver))
+                ) && 
+                (
+                    this.ChainId == input.ChainId ||
+                    this.ChainId.Equals(input.ChainId)
+                );
+        }
+
+        /// <summary>
+        /// Gets the hash code
+        /// </summary>
+        /// <returns>Hash code</returns>
+        public override int GetHashCode()
+        {
+            unchecked // Overflow is fine, just wrap
+            {
+                int hashCode = 41;
+                if (this.Src != null)
+                {
+                    hashCode = (hashCode * 59) + this.Src.GetHashCode();
+                }
+                if (this.Dst != null)
+                {
+                    hashCode = (hashCode * 59) + this.Dst.GetHashCode();
+                }
+                if (this.Amount != null)
+                {
+                    hashCode = (hashCode * 59) + this.Amount.GetHashCode();
+                }
+                if (this.From != null)
+                {
+                    hashCode = (hashCode * 59) + this.From.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Slippage.GetHashCode();
+                if (this.Protocols != null)
+                {
+                    hashCode = (hashCode * 59) + this.Protocols.GetHashCode();
+                }
+                if (this.Fee != null)
+                {
+                    hashCode = (hashCode * 59) + this.Fee.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.DisableEstimate.GetHashCode();
+                if (this.Permit != null)
+                {
+                    hashCode = (hashCode * 59) + this.Permit.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.IncludeTokensInfo.GetHashCode();
+                hashCode = (hashCode * 59) + this.IncludeProtocols.GetHashCode();
+                hashCode = (hashCode * 59) + this.Compatibility.GetHashCode();
+                hashCode = (hashCode * 59) + this.AllowPartialFill.GetHashCode();
+                if (this.Parts != null)
+                {
+                    hashCode = (hashCode * 59) + this.Parts.GetHashCode();
+                }
+                if (this.MainRouteParts != null)
+                {
+                    hashCode = (hashCode * 59) + this.MainRouteParts.GetHashCode();
+                }
+                if (this.ConnectorTokens != null)
+                {
+                    hashCode = (hashCode * 59) + this.ConnectorTokens.GetHashCode();
+                }
+                if (this.ComplexityLevel != null)
+                {
+                    hashCode = (hashCode * 59) + this.ComplexityLevel.GetHashCode();
+                }
+                if (this.GasLimit != null)
+                {
+                    hashCode = (hashCode * 59) + this.GasLimit.GetHashCode();
+                }
+                if (this.GasPrice != null)
+                {
+                    hashCode = (hashCode * 59) + this.GasPrice.GetHashCode();
+                }
+                if (this.Referrer != null)
+                {
+                    hashCode = (hashCode * 59) + this.Referrer.GetHashCode();
+                }
+                if (this.Receiver != null)
+                {
+                    hashCode = (hashCode * 59) + this.Receiver.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.ChainId.GetHashCode();
+                return hashCode;
+            }
         }
 
     }

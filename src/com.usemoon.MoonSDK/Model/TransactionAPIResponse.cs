@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// TransactionAPIResponse
     /// </summary>
     [DataContract(Name = "TransactionAPIResponse")]
-    public partial class TransactionAPIResponse
+    public partial class TransactionAPIResponse : IEquatable<TransactionAPIResponse>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TransactionAPIResponse" /> class.
@@ -40,8 +40,12 @@ namespace com.usemoon.MoonSDK.Model
         /// </summary>
         /// <param name="success">success (required).</param>
         /// <param name="message">message (required).</param>
+        /// <param name="body">body.</param>
+        /// <param name="address">address.</param>
+        /// <param name="transactionHash">transactionHash.</param>
+        /// <param name="signedTx">signedTx.</param>
         /// <param name="data">data.</param>
-        public TransactionAPIResponse(bool success = default(bool), string message = default(string), Transaction data = default(Transaction))
+        public TransactionAPIResponse(bool success = default(bool), string message = default(string), InputBody body = default(InputBody), string address = default(string), Object transactionHash = default(Object), Object signedTx = default(Object), Transaction data = default(Transaction))
         {
             this.Success = success;
             // to ensure "message" is required (not null)
@@ -50,6 +54,10 @@ namespace com.usemoon.MoonSDK.Model
                 throw new ArgumentNullException("message is a required property for TransactionAPIResponse and cannot be null");
             }
             this.Message = message;
+            this.Body = body;
+            this.Address = address;
+            this.TransactionHash = transactionHash;
+            this.SignedTx = signedTx;
             this.Data = data;
         }
 
@@ -64,6 +72,30 @@ namespace com.usemoon.MoonSDK.Model
         /// </summary>
         [DataMember(Name = "message", IsRequired = true, EmitDefaultValue = true)]
         public string Message { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Body
+        /// </summary>
+        [DataMember(Name = "body", EmitDefaultValue = false)]
+        public InputBody Body { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Address
+        /// </summary>
+        [DataMember(Name = "address", EmitDefaultValue = false)]
+        public string Address { get; set; }
+
+        /// <summary>
+        /// Gets or Sets TransactionHash
+        /// </summary>
+        [DataMember(Name = "transaction_hash", EmitDefaultValue = true)]
+        public Object TransactionHash { get; set; }
+
+        /// <summary>
+        /// Gets or Sets SignedTx
+        /// </summary>
+        [DataMember(Name = "signedTx", EmitDefaultValue = true)]
+        public Object SignedTx { get; set; }
 
         /// <summary>
         /// Gets or Sets Data
@@ -81,6 +113,10 @@ namespace com.usemoon.MoonSDK.Model
             sb.Append("class TransactionAPIResponse {\n");
             sb.Append("  Success: ").Append(Success).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
+            sb.Append("  Body: ").Append(Body).Append("\n");
+            sb.Append("  Address: ").Append(Address).Append("\n");
+            sb.Append("  TransactionHash: ").Append(TransactionHash).Append("\n");
+            sb.Append("  SignedTx: ").Append(SignedTx).Append("\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -93,6 +129,102 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        /// <param name="input">Object to be compared</param>
+        /// <returns>Boolean</returns>
+        public override bool Equals(object input)
+        {
+            return this.Equals(input as TransactionAPIResponse);
+        }
+
+        /// <summary>
+        /// Returns true if TransactionAPIResponse instances are equal
+        /// </summary>
+        /// <param name="input">Instance of TransactionAPIResponse to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(TransactionAPIResponse input)
+        {
+            if (input == null)
+            {
+                return false;
+            }
+            return 
+                (
+                    this.Success == input.Success ||
+                    this.Success.Equals(input.Success)
+                ) && 
+                (
+                    this.Message == input.Message ||
+                    (this.Message != null &&
+                    this.Message.Equals(input.Message))
+                ) && 
+                (
+                    this.Body == input.Body ||
+                    (this.Body != null &&
+                    this.Body.Equals(input.Body))
+                ) && 
+                (
+                    this.Address == input.Address ||
+                    (this.Address != null &&
+                    this.Address.Equals(input.Address))
+                ) && 
+                (
+                    this.TransactionHash == input.TransactionHash ||
+                    (this.TransactionHash != null &&
+                    this.TransactionHash.Equals(input.TransactionHash))
+                ) && 
+                (
+                    this.SignedTx == input.SignedTx ||
+                    (this.SignedTx != null &&
+                    this.SignedTx.Equals(input.SignedTx))
+                ) && 
+                (
+                    this.Data == input.Data ||
+                    (this.Data != null &&
+                    this.Data.Equals(input.Data))
+                );
+        }
+
+        /// <summary>
+        /// Gets the hash code
+        /// </summary>
+        /// <returns>Hash code</returns>
+        public override int GetHashCode()
+        {
+            unchecked // Overflow is fine, just wrap
+            {
+                int hashCode = 41;
+                hashCode = (hashCode * 59) + this.Success.GetHashCode();
+                if (this.Message != null)
+                {
+                    hashCode = (hashCode * 59) + this.Message.GetHashCode();
+                }
+                if (this.Body != null)
+                {
+                    hashCode = (hashCode * 59) + this.Body.GetHashCode();
+                }
+                if (this.Address != null)
+                {
+                    hashCode = (hashCode * 59) + this.Address.GetHashCode();
+                }
+                if (this.TransactionHash != null)
+                {
+                    hashCode = (hashCode * 59) + this.TransactionHash.GetHashCode();
+                }
+                if (this.SignedTx != null)
+                {
+                    hashCode = (hashCode * 59) + this.SignedTx.GetHashCode();
+                }
+                if (this.Data != null)
+                {
+                    hashCode = (hashCode * 59) + this.Data.GetHashCode();
+                }
+                return hashCode;
+            }
         }
 
     }

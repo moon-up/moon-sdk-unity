@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// TransactionInput
     /// </summary>
     [DataContract(Name = "TransactionInput")]
-    public partial class TransactionInput
+    public partial class TransactionInput : IEquatable<TransactionInput>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TransactionInput" /> class.
@@ -238,6 +238,156 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        /// <param name="input">Object to be compared</param>
+        /// <returns>Boolean</returns>
+        public override bool Equals(object input)
+        {
+            return this.Equals(input as TransactionInput);
+        }
+
+        /// <summary>
+        /// Returns true if TransactionInput instances are equal
+        /// </summary>
+        /// <param name="input">Instance of TransactionInput to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(TransactionInput input)
+        {
+            if (input == null)
+            {
+                return false;
+            }
+            return 
+                (
+                    this.SupportedParams == input.SupportedParams ||
+                    (this.SupportedParams != null &&
+                    this.SupportedParams.Equals(input.SupportedParams))
+                ) && 
+                (
+                    this.Wallet == input.Wallet ||
+                    (this.Wallet != null &&
+                    this.Wallet.Equals(input.Wallet))
+                ) && 
+                (
+                    this.MetaData == input.MetaData ||
+                    (this.MetaData != null &&
+                    this.MetaData.Equals(input.MetaData))
+                ) && 
+                (
+                    this.OriginatingHost == input.OriginatingHost ||
+                    (this.OriginatingHost != null &&
+                    this.OriginatingHost.Equals(input.OriginatingHost))
+                ) && 
+                (
+                    this.PartnerContext == input.PartnerContext ||
+                    (this.PartnerContext != null &&
+                    this.PartnerContext.Equals(input.PartnerContext))
+                ) && 
+                (
+                    this.Uuid == input.Uuid ||
+                    (this.Uuid != null &&
+                    this.Uuid.Equals(input.Uuid))
+                ) && 
+                (
+                    this.Network == input.Network ||
+                    (this.Network != null &&
+                    this.Network.Equals(input.Network))
+                ) && 
+                (
+                    this.PaymentMethod == input.PaymentMethod ||
+                    (this.PaymentMethod != null &&
+                    this.PaymentMethod.Equals(input.PaymentMethod))
+                ) && 
+                (
+                    this.Type == input.Type ||
+                    (this.Type != null &&
+                    this.Type.Equals(input.Type))
+                ) && 
+                (
+                    this.Amount == input.Amount ||
+                    this.Amount.Equals(input.Amount)
+                ) && 
+                (
+                    this.Destination == input.Destination ||
+                    (this.Destination != null &&
+                    this.Destination.Equals(input.Destination))
+                ) && 
+                (
+                    this.Source == input.Source ||
+                    (this.Source != null &&
+                    this.Source.Equals(input.Source))
+                ) && 
+                (
+                    this.Onramp == input.Onramp ||
+                    (this.Onramp != null &&
+                    this.Onramp.Equals(input.Onramp))
+                );
+        }
+
+        /// <summary>
+        /// Gets the hash code
+        /// </summary>
+        /// <returns>Hash code</returns>
+        public override int GetHashCode()
+        {
+            unchecked // Overflow is fine, just wrap
+            {
+                int hashCode = 41;
+                if (this.SupportedParams != null)
+                {
+                    hashCode = (hashCode * 59) + this.SupportedParams.GetHashCode();
+                }
+                if (this.Wallet != null)
+                {
+                    hashCode = (hashCode * 59) + this.Wallet.GetHashCode();
+                }
+                if (this.MetaData != null)
+                {
+                    hashCode = (hashCode * 59) + this.MetaData.GetHashCode();
+                }
+                if (this.OriginatingHost != null)
+                {
+                    hashCode = (hashCode * 59) + this.OriginatingHost.GetHashCode();
+                }
+                if (this.PartnerContext != null)
+                {
+                    hashCode = (hashCode * 59) + this.PartnerContext.GetHashCode();
+                }
+                if (this.Uuid != null)
+                {
+                    hashCode = (hashCode * 59) + this.Uuid.GetHashCode();
+                }
+                if (this.Network != null)
+                {
+                    hashCode = (hashCode * 59) + this.Network.GetHashCode();
+                }
+                if (this.PaymentMethod != null)
+                {
+                    hashCode = (hashCode * 59) + this.PaymentMethod.GetHashCode();
+                }
+                if (this.Type != null)
+                {
+                    hashCode = (hashCode * 59) + this.Type.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Amount.GetHashCode();
+                if (this.Destination != null)
+                {
+                    hashCode = (hashCode * 59) + this.Destination.GetHashCode();
+                }
+                if (this.Source != null)
+                {
+                    hashCode = (hashCode * 59) + this.Source.GetHashCode();
+                }
+                if (this.Onramp != null)
+                {
+                    hashCode = (hashCode * 59) + this.Onramp.GetHashCode();
+                }
+                return hashCode;
+            }
         }
 
     }

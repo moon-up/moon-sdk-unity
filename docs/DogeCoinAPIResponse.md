@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.DogeCoinAPIResponse
+# com.usemoon.MoonSDK.Model.DogeCoinAPIResponse
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.Tx
+# com.usemoon.MoonSDK.Model.Tx
 
 ## Properties
 

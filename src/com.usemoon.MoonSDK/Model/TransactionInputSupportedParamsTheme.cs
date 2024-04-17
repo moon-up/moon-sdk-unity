@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// TransactionInputSupportedParamsTheme
     /// </summary>
     [DataContract(Name = "TransactionInput_supportedParams_theme")]
-    public partial class TransactionInputSupportedParamsTheme
+    public partial class TransactionInputSupportedParamsTheme : IEquatable<TransactionInputSupportedParamsTheme>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TransactionInputSupportedParamsTheme" /> class.
@@ -168,6 +168,111 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        /// <param name="input">Object to be compared</param>
+        /// <returns>Boolean</returns>
+        public override bool Equals(object input)
+        {
+            return this.Equals(input as TransactionInputSupportedParamsTheme);
+        }
+
+        /// <summary>
+        /// Returns true if TransactionInputSupportedParamsTheme instances are equal
+        /// </summary>
+        /// <param name="input">Instance of TransactionInputSupportedParamsTheme to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(TransactionInputSupportedParamsTheme input)
+        {
+            if (input == null)
+            {
+                return false;
+            }
+            return 
+                (
+                    this.BorderRadius == input.BorderRadius ||
+                    (this.BorderRadius != null &&
+                    this.BorderRadius.Equals(input.BorderRadius))
+                ) && 
+                (
+                    this.CardColor == input.CardColor ||
+                    (this.CardColor != null &&
+                    this.CardColor.Equals(input.CardColor))
+                ) && 
+                (
+                    this.SecondaryTextColor == input.SecondaryTextColor ||
+                    (this.SecondaryTextColor != null &&
+                    this.SecondaryTextColor.Equals(input.SecondaryTextColor))
+                ) && 
+                (
+                    this.PrimaryTextColor == input.PrimaryTextColor ||
+                    (this.PrimaryTextColor != null &&
+                    this.PrimaryTextColor.Equals(input.PrimaryTextColor))
+                ) && 
+                (
+                    this.SecondaryColor == input.SecondaryColor ||
+                    (this.SecondaryColor != null &&
+                    this.SecondaryColor.Equals(input.SecondaryColor))
+                ) && 
+                (
+                    this.PrimaryColor == input.PrimaryColor ||
+                    (this.PrimaryColor != null &&
+                    this.PrimaryColor.Equals(input.PrimaryColor))
+                ) && 
+                (
+                    this.ThemeName == input.ThemeName ||
+                    (this.ThemeName != null &&
+                    this.ThemeName.Equals(input.ThemeName))
+                ) && 
+                (
+                    this.IsDark == input.IsDark ||
+                    this.IsDark.Equals(input.IsDark)
+                );
+        }
+
+        /// <summary>
+        /// Gets the hash code
+        /// </summary>
+        /// <returns>Hash code</returns>
+        public override int GetHashCode()
+        {
+            unchecked // Overflow is fine, just wrap
+            {
+                int hashCode = 41;
+                if (this.BorderRadius != null)
+                {
+                    hashCode = (hashCode * 59) + this.BorderRadius.GetHashCode();
+                }
+                if (this.CardColor != null)
+                {
+                    hashCode = (hashCode * 59) + this.CardColor.GetHashCode();
+                }
+                if (this.SecondaryTextColor != null)
+                {
+                    hashCode = (hashCode * 59) + this.SecondaryTextColor.GetHashCode();
+                }
+                if (this.PrimaryTextColor != null)
+                {
+                    hashCode = (hashCode * 59) + this.PrimaryTextColor.GetHashCode();
+                }
+                if (this.SecondaryColor != null)
+                {
+                    hashCode = (hashCode * 59) + this.SecondaryColor.GetHashCode();
+                }
+                if (this.PrimaryColor != null)
+                {
+                    hashCode = (hashCode * 59) + this.PrimaryColor.GetHashCode();
+                }
+                if (this.ThemeName != null)
+                {
+                    hashCode = (hashCode * 59) + this.ThemeName.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.IsDark.GetHashCode();
+                return hashCode;
+            }
         }
 
     }

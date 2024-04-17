@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// GetSupportedOnRampsResponse
     /// </summary>
     [DataContract(Name = "GetSupportedOnRampsResponse")]
-    public partial class GetSupportedOnRampsResponse
+    public partial class GetSupportedOnRampsResponse : IEquatable<GetSupportedOnRampsResponse>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="GetSupportedOnRampsResponse" /> class.
@@ -75,6 +75,53 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        /// <param name="input">Object to be compared</param>
+        /// <returns>Boolean</returns>
+        public override bool Equals(object input)
+        {
+            return this.Equals(input as GetSupportedOnRampsResponse);
+        }
+
+        /// <summary>
+        /// Returns true if GetSupportedOnRampsResponse instances are equal
+        /// </summary>
+        /// <param name="input">Instance of GetSupportedOnRampsResponse to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(GetSupportedOnRampsResponse input)
+        {
+            if (input == null)
+            {
+                return false;
+            }
+            return 
+                (
+                    this.Message == input.Message ||
+                    this.Message != null &&
+                    input.Message != null &&
+                    this.Message.SequenceEqual(input.Message)
+                );
+        }
+
+        /// <summary>
+        /// Gets the hash code
+        /// </summary>
+        /// <returns>Hash code</returns>
+        public override int GetHashCode()
+        {
+            unchecked // Overflow is fine, just wrap
+            {
+                int hashCode = 41;
+                if (this.Message != null)
+                {
+                    hashCode = (hashCode * 59) + this.Message.GetHashCode();
+                }
+                return hashCode;
+            }
         }
 
     }

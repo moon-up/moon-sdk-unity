@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// ConveyorFinanceControllerResponse
     /// </summary>
     [DataContract(Name = "ConveyorFinanceControllerResponse")]
-    public partial class ConveyorFinanceControllerResponse
+    public partial class ConveyorFinanceControllerResponse : IEquatable<ConveyorFinanceControllerResponse>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ConveyorFinanceControllerResponse" /> class.
@@ -129,6 +129,102 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        /// <param name="input">Object to be compared</param>
+        /// <returns>Boolean</returns>
+        public override bool Equals(object input)
+        {
+            return this.Equals(input as ConveyorFinanceControllerResponse);
+        }
+
+        /// <summary>
+        /// Returns true if ConveyorFinanceControllerResponse instances are equal
+        /// </summary>
+        /// <param name="input">Instance of ConveyorFinanceControllerResponse to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(ConveyorFinanceControllerResponse input)
+        {
+            if (input == null)
+            {
+                return false;
+            }
+            return 
+                (
+                    this.Input == input.Input ||
+                    (this.Input != null &&
+                    this.Input.Equals(input.Input))
+                ) && 
+                (
+                    this.Convey == input.Convey ||
+                    (this.Convey != null &&
+                    this.Convey.Equals(input.Convey))
+                ) && 
+                (
+                    this.Data == input.Data ||
+                    (this.Data != null &&
+                    this.Data.Equals(input.Data))
+                ) && 
+                (
+                    this.Tx == input.Tx ||
+                    (this.Tx != null &&
+                    this.Tx.Equals(input.Tx))
+                ) && 
+                (
+                    this.Signed == input.Signed ||
+                    (this.Signed != null &&
+                    this.Signed.Equals(input.Signed))
+                ) && 
+                (
+                    this.Success == input.Success ||
+                    this.Success.Equals(input.Success)
+                ) && 
+                (
+                    this.Message == input.Message ||
+                    (this.Message != null &&
+                    this.Message.Equals(input.Message))
+                );
+        }
+
+        /// <summary>
+        /// Gets the hash code
+        /// </summary>
+        /// <returns>Hash code</returns>
+        public override int GetHashCode()
+        {
+            unchecked // Overflow is fine, just wrap
+            {
+                int hashCode = 41;
+                if (this.Input != null)
+                {
+                    hashCode = (hashCode * 59) + this.Input.GetHashCode();
+                }
+                if (this.Convey != null)
+                {
+                    hashCode = (hashCode * 59) + this.Convey.GetHashCode();
+                }
+                if (this.Data != null)
+                {
+                    hashCode = (hashCode * 59) + this.Data.GetHashCode();
+                }
+                if (this.Tx != null)
+                {
+                    hashCode = (hashCode * 59) + this.Tx.GetHashCode();
+                }
+                if (this.Signed != null)
+                {
+                    hashCode = (hashCode * 59) + this.Signed.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Success.GetHashCode();
+                if (this.Message != null)
+                {
+                    hashCode = (hashCode * 59) + this.Message.GetHashCode();
+                }
+                return hashCode;
+            }
         }
 
     }

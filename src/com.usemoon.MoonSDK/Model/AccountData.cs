@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// AccountData
     /// </summary>
     [DataContract(Name = "AccountData")]
-    public partial class AccountData
+    public partial class AccountData : IEquatable<AccountData>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AccountData" /> class.
@@ -74,6 +74,62 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        /// <param name="input">Object to be compared</param>
+        /// <returns>Boolean</returns>
+        public override bool Equals(object input)
+        {
+            return this.Equals(input as AccountData);
+        }
+
+        /// <summary>
+        /// Returns true if AccountData instances are equal
+        /// </summary>
+        /// <param name="input">Instance of AccountData to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(AccountData input)
+        {
+            if (input == null)
+            {
+                return false;
+            }
+            return 
+                (
+                    this.Keys == input.Keys ||
+                    this.Keys != null &&
+                    input.Keys != null &&
+                    this.Keys.SequenceEqual(input.Keys)
+                ) && 
+                (
+                    this.Address == input.Address ||
+                    (this.Address != null &&
+                    this.Address.Equals(input.Address))
+                );
+        }
+
+        /// <summary>
+        /// Gets the hash code
+        /// </summary>
+        /// <returns>Hash code</returns>
+        public override int GetHashCode()
+        {
+            unchecked // Overflow is fine, just wrap
+            {
+                int hashCode = 41;
+                if (this.Keys != null)
+                {
+                    hashCode = (hashCode * 59) + this.Keys.GetHashCode();
+                }
+                if (this.Address != null)
+                {
+                    hashCode = (hashCode * 59) + this.Address.GetHashCode();
+                }
+                return hashCode;
+            }
         }
 
     }

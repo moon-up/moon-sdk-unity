@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SolanaInput
+# com.usemoon.MoonSDK.Model.SolanaInput
 
 ## Properties
 

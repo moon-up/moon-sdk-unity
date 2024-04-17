@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// TransactionInputMetaData
     /// </summary>
     [DataContract(Name = "TransactionInput_metaData")]
-    public partial class TransactionInputMetaData
+    public partial class TransactionInputMetaData : IEquatable<TransactionInputMetaData>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TransactionInputMetaData" /> class.
@@ -75,6 +75,52 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        /// <param name="input">Object to be compared</param>
+        /// <returns>Boolean</returns>
+        public override bool Equals(object input)
+        {
+            return this.Equals(input as TransactionInputMetaData);
+        }
+
+        /// <summary>
+        /// Returns true if TransactionInputMetaData instances are equal
+        /// </summary>
+        /// <param name="input">Instance of TransactionInputMetaData to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(TransactionInputMetaData input)
+        {
+            if (input == null)
+            {
+                return false;
+            }
+            return 
+                (
+                    this.QuoteId == input.QuoteId ||
+                    (this.QuoteId != null &&
+                    this.QuoteId.Equals(input.QuoteId))
+                );
+        }
+
+        /// <summary>
+        /// Gets the hash code
+        /// </summary>
+        /// <returns>Hash code</returns>
+        public override int GetHashCode()
+        {
+            unchecked // Overflow is fine, just wrap
+            {
+                int hashCode = 41;
+                if (this.QuoteId != null)
+                {
+                    hashCode = (hashCode * 59) + this.QuoteId.GetHashCode();
+                }
+                return hashCode;
+            }
         }
 
     }

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.Message
+# com.usemoon.MoonSDK.Model.Message
 
 ## Properties
 

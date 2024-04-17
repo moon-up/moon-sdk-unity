@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.CosmosTransactionOutput
+# com.usemoon.MoonSDK.Model.CosmosTransactionOutput
 
 ## Properties
 

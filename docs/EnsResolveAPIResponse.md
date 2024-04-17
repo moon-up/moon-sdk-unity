@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.EnsResolveAPIResponse
+# com.usemoon.MoonSDK.Model.EnsResolveAPIResponse
 
 ## Properties
 

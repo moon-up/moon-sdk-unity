@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// AaveReservesData
     /// </summary>
     [DataContract(Name = "AaveReservesData")]
-    public partial class AaveReservesData
+    public partial class AaveReservesData : IEquatable<AaveReservesData>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AaveReservesData" /> class.
@@ -201,6 +201,133 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        /// <param name="input">Object to be compared</param>
+        /// <returns>Boolean</returns>
+        public override bool Equals(object input)
+        {
+            return this.Equals(input as AaveReservesData);
+        }
+
+        /// <summary>
+        /// Returns true if AaveReservesData instances are equal
+        /// </summary>
+        /// <param name="input">Instance of AaveReservesData to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(AaveReservesData input)
+        {
+            if (input == null)
+            {
+                return false;
+            }
+            return 
+                (
+                    this.CurrentAtokenBalance == input.CurrentAtokenBalance ||
+                    (this.CurrentAtokenBalance != null &&
+                    this.CurrentAtokenBalance.Equals(input.CurrentAtokenBalance))
+                ) && 
+                (
+                    this.CurrentBorrowBalance == input.CurrentBorrowBalance ||
+                    (this.CurrentBorrowBalance != null &&
+                    this.CurrentBorrowBalance.Equals(input.CurrentBorrowBalance))
+                ) && 
+                (
+                    this.PrincipalBorrowBalance == input.PrincipalBorrowBalance ||
+                    (this.PrincipalBorrowBalance != null &&
+                    this.PrincipalBorrowBalance.Equals(input.PrincipalBorrowBalance))
+                ) && 
+                (
+                    this.BorrowRateMode == input.BorrowRateMode ||
+                    (this.BorrowRateMode != null &&
+                    this.BorrowRateMode.Equals(input.BorrowRateMode))
+                ) && 
+                (
+                    this.BorrowRate == input.BorrowRate ||
+                    (this.BorrowRate != null &&
+                    this.BorrowRate.Equals(input.BorrowRate))
+                ) && 
+                (
+                    this.LiquidityRate == input.LiquidityRate ||
+                    (this.LiquidityRate != null &&
+                    this.LiquidityRate.Equals(input.LiquidityRate))
+                ) && 
+                (
+                    this.OriginationFee == input.OriginationFee ||
+                    (this.OriginationFee != null &&
+                    this.OriginationFee.Equals(input.OriginationFee))
+                ) && 
+                (
+                    this.VariableBorrowIndex == input.VariableBorrowIndex ||
+                    (this.VariableBorrowIndex != null &&
+                    this.VariableBorrowIndex.Equals(input.VariableBorrowIndex))
+                ) && 
+                (
+                    this.LastUpdateTimestamp == input.LastUpdateTimestamp ||
+                    (this.LastUpdateTimestamp != null &&
+                    this.LastUpdateTimestamp.Equals(input.LastUpdateTimestamp))
+                ) && 
+                (
+                    this.UsageAsCollateralEnabled == input.UsageAsCollateralEnabled ||
+                    (this.UsageAsCollateralEnabled != null &&
+                    this.UsageAsCollateralEnabled.Equals(input.UsageAsCollateralEnabled))
+                );
+        }
+
+        /// <summary>
+        /// Gets the hash code
+        /// </summary>
+        /// <returns>Hash code</returns>
+        public override int GetHashCode()
+        {
+            unchecked // Overflow is fine, just wrap
+            {
+                int hashCode = 41;
+                if (this.CurrentAtokenBalance != null)
+                {
+                    hashCode = (hashCode * 59) + this.CurrentAtokenBalance.GetHashCode();
+                }
+                if (this.CurrentBorrowBalance != null)
+                {
+                    hashCode = (hashCode * 59) + this.CurrentBorrowBalance.GetHashCode();
+                }
+                if (this.PrincipalBorrowBalance != null)
+                {
+                    hashCode = (hashCode * 59) + this.PrincipalBorrowBalance.GetHashCode();
+                }
+                if (this.BorrowRateMode != null)
+                {
+                    hashCode = (hashCode * 59) + this.BorrowRateMode.GetHashCode();
+                }
+                if (this.BorrowRate != null)
+                {
+                    hashCode = (hashCode * 59) + this.BorrowRate.GetHashCode();
+                }
+                if (this.LiquidityRate != null)
+                {
+                    hashCode = (hashCode * 59) + this.LiquidityRate.GetHashCode();
+                }
+                if (this.OriginationFee != null)
+                {
+                    hashCode = (hashCode * 59) + this.OriginationFee.GetHashCode();
+                }
+                if (this.VariableBorrowIndex != null)
+                {
+                    hashCode = (hashCode * 59) + this.VariableBorrowIndex.GetHashCode();
+                }
+                if (this.LastUpdateTimestamp != null)
+                {
+                    hashCode = (hashCode * 59) + this.LastUpdateTimestamp.GetHashCode();
+                }
+                if (this.UsageAsCollateralEnabled != null)
+                {
+                    hashCode = (hashCode * 59) + this.UsageAsCollateralEnabled.GetHashCode();
+                }
+                return hashCode;
+            }
         }
 
     }

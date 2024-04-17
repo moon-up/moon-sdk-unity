@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// SupportedDefaultResponse
     /// </summary>
     [DataContract(Name = "SupportedDefaultResponse")]
-    public partial class SupportedDefaultResponse
+    public partial class SupportedDefaultResponse : IEquatable<SupportedDefaultResponse>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportedDefaultResponse" /> class.
@@ -89,6 +89,61 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        /// <param name="input">Object to be compared</param>
+        /// <returns>Boolean</returns>
+        public override bool Equals(object input)
+        {
+            return this.Equals(input as SupportedDefaultResponse);
+        }
+
+        /// <summary>
+        /// Returns true if SupportedDefaultResponse instances are equal
+        /// </summary>
+        /// <param name="input">Instance of SupportedDefaultResponse to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(SupportedDefaultResponse input)
+        {
+            if (input == null)
+            {
+                return false;
+            }
+            return 
+                (
+                    this.Defaults == input.Defaults ||
+                    (this.Defaults != null &&
+                    this.Defaults.Equals(input.Defaults))
+                ) && 
+                (
+                    this.Recommended == input.Recommended ||
+                    (this.Recommended != null &&
+                    this.Recommended.Equals(input.Recommended))
+                );
+        }
+
+        /// <summary>
+        /// Gets the hash code
+        /// </summary>
+        /// <returns>Hash code</returns>
+        public override int GetHashCode()
+        {
+            unchecked // Overflow is fine, just wrap
+            {
+                int hashCode = 41;
+                if (this.Defaults != null)
+                {
+                    hashCode = (hashCode * 59) + this.Defaults.GetHashCode();
+                }
+                if (this.Recommended != null)
+                {
+                    hashCode = (hashCode * 59) + this.Recommended.GetHashCode();
+                }
+                return hashCode;
+            }
         }
 
     }

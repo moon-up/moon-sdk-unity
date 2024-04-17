@@ -28,7 +28,7 @@ namespace com.usemoon.MoonSDK.Model
     /// SupportedPaymentTypesMessage
     /// </summary>
     [DataContract(Name = "SupportedPaymentTypesMessage")]
-    public partial class SupportedPaymentTypesMessage
+    public partial class SupportedPaymentTypesMessage : IEquatable<SupportedPaymentTypesMessage>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportedPaymentTypesMessage" /> class.
@@ -103,6 +103,70 @@ namespace com.usemoon.MoonSDK.Model
         public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        /// <param name="input">Object to be compared</param>
+        /// <returns>Boolean</returns>
+        public override bool Equals(object input)
+        {
+            return this.Equals(input as SupportedPaymentTypesMessage);
+        }
+
+        /// <summary>
+        /// Returns true if SupportedPaymentTypesMessage instances are equal
+        /// </summary>
+        /// <param name="input">Instance of SupportedPaymentTypesMessage to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(SupportedPaymentTypesMessage input)
+        {
+            if (input == null)
+            {
+                return false;
+            }
+            return 
+                (
+                    this.Googlepay == input.Googlepay ||
+                    (this.Googlepay != null &&
+                    this.Googlepay.Equals(input.Googlepay))
+                ) && 
+                (
+                    this.Applepay == input.Applepay ||
+                    (this.Applepay != null &&
+                    this.Applepay.Equals(input.Applepay))
+                ) && 
+                (
+                    this.Creditcard == input.Creditcard ||
+                    (this.Creditcard != null &&
+                    this.Creditcard.Equals(input.Creditcard))
+                );
+        }
+
+        /// <summary>
+        /// Gets the hash code
+        /// </summary>
+        /// <returns>Hash code</returns>
+        public override int GetHashCode()
+        {
+            unchecked // Overflow is fine, just wrap
+            {
+                int hashCode = 41;
+                if (this.Googlepay != null)
+                {
+                    hashCode = (hashCode * 59) + this.Googlepay.GetHashCode();
+                }
+                if (this.Applepay != null)
+                {
+                    hashCode = (hashCode * 59) + this.Applepay.GetHashCode();
+                }
+                if (this.Creditcard != null)
+                {
+                    hashCode = (hashCode * 59) + this.Creditcard.GetHashCode();
+                }
+                return hashCode;
+            }
         }
 
     }
